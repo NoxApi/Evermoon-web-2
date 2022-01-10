@@ -24,8 +24,8 @@ module.exports = {
           background:
             "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 65%, rgba(255,255,255,0) 100%)",
         },
-        ".gold-gradient-inv": {
-          background: "linear-gradient(0deg, #F9D39000 0%, #E2B15B66 100%)",
+        ".bg-gold-gradient-inv": {
+          background: "linear-gradient(0deg, #F9D39000 0%, #E2B15B66 140%)",
         },
         ".bg-gold": {
           background: "#CA9E51",
@@ -39,6 +39,9 @@ module.exports = {
         },
         ".text-gold": {
           color: "#CA9E51",
+        },
+        ".text-gold-light": {
+          color: "#F9D390",
         },
         ".text-gold-gradient": {
           background:
