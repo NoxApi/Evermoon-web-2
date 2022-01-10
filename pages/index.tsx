@@ -22,11 +22,12 @@ const Home: NextPage = () => {
             loop
             autoPlay
             muted
+            preload="metadata"
           >
-            <source src="/bg-video.webm" type="video/webm" />
-            <source src="/bg-video.mp4" type="video/mp4" />
+            <source src="/bg-video.webm#t=0.1" type="video/webm" />
+            <source src="/bg-video.mp4#t=0.1" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 black-gradient" />
+          <div className="absolute inset-0 bg-black-gradient" />
           <div className="absolute inset-0">
             <Header />
           </div>

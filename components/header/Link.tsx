@@ -12,14 +12,14 @@ export function Link({ title, href, current }: LinkProp) {
       <a className="mx-8 ">
         <div
           className={`px-8 py-2 font-source text-lg ${
-            current && "gold-gradient"
+            current && "bg-gold-gradient"
           } ${current ? "text-gold" : "text-white"}`}
         >
           {title}
         </div>
         <div
           className={`w-full h-[1.5px] rounded-xl -translate-y-1/2 ${
-            current && "gold"
+            current && "bg-gold"
           }`}
         />
       </a>
