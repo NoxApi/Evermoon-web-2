@@ -7,7 +7,7 @@ interface Props {
 const Footer = ({ className }: Props) => {
   return (
     <footer className={"flex flex-wrap justify-between py-4 px-8 " + className}>
-      <div className="font-poppins">© 2021 - Moonbrat. All rights reserved</div>
+      <div className="font-poppins">© 2022 - EverMoon. All rights reserved</div>
       <div className="mr-5 flex">
         <a href="http://discord.gg/HS9UquFhPU">
           <img src="./discord.svg" width={35} height={35} className="mr-2" />
