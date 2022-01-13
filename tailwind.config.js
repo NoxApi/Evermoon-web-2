@@ -28,20 +28,20 @@ module.exports = {
           background: "linear-gradient(0deg, #F9D39000 0%, #E2B15B66 140%)",
         },
         ".bg-gold": {
-          background: "#CA9E51",
+          background: "var(--gold)",
         },
         ".bg-gold-light": {
-          background: "#F9D390",
+          background: "var(--gold-light)",
         },
         ".bg-bluepurple-gradient": {
           background:
             "linear-gradient(180deg, rgba(0,19,59,1) 0%, rgba(12,13,45,1) 51%, rgba(22,7,33,1) 100%)",
         },
         ".text-gold": {
-          color: "#CA9E51",
+          color: "var(--gold)",
         },
         ".text-gold-light": {
-          color: "#F9D390",
+          color: "var(--gold-light)",
         },
         ".text-gold-gradient": {
           background:

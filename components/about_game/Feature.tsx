@@ -1,7 +1,6 @@
 import Image from "../image";
 import BG from "../../assets/bg.png";
 import HeaderBox from "../../assets/header-box.svg";
-import LearnMoreBox from "../../assets/learnmore-box.svg";
 import YouTube from "react-youtube";
 import NFTHero from "../../assets/feature/nft-hero.png";
 import MarketPlace from "../../assets/feature/market-place.png";
@@ -9,6 +8,7 @@ import FreeToPlay from "../../assets/feature/free-to-play.png";
 import Staking from "../../assets/feature/staking.png";
 import BuildingChallenge from "../../assets/feature/building-challenge.png";
 import SubFeature from "./SubFeature";
+import LearnMore from "./LearnMore";
 
 export default function Feature() {
   return (
@@ -31,16 +31,7 @@ export default function Feature() {
           <div className="grid grid-cols-2 mt-16">
             <div className="flex flex-col mt-8 items-center">
               <YouTube videoId="piZkiA-mLx8" />
-              <div className={"relative z-0 mt-16"}>
-                <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
-                  <Image className="" src={LearnMoreBox} alt="LearnMoreBox" />
-                </div>
-                <div className=" mx-10">
-                  <div className="font-tavi font-medium text-2xl">
-                    LEARN MORE
-                  </div>
-                </div>
-              </div>
+              <LearnMore />
             </div>
 
             <div className="mx-20 flex flex-col">

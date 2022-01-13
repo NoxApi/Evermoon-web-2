@@ -11,6 +11,7 @@ import Facebook from "../../assets/socials/facebook.svg";
 import Twitter from "../../assets/socials/twitter.svg";
 import Youtube from "../../assets/socials/youtube.svg";
 import WhitePaper from "../../assets/white-paper.svg";
+import LinkNewTab from "../LinkNewTab";
 
 export default function Home() {
   return (
@@ -28,8 +29,9 @@ export default function Home() {
       <div className="absolute inset-0 bg-black-gradient" />
       <div className="absolute inset-0">
         <Header />
-
-        <div className="mt-40 text-4xl font-tavi font-bold text-gold-gradient text-center">
+      </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="text-4xl font-tavi font-bold text-gold-gradient text-center">
           MOBILE MOBA BLOCKCHAIN
         </div>
         <div className="text-xl font-tavi text-center">
@@ -37,7 +39,12 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col mt-16 items-center w-72 mx-auto">
-          <div className="relative z-0">
+          <a
+            className="relative z-0"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfBJTRBIPUIXd1g_0uadx__KC8x1y8NxD94bvwW_T6LgDbRPA/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="font-source font-semibold text-black text-sm w-72 py-4 z-0 text-center">
               JOIN MOONLIGHT PROGRAM
             </div>
@@ -46,7 +53,7 @@ export default function Home() {
               src={JoinButton}
               alt="JoinButton"
             />
-          </div>
+          </a>
           <div className="flex my-3 items-center w-72">
             <div className="flex-grow h-[1px] bg-gold-light" />
             <Image
@@ -56,7 +63,12 @@ export default function Home() {
             />
             <div className="flex-grow h-[1px] bg-gold-light" />
           </div>
-          <div className="relative z-0">
+          <a
+            className="relative z-0"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf954l5vbU-LZ-VuR_iNPJM-yJCCJiCu3WIn4e4702j7kvDdw/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="font-source font-semibold text-gold-light text-sm w-72 py-4 z-0 text-center">
               Join Stategic Partner & Private Sale
             </div>
@@ -65,7 +77,7 @@ export default function Home() {
               src={JoinOutlineButton}
               alt="JoinOutlineButton"
             />
-          </div>
+          </a>
         </div>
 
         <div className="flex flex-col mt-16 items-center">
@@ -78,19 +90,32 @@ export default function Home() {
           </div>
 
           <div className="flex my-3 justify-between w-72">
-            <Image className="w-8" src={Telegram} alt="Telegram" />
-            <Image className="w-8" src={Discord} alt="Discord" />
-            <Image className="w-8" src={Facebook} alt="Facebook" />
-            <Image className="w-8" src={Twitter} alt="Twitter" />
-            <Image className="w-8" src={Youtube} alt="Youtube" />
+            <LinkNewTab href="https://t.me/Evermoon_Community">
+              <Image className="w-8" src={Telegram} alt="Telegram" />
+            </LinkNewTab>
+            <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
+              <Image className="w-8" src={Discord} alt="Discord" />
+            </LinkNewTab>
+            <LinkNewTab href="https://www.facebook.com/EvermoonOfficialGameFi">
+              <Image className="w-8" src={Facebook} alt="Facebook" />
+            </LinkNewTab>
+            <LinkNewTab href="https://twitter.com/EverMoon_nft">
+              <Image className="w-8" src={Twitter} alt="Twitter" />
+            </LinkNewTab>
+            <LinkNewTab href="https://www.youtube.com/channel/UCFxqPU4dTufi07B13w_mMuw/videos">
+              <Image className="w-8" src={Youtube} alt="Youtube" />
+            </LinkNewTab>
           </div>
         </div>
       </div>
-      <Image
-        className="absolute bottom-12 right-20 w-52"
-        src={WhitePaper}
-        alt="WhitePaper"
-      />
+
+      <LinkNewTab href="https://docs.evermoon.games/evermoon/">
+        <Image
+          className="absolute bottom-12 right-20 w-52"
+          src={WhitePaper}
+          alt="WhitePaper"
+        />
+      </LinkNewTab>
     </section>
   );
 }
