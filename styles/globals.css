@@ -9,8 +9,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  --gold: #CA9E51;
-  --gold-light: #F9D390;
+  --gold: #ca9e51;
+  --gold-light: #f9d390;
+  --black-blue-grad: linear-gradient(
+    180deg,
+    rgba(0, 19, 59, 1) 0%,
+    rgba(12, 13, 45, 1) 51%,
+    rgba(22, 7, 33, 1) 100%
+  );
 }
 
 a {
@@ -34,15 +40,10 @@ a {
   z-index: -1;
   inset: 0;
   clip-path: polygon(10% 0%, 100% 0, 100% 90%, 90% 100%, 0 100%, 0% 10%);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 19, 59, 1) 0%,
-    rgba(12, 13, 45, 1) 51%,
-    rgba(22, 7, 33, 1) 100%
-  );
+  background: var(--black-blue-grad);
 }
 
 .parallelogram::before {
-  background:#F9D390;
+  background: #f9d390;
   transform: scale(1.02);
 }

@@ -34,8 +34,14 @@ module.exports = {
           background: "var(--gold-light)",
         },
         ".bg-bluepurple-gradient": {
+          background: "var(--black-blue-grad)",
+        },
+        ".bg-bluegreen-gradient": {
           background:
-            "linear-gradient(180deg, rgba(0,19,59,1) 0%, rgba(12,13,45,1) 51%, rgba(22,7,33,1) 100%)",
+            "linear-gradient(180deg, #002452 0%, rgba(0, 19, 44, 0.8) 100%)",
+        },
+        ".bg-disable": {
+          background: "#c2c2c2",
         },
         ".text-gold": {
           color: "var(--gold)",
@@ -51,6 +57,12 @@ module.exports = {
         },
         ".text-disable": {
           color: "#767676",
+        },
+        ".border-gold-light": {
+          borderColor: "var(--gold-light)",
+        },
+        ".hole": {
+          boxShadow: "0 0 0 9999px rgba(0, 0, 0, 0.6)",
         },
       };
 
