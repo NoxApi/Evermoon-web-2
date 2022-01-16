@@ -20,6 +20,9 @@ module.exports = {
         ".bg-gold-gradient": {
           background: "linear-gradient(180deg, #F9D39000 0%, #E2B15B44 100%)",
         },
+        ".bg-gold-gradient-sm": {
+          background: "linear-gradient(180deg, #F9D390 0%, #E2B15B 100%)",
+        },
         ".bg-black-gradient": {
           background:
             "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 65%, rgba(255,255,255,0) 100%)",
@@ -38,7 +41,7 @@ module.exports = {
         },
         ".bg-bluegreen-gradient": {
           background:
-            "linear-gradient(180deg, #002452 0%, rgba(0, 19, 44, 0.8) 100%)",
+            "linear-gradient(180deg, #002452 -20%, rgba(0, 19, 44, 0.8) 100%)",
         },
         ".bg-disable": {
           background: "#c2c2c2",

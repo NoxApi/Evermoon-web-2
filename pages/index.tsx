@@ -6,6 +6,7 @@ import Feature from "../components/about_game/Feature";
 
 import Layout from "../components/layout";
 import Tribe from "../components/about_game/Tribe";
+import Token from "../components/about_game/Token";
 
 const Index: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Index: NextPage = () => {
         <Home />
         <Feature />
         <Tribe />
+        <Token />
       </main>
 
       <Footer />
