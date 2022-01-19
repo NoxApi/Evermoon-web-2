@@ -1,4 +1,5 @@
 import Image from "../image";
+import ImageNext from "next/image"
 import BG from "../../assets/bg.png";
 import HeaderBox from "../../assets/header-box.svg";
 import YouTube from "react-youtube";
@@ -14,7 +15,15 @@ export default function Feature() {
   return (
     <section id="Feature" className="relative bg-white h-screen w-full">
       <div className="h-full w-full overflow-hidden">
-        <Image className=" " src={BG} alt="BG" />
+      <ImageNext
+          width="100%"
+          height="100%"
+          layout="fill"
+          objectFit="cover"
+          src={BG}
+          alt="BG"
+          priority={true}
+        />
       </div>
       <div className="absolute inset-0">
         <div className="flex flex-col items-center">

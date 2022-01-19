@@ -40,6 +40,7 @@ export default function Token() {
           objectFit="cover"
           src={BG}
           alt="BG"
+          priority={true}
         />
       </div>
       <div className="absolute inset-0">

@@ -1,4 +1,5 @@
 import Image from "../image";
+import ImageNext from "next/image"
 import BG from "../../assets/bgtribe.png";
 import HeaderBox from "../../assets/header-box.svg";
 import LNakamatos from "../../assets/tribe/lnakamatos.png";
@@ -84,7 +85,15 @@ export default function Tribe() {
   return (
     <section id="Tribe" className="relative bg-white h-screen w-full ">
       <div className="h-full w-full overflow-hidden">
-        <Image className=" " src={BG} alt="BG" />
+      <ImageNext
+          width="100%"
+          height="100%"
+          layout="fill"
+          objectFit="cover"
+          src={BG}
+          alt="BG"
+          priority={true}
+        />
       </div>
       <div className="absolute inset-0 mx-auto max-w-7xl">
         <div className="flex h-full items-stretch">
@@ -131,7 +140,7 @@ function TribesLogo() {
     <>
       {tribes.map((tribe) => (
         <div key={tribe.title}>
-          <Image className="w-28 m-4" src={tribe.logo} alt={tribe.title} />
+          <Image className="w-28 m-4" src={tribe.logo} alt={tribe.title} priority={true} />
         </div>
       ))}
     </>
@@ -150,7 +159,7 @@ function TribeNakamatos() {
       />
 
       <div className="absolute top-0 bottom-0 -left-12 w-[29rem]">
-        <Image src={Nakamatos} alt="Nakamatos" />
+        <Image src={Nakamatos} alt="Nakamatos" key="NakamatosImage" priority={true}/>
       </div>
     </div>
   );
@@ -168,7 +177,7 @@ function TribeEthern() {
       />
 
       <div className="absolute top-0 bottom-0 -left-14 w-[31rem]">
-        <Image src={Ethern} alt="Nakamatos" />
+        <Image src={Ethern} alt="Ethern" key="EthernImage" priority={true}/>
       </div>
     </div>
   );
@@ -186,7 +195,7 @@ function TribeByzan() {
       />
 
       <div className="absolute -top-10 bottom-0 -left-16 w-[35rem]">
-        <Image src={Byzan} alt="Byzan" />
+        <Image src={Byzan} alt="Byzan" key="ByzanImage" priority={true}/>
       </div>
     </div>
   );
@@ -205,7 +214,7 @@ function TribeSolis() {
       <div className="w-[36rem]" />
 
       <div className="absolute top-10 bottom-0 -right-20 w-[42rem]">
-        <Image src={Solis} alt="Solis" />
+        <Image src={Solis} alt="Solis" key="SolisImage" priority={true}/>
       </div>
     </div>
   );
@@ -224,7 +233,7 @@ function TribeLunarian() {
       />
 
       <div className="absolute -top-5 bottom-0 -left-8 w-[34rem]">
-        <Image src={Lunarian} alt="Lunarian" />
+        <Image src={Lunarian} alt="Lunarian" key="LunarianImage" priority={true}/>
       </div>
     </div>
   );

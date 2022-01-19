@@ -1,10 +1,16 @@
 import ImageNext from "next/image";
 
-function Image(props : any) {
+interface ImageProps {
+  className?: string;
+  src: StaticImageData;
+  alt: string;
+  priority?: boolean;
+}
+function Image({className, src, alt,priority} : ImageProps) {
   return (
-    <div className={props.className}>
+    <div className={className}>
       <div className={"relative"}>
-        <ImageNext layout="responsive" objectFit="contain" src={props.src} alt={props.alt}/>
+        <ImageNext layout="responsive" objectFit="contain" src={src} alt={alt} priority={priority}/>
       </div>
     </div>
   );
