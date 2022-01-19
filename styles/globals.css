@@ -68,6 +68,9 @@ a {
     top: 20%;
     opacity: 1;
   }
+  50% {
+    opacity: 1;
+  }
   80% {
     top: 70%;
     opacity: 0.2;

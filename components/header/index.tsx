@@ -56,7 +56,7 @@ function HeaderDesktop() {
         </Menu>
 
         <div className="bg-white w-2 h-2 rounded-full" />
-        <Link title="ROADMAP" href="/" current={false} />
+        <Link title="ROADMAP" href="/#RoadMap" current={false} />
         <div className="bg-[#767676] w-2 h-2 rounded-full" />
         <ComingSoonLink title="PARTNERSHIP" />
         <div className="bg-[#767676] w-2 h-2 rounded-full" />
