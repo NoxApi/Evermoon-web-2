@@ -7,6 +7,7 @@ import Feature from "../components/about_game/Feature";
 import Layout from "../components/layout";
 import Tribe from "../components/about_game/Tribe";
 import Token from "../components/about_game/Token";
+import RoadMap from "../components/road_map";
 
 const Index: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Index: NextPage = () => {
         <Feature />
         <Tribe />
         <Token />
+        <RoadMap />
       </main>
 
       <Footer />
