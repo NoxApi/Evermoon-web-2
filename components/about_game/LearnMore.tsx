@@ -239,7 +239,7 @@ interface RuneItemProps {
 function RuneItem({ src, title }: RuneItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} />
+      <Image className="w-52" src={src} alt={title} priority={true} />
       <div>
         <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
@@ -257,7 +257,7 @@ interface ShardItemProps {
 function ShardItem({ src, title }: ShardItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} />
+      <Image className="w-52" src={src} alt={title} priority={true} />
       <div>
         {/* <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
@@ -276,7 +276,7 @@ interface LootItemProps {
 function LootItem({ src, title, children }: LootItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} />
+      <Image className="w-52" src={src} alt={title} priority={true} />
       <div>
         <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
