@@ -25,12 +25,7 @@ export default function LearnMore() {
     setIsOpen(true);
   }
 
-  useEffect(() => {
-    const maxPage = 2;
-    if (page < 0) setPage(0);
-    if (page > maxPage) setPage(maxPage);
-    return () => {};
-  }, [page]);
+
 
   useEffect(() => {
     if (isOpen) setPage(0);
@@ -89,8 +84,11 @@ export default function LearnMore() {
             >
               <div className=" inline-block w-full max-w-6xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-bluepurple-gradient border-2 border-[color:var(--gold-light)] shadow-xl rounded-2xl">
                 <div className="grid grid-cols-[auto_1fr_auto] items-center">
-                  <div className="z-10 cursor-pointer" onClick={() => setPage(page - 1)}>
-                    <ArrowLeft />
+                  <div
+                    className="z-10 cursor-pointer"
+                    onClick={() => page >0 && setPage(page - 1)}
+                  >
+                    <ArrowLeft gray={page === 0} />
                   </div>
 
                   <div className="relative z-0">
@@ -202,25 +200,28 @@ export default function LearnMore() {
                     </div>
                   </div>
 
-                  <div className="z-10 cursor-pointer" onClick={() => setPage(page + 1)}>
-                    <ArrowRight />
+                  <div
+                    className="z-10 cursor-pointer"
+                    onClick={() => page <2 && setPage(page + 1)}
+                  >
+                    <ArrowRight gray={page === 2} />
                   </div>
                 </div>
                 <div className="flex justify-center mt-10 mb-4">
                   <div
-                  onClick={() => setPage(0)}
+                    onClick={() => setPage(0)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 0 ? "bg-gold-light" : "bg-disable"
                     }`}
                   />
                   <div
-                  onClick={() => setPage(1)}
+                    onClick={() => setPage(1)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 1 ? "bg-gold-light" : "bg-disable"
                     }`}
                   />
                   <div
-                  onClick={() => setPage(2)}
+                    onClick={() => setPage(2)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 2 ? "bg-gold-light" : "bg-disable"
                     }`}
