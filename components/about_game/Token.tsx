@@ -116,18 +116,22 @@ export default function Token() {
                 {selected === 1 && <MoonStoneDetail />}
               </div>
               <div className="w-24 flex flex-col items-center mb-8">
-                <div
-                  // layoutId="dmoon"
-                  className={`${
-                    selected === 1 ? "scale-x-[12] " : ""
-                  } skew-y-[35deg] w-1  origin-left flex-grow-[2] bg-gold-gradient-sm transition-all duration-300`}
-                />
+                <div className="flex-grow-[2] relative">
+                  <div
+                    // layoutId="dmoon"
+                    className={`${
+                      selected === 1 ? "w-12 " : "w-1 "
+                    } skew-y-[35deg]   origin-left  bg-gold-gradient-sm absolute top-0 bottom-0 h-full left-1/2 -translate-x-[1px]  transition-all duration-300`}
+                  />
+                </div>
                 <div className="h-16" />
-                <div
-                  className={`${
-                    selected === 2 ? "scale-x-[12] " : ""
-                  } -skew-y-[35deg] w-1 origin-right flex-grow-[3] bg-gold-gradient-sm transition-all duration-300`}
-                />
+                <div className="flex-grow-[3] relative">
+                  <div
+                    className={`${
+                      selected === 2 ? "w-12 " : "w-1"
+                    } -skew-y-[35deg]  origin-right  bg-gold-gradient-sm absolute top-0 bottom-0 h-full right-1/2 translate-x-[1px] transition-all duration-300`}
+                  />
+                </div>
                 <div className="h-4" />
               </div>
               <div
