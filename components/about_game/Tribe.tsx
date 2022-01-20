@@ -1,5 +1,5 @@
 import Image from "../image";
-import ImageNext from "next/image"
+import ImageNext from "next/image";
 import BG from "../../assets/bgtribe.png";
 import HeaderBox from "../../assets/header-box.svg";
 import LNakamatos from "../../assets/tribe/lnakamatos.png";
@@ -85,7 +85,7 @@ export default function Tribe() {
   return (
     <section id="Tribe" className="relative bg-white h-screen w-full ">
       <div className="h-full w-full overflow-hidden">
-      <ImageNext
+        <ImageNext
           // width="100%"
           // height="100%"
           layout="fill"
@@ -97,7 +97,7 @@ export default function Tribe() {
       </div>
       <div className="absolute inset-0 mx-auto max-w-7xl">
         <div className="flex h-full items-stretch">
-          <div className="flex flex-col  pr-8">
+          <div className="flex flex-col  pr-8 relative">
             <div className="flex mt-28 mb-10">
               <div className={"relative z-0 "}>
                 <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
@@ -140,7 +140,12 @@ function TribesLogo() {
     <>
       {tribes.map((tribe) => (
         <div key={tribe.title}>
-          <Image className="w-28 m-4" src={tribe.logo} alt={tribe.title} priority={true} />
+          <Image
+            className="w-28 m-4"
+            src={tribe.logo}
+            alt={tribe.title}
+            priority={true}
+          />
         </div>
       ))}
     </>
@@ -158,7 +163,7 @@ function TribeNakamatos() {
             are also known as a sacred tribe."
       />
 
-      <div className="absolute top-0 bottom-0 -left-12 w-[29rem]">
+      <div className="absolute top-0 bottom-0 -left-12 w-[29rem] floating">
         <Image src={Nakamatos} alt="Nakamatos" key="NakamatosImage" priority={true}/>
       </div>
     </div>
@@ -176,7 +181,7 @@ function TribeEthern() {
         they start a new tribe making them a tribe with high technology."
       />
 
-      <div className="absolute top-0 bottom-0 -left-14 w-[31rem]">
+      <div className="absolute top-0 bottom-0 -left-14 w-[31rem] floating2">
         <Image src={Ethern} alt="Ethern" key="EthernImage" priority={true}/>
       </div>
     </div>
@@ -194,7 +199,7 @@ function TribeByzan() {
         They are good at farming, inventing new tactics, and developing new weapons. They love peace, but when it’s time to fight, they have no hesitation."
       />
 
-      <div className="absolute -top-10 bottom-0 -left-16 w-[35rem]">
+      <div className="absolute -top-10 bottom-0 -left-16 w-[35rem] floating3">
         <Image src={Byzan} alt="Byzan" key="ByzanImage" priority={true}/>
       </div>
     </div>
@@ -213,7 +218,7 @@ function TribeSolis() {
       />
       <div className="w-[36rem]" />
 
-      <div className="absolute top-10 bottom-0 -right-20 w-[42rem]">
+      <div className="absolute top-11 bottom-0 -right-20 w-[42rem] floating">
         <Image src={Solis} alt="Solis" key="SolisImage" priority={true}/>
       </div>
     </div>
@@ -232,7 +237,7 @@ function TribeLunarian() {
         since they came from another planet"
       />
 
-      <div className="absolute -top-5 bottom-0 -left-8 w-[34rem]">
+      <div className="absolute -top-5 bottom-0 -left-8 w-[34rem] floating2">
         <Image src={Lunarian} alt="Lunarian" key="LunarianImage" priority={true}/>
       </div>
     </div>

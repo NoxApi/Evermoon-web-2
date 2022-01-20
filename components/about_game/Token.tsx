@@ -14,7 +14,13 @@ import m5 from "../../assets/token/m5.svg";
 import e1 from "../../assets/token/e1.svg";
 import e2 from "../../assets/token/e2.svg";
 import e3 from "../../assets/token/e3.svg";
-
+import eclipseb from "../../assets/token/eclipseb.svg";
+import eclipses from "../../assets/token/eclipses.svg";
+const spring = {
+  type: "spring",
+  damping: 25,
+  stiffness: 150,
+};
 export default function Token() {
   const [selected, setSelected] = useState(0);
 
@@ -30,7 +36,7 @@ export default function Token() {
   return (
     <section
       id="Token"
-      className="relative bg-white h-[70rem] w-full overflow-hidden"
+      className="relative bg-white h-[75rem] w-full overflow-hidden"
     >
       <div className="relative h-full w-full ">
         <ImageNext
@@ -65,12 +71,51 @@ export default function Token() {
                   (selected === 1 ? "" : "justify-center mb-32 ")
                 }
               >
-                <motion.div layoutId="moon">
-                  <Image className="w-64 cursor-pointer" src={Moon} alt="Moon" priority={true}/>
-                </motion.div>
+                <div className="relative">
+                  {selected === 1 && (
+                    <motion.div
+                      className="absolute inset-0"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      <Image
+                        className="w-72 cursor-pointer"
+                        src={eclipses}
+                        alt="eclipses"
+                        priority={true}
+                      />
+                    </motion.div>
+                  )}
+                  {selected === 1 && (
+                    <motion.div
+                      className="absolute inset-0"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <Image
+                        className="w-72 p-7 cursor-pointer"
+                        src={eclipseb}
+                        alt="eclipseb"
+                        priority={true}
+                      />
+                    </motion.div>
+                  )}
+                  <motion.div transition={spring} layoutId="moon">
+                    <Image
+                      className="w-72 p-10 cursor-pointer"
+                      src={Moon}
+                      alt="Moon"
+                      priority={true}
+                    />
+                  </motion.div>
+                </div>
                 {selected === 1 && <MoonStoneDetail />}
               </div>
-              <div className="w-24 flex flex-col items-center">
+              <div className="w-24 flex flex-col items-center mb-8">
                 <div
                   // layoutId="dmoon"
                   className={`${
@@ -92,9 +137,48 @@ export default function Token() {
                   (selected === 2 ? "" : "justify-center  mb-32")
                 }
               >
-                <motion.div layoutId="evermoon">
-                  <Image className="w-64 cursor-pointer" src={Evermoon} alt="Evermoon" priority={true}/>
-                </motion.div>
+                <div className="relative">
+                  {selected === 2 && (
+                    <motion.div
+                      className="absolute inset-0"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      <Image
+                        className="w-72 cursor-pointer"
+                        src={eclipses}
+                        alt="eclipses"
+                        priority={true}
+                      />
+                    </motion.div>
+                  )}
+                  {selected === 2 && (
+                    <motion.div
+                      className="absolute inset-0"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <Image
+                        className="w-72 p-7 cursor-pointer"
+                        src={eclipseb}
+                        alt="eclipseb"
+                        priority={true}
+                      />
+                    </motion.div>
+                  )}
+                  <motion.div transition={spring} layoutId="evermoon">
+                    <Image
+                      className="w-72 p-12 cursor-pointer"
+                      src={Evermoon}
+                      alt="Evermoon"
+                      priority={true}
+                    />
+                  </motion.div>
+                </div>
                 {selected === 2 && <EverMoonStoneDetail />}
               </div>
             </div>
@@ -107,7 +191,12 @@ export default function Token() {
 
 function MoonStoneDetail() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, translateY: 400 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      exit={{ opacity: 0, translateY: 400 }}
+      transition={spring}
+    >
       <div className="font-tavi text-5xl font-medium text-gold-gradient text-center">
         MOONSTONE
       </div>
@@ -147,13 +236,18 @@ function MoonStoneDetail() {
           src={m5}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function EverMoonStoneDetail() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, translateY: 400 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      exit={{ opacity: 0, translateY: 400 }}
+      transition={spring}
+    >
       <div className="mt-8 font-tavi text-5xl font-medium text-gold-gradient text-center">
         EVERSTONE
       </div>
@@ -182,7 +276,7 @@ function EverMoonStoneDetail() {
           src={e3}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 interface SubDetailProps {

@@ -88,3 +88,51 @@ a {
     opacity: 0;
   }
 }
+
+.floating {
+  animation: 4s ease-in-out 0.33s infinite normal none running floatinani;
+}
+
+@keyframes floatinani {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.floating2 {
+  animation: 4s ease-in-out 0.33s infinite normal none running floatinani2;
+}
+
+@keyframes floatinani2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.floating3 {
+  animation: 4s ease-in-out 0.33s infinite normal none running floatinani3;
+}
+
+@keyframes floatinani3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-1px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
