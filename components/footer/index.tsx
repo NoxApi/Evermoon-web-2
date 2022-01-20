@@ -9,7 +9,7 @@ import Discord from "../../assets/socials/discord.svg";
 import Facebook from "../../assets/socials/facebook.svg";
 import Twitter from "../../assets/socials/twitter.svg";
 import Youtube from "../../assets/socials/youtube.svg";
-import Link from "next/link"
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -24,16 +24,22 @@ const Footer = ({ className }: Props) => {
           "linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)",
       }}
     >
-      <Image className="absolute left-0 bottom-0 w-48" src={left} alt="left" />
+      <Image
+        className="absolute left-0 bottom-0 w-48"
+        src={left}
+        alt="left"
+        priority={true}
+      />
       <Image
         className="absolute right-0 bottom-0 w-40"
         src={right}
         alt="right"
+        priority={true}
       />
-      <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30"/>
+      <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
       <div className="flex flex-wrap justify-between max-w-6xl mx-auto py-12 px-8">
         <div className="max-w-[217px]">
-          <Image className="w-full" src={Logo} alt="Logo" />
+          <Image className="w-full" src={Logo} alt="Logo" priority={true} />
           <div className="font-source text-center">
             NFT multichain MOBA game
           </div>
@@ -43,10 +49,18 @@ const Footer = ({ className }: Props) => {
             EXPLORE
           </div>
           <div className="mt-4 grid grid-cols-2 gap-y-6 font-source">
-            <Link href="/#Home"><a>HOME</a></Link>
-            <Link href="/#RoadMap"><a>ROADMAP</a></Link>
-            <Link href="/#Feature"><a>ABOUT GAME</a></Link>
-            <LinkNewTab href="https://docs.evermoon.games/evermoon/">WHITEPAPER</LinkNewTab>
+            <Link href="/#Home">
+              <a>HOME</a>
+            </Link>
+            <Link href="/#RoadMap">
+              <a>ROADMAP</a>
+            </Link>
+            <Link href="/#Feature">
+              <a>ABOUT GAME</a>
+            </Link>
+            <LinkNewTab href="https://docs.evermoon.games/evermoon/">
+              WHITEPAPER
+            </LinkNewTab>
           </div>
         </div>
         <div className="max-w-[217px]">

@@ -86,8 +86,8 @@ export default function Tribe() {
     <section id="Tribe" className="relative bg-white h-screen w-full ">
       <div className="h-full w-full overflow-hidden">
       <ImageNext
-          width="100%"
-          height="100%"
+          // width="100%"
+          // height="100%"
           layout="fill"
           objectFit="cover"
           src={BG}
@@ -265,7 +265,7 @@ interface ScrollerProps {
 function Scroller({ up, down, isTransition, tribeIndex }: ScrollerProps) {
   return (
     <div className="h-full flex flex-col justify-center items-center">
-      <div className="w-6 rotate-90 z-10" onClick={up}>
+      <div className="w-6 rotate-90 z-10 cursor-pointer" onClick={up}>
         <ArrowLeft />
       </div>
       <div className="relative  rounded-[50px]  bg-black/10 overflow-hidden">
@@ -295,7 +295,7 @@ function Scroller({ up, down, isTransition, tribeIndex }: ScrollerProps) {
           <div className="w-32 h-32 mx-auto   rounded-full border-2 border-gold-light hole"></div>
         </div>
       </div>
-      <div className="w-6 rotate-90 z-10" onClick={down}>
+      <div className="w-6 rotate-90 z-10 cursor-pointer" onClick={down}>
         <ArrowRight />
       </div>
     </div>

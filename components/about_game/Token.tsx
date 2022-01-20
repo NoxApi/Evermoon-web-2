@@ -34,8 +34,8 @@ export default function Token() {
     >
       <div className="relative h-full w-full ">
         <ImageNext
-          width="100%"
-          height="100%"
+          // width="100%"
+          // height="100%"
           layout="fill"
           objectFit="cover"
           src={BG}
@@ -66,7 +66,7 @@ export default function Token() {
                 }
               >
                 <motion.div layoutId="moon">
-                  <Image className="w-64" src={Moon} alt="Moon" />
+                  <Image className="w-64 cursor-pointer" src={Moon} alt="Moon" priority={true}/>
                 </motion.div>
                 {selected === 1 && <MoonStoneDetail />}
               </div>
@@ -93,7 +93,7 @@ export default function Token() {
                 }
               >
                 <motion.div layoutId="evermoon">
-                  <Image className="w-64 " src={Evermoon} alt="Evermoon" />
+                  <Image className="w-64 cursor-pointer" src={Evermoon} alt="Evermoon" priority={true}/>
                 </motion.div>
                 {selected === 2 && <EverMoonStoneDetail />}
               </div>

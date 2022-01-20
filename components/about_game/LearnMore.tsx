@@ -89,7 +89,7 @@ export default function LearnMore() {
             >
               <div className=" inline-block w-full max-w-6xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-bluepurple-gradient border-2 border-[color:var(--gold-light)] shadow-xl rounded-2xl">
                 <div className="grid grid-cols-[auto_1fr_auto] items-center">
-                  <div className="z-10" onClick={() => setPage(page - 1)}>
+                  <div className="z-10 cursor-pointer" onClick={() => setPage(page - 1)}>
                     <ArrowLeft />
                   </div>
 
@@ -202,22 +202,25 @@ export default function LearnMore() {
                     </div>
                   </div>
 
-                  <div className="z-10" onClick={() => setPage(page + 1)}>
+                  <div className="z-10 cursor-pointer" onClick={() => setPage(page + 1)}>
                     <ArrowRight />
                   </div>
                 </div>
                 <div className="flex justify-center mt-10 mb-4">
                   <div
+                  onClick={() => setPage(0)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 0 ? "bg-gold-light" : "bg-disable"
                     }`}
                   />
                   <div
+                  onClick={() => setPage(1)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 1 ? "bg-gold-light" : "bg-disable"
                     }`}
                   />
                   <div
+                  onClick={() => setPage(2)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
                       page === 2 ? "bg-gold-light" : "bg-disable"
                     }`}

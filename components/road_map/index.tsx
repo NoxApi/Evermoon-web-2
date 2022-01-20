@@ -9,15 +9,15 @@ import m4 from "../../assets/roadmap/m4.png";
 import m5 from "../../assets/token/tever.png";
 import m6 from "../../assets/roadmap/m6.png";
 import dash from "../../assets/roadmap/dash.svg";
-import droplet from "../../assets/roadmap/droplet.svg"
+import droplet from "../../assets/roadmap/droplet.svg";
 
 export default function RoadMap() {
   return (
     <section id="RoadMap" className="relative bg-white  w-full overflow-hidden">
       <div className="absolute inset-0  ">
         <ImageNext
-          width="100%"
-          height="100%"
+          // width="100%"
+          // height="100%"
           layout="fill"
           objectFit="cover"
           src={BG}
@@ -49,8 +49,8 @@ export default function RoadMap() {
                 /> */}
                 <ImageNext
                   className="w-[0.01rem] h-full mx-auto bg-repeat-y  "
-                  width="0.1rem"
-                  height="100%"
+                  // width="0.1rem"
+                  // height="100%"
                   src={dash}
                   alt="dash"
                   layout="fill"
@@ -62,11 +62,20 @@ export default function RoadMap() {
               {/* <div className="w-1 h-full mx-auto border-l-2 border-white border-dashed"></div> */}
               <div className="relative h-[45rem] -mt-8 ">
                 {/* <div className="w-4 h-32 bg-gold-gradient-strong mx-auto rounded-[50%] rounded-tr-none -rotate-45" /> */}
-                <Image className="absolute left-0 right-0 droplet w-10 mx-auto" src={droplet} alt="droplet" />
+                <Image
+                  className="absolute left-0 right-0 droplet w-10 mx-auto"
+                  src={droplet}
+                  alt="droplet"
+                />
               </div>
             </div>
             <div className="relative">
-              <Image className="w-52" src={m1} alt="milestone1" />
+              <Image
+                className="w-52"
+                src={m1}
+                alt="milestone1"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center top-0 bottom-0 right-0 translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 1
@@ -84,7 +93,12 @@ export default function RoadMap() {
             </div>
 
             <div className="relative">
-              <Image className="w-52 p-4" src={m2} alt="milestone1" />
+              <Image
+                className="w-52 p-4"
+                src={m2}
+                alt="milestone2"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center items-end top-0 bottom-0 left-0 -translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 2
@@ -101,7 +115,12 @@ export default function RoadMap() {
             </div>
 
             <div className="relative">
-              <Image className="w-52 p-4" src={m3} alt="milestone1" />
+              <Image
+                className="w-52 p-4"
+                src={m3}
+                alt="milestone3"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center top-0 bottom-0 right-0 translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 3
@@ -120,7 +139,12 @@ export default function RoadMap() {
             </div>
 
             <div className="relative">
-              <Image className="w-52 p-4" src={m4} alt="milestone1" />
+              <Image
+                className="w-52 p-4"
+                src={m4}
+                alt="milestone4"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center items-end top-0 bottom-0 left-0 -translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 4
@@ -135,7 +159,12 @@ export default function RoadMap() {
             </div>
 
             <div className="relative">
-              <Image className="w-52 p-4" src={m5} alt="milestone1" />
+              <Image
+                className="w-52 p-4"
+                src={m5}
+                alt="milestone5"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center top-0 bottom-0 right-0 translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 5
@@ -152,7 +181,12 @@ export default function RoadMap() {
             </div>
 
             <div className="relative">
-              <Image className="w-52 p-4" src={m6} alt="milestone1" />
+              <Image
+                className="w-52 p-4"
+                src={m6}
+                alt="milestone6"
+                priority={true}
+              />
               <div className="absolute flex flex-col justify-center items-end top-0 bottom-0 left-0 -translate-x-full">
                 <div className="font-source font-semibold text-lg text-gold-gradient">
                   MILESTONE 6

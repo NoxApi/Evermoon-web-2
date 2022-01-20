@@ -16,8 +16,8 @@ export default function Feature() {
     <section id="Feature" className="relative bg-white h-screen w-full">
       <div className="h-full w-full overflow-hidden">
       <ImageNext
-          width="100%"
-          height="100%"
+          // width="100%"
+          // height="100%"
           layout="fill"
           objectFit="cover"
           src={BG}
