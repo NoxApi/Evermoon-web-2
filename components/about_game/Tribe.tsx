@@ -64,14 +64,14 @@ export default function Tribe() {
     if (tribeIndex < -5) {
       setIsTransition(false);
       setTribeIndex(0);
-      await delay(1);
+      await delay(10);
       setIsTransition(true);
       setTribeIndex(-1);
     }
     if (tribeIndex > 5) {
       setIsTransition(false);
       setTribeIndex(0);
-      await delay(1);
+      await delay(10);
       setIsTransition(true);
       setTribeIndex(1);
     }
@@ -83,8 +83,8 @@ export default function Tribe() {
   }, [tribeIndex]);
 
   return (
-    <section id="Tribe" className="relative bg-white h-screen w-full ">
-      <div className="h-full w-full overflow-hidden">
+    <section id="Tribe" className="relative bg-white h-[61rem] w-full ">
+      <div className="h-full w-full ">
         <ImageNext
           // width="100%"
           // height="100%"

@@ -13,7 +13,7 @@ import LearnMore from "./LearnMore";
 
 export default function Feature() {
   return (
-    <section id="Feature" className="relative bg-white h-screen w-full">
+    <section id="Feature" className="relative bg-white h-[60rem] w-full">
       <div className="h-full w-full overflow-hidden">
       <ImageNext
           // width="100%"
