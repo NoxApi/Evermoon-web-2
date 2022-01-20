@@ -30,7 +30,7 @@ export default function Token() {
   return (
     <section
       id="Token"
-      className="relative bg-white h-[117vh] w-full overflow-hidden"
+      className="relative bg-white h-[70rem] w-full overflow-hidden"
     >
       <div className="relative h-full w-full ">
         <ImageNext
@@ -70,13 +70,20 @@ export default function Token() {
                 </motion.div>
                 {selected === 1 && <MoonStoneDetail />}
               </div>
-              <div className="  flex flex-col">
-                <motion.div
-                  layoutId="dmoon"
-                  className="w-1 flex-grow-[2] bg-gold-gradient-sm"
+              <div className="w-24 flex flex-col items-center">
+                <div
+                  // layoutId="dmoon"
+                  className={`${
+                    selected === 1 ? "scale-x-[12] " : ""
+                  } skew-y-[35deg] w-1  origin-left flex-grow-[2] bg-gold-gradient-sm transition-all duration-300`}
                 />
-                <div className="h-8" />
-                <div className="w-1 flex-grow-[3] bg-gold-gradient-sm" />
+                <div className="h-16" />
+                <div
+                  className={`${
+                    selected === 2 ? "scale-x-[12] " : ""
+                  } -skew-y-[35deg] w-1 origin-right flex-grow-[3] bg-gold-gradient-sm transition-all duration-300`}
+                />
+                <div className="h-4" />
               </div>
               <div
                 onClick={tapEverMoon}
