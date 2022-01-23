@@ -32,6 +32,11 @@ a {
   box-sizing: border-box;
 }
 
+.bg {
+  background-image: url("/bg2.jpg");
+  background-size: 100% auto;
+}
+
 .parallelogram {
   position: relative;
   z-index: 0;

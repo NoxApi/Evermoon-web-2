@@ -83,8 +83,8 @@ export default function Tribe() {
   }, [tribeIndex]);
 
   return (
-    <section id="Tribe" className="relative bg-white h-[61rem] w-full ">
-      <div className="h-full w-full ">
+    <section id="Tribe" className="relative h-[62rem] w-full ">
+      {/* <div className="h-full w-full ">
         <ImageNext
           // width="100%"
           // height="100%"
@@ -94,8 +94,8 @@ export default function Tribe() {
           alt="BG"
           priority={true}
         />
-      </div>
-      <div className="absolute inset-0 mx-auto max-w-7xl">
+      </div> */}
+      <div className="h-full mx-auto max-w-7xl">
         <div className="flex h-full items-stretch">
           <div className="flex flex-col  pr-8 relative">
             <div className="flex mt-28 mb-10">

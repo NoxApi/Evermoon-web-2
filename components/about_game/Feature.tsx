@@ -13,8 +13,8 @@ import LearnMore from "./LearnMore";
 
 export default function Feature() {
   return (
-    <section id="Feature" className="relative bg-white h-[60rem] w-full">
-      <div className="h-full w-full overflow-hidden">
+    <section id="Feature" className="relative  w-full">
+      {/* <div className="h-full w-full overflow-hidden">
       <ImageNext
           // width="100%"
           // height="100%"
@@ -24,8 +24,8 @@ export default function Feature() {
           alt="BG"
           priority={true}
         />
-      </div>
-      <div className="absolute inset-0">
+      </div> */}
+      <div className="pb-16">
         <div className="flex flex-col items-center">
           <div className={"relative z-0 mt-32  mb-10"}>
             <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">

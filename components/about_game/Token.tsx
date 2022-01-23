@@ -36,9 +36,9 @@ export default function Token() {
   return (
     <section
       id="Token"
-      className="relative bg-white h-[75rem] w-full overflow-hidden"
+      className="relative  h-[75rem] w-full overflow-hidden"
     >
-      <div className="relative h-full w-full ">
+      {/* <div className="relative h-full w-full ">
         <ImageNext
           // width="100%"
           // height="100%"
@@ -48,8 +48,8 @@ export default function Token() {
           alt="BG"
           priority={true}
         />
-      </div>
-      <div className="absolute inset-0">
+      </div> */}
+      <div className="h-full">
         <div className="flex h-full flex-col items-center pb-8">
           <div className={"relative z-0 mt-32  mb-10"}>
             <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">

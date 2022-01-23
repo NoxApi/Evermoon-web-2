@@ -13,8 +13,8 @@ import droplet from "../../assets/roadmap/droplet.svg";
 
 export default function RoadMap() {
   return (
-    <section id="RoadMap" className="relative bg-white  w-full overflow-hidden">
-      <div className="absolute inset-0  ">
+    <section id="RoadMap" className="relative w-full overflow-hidden">
+      {/* <div className="absolute inset-0  ">
         <ImageNext
           // width="100%"
           // height="100%"
@@ -24,7 +24,7 @@ export default function RoadMap() {
           alt="BG"
           priority={true}
         />
-      </div>
+      </div> */}
       <div className="relative w-full">
         <div className="flex h-full flex-col items-center ">
           <div className={"relative z-0 mt-32  mb-10"}>
