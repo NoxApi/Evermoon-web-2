@@ -34,10 +34,7 @@ export default function Token() {
   };
 
   return (
-    <section
-      id="Token"
-      className="relative  h-[75rem] w-full overflow-hidden"
-    >
+    <section id="Token" className="relative  h-[75rem] w-full overflow-hidden">
       {/* <div className="relative h-full w-full ">
         <ImageNext
           // width="100%"
@@ -113,7 +110,7 @@ export default function Token() {
                     />
                   </motion.div>
                 </div>
-                {selected === 1 && <MoonStoneDetail />}
+                {selected === 1 && <EvermoonDetail />}
               </div>
               <div className="w-24 flex flex-col items-center mb-8">
                 <div className="flex-grow-[2] relative">
@@ -193,7 +190,7 @@ export default function Token() {
   );
 }
 
-function MoonStoneDetail() {
+function EvermoonDetail() {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 400 }}
@@ -202,10 +199,10 @@ function MoonStoneDetail() {
       transition={spring}
     >
       <div className="font-tavi text-5xl font-medium text-gold-gradient text-center">
-        MOONSTONE
+        EVERMOON
       </div>
       <div className="font-tavi text-2xl text-gold-gradient text-center">
-        #MS
+        #EVM
       </div>
       <div className="max-w-lg mx-auto mt-8 text-center">
         Core of our moon economy, to the new dimension of NFT games industry
@@ -221,7 +218,7 @@ function MoonStoneDetail() {
         />
         <SubDetail
           title="2. STAKING"
-          detail="Use your $MS tokens to earn more profit! Watch it rise in value as $MS inevitably conquers the NF'T game market."
+          detail="Use your $EVM tokens to earn more profit! Watch it rise in value as $MS inevitably conquers the NF'T game market."
           src={m2}
         />
         <SubDetail
@@ -231,12 +228,12 @@ function MoonStoneDetail() {
         />
         <SubDetail
           title="4. IN GAME PAYMENT"
-          detail="Use $MS tokens to buy Heroes, Skins, Shards and Loot boxes gaining new experiences."
+          detail="Use $EVM  tokens to buy Heroes, Skins, Shards and Loot boxes gaining new experiences."
           src={m4}
         />
         <SubDetail
           title="5. GOVERNANCE"
-          detail="EVERMOON is an economic game powered by $MS and $EVS coins based on earning, staking and spending."
+          detail="EVERMOON is an economic game powered by $EVM and $EVS coins based on earning, staking and spending."
           src={m5}
         />
       </div>
