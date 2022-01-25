@@ -6,7 +6,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        "2xlr": [
+          "clamp(1rem, 1vw + 0.7rem,1.5rem)",
+          "clamp(2rem, 2vw + 1rem,3.5rem)",
+        ],
+        "5xlr": [
+          "clamp(1.875rem, 3vw + 1rem,3rem)",
+          "clamp(2.25rem, 3vw + 1rem,4.5rem)",
+        ],
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {

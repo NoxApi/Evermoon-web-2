@@ -31,10 +31,10 @@ export default function Home() {
         <Header />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="text-4xl font-tavi font-bold text-gold-gradient text-center">
+        <div className="text-5xlr font-tavi font-bold text-gold-gradient text-center">
           MOBILE MOBA BLOCKCHAIN
         </div>
-        <div className="text-xl font-tavi text-center">
+        <div className="text-2xlr font-tavi text-center">
           JOIN OUR UNIVERSE TO BE A HERO
         </div>
 
