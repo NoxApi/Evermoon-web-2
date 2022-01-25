@@ -1,5 +1,5 @@
 import Image from "../image";
-import ImageNext from "next/image"
+import ImageNext from "next/image";
 import BG from "../../assets/bg.png";
 import HeaderBox from "../../assets/header-box.svg";
 import YouTube from "react-youtube";
@@ -8,6 +8,7 @@ import MarketPlace from "../../assets/feature/market-place.png";
 import FreeToPlay from "../../assets/feature/free-to-play.png";
 import Staking from "../../assets/feature/staking.png";
 import BuildingChallenge from "../../assets/feature/building-challenge.png";
+import YoutubeFrame from "../../assets/feature/youtube-frame.svg";
 import SubFeature from "./SubFeature";
 import LearnMore from "./LearnMore";
 
@@ -37,13 +38,27 @@ export default function Feature() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-16">
             <div className="flex flex-col mt-8 items-center">
-              <YouTube videoId="piZkiA-mLx8" />
+              <div className="w-full max-w-2xl px-7">
+                <div className="w-full relative z-0 aspect-video">
+                  <Image
+                    className="absolute inset-0 -mx-6 -my-4  sm:-mx-11 sm:-my-7 -z-10"
+                    src={YoutubeFrame}
+                    alt="YoutubeFrame"
+                  />
+                  <YouTube
+                    videoId="piZkiA-mLx8"
+                    opts={{ height: "100%", width: "100%" }}
+                    className="w-full h-full aspect-video"
+                    containerClassName="w-full h-full aspect-video"
+                  />
+                </div>
+              </div>
               <LearnMore />
             </div>
 
-            <div className="mx-20 flex flex-col">
+            <div className="mx-8 mt-24 lg:mt-0  md:mx-20 flex flex-col">
               <SubFeature
                 src={NFTHero}
                 title={[`NFT HEROES`, <br key={""} />, `/SKINS`]}
