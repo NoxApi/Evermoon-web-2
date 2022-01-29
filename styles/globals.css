@@ -141,3 +141,30 @@ a {
     transform: translate(0px, 0px);
   }
 }
+
+.scroller-horizontal {
+  visibility: hidden;
+  display: none;
+}
+
+
+@media (min-width: 1024px) {
+  .scroller-horizontal {
+    visibility: visible;
+    display: block;
+  }
+}
+
+
+.scroller-vertical {
+  visibility: visible;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .scroller-vertical {
+    visibility: hidden;
+    display: none;
+  }
+}
+
