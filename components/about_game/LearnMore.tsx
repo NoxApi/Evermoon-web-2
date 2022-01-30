@@ -15,7 +15,7 @@ import { CCarousel, CCarouselItem } from "@coreui/react";
 
 export default function LearnMore() {
   let [isOpen, setIsOpen] = useState(false);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
 
   function closeModal() {
     setIsOpen(false);
@@ -25,10 +25,8 @@ export default function LearnMore() {
     setIsOpen(true);
   }
 
-
-
   useEffect(() => {
-    if (isOpen) setPage(0);
+    if (isOpen) setPage(1);
     return () => {};
   }, [isOpen]);
 
@@ -43,7 +41,9 @@ export default function LearnMore() {
           <Image className="" src={LearnMoreBox} alt="LearnMoreBox" />
         </div>
         <div className=" mx-10">
-          <div className="font-tavi font-medium text-2xl">LEARN MORE</div>
+          <div className="font-tavi font-medium text-xs md:text-2xl">
+            LEARN MORE
+          </div>
         </div>
       </button>
 
@@ -82,19 +82,27 @@ export default function LearnMore() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className=" inline-block w-full max-w-6xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-bluepurple-gradient border-2 border-[color:var(--gold-light)] shadow-xl rounded-2xl">
-                <div className="grid grid-cols-[auto_1fr_auto] items-center">
+              <div
+                className={` inline-block w-full max-w-6xl  my-8 overflow-hidden text-left align-middle transition-all transform bg-bluepurple-gradient border-2 border-[color:var(--gold-light)] shadow-xl rounded-2xl`}
+              >
+                <div className="md:grid md:grid-cols-[auto_1fr_auto] m-6 items-center">
                   <div
-                    className="z-10 cursor-pointer"
-                    onClick={() => page >0 && setPage(page - 1)}
+                    className="absolute md:relative top-7 left-3 z-10 cursor-pointer mt-4 md:mt-0"
+                    onClick={() => page > 0 && setPage(page - 1)}
                   >
                     <ArrowLeft gray={page === 0} />
                   </div>
 
-                  <div className="relative z-0">
+                  <div
+                    className={`relative z-0 
+                  ${page === 1 ? " h-[620px] md:h-auto" : ""} ${
+                      page === 2 ? " h-[880px] md:h-auto" : ""
+                    } transition-all duration-500
+                `}
+                  >
                     <div
                       className="flex flex-col items-center transition-transform"
-                      style={{ transform: `translateX(${(0 - page) * 100}%)` }}
+                      style={{ transform: `translateX(${(0 - page) * 150}%)` }}
                     >
                       <Dialog.Title
                         as="h3"
@@ -108,14 +116,14 @@ export default function LearnMore() {
                               alt="LearnMoreBox"
                             />
                           </div>
-                          <div className=" mx-24">
-                            <div className="font-tavi font-medium text-2xl text-center">
+                          <div className="mx-16 md:mx-24">
+                            <div className="font-tavi font-medium text-lg md:text-2xl text-center">
                               RUNES
                             </div>
                           </div>
                         </div>
                       </Dialog.Title>
-                      <div className="flex w-full px-20 mt-16 justify-evenly">
+                      <div className="flex flex-col md:flex-row px-20 mt-16 justify-evenly">
                         <RuneItem src={RSpeed} title="Speed" />
                         <RuneItem src={RStrength} title="Strength" />
                         <RuneItem src={RProtection} title="Protection" />
@@ -127,8 +135,8 @@ export default function LearnMore() {
                       </div>
                     </div>
                     <div
-                      className="absolute inset-0 flex flex-col items-center transition-transform"
-                      style={{ transform: `translateX(${(1 - page) * 100}%)` }}
+                      className="absolute inset-0 flex flex-col items-center transition-transform "
+                      style={{ transform: `translateX(${(1 - page) * 150}%)` }}
                     >
                       <Dialog.Title
                         as="h3"
@@ -142,14 +150,14 @@ export default function LearnMore() {
                               alt="LearnMoreBox"
                             />
                           </div>
-                          <div className=" mx-24">
-                            <div className="font-tavi font-medium text-2xl text-center">
+                          <div className="mx-16 md:mx-24">
+                            <div className="font-tavi font-medium text-lg md:text-2xl text-center">
                               SHARDS
                             </div>
                           </div>
                         </div>
                       </Dialog.Title>
-                      <div className="flex w-full px-20 mt-16 justify-evenly">
+                      <div className="flex flex-col md:flex-row px-20 mt-16 justify-evenly">
                         <ShardItem src={SPurple} title="Purple" />
                         <ShardItem src={SGold} title="Gold" />
                       </div>
@@ -161,7 +169,7 @@ export default function LearnMore() {
                     </div>
                     <div
                       className="absolute inset-0 flex flex-col items-center transition-transform"
-                      style={{ transform: `translateX(${(2 - page) * 100}%)` }}
+                      style={{ transform: `translateX(${(2 - page) * 150}%)` }}
                     >
                       <Dialog.Title
                         as="h3"
@@ -175,14 +183,18 @@ export default function LearnMore() {
                               alt="LearnMoreBox"
                             />
                           </div>
-                          <div className=" mx-24">
-                            <div className="font-tavi font-medium text-2xl text-center">
+                          <div className="mx-12 md:mx-24">
+                            <div className="font-tavi font-medium text-lg md:text-2xl text-center">
                               LOOT BOXES
                             </div>
                           </div>
                         </div>
                       </Dialog.Title>
-                      <div className="flex w-full px-20 mt-16 justify-evenly">
+                      <div className="mt-8 font-source text-sm text-white">
+                        Mystery boxes that will be opened will be rewarded. Good
+                        or bad depends on your luck.
+                      </div>
+                      <div className="flex flex-col md:flex-row md:px-20 mt-7 justify-evenly  gap-x-2">
                         <LootItem src={LWinner} title="Winner Loot boxes">
                           A box to get when you win in Ranked Mode. The reward
                           in the box will be good or bad depending on your luck.
@@ -201,13 +213,13 @@ export default function LearnMore() {
                   </div>
 
                   <div
-                    className="z-10 cursor-pointer"
-                    onClick={() => page <2 && setPage(page + 1)}
+                    className="absolute md:relative top-7 right-3 z-10 cursor-pointer mt-4 md:mt-0"
+                    onClick={() => page < 2 && setPage(page + 1)}
                   >
                     <ArrowRight gray={page === 2} />
                   </div>
                 </div>
-                <div className="flex justify-center mt-10 mb-4">
+                <div className={`flex justify-center mt-10 mb-4 `}>
                   <div
                     onClick={() => setPage(0)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
@@ -243,7 +255,12 @@ interface RuneItemProps {
 function RuneItem({ src, title }: RuneItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} priority={true} />
+      <Image
+        className="w-36 md:w-40 lg:w-52"
+        src={src}
+        alt={title}
+        priority={true}
+      />
       <div>
         <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
@@ -261,7 +278,12 @@ interface ShardItemProps {
 function ShardItem({ src, title }: ShardItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} priority={true} />
+      <Image
+        className="w-36 md:w-44 lg:w-52"
+        src={src}
+        alt={title}
+        priority={true}
+      />
       <div>
         {/* <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
@@ -280,13 +302,20 @@ interface LootItemProps {
 function LootItem({ src, title, children }: LootItemProps) {
   return (
     <div className="flex flex-col items-center">
-      <Image className="w-52" src={src} alt={title} priority={true} />
+      <Image
+        className="w-36 md:w-44 lg:w-52"
+        src={src}
+        alt={title}
+        priority={true}
+      />
       <div>
         <div className="font-tavi font-medium text-lg text-white uppercase">
           {title}
         </div>
         <div className="h-[3px] w-8 mt-0 rounded-full bg-gold-light" />
-        <div className="text-white font-source text-sm w-52">{children}</div>
+        <div className="text-white font-source text-sm w-full md:w-44 lg:w-52">
+          {children}
+        </div>
       </div>
     </div>
   );

@@ -106,8 +106,8 @@ export default function Tribe() {
                 <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                   <Image className="" src={HeaderBox} alt="HeaderBox" />
                 </div>
-                <div className=" mx-20">
-                  <div className="text-gold-gradient font-tavi text-5xl font-medium  ">
+                <div className=" mx-14 md:mx-20">
+                  <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium  ">
                     TRIBE
                   </div>
                 </div>

@@ -33,7 +33,7 @@ export default function Feature() {
               <Image className="" src={HeaderBox} alt="HeaderBox" />
             </div>
             <div className=" mx-10">
-              <div className="text-gold-gradient font-tavi text-5xl font-medium ">
+              <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium ">
                 FEATURES
               </div>
             </div>
@@ -62,6 +62,7 @@ export default function Feature() {
               <SubFeature
                 src={NFTHero}
                 title={[`NFT HEROES`, <br key={""} />, `/SKINS`]}
+                smallTitle="NFT HEROES / SKINS"
                 detail="Heroes and skins are stored securely on the Binance Smart Chain."
               />
               <SubFeature
@@ -73,6 +74,7 @@ export default function Feature() {
               <SubFeature
                 src={FreeToPlay}
                 title={[`MOBA Free`, <br key={""} />, `to play`]}
+                smallTitle="MOBA FREE TO PLAY"
                 detail="Battle in the Everfield to earn $EVS while playing."
                 imgWidth="w-20"
               />
