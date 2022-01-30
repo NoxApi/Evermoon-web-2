@@ -147,14 +147,12 @@ a {
   display: none;
 }
 
-
 @media (min-width: 1024px) {
   .scroller-horizontal {
     visibility: visible;
     display: block;
   }
 }
-
 
 .scroller-vertical {
   visibility: visible;
@@ -167,4 +165,3 @@ a {
     display: none;
   }
 }
-
