@@ -18,33 +18,33 @@ interface Props {
 const Footer = ({ className }: Props) => {
   return (
     <footer
-      className={"relative  " + className}
+      className={"relative z-0 " + className}
       style={{
         background:
           "linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)",
       }}
     >
       <Image
-        className="absolute left-0 bottom-0 w-48"
+        className="hidden md:block absolute left-0 bottom-0 w-48 -z-10"
         src={left}
         alt="left"
         priority={true}
       />
       <Image
-        className="absolute right-0 bottom-0 w-40"
+        className="absolute right-0 bottom-0 w-28 md:w-40 -z-10"
         src={right}
         alt="right"
         priority={true}
       />
       <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
-      <div className="flex flex-wrap justify-between max-w-6xl mx-auto py-12 px-8">
-        <div className="max-w-[217px]">
+      <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
+        <div className="max-w-[187px] md:max-w-[217px]">
           <Image className="w-full" src={Logo} alt="Logo" priority={true} />
           <div className="font-source text-center">
             NFT multichain MOBA game
           </div>
         </div>
-        <div className="w-full max-w-[310px]">
+        <div className="w-full max-w-[310px] mt-20 md:mt-0">
           <div className="font-tavi font-semibold text-2xl text-gold-gradient">
             EXPLORE
           </div>
@@ -63,7 +63,7 @@ const Footer = ({ className }: Props) => {
             </LinkNewTab>
           </div>
         </div>
-        <div className="max-w-[217px]">
+        <div className="max-w-[217px] mt-12 md:mt-0 mb-12 md:mb-0">
           <div className="font-tavi font-semibold text-2xl text-gold-gradient">
             COMMUNITY
           </div>
