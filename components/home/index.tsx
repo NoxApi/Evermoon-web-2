@@ -15,9 +15,9 @@ import LinkNewTab from "../LinkNewTab";
 
 export default function Home() {
   return (
-    <section id="Home" className="relative bg-white h-screen w-full">
+    <section id="Home" className="relative bg-white min-h-[844px] h-screen w-full">
       <video
-        className="inset-0 h-screen w-full object-cover"
+        className="inset-0 min-h-[844px] h-screen w-full object-cover"
         loop
         autoPlay
         muted
@@ -111,7 +111,7 @@ export default function Home() {
 
       <LinkNewTab href="https://docs.evermoon.games/evermoon/">
         <Image
-          className="absolute bottom-12 right-20 w-52"
+          className="absolute bottom-8 md:bottom-12 right-6 md:right-20 w-28 md:w-40 lg:w-52"
           src={WhitePaper}
           alt="WhitePaper"
         />

@@ -35,7 +35,7 @@ export default function Token() {
 
   return (
     <section
-      id="Token"
+      id="Tokens"
       className="relative  md:h-[75rem] w-full overflow-hidden"
     >
       {/* <div className="relative h-full w-full ">
@@ -57,7 +57,7 @@ export default function Token() {
             </div>
             <div className=" mx-14">
               <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium ">
-                Token
+                Tokens
               </div>
             </div>
           </div>
