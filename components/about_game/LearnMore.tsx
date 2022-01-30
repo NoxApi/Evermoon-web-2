@@ -15,7 +15,7 @@ import { CCarousel, CCarouselItem } from '@coreui/react'
 
 export default function LearnMore() {
   let [isOpen, setIsOpen] = useState(false)
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(0)
 
   function closeModal() {
     setIsOpen(false)
@@ -26,7 +26,7 @@ export default function LearnMore() {
   }
 
   useEffect(() => {
-    if (isOpen) setPage(1)
+    if (isOpen) setPage(0)
     return () => {}
   }, [isOpen])
 
