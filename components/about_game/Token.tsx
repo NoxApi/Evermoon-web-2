@@ -34,7 +34,10 @@ export default function Token() {
   };
 
   return (
-    <section id="Token" className="relative  h-[75rem] w-full overflow-hidden">
+    <section
+      id="Token"
+      className="relative  md:h-[75rem] w-full overflow-hidden"
+    >
       {/* <div className="relative h-full w-full ">
         <ImageNext
           // width="100%"
@@ -53,66 +56,91 @@ export default function Token() {
               <Image className="" src={HeaderBox} alt="HeaderBox" />
             </div>
             <div className=" mx-14">
-              <div className="text-gold-gradient font-tavi text-5xl font-medium ">
+              <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium ">
                 Token
               </div>
             </div>
           </div>
 
           <AnimatePresence>
-            <div className="grid grid-cols-[1fr_auto_1fr] mx-auto w-full h-full max-w-7xl">
+            <div className="md:grid md:grid-cols-[1fr_auto_1fr] mx-auto w-full h-full max-w-7xl px-3">
               <div
                 onClick={tapMoon}
                 className={
                   "flex flex-col items-center " +
-                  (selected === 1 ? "" : "justify-center mb-32 ")
+                  (selected === 1 ? "" : "justify-center md:mb-32 ")
                 }
               >
                 <div className="relative">
-                  {selected === 1 && (
-                    <motion.div
-                      className="absolute inset-0"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
+                  <div className="hidden md:block">
+                    {selected === 1 && (
+                      <motion.div
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        <Image
+                          className="w-72 cursor-pointer"
+                          src={eclipses}
+                          alt="eclipses"
+                          priority={true}
+                        />
+                      </motion.div>
+                    )}
+                    {selected === 1 && (
+                      <motion.div
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        <Image
+                          className="w-72 p-7 cursor-pointer"
+                          src={eclipseb}
+                          alt="eclipseb"
+                          priority={true}
+                        />
+                      </motion.div>
+                    )}
+                  </div>
+                  <div className="md:hidden">
+                    <div className="absolute inset-0">
                       <Image
-                        className="w-72 cursor-pointer"
+                        className="w-48 cursor-pointer"
                         src={eclipses}
                         alt="eclipses"
                         priority={true}
                       />
-                    </motion.div>
-                  )}
-                  {selected === 1 && (
-                    <motion.div
-                      className="absolute inset-0"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
+                    </div>
+                    <div className="absolute inset-0">
                       <Image
-                        className="w-72 p-7 cursor-pointer"
+                        className="w-48 p-7 cursor-pointer"
                         src={eclipseb}
                         alt="eclipseb"
                         priority={true}
                       />
-                    </motion.div>
-                  )}
+                    </div>
+                  </div>
                   <motion.div transition={spring} layoutId="moon">
                     <Image
-                      className="w-72 p-10 cursor-pointer"
+                      className="w-48 md:w-72 p-10 cursor-pointer"
                       src={Moon}
                       alt="Moon"
                       priority={true}
                     />
                   </motion.div>
                 </div>
-                {selected === 1 && <EvermoonDetail />}
+                <div className="hidden md:block">
+                  {selected === 1 && <EvermoonDetail />}
+                </div>
+                <div className="md:hidden">
+                  <EvermoonDetail />
+                </div>
               </div>
-              <div className="w-24 flex flex-col items-center mb-8">
+              <div className="hidden w-24 md:flex flex-col items-center mb-8">
                 <div className="flex-grow-[2] relative">
                   <div
                     // layoutId="dmoon"
@@ -135,52 +163,77 @@ export default function Token() {
                 onClick={tapEverMoon}
                 className={
                   "flex flex-col items-center " +
-                  (selected === 2 ? "" : "justify-center  mb-32")
+                  (selected === 2 ? "" : "justify-center  md:mb-32")
                 }
               >
                 <div className="relative">
-                  {selected === 2 && (
-                    <motion.div
-                      className="absolute inset-0"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
+                  <div className="hidden md:block">
+                    {selected === 2 && (
+                      <motion.div
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        <Image
+                          className="w-72 cursor-pointer"
+                          src={eclipses}
+                          alt="eclipses"
+                          priority={true}
+                        />
+                      </motion.div>
+                    )}
+                    {selected === 2 && (
+                      <motion.div
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        <Image
+                          className="w-72 p-7 cursor-pointer"
+                          src={eclipseb}
+                          alt="eclipseb"
+                          priority={true}
+                        />
+                      </motion.div>
+                    )}
+                  </div>
+                  <div className="md:hidden">
+                    <div className="absolute inset-0">
                       <Image
-                        className="w-72 cursor-pointer"
+                        className="w-48 cursor-pointer"
                         src={eclipses}
                         alt="eclipses"
                         priority={true}
                       />
-                    </motion.div>
-                  )}
-                  {selected === 2 && (
-                    <motion.div
-                      className="absolute inset-0"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
+                    </div>
+                    <div className="absolute inset-0">
                       <Image
-                        className="w-72 p-7 cursor-pointer"
+                        className="w-48 p-7 cursor-pointer"
                         src={eclipseb}
                         alt="eclipseb"
                         priority={true}
                       />
-                    </motion.div>
-                  )}
+                    </div>
+                  </div>
                   <motion.div transition={spring} layoutId="evermoon">
                     <Image
-                      className="w-72 p-12 cursor-pointer"
+                      className="w-48 md:w-72 p-12 cursor-pointer"
                       src={Evermoon}
                       alt="Evermoon"
                       priority={true}
                     />
                   </motion.div>
                 </div>
-                {selected === 2 && <EverMoonStoneDetail />}
+                <div className="hidden md:block">
+                  {selected === 2 && <EverMoonStoneDetail />}
+                </div>
+                <div className="md:hidden">
+                  <EverMoonStoneDetail />
+                </div>
               </div>
             </div>
           </AnimatePresence>
@@ -198,13 +251,13 @@ function EvermoonDetail() {
       exit={{ opacity: 0, translateY: 400 }}
       transition={spring}
     >
-      <div className="font-tavi text-5xl font-medium text-gold-gradient text-center">
+      <div className="font-tavi text-lg md:text-5xl font-medium text-gold-gradient text-center">
         EVERMOON
       </div>
-      <div className="font-tavi text-2xl text-gold-gradient text-center">
+      <div className="font-tavi text-sm md:text-2xl text-gold-gradient text-center">
         #EVM
       </div>
-      <div className="max-w-lg mx-auto mt-8 text-center">
+      <div className="max-w-lg text-sm md:text-base mx-auto mt-8 text-center">
         Core of our moon economy, to the new dimension of NFT games industry
         play and earn. Generate income to reach the dreams for players, players
         can achieve a rewarding experience. Through...
@@ -249,13 +302,13 @@ function EverMoonStoneDetail() {
       exit={{ opacity: 0, translateY: 400 }}
       transition={spring}
     >
-      <div className="mt-8 font-tavi text-5xl font-medium text-gold-gradient text-center">
+      <div className="mt-8 font-tavi text-lg md:text-5xl font-medium text-gold-gradient text-center">
         EVERSTONE
       </div>
-      <div className="font-tavi text-2xl text-gold-gradient text-center">
+      <div className="font-tavi text-sm md:text-2xl text-gold-gradient text-center">
         #EVS
       </div>
-      <div className="max-w-lg mx-auto mt-8 text-center">
+      <div className="max-w-lg text-sm md:text-base mx-auto mt-8 text-center">
         Everstone, the valuable tokens in the EVERMOON universe, is the token
         that controls the core economy of the game. Allows players to purchase
         loot boxes containing rare skins that cannot be found in the game.
@@ -288,12 +341,12 @@ interface SubDetailProps {
 function SubDetail({ title, detail, src }: SubDetailProps) {
   return (
     <div className="grid grid-cols-[auto_1fr] my-3">
-      <Image className="w-16" src={src} alt="m1" />
+      <Image className="w-12 md:w-16" src={src} alt="m1" />
       <div className="ml-3">
-        <div className="font-source font-bold leading-4 text-gold-gradient">
+        <div className="font-source text-sm md:text-base font-bold leading-4 text-gold-gradient">
           {title}
         </div>
-        <div className="font-source  leading-5">{detail}</div>
+        <div className="font-source text-sm md:text-base leading-5">{detail}</div>
       </div>
     </div>
   );
