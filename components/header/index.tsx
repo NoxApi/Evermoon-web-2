@@ -1,21 +1,21 @@
-import React, { Fragment, useState } from "react";
-import Moon from "../assets/moon.png";
-import Image from "../image";
-import { ComingSoonLink, Link } from "./Link";
-import NextLink from "next/link";
-import Logo from "../../assets/logo.png";
-import Hamburger from "../../assets/hamburger.svg";
-import x from "../../assets/x.svg";
-import bg from "../../assets/starbg.svg";
-import NextImage from "next/image";
-import MarketplaceSmall from "../../assets/marketsmall.svg";
+import React, { Fragment, useState } from 'react'
+import Moon from '../assets/moon.png'
+import Image from '../image'
+import { ComingSoonLink, Link } from './Link'
+import NextLink from 'next/link'
+import Logo from '../../assets/logo.png'
+import Hamburger from '../../assets/hamburger.svg'
+import x from '../../assets/x.svg'
+import bg from '../../assets/starbg.svg'
+import NextImage from 'next/image'
+import MarketplaceSmall from '../../assets/marketsmall.svg'
 
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import Marketplace from "./Marketplace";
+import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+import Marketplace from './Marketplace'
 const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
-      <div className="hidden md:block absolute inset-0 w-full h-16 bg-gold-gradient-inv" />
+      <div className="hidden 2xl:block absolute inset-0 w-full h-16 bg-gold-gradient-inv" />
       <div className="px-4 md:px-10 py-5 flex items-center">
         <div className="">
           <NextLink href="/">
@@ -28,10 +28,10 @@ const Header = () => {
         <HeaderMobile />
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 
 function HeaderDesktop() {
   return (
@@ -45,10 +45,10 @@ function HeaderDesktop() {
           </Menu.Button>
           <Menu.Items className="absolute flex flex-col -bottom-2 translate-y-full left-0 ml-14  mt-2  text-white font-sans font-semibold">
             <div className="parallelogram px-7 py-4 w-44">
-              {["Feature", "Tribe", "Tokens"].map((stitle) => (
+              {['Feature', 'Tribe', 'Tokens'].map((stitle) => (
                 <Menu.Item key={`stitle-${stitle}`}>
                   <div className="group my-1">
-                    <NextLink href={"#" + stitle}>
+                    <NextLink href={'#' + stitle}>
                       <a className={``}>{stitle.toUpperCase()}</a>
                     </NextLink>
                     <div className="h-[3px] w-8 mt-1 rounded-full bg-gold-light scale-x-0 group-hover:scale-x-100 transition-transform origin-top-left" />
@@ -68,17 +68,17 @@ function HeaderDesktop() {
       </div>
       <Marketplace className="mr-12" />
     </div>
-  );
+  )
 }
 
 function HeaderMobile() {
-  let [isOpen, setIsOpen] = useState(false);
+  let [isOpen, setIsOpen] = useState(false)
   const openModal = () => {
-    setIsOpen(true);
-  };
+    setIsOpen(true)
+  }
   const closeModal = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
   return (
     <div className="2xl:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
@@ -87,7 +87,7 @@ function HeaderMobile() {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0  z-[60] overflow-y-aut"
+          className="fixed inset-0 z-[60] overflow-y-aut"
           onClose={closeModal}
         >
           <div className="min-h-screen text-center">
@@ -112,7 +112,7 @@ function HeaderMobile() {
               leaveFrom="opacity-100 translate-x-0"
               leaveTo="opacity-0 translate-x-full"
             >
-              <div className="sm:ml-auto  sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-[#0E0E16] shadow-xl ">
+              <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-[#0E0E16] shadow-xl ">
                 <div className="absolute inset-0 -z-10">
                   <NextImage
                     layout="fill"
@@ -167,24 +167,24 @@ function HeaderMobile() {
         </Dialog>
       </Transition>
     </div>
-  );
+  )
 
   function NLink({ title, href }: { title: string; href?: string }) {
     if (href) {
       return (
         <div
           onClick={() => {
-            closeModal();
-            document.getElementById(href)?.scrollIntoView();
+            closeModal()
+            document.getElementById(href)?.scrollIntoView()
           }}
         >
           <NextLink href={href}>
             <a className="block font-source m-6 mt-0 text-white">{title}</a>
           </NextLink>
         </div>
-      );
+      )
     }
-    return <div className="block font-source m-6 mt-0 text-white">{title}</div>;
+    return <div className="block font-source m-6 mt-0 text-white">{title}</div>
   }
 
   function CLink({ title }: { title: string }) {
@@ -195,7 +195,7 @@ function HeaderMobile() {
           COMING SOON
         </div>
       </div>
-    );
+    )
   }
 
   function SubLink({ title }: { title: string }) {
@@ -203,8 +203,8 @@ function HeaderMobile() {
       <div
         className="pb-4"
         onClick={() => {
-          closeModal();
-          document.getElementById(`/#${title}`)?.scrollIntoView();
+          closeModal()
+          document.getElementById(`/#${title}`)?.scrollIntoView()
         }}
       >
         <NextLink href={`/#${title}`}>
@@ -212,6 +212,6 @@ function HeaderMobile() {
         </NextLink>
         <div className="h-[2px] w-8 rounded-full bg-gold-light scale-x-100 transition-transform origin-top-left" />
       </div>
-    );
+    )
   }
 }

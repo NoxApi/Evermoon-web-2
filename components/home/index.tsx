@@ -1,21 +1,24 @@
-import Header from "../header";
-import Image from "../image";
-import JoinButton from "../../assets/join_button.svg";
-import JoinOutlineButton from "../../assets/join_outline_button.svg";
-import DividerDiamond from "../../assets/divider-diamond.svg";
-import GooglePlay from "../../assets/google-play.png";
-import AppStore from "../../assets/app-store.png";
-import Telegram from "../../assets/socials/telegram.svg";
-import Discord from "../../assets/socials/discord.svg";
-import Facebook from "../../assets/socials/facebook.svg";
-import Twitter from "../../assets/socials/twitter.svg";
-import Youtube from "../../assets/socials/youtube.svg";
-import WhitePaper from "../../assets/white-paper.svg";
-import LinkNewTab from "../LinkNewTab";
+import Header from '../header'
+import Image from '../image'
+import JoinButton from '../../assets/join_button.svg'
+import JoinOutlineButton from '../../assets/join_outline_button.svg'
+import DividerDiamond from '../../assets/divider-diamond.svg'
+import GooglePlay from '../../assets/google-play.png'
+import AppStore from '../../assets/app-store.png'
+import Telegram from '../../assets/socials/telegram.svg'
+import Discord from '../../assets/socials/discord.svg'
+import Facebook from '../../assets/socials/facebook.svg'
+import Twitter from '../../assets/socials/twitter.svg'
+import Youtube from '../../assets/socials/youtube.svg'
+import WhitePaper from '../../assets/white-paper.svg'
+import LinkNewTab from '../LinkNewTab'
 
 export default function Home() {
   return (
-    <section id="Home" className="relative bg-white min-h-[844px] h-screen w-full">
+    <section
+      id="Home"
+      className="relative bg-white min-h-[844px] h-screen w-full"
+    >
       <video
         className="inset-0 min-h-[844px] h-screen w-full object-cover"
         loop
@@ -117,5 +120,5 @@ export default function Home() {
         />
       </LinkNewTab>
     </section>
-  );
+  )
 }

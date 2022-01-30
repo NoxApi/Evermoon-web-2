@@ -1,6 +1,6 @@
 interface Props {
-  children: any;
-  href: string;
+  children: any
+  href: string
 }
 
 export default function LinkNewTab({ children, href }: Props) {
@@ -8,5 +8,5 @@ export default function LinkNewTab({ children, href }: Props) {
     <a href={href} target="_blank" rel="noreferrer">
       {children}
     </a>
-  );
+  )
 }

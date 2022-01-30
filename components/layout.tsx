@@ -1,5 +1,5 @@
-import React from "react";
-import gradient from "../styles/gradient.module.css";
+import React from 'react'
+import gradient from '../styles/gradient.module.css'
 
 const Layout = (props: any) => {
   return (
@@ -8,7 +8,7 @@ const Layout = (props: any) => {
         <div>{props.children}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

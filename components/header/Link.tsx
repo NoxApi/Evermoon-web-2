@@ -1,9 +1,9 @@
-import NextLink from "next/link";
+import NextLink from 'next/link'
 
 interface LinkProp {
-  title: string;
-  href: string;
-  current: boolean;
+  title: string
+  href: string
+  current: boolean
 }
 
 export function Link({ title, href, current }: LinkProp) {
@@ -13,24 +13,24 @@ export function Link({ title, href, current }: LinkProp) {
         <div>
           <div
             className={`px-8 py-2 font-source text-lg text-center whitespace-nowrap ${
-              current && "bg-gold-gradient"
-            } ${current ? "text-gold" : "text-white"}`}
+              current && 'bg-gold-gradient'
+            } ${current ? 'text-gold' : 'text-white'}`}
           >
             {title}
           </div>
           <div
             className={`w-full h-[1.5px] rounded-xl -translate-y-1/2 ${
-              current && "bg-gold"
+              current && 'bg-gold'
             }`}
           />
         </div>
       </a>
     </NextLink>
-  );
+  )
 }
 
 interface ComingSoonLinkProp {
-  title: string;
+  title: string
 }
 
 export function ComingSoonLink({ title }: ComingSoonLinkProp) {
@@ -49,5 +49,5 @@ export function ComingSoonLink({ title }: ComingSoonLinkProp) {
         </div>
       </div>
     </div>
-  );
+  )
 }

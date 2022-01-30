@@ -1,28 +1,28 @@
-import Image from "../image";
-import ImageNext from "next/image";
-import BG from "../../assets/bgtribe.png";
-import HeaderBox from "../../assets/header-box.svg";
-import LNakamatos from "../../assets/tribe/lnakamatos.png";
-import LEthern from "../../assets/tribe/lethern.png";
-import LByzan from "../../assets/tribe/lbyzan.png";
-import LLunarian from "../../assets/tribe/llunarian.png";
-import LSolis from "../../assets/tribe/lsolis.png";
-import Nakamatos from "../../assets/tribe/nakamatos.png";
-import Ethern from "../../assets/tribe/ethern.png";
-import Byzan from "../../assets/tribe/byzan.png";
-import Lunarian from "../../assets/tribe/lunarian.png";
-import Solis from "../../assets/tribe/solis.png";
-import { ArrowLeft, ArrowRight } from "./Arrow";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { title } from "process";
-import { CarouselProvider, Slide, Slider } from "pure-react-carousel";
+import Image from '../image'
+import ImageNext from 'next/image'
+import BG from '../../assets/bgtribe.png'
+import HeaderBox from '../../assets/header-box.svg'
+import LNakamatos from '../../assets/tribe/lnakamatos.png'
+import LEthern from '../../assets/tribe/lethern.png'
+import LByzan from '../../assets/tribe/lbyzan.png'
+import LLunarian from '../../assets/tribe/llunarian.png'
+import LSolis from '../../assets/tribe/lsolis.png'
+import Nakamatos from '../../assets/tribe/nakamatos.png'
+import Ethern from '../../assets/tribe/ethern.png'
+import Byzan from '../../assets/tribe/byzan.png'
+import Lunarian from '../../assets/tribe/lunarian.png'
+import Solis from '../../assets/tribe/solis.png'
+import { ArrowLeft, ArrowRight } from './Arrow'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { title } from 'process'
+import { CarouselProvider, Slide, Slider } from 'pure-react-carousel'
 
 class TribeClass {
-  title: string;
-  img: StaticImageData;
-  logo: StaticImageData;
-  element: JSX.Element;
+  title: string
+  img: StaticImageData
+  logo: StaticImageData
+  element: JSX.Element
 
   constructor(
     title: string,
@@ -30,60 +30,60 @@ class TribeClass {
     logo: StaticImageData,
     element: JSX.Element
   ) {
-    this.title = title;
-    this.img = img;
-    this.logo = logo;
-    this.element = element;
+    this.title = title
+    this.img = img
+    this.logo = logo
+    this.element = element
   }
 }
 
 const tribes = [
-  new TribeClass("Solis", Solis, LSolis, TribeSolis()),
-  new TribeClass("Lunarian", Lunarian, LLunarian, TribeLunarian()),
-  new TribeClass("Nakamatos", Nakamatos, LNakamatos, TribeNakamatos()),
-  new TribeClass("Ethern", Ethern, LEthern, TribeEthern()),
-  new TribeClass("Byzan", Byzan, LByzan, TribeByzan()),
-];
+  new TribeClass('Solis', Solis, LSolis, TribeSolis()),
+  new TribeClass('Lunarian', Lunarian, LLunarian, TribeLunarian()),
+  new TribeClass('Nakamatos', Nakamatos, LNakamatos, TribeNakamatos()),
+  new TribeClass('Ethern', Ethern, LEthern, TribeEthern()),
+  new TribeClass('Byzan', Byzan, LByzan, TribeByzan()),
+]
 
 export default function Tribe() {
-  const [tribeIndex, setTribeIndex] = useState(0);
-  const [isTransition, setIsTransition] = useState(true);
+  const [tribeIndex, setTribeIndex] = useState(0)
+  const [isTransition, setIsTransition] = useState(true)
 
-  const tribesElement = [...tribes.slice(2), ...tribes.slice(0, 2)];
+  const tribesElement = [...tribes.slice(2), ...tribes.slice(0, 2)]
   const up = () => {
-    if (tribeIndex >= 4) return setTribeIndex(0);
-    setTribeIndex(tribeIndex + 1);
-  };
+    if (tribeIndex >= 4) return setTribeIndex(0)
+    setTribeIndex(tribeIndex + 1)
+  }
   const down = () => {
-    if (tribeIndex <= 0) return setTribeIndex(4);
-    setTribeIndex(tribeIndex - 1);
-  };
+    if (tribeIndex <= 0) return setTribeIndex(4)
+    setTribeIndex(tribeIndex - 1)
+  }
 
   function delay(time: number) {
-    return new Promise((resolve) => setTimeout(resolve, time));
+    return new Promise((resolve) => setTimeout(resolve, time))
   }
 
   const checkTribeIndex = async () => {
     if (tribeIndex < -5) {
-      setIsTransition(false);
-      setTribeIndex(0);
-      await delay(10);
-      setIsTransition(true);
-      setTribeIndex(-1);
+      setIsTransition(false)
+      setTribeIndex(0)
+      await delay(10)
+      setIsTransition(true)
+      setTribeIndex(-1)
     }
     if (tribeIndex > 5) {
-      setIsTransition(false);
-      setTribeIndex(0);
-      await delay(10);
-      setIsTransition(true);
-      setTribeIndex(1);
+      setIsTransition(false)
+      setTribeIndex(0)
+      await delay(10)
+      setIsTransition(true)
+      setTribeIndex(1)
     }
-  };
+  }
 
   useEffect(() => {
-    checkTribeIndex();
-    return () => {};
-  }, [tribeIndex]);
+    checkTribeIndex()
+    return () => {}
+  }, [tribeIndex])
 
   return (
     <section id="Tribe" className="relative w-full  overflow-hidden">
@@ -102,7 +102,7 @@ export default function Tribe() {
         <div className="flex h-full">
           <div className="flex flex-col  lg:pr-8 relative w-full">
             <div className="flex flex-col lg:flex-row mt-28 lg:mb-10 items-center">
-              <div className={"relative z-0 "}>
+              <div className={'relative z-0 '}>
                 <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                   <Image className="" src={HeaderBox} alt="HeaderBox" />
                 </div>
@@ -145,35 +145,35 @@ export default function Tribe() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 interface TribesLogoProps {
-  small?: boolean;
-  tribeIndex?: number;
+  small?: boolean
+  tribeIndex?: number
 }
 
 function TribesLogo({ small, tribeIndex = 0 }: TribesLogoProps) {
-  var renderTribes = tribes;
+  var renderTribes = tribes
   if (small) {
     switch (tribeIndex) {
       case 0:
-        renderTribes = tribes.slice(1, 4);
-        break;
+        renderTribes = tribes.slice(1, 4)
+        break
       case 1:
-        renderTribes = tribes.slice(0, 3);
-        break;
+        renderTribes = tribes.slice(0, 3)
+        break
       case 2:
-        renderTribes = [tribes[4], ...tribes.slice(0, 2)];
-        break;
+        renderTribes = [tribes[4], ...tribes.slice(0, 2)]
+        break
       case 3:
-        renderTribes = [...tribes.slice(3,5), tribes[0]];
-        break;
+        renderTribes = [...tribes.slice(3, 5), tribes[0]]
+        break
       case 4:
-        renderTribes = tribes.slice(2, 5);
-        break;
+        renderTribes = tribes.slice(2, 5)
+        break
       default:
-        break;
+        break
     }
   }
 
@@ -190,7 +190,7 @@ function TribesLogo({ small, tribeIndex = 0 }: TribesLogoProps) {
         </div>
       ))}
     </>
-  );
+  )
 }
 
 function TribeNakamatos() {
@@ -215,7 +215,7 @@ function TribeNakamatos() {
         />
       </div>
     </div>
-  );
+  )
 }
 
 function TribeEthern() {
@@ -235,7 +235,7 @@ function TribeEthern() {
         <Image src={Ethern} alt="Ethern" key="EthernImage" priority={true} />
       </div>
     </div>
-  );
+  )
 }
 
 function TribeByzan() {
@@ -255,7 +255,7 @@ function TribeByzan() {
         <Image src={Byzan} alt="Byzan" key="ByzanImage" priority={true} />
       </div>
     </div>
-  );
+  )
 }
 
 function TribeSolis() {
@@ -275,7 +275,7 @@ function TribeSolis() {
         <Image src={Solis} alt="Solis" key="SolisImage" priority={true} />
       </div>
     </div>
-  );
+  )
 }
 
 function TribeLunarian() {
@@ -301,12 +301,12 @@ function TribeLunarian() {
         />
       </div>
     </div>
-  );
+  )
 }
 
 interface TribeInfoProps {
-  title: string;
-  detail: string;
+  title: string
+  detail: string
 }
 function TribeInfo({ title, detail }: TribeInfoProps) {
   return (
@@ -319,7 +319,7 @@ function TribeInfo({ title, detail }: TribeInfoProps) {
       </div>
       <div className="absolute inset-0 bg-bluegreen-gradient -z-10 -skew-x-6" />
     </div>
-  );
+  )
 }
 
 function TribeHeader({ title }: { title: string }) {
@@ -327,7 +327,7 @@ function TribeHeader({ title }: { title: string }) {
     <div className="lg:hidden font-tavi text-4xl text-gold-gradient mx-auto mt-8">
       {title}
     </div>
-  );
+  )
 }
 
 enum alignment {
@@ -335,12 +335,12 @@ enum alignment {
   horizontal,
 }
 interface ScrollerProps {
-  up: () => void;
-  down: () => void;
-  isTransition: boolean;
-  tribeIndex: number;
-  horizontal: boolean;
-  className?: string;
+  up: () => void
+  down: () => void
+  isTransition: boolean
+  tribeIndex: number
+  horizontal: boolean
+  className?: string
 }
 
 function Scroller({
@@ -353,16 +353,16 @@ function Scroller({
 }: ScrollerProps) {
   return (
     <div
-      key={horizontal ? "horizontal-container" : "vertical-horizontal"}
-      className={horizontal ? "scroller-horizontal" : "scroller-vertical"}
+      key={horizontal ? 'horizontal-container' : 'vertical-horizontal'}
+      className={horizontal ? 'scroller-horizontal' : 'scroller-vertical'}
     >
       <div
         className={`h-full relative z-0 flex ${
-          horizontal && "flex-col pt-32 pb-12"
+          horizontal && 'flex-col pt-32 pb-12'
         } justify-center items-center`}
       >
         <div
-          className={`w-6  cursor-pointer ${horizontal ? "rotate-90" : "mr-4"}`}
+          className={`w-6  cursor-pointer ${horizontal ? 'rotate-90' : 'mr-4'}`}
           onClick={up}
         >
           <ArrowLeft />
@@ -373,9 +373,8 @@ function Scroller({
           <div
             className={
               // (isTransition ? "transition-transform" : "") +
-              " flex" + " md:hidden"
+              ' flex' + ' md:hidden'
             }
-            
           >
             <TribesLogo small tribeIndex={tribeIndex} />
           </div>
@@ -383,9 +382,9 @@ function Scroller({
             {/* main */}
             <div
               className={
-                "" +
+                '' +
                 // (isTransition ? "transition-transform" : "") +
-                " hidden md:flex lg:block"
+                ' hidden md:flex lg:block'
               }
               style={{
                 transform: `${
@@ -400,9 +399,9 @@ function Scroller({
             {/* left */}
             <div
               className={
-                "absolute inset-0 " +
+                'absolute inset-0 ' +
                 // (isTransition ? "transition-transform" : "") +
-                " hidden md:flex lg:block"
+                ' hidden md:flex lg:block'
               }
               style={{
                 transform: `${
@@ -417,9 +416,9 @@ function Scroller({
             {/* right */}
             <div
               className={
-                "absolute inset-0 " +
+                'absolute inset-0 ' +
                 // (isTransition ? "transition-transform" : "") +
-                " hidden md:flex lg:block"
+                ' hidden md:flex lg:block'
               }
               style={{
                 transform: `${
@@ -439,7 +438,7 @@ function Scroller({
         </div>
         <div
           className={`w-6  z-10 cursor-pointer ${
-            horizontal ? "rotate-90" : "ml-2"
+            horizontal ? 'rotate-90' : 'ml-2'
           }`}
           onClick={down}
         >
@@ -447,5 +446,5 @@ function Scroller({
         </div>
       </div>
     </div>
-  );
+  )
 }

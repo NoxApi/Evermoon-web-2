@@ -1,41 +1,41 @@
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
-import Image from "../image";
-import LearnMoreBox from "../../assets/learnmore-box.svg";
-import { ArrowLeft, ArrowRight } from "./Arrow";
-import RSpeed from "../../assets/feature/rspeed.png";
-import RStrength from "../../assets/feature/rstrength.png";
-import RProtection from "../../assets/feature/rprotection.png";
-import SPurple from "../../assets/feature/spurple.png";
-import SGold from "../../assets/feature/sgold.png";
-import LWinner from "../../assets/feature/lwinner.png";
-import LLoser from "../../assets/feature/lloser.png";
-import LEvermoon from "../../assets/feature/levermoon.png";
-import { CCarousel, CCarouselItem } from "@coreui/react";
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useEffect, useState } from 'react'
+import Image from '../image'
+import LearnMoreBox from '../../assets/learnmore-box.svg'
+import { ArrowLeft, ArrowRight } from './Arrow'
+import RSpeed from '../../assets/feature/rspeed.png'
+import RStrength from '../../assets/feature/rstrength.png'
+import RProtection from '../../assets/feature/rprotection.png'
+import SPurple from '../../assets/feature/spurple.png'
+import SGold from '../../assets/feature/sgold.png'
+import LWinner from '../../assets/feature/lwinner.png'
+import LLoser from '../../assets/feature/lloser.png'
+import LEvermoon from '../../assets/feature/levermoon.png'
+import { CCarousel, CCarouselItem } from '@coreui/react'
 
 export default function LearnMore() {
-  let [isOpen, setIsOpen] = useState(false);
-  const [page, setPage] = useState(1);
+  let [isOpen, setIsOpen] = useState(false)
+  const [page, setPage] = useState(1)
 
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   function openModal() {
-    setIsOpen(true);
+    setIsOpen(true)
   }
 
   useEffect(() => {
-    if (isOpen) setPage(1);
-    return () => {};
-  }, [isOpen]);
+    if (isOpen) setPage(1)
+    return () => {}
+  }, [isOpen])
 
   return (
     <>
       <button
         type="button"
         onClick={openModal}
-        className={"relative z-0 mt-16"}
+        className={'relative z-0 mt-16'}
       >
         <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
           <Image className="" src={LearnMoreBox} alt="LearnMoreBox" />
@@ -95,8 +95,8 @@ export default function LearnMore() {
 
                   <div
                     className={`relative z-0 
-                  ${page === 1 ? " h-[620px] md:h-auto" : ""} ${
-                      page === 2 ? " h-[880px] md:h-auto" : ""
+                  ${page === 1 ? ' h-[620px] md:h-auto' : ''} ${
+                      page === 2 ? ' h-[880px] md:h-auto' : ''
                     } transition-all duration-500
                 `}
                   >
@@ -108,7 +108,7 @@ export default function LearnMore() {
                         as="h3"
                         className="mt-8 mb-6 text-white flex justify-center"
                       >
-                        <div className={"relative z-0 "}>
+                        <div className={'relative z-0 '}>
                           <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                             <Image
                               className=""
@@ -142,7 +142,7 @@ export default function LearnMore() {
                         as="h3"
                         className="mt-8 mb-6 text-white flex justify-center"
                       >
-                        <div className={"relative z-0 "}>
+                        <div className={'relative z-0 '}>
                           <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                             <Image
                               className=""
@@ -175,7 +175,7 @@ export default function LearnMore() {
                         as="h3"
                         className="mt-8 mb-6 text-white flex justify-center"
                       >
-                        <div className={"relative z-0 "}>
+                        <div className={'relative z-0 '}>
                           <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                             <Image
                               className=""
@@ -223,19 +223,19 @@ export default function LearnMore() {
                   <div
                     onClick={() => setPage(0)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
-                      page === 0 ? "bg-gold-light" : "bg-disable"
+                      page === 0 ? 'bg-gold-light' : 'bg-disable'
                     }`}
                   />
                   <div
                     onClick={() => setPage(1)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
-                      page === 1 ? "bg-gold-light" : "bg-disable"
+                      page === 1 ? 'bg-gold-light' : 'bg-disable'
                     }`}
                   />
                   <div
                     onClick={() => setPage(2)}
                     className={`w-2 h-2 m-[0.3rem] rotate-45 ${
-                      page === 2 ? "bg-gold-light" : "bg-disable"
+                      page === 2 ? 'bg-gold-light' : 'bg-disable'
                     }`}
                   />
                 </div>
@@ -245,12 +245,12 @@ export default function LearnMore() {
         </Dialog>
       </Transition>
     </>
-  );
+  )
 }
 
 interface RuneItemProps {
-  src: StaticImageData;
-  title: string;
+  src: StaticImageData
+  title: string
 }
 function RuneItem({ src, title }: RuneItemProps) {
   return (
@@ -268,12 +268,12 @@ function RuneItem({ src, title }: RuneItemProps) {
         <div className="h-[3px] w-8 mt-0 rounded-full bg-gold-light" />
       </div>
     </div>
-  );
+  )
 }
 
 interface ShardItemProps {
-  src: StaticImageData;
-  title: string;
+  src: StaticImageData
+  title: string
 }
 function ShardItem({ src, title }: ShardItemProps) {
   return (
@@ -291,13 +291,13 @@ function ShardItem({ src, title }: ShardItemProps) {
         <div className="h-[3px] w-8 mt-0 rounded-full bg-gold-light" /> */}
       </div>
     </div>
-  );
+  )
 }
 
 interface LootItemProps {
-  src: StaticImageData;
-  title: string;
-  children: any;
+  src: StaticImageData
+  title: string
+  children: any
 }
 function LootItem({ src, title, children }: LootItemProps) {
   return (
@@ -318,5 +318,5 @@ function LootItem({ src, title, children }: LootItemProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

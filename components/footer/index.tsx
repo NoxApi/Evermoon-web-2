@@ -1,27 +1,27 @@
-import React from "react";
-import Image from "../image";
-import left from "../../assets/footer/left.png";
-import right from "../../assets/footer/right.png";
-import Logo from "../../assets/logo.png";
-import LinkNewTab from "../LinkNewTab";
-import Telegram from "../../assets/socials/telegram.svg";
-import Discord from "../../assets/socials/discord.svg";
-import Facebook from "../../assets/socials/facebook.svg";
-import Twitter from "../../assets/socials/twitter.svg";
-import Youtube from "../../assets/socials/youtube.svg";
-import Link from "next/link";
+import React from 'react'
+import Image from '../image'
+import left from '../../assets/footer/left.png'
+import right from '../../assets/footer/right.png'
+import Logo from '../../assets/logo.png'
+import LinkNewTab from '../LinkNewTab'
+import Telegram from '../../assets/socials/telegram.svg'
+import Discord from '../../assets/socials/discord.svg'
+import Facebook from '../../assets/socials/facebook.svg'
+import Twitter from '../../assets/socials/twitter.svg'
+import Youtube from '../../assets/socials/youtube.svg'
+import Link from 'next/link'
 
 interface Props {
-  className?: string;
+  className?: string
 }
 
 const Footer = ({ className }: Props) => {
   return (
     <footer
-      className={"relative z-0 " + className}
+      className={'relative z-0 ' + className}
       style={{
         background:
-          "linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)",
+          'linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)',
       }}
     >
       <Image
@@ -87,7 +87,7 @@ const Footer = ({ className }: Props) => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,15 +1,15 @@
-import Image from "../image";
-import ImageNext from "next/image";
-import BG from "../../assets/bgroadmap.png";
-import HeaderBox from "../../assets/header-box.svg";
-import m1 from "../../assets/roadmap/m1.png";
-import m2 from "../../assets/token/tmoon.png";
-import m3 from "../../assets/roadmap/m3.png";
-import m4 from "../../assets/roadmap/m4.png";
-import m5 from "../../assets/token/tever.png";
-import m6 from "../../assets/roadmap/m6.png";
-import dash from "../../assets/roadmap/dash.svg";
-import droplet from "../../assets/roadmap/droplet.svg";
+import Image from '../image'
+import ImageNext from 'next/image'
+import BG from '../../assets/bgroadmap.png'
+import HeaderBox from '../../assets/header-box.svg'
+import m1 from '../../assets/roadmap/m1.png'
+import m2 from '../../assets/token/tmoon.png'
+import m3 from '../../assets/roadmap/m3.png'
+import m4 from '../../assets/roadmap/m4.png'
+import m5 from '../../assets/token/tever.png'
+import m6 from '../../assets/roadmap/m6.png'
+import dash from '../../assets/roadmap/dash.svg'
+import droplet from '../../assets/roadmap/droplet.svg'
 
 export default function RoadMap() {
   return (
@@ -27,7 +27,7 @@ export default function RoadMap() {
       </div> */}
       <div className="relative w-full">
         <div className="flex h-full flex-col items-center ">
-          <div className={"relative z-0 mt-32  mb-10"}>
+          <div className={'relative z-0 mt-32  mb-10'}>
             <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
               <Image className="" src={HeaderBox} alt="HeaderBox" />
             </div>
@@ -157,10 +157,10 @@ export default function RoadMap() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-type MilestoneProps = { title: string; subtitle: string; children: any };
+type MilestoneProps = { title: string; subtitle: string; children: any }
 function MilestoneLeft({ title, subtitle, children }: MilestoneProps) {
   return (
     <div className="absolute  flex flex-col justify-center top-0 bottom-0 -right-7 md:right-0 translate-x-full">
@@ -174,7 +174,7 @@ function MilestoneLeft({ title, subtitle, children }: MilestoneProps) {
         {children}
       </div>
     </div>
-  );
+  )
 }
 
 function MilestoneRight({ title, subtitle, children }: MilestoneProps) {
@@ -190,5 +190,5 @@ function MilestoneRight({ title, subtitle, children }: MilestoneProps) {
         {children}
       </div>
     </div>
-  );
+  )
 }
