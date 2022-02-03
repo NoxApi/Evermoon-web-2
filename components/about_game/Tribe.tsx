@@ -47,43 +47,45 @@ const tribes = [
 
 export default function Tribe() {
   const [tribeIndex, setTribeIndex] = useState(0)
+  const [tribeIndexSmall, setTribeIndexSmall] = useState(0)
   const [isTransition, setIsTransition] = useState(true)
 
   const tribesElement = [...tribes.slice(2), ...tribes.slice(0, 2)]
-  const up = () => {
-    if (tribeIndex >= 4) return setTribeIndex(0)
+  const up = async () => {
+    if (tribeIndex === 5) {
+      setIsTransition(false)
+      setTribeIndex(0)
+      await delay(1)
+      setIsTransition(true)
+      setTribeIndex(1)
+      return
+    }
     setTribeIndex(tribeIndex + 1)
   }
-  const down = () => {
-    if (tribeIndex <= 0) return setTribeIndex(4)
+  const down = async () => {
+    if (tribeIndex === -5) {
+      setIsTransition(false)
+      setTribeIndex(0)
+      await delay(1)
+      setIsTransition(true)
+      setTribeIndex(-1)
+      return
+    }
     setTribeIndex(tribeIndex - 1)
+  }
+
+  const upSmall = () => {
+    if (tribeIndexSmall >= 4) return setTribeIndexSmall(0)
+    setTribeIndexSmall(tribeIndexSmall + 1)
+  }
+  const downSmall = () => {
+    if (tribeIndexSmall <= 0) return setTribeIndexSmall(4)
+    setTribeIndexSmall(tribeIndexSmall - 1)
   }
 
   function delay(time: number) {
     return new Promise((resolve) => setTimeout(resolve, time))
   }
-
-  const checkTribeIndex = async () => {
-    if (tribeIndex < -5) {
-      setIsTransition(false)
-      setTribeIndex(0)
-      await delay(10)
-      setIsTransition(true)
-      setTribeIndex(-1)
-    }
-    if (tribeIndex > 5) {
-      setIsTransition(false)
-      setTribeIndex(0)
-      await delay(10)
-      setIsTransition(true)
-      setTribeIndex(1)
-    }
-  }
-
-  useEffect(() => {
-    checkTribeIndex()
-    return () => {}
-  }, [tribeIndex])
 
   return (
     <section id="Tribe" className="relative w-full  overflow-hidden">
@@ -120,25 +122,42 @@ export default function Tribe() {
             <Scroller
               up={up}
               down={down}
+              upSmall={upSmall}
+              downSmall={downSmall}
               isTransition={isTransition}
               tribeIndex={tribeIndex}
+              tribeIndexSmall={tribeIndexSmall}
               horizontal={false}
               className="flex lg:hidden"
             />
 
-            {
-              tribesElement[
-                (5 -
-                  (tribeIndex < 0 ? (tribeIndex + 10) % 5 : tribeIndex % 5)) %
-                  5
-              ].element
-            }
+            <div className='hidden md:block'>
+              {
+                tribesElement[
+                  (5 -
+                    (tribeIndex < 0 ? (tribeIndex + 10) % 5 : tribeIndex % 5)) %
+                    5
+                ].element
+              }
+            </div>
+            <div className='md:hidden'>
+              {
+                tribesElement[
+                  (5 -
+                    (tribeIndexSmall < 0 ? (tribeIndexSmall + 10) % 5 : tribeIndexSmall % 5)) %
+                    5
+                ].element
+              }
+            </div>
           </div>
           <Scroller
             up={up}
             down={down}
+            upSmall={upSmall}
+            downSmall={downSmall}
             isTransition={isTransition}
             tribeIndex={tribeIndex}
+            tribeIndexSmall={tribeIndexSmall}
             horizontal={true}
             className="flex"
           />
@@ -337,8 +356,11 @@ enum alignment {
 interface ScrollerProps {
   up: () => void
   down: () => void
+  upSmall: () => void
+  downSmall: () => void
   isTransition: boolean
   tribeIndex: number
+  tribeIndexSmall: number
   horizontal: boolean
   className?: string
 }
@@ -346,8 +368,11 @@ interface ScrollerProps {
 function Scroller({
   up,
   down,
+  upSmall,
+  downSmall,
   isTransition,
   tribeIndex,
+  tribeIndexSmall,
   horizontal,
   className,
 }: ScrollerProps) {
@@ -362,8 +387,20 @@ function Scroller({
         } justify-center items-center`}
       >
         <div
-          className={`w-6  cursor-pointer ${horizontal ? 'rotate-90' : 'mr-4'}`}
+          className={`hidden md:block w-6  cursor-pointer ${
+            horizontal ? 'rotate-90' : 'mr-4'
+          }`}
           onClick={up}
+          key='up'
+        >
+          <ArrowLeft />
+        </div>
+        <div
+          className={`md:hidden w-6  cursor-pointer ${
+            horizontal ? 'rotate-90' : 'mr-4'
+          }`}
+          onClick={upSmall}
+          key='upSmall'
         >
           <ArrowLeft />
         </div>
@@ -376,14 +413,14 @@ function Scroller({
               ' flex' + ' md:hidden'
             }
           >
-            <TribesLogo small tribeIndex={tribeIndex} />
+            <TribesLogo small tribeIndex={tribeIndexSmall} />
           </div>
           <div className="absolute inset-0 md:static">
             {/* main */}
             <div
               className={
                 '' +
-                // (isTransition ? "transition-transform" : "") +
+                (isTransition ? 'transition-transform' : '') +
                 ' hidden md:flex lg:block'
               }
               style={{
@@ -400,7 +437,7 @@ function Scroller({
             <div
               className={
                 'absolute inset-0 ' +
-                // (isTransition ? "transition-transform" : "") +
+                (isTransition ? 'transition-transform' : '') +
                 ' hidden md:flex lg:block'
               }
               style={{
@@ -417,7 +454,7 @@ function Scroller({
             <div
               className={
                 'absolute inset-0 ' +
-                // (isTransition ? "transition-transform" : "") +
+                (isTransition ? 'transition-transform' : '') +
                 ' hidden md:flex lg:block'
               }
               style={{
@@ -436,11 +473,22 @@ function Scroller({
             <div className="w-[4.5rem] h-[4.5rem] md:w-[6.5rem] md:h-[6.5rem] lg:w-32 lg:h-32 mx-auto   rounded-full border-2 border-gold-light hole"></div>
           </div>
         </div>
+
         <div
-          className={`w-6  z-10 cursor-pointer ${
+          className={`hidden md:block w-6  z-10 cursor-pointer ${
             horizontal ? 'rotate-90' : 'ml-2'
           }`}
           onClick={down}
+          key='down'
+        >
+          <ArrowRight />
+        </div>
+        <div
+          className={`md:hidden w-6  z-10 cursor-pointer ${
+            horizontal ? 'rotate-90' : 'ml-2'
+          }`}
+          onClick={downSmall}
+          key='downSmall'
         >
           <ArrowRight />
         </div>
