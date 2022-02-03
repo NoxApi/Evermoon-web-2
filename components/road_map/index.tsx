@@ -38,15 +38,10 @@ export default function RoadMap() {
             </div>
           </div>
 
-          <div className="relative mt-8 md:mt-16 flex flex-col items-center gap-y-10 md:gap-y-80 pb-8 -translate-x-20 md:translate-x-0">
+          <div className="relative mt-8 md:mt-16 flex flex-col items-center gap-y-10 md:gap-y-52 pb-8 -translate-x-20 md:translate-x-0">
             <div className="absolute inset-0 flex flex-col">
               {/* <div className="w-1 h-full mx-auto border-l-2 border-white border-dashed"></div> */}
               <div className="relative h-full  overflow-hidden mt-24 mb-32">
-                {/* <Image
-                  className="w-[0.2rem] h-full mx-auto bg-repeat-y "
-                  src={dash}
-                  alt="dash"
-                /> */}
                 <ImageNext
                   className="w-[0.01rem] h-full mx-auto bg-repeat-y  "
                   // width="0.1rem"
@@ -60,7 +55,7 @@ export default function RoadMap() {
             </div>
             <div className="absolute inset-0 flex flex-col">
               {/* <div className="w-1 h-full mx-auto border-l-2 border-white border-dashed"></div> */}
-              <div className="relative h-[11rem] md:h-[45rem] md:-mt-8 ">
+              <div className="relative h-[11rem] md:h-[37rem] md:-mt-8 ">
                 {/* <div className="w-4 h-32 bg-gold-gradient-strong mx-auto rounded-[50%] rounded-tr-none -rotate-45" /> */}
                 <Image
                   className="absolute left-0 right-0 droplet w-7 md:w-10 mx-auto"
