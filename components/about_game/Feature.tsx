@@ -43,7 +43,7 @@ export default function Feature() {
               <div className="w-full max-w-2xl px-7">
                 <div className="w-full relative z-0 aspect-video">
                   <Image
-                    className="absolute inset-0 -mx-6 -my-4  sm:-mx-11 sm:-my-7 -z-10"
+                    className="absolute inset-0 -mx-3 -my-5  sm:-mx-3 sm:-my-7 -z-10"
                     src={YoutubeFrame}
                     alt="YoutubeFrame"
                   />
