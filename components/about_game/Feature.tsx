@@ -69,26 +69,22 @@ export default function Feature() {
                 src={MarketPlace}
                 title={'Market Place'}
                 detail="Trade heroes, skins, shards and loot boxes."
-                imgWidth="w-16"
               />
               <SubFeature
                 src={FreeToPlay}
                 title={[`MOBA Free`, <br key={''} />, `to play`]}
                 smallTitle="MOBA FREE TO PLAY"
                 detail="Battle in the Everfield to earn $EVS while playing."
-                imgWidth="w-20"
               />
               <SubFeature
                 src={Staking}
                 title={'Staking'}
                 detail="Increase your $MS token yields by holding $EVS."
-                imgWidth="w-28"
               />
               <SubFeature
                 src={BuildingChallenge}
                 title={'Building Challenge'}
                 detail="Assimilate heroes and skins to earn new valuable resources."
-                imgWidth="w-16"
               />
             </div>
           </div>
