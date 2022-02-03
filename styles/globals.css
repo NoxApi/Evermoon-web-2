@@ -165,3 +165,32 @@ a {
     display: none;
   }
 }
+
+@media (min-width: 768px) {
+  .floating-token {
+    animation: 4s ease-in-out 0.33s infinite normal none running floatinani;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-token-small1 {
+    animation: 4s ease-in-out 0.33s infinite normal none running floatinani;
+  }
+
+  .floating-token-small2 {
+    animation: 4s ease-in-out 0.33s infinite normal none running floatinani;
+    animation-delay: 3s;
+  }
+}
+
+@keyframes floatinani {
+  0% {
+    transform: translate(1px, -5px);
+  }
+  50% {
+    transform: translate(-1px, 0px);
+  }
+  100% {
+    transform: translate(1px, -5px);
+  }
+}

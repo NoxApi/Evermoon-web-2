@@ -126,7 +126,9 @@ export default function Token() {
                   </div>
                   <motion.div transition={spring} layoutId="moon">
                     <Image
-                      className="w-48 md:w-72 p-10 cursor-pointer"
+                      className={`w-48 md:w-72 p-10 cursor-pointer floating-token-small1 ${
+                        selected === 1 ? 'floating-token' : ''
+                      }`}
                       src={Moon}
                       alt="Moon"
                       priority={true}
@@ -221,7 +223,9 @@ export default function Token() {
                   </div>
                   <motion.div transition={spring} layoutId="evermoon">
                     <Image
-                      className="w-48 md:w-72 p-12 cursor-pointer"
+                      className={`w-48 md:w-72 p-12 cursor-pointer floating-token-small2 ${
+                        selected === 2 ? 'floating-token' : ''
+                      }`}
                       src={Evermoon}
                       alt="Evermoon"
                       priority={true}
