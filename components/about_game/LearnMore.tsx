@@ -51,7 +51,7 @@ export default function LearnMore() {
         <Dialog
           as="div"
           className="fixed inset-0 z-10 overflow-y-auto"
-          onClose={closeModal}
+          onClose={() => closeModal()}
         >
           <div className="min-h-screen px-4 text-center">
             <Transition.Child
@@ -84,11 +84,15 @@ export default function LearnMore() {
             >
               <div
                 className={` inline-block w-full max-w-6xl  my-8 overflow-hidden text-left align-middle transition-all transform bg-bluepurple-gradient border-2 border-[color:var(--gold-light)] shadow-xl rounded-2xl`}
+                onClick={closeModal}
               >
                 <div className="md:grid md:grid-cols-[auto_1fr_auto] m-6 items-center">
                   <div
                     className="absolute md:relative top-7 left-3 z-10 cursor-pointer mt-4 md:mt-0"
-                    onClick={() => page > 0 && setPage(page - 1)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      if (page > 0) setPage(page - 1)
+                    }}
                   >
                     <ArrowLeft gray={page === 0} />
                   </div>
@@ -214,7 +218,10 @@ export default function LearnMore() {
 
                   <div
                     className="absolute md:relative top-7 right-3 z-10 cursor-pointer mt-4 md:mt-0"
-                    onClick={() => page < 2 && setPage(page + 1)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      if (page < 2) setPage(page + 1)
+                    }}
                   >
                     <ArrowRight gray={page === 2} />
                   </div>
