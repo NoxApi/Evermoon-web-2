@@ -61,30 +61,30 @@ export default function Feature() {
             <div className="mx-8 mt-24 lg:mt-0  md:mx-20 flex flex-col">
               <SubFeature
                 src={NFTHero}
-                title={[`NFT HEROES`, <br key={''} />, `/SKINS`]}
-                smallTitle="NFT HEROES / SKINS"
-                detail="Heroes and skins are stored securely on the Binance Smart Chain."
+                title={[`NFT HEROES`, <br key={''} />, `AND SKINS`]}
+                smallTitle="NFT HEROES AND SKINS"
+                detail="Heroes and skins are stored securely on Binance Smart Chain."
               />
               <SubFeature
                 src={MarketPlace}
-                title={'Market Place'}
+                title={'Marketplace'}
                 detail="Trade heroes, skins, shards and loot boxes."
               />
               <SubFeature
                 src={FreeToPlay}
                 title={[`MOBA Free`, <br key={''} />, `to play`]}
                 smallTitle="MOBA FREE TO PLAY"
-                detail="Battle in the Everfield to earn $EVS while playing."
+                detail="Battle in the Everfield to earn $ES while playing."
               />
               <SubFeature
                 src={Staking}
                 title={'Staking'}
-                detail="Increase your $MS token yields by holding $EVS."
+                detail="increase your $EVM token yeilds by holding $ES."
               />
               <SubFeature
                 src={BuildingChallenge}
                 title={'Building Challenge'}
-                detail="Assimilate heroes and skins to earn new valuable resources."
+                detail="Assimilate heroes, skins, and runes to earn new valuable resources."
               />
             </div>
           </div>

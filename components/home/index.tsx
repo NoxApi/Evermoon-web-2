@@ -38,7 +38,7 @@ export default function Home() {
           MOBILE MOBA BLOCKCHAIN
         </div>
         <div className="text-2xlr font-tavi text-center">
-          JOIN OUR UNIVERSE TO BE A HERO
+          JOIN OUR UNIVERSE TO BECOME A HERO
         </div>
 
         <div className="flex flex-col mt-16 items-center w-72 mx-auto">

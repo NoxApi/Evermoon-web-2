@@ -262,30 +262,29 @@ function EvermoonDetail() {
         #EVM
       </div>
       <div className="max-w-lg text-sm md:text-base mx-auto mt-8 text-center">
-        Core of our moon economy, to the new dimension of NFT games industry
-        play and earn. Generate income to reach the dreams for players, players
-        can achieve a rewarding experience. Through...
+        To the new dimension of NFT game industries of play and earn, moonstone
+        is a core of our moon economy. Generating income to reach your dreams.
+        Players may achieve a rewarding experience through…
       </div>
       <div className="mt-8 mx-8">
         <SubDetail
           title="1. TOURNAMENT"
-          detail=" Join rank, special event and e-sport to earn a lot of special rewards
-          from our games."
+          detail="Join rank, special event, and e-sport to earn a lot of special rewards from our game."
           src={m1}
         />
         <SubDetail
           title="2. STAKING"
-          detail="Use your $EVM tokens to earn more profit! Watch it rise in value as $MS inevitably conquers the NF'T game market."
+          detail="Use your $EVM tokens to earn more proffit! Watch them rise in value as $EVM inevitably conquer the NFT game markets"
           src={m2}
         />
         <SubDetail
           title="3. BUILDING CHALENGE"
-          detail="Burn Heroes, Skins and Shards to gain more valuable rewards."
+          detail="Burn Heroes, Skins, and Runes to gain more valuable rewards."
           src={m3}
         />
         <SubDetail
-          title="4. IN GAME PAYMENT"
-          detail="Use $EVM  tokens to buy Heroes, Skins, Shards and Loot boxes gaining new experiences."
+          title="4. PLAY TO EARN"
+          detail="Be in a top rank to receive more $EVM tokens."
           src={m4}
         />
         <SubDetail
@@ -313,19 +312,20 @@ function EverMoonStoneDetail() {
         #EVS
       </div>
       <div className="max-w-lg text-sm md:text-base mx-auto mt-8 text-center">
-        Everstone, the valuable tokens in the EVERMOON universe, is the token
-        that controls the core economy of the game. Allows players to purchase
-        loot boxes containing rare skins that cannot be found in the game.
+        Everstone, the most valuable tokens in the EVERMOON universe, is the
+        token that overcome the core economy of the game. As it always be,
+        Evermoon allows players to purchase loot boxes that contain rare skins
+        that never be found in the game.
       </div>
       <div className="mt-8 mx-8">
         <SubDetail
-          title="1. IN GAME PAYMENT"
-          detail="Use $MS tokens to buy Heroes, Skins, Shards and Loot boxes gaining new experiences."
+          title="1. PLAY TO EARN"
+          detail="Receive $ES tokens as a reward of each game."
           src={e1}
         />
         <SubDetail
           title="2. BUILDING CHALENGE"
-          detail="Burn Heroes, Skins and Shards to gain more valuable rewards."
+          detail="Burn Heroes, Skins, and Runes to gain more valuable rewards."
           src={e2}
         />
         <SubDetail

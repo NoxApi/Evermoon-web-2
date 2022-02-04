@@ -7,7 +7,7 @@ interface ImageProps {
   priority?: boolean
 }
 function Image({ className, src, alt, priority }: ImageProps) {
-  if(src.src.includes('png')) {
+  if (src.src.includes('png')) {
     return (
       <div className={className}>
         <div className={'relative'}>
@@ -17,13 +17,13 @@ function Image({ className, src, alt, priority }: ImageProps) {
             src={src}
             alt={alt}
             priority={priority}
-            placeholder='blur'
+            placeholder="blur"
           />
         </div>
       </div>
     )
   }
-  
+
   return (
     <div className={className}>
       <div className={'relative'}>

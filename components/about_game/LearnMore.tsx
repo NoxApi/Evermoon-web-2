@@ -133,9 +133,9 @@ export default function LearnMore() {
                         <RuneItem src={RProtection} title="Protection" />
                       </div>
                       <div className="mt-12 text-white font-source text-lg max-w-lg text-center">
-                        An ancient stone that harbored a strong energy since
-                        ancient times. It can be obtained by opening it from
-                        loot boxes and market places.
+                        Ancient stones that harbored a highly strong energy
+                        since ages of time. They can be obtained by opening the
+                        loot boxes and marketplaces
                       </div>
                     </div>
                     <div
@@ -166,9 +166,9 @@ export default function LearnMore() {
                         <ShardItem src={SGold} title="Gold" />
                       </div>
                       <div className="mt-20 text-white font-source text-lg max-w-lg text-center">
-                        An ancient crystal that harbored a hero spirit since
-                        ancient times. It can be obtained by opening it from
-                        loot boxes and market places.
+                        Venerable crystals that hold hero spirits since ancient
+                        times. They can be obtained by opening the loot boxes
+                        and marketplaces
                       </div>
                     </div>
                     <div
@@ -189,28 +189,29 @@ export default function LearnMore() {
                           </div>
                           <div className="mx-12 md:mx-24">
                             <div className="font-tavi font-medium text-lg md:text-2xl text-center">
-                              LOOT BOXES
+                              Capsules
                             </div>
                           </div>
                         </div>
                       </Dialog.Title>
                       <div className="mt-8 font-source text-sm text-white">
-                        Mystery boxes that will be opened will be rewarded. Good
-                        or bad depends on your luck.
+                        Mystery boxes will be rewarded from Evermoon. Rewards
+                        inside each box will be randomly distributed.
                       </div>
                       <div className="flex flex-col md:flex-row md:px-20 mt-7 justify-evenly  gap-x-2">
-                        <LootItem src={LWinner} title="Winner Loot boxes">
-                          A box to get when you win in Ranked Mode. The reward
-                          in the box will be good or bad depending on your luck.
+                        <LootItem src={LWinner} title="SKIN CAPSULE">
+                          Use $EVM to buy the skin capsule to obtain new skin.
+                          The rewards will be likely good or slightly bad
+                          depending on your luck.
                         </LootItem>
-                        <LootItem src={LLoser} title="Loser Loot boxes">
-                          A box to get when you lose in Ranked Mode. The reward
-                          in the box will be good or bad depending on your luck.
+                        <LootItem src={LLoser} title="HERO CAPSULE">
+                          Use $EVM to obtain a new hero buy purchasing the hero
+                          capsule from the central store in Evermoon
                         </LootItem>
-                        <LootItem src={LEvermoon} title="Evermoon Loot Box">
-                          A box that you can buy from Evermoon, the central
-                          store. The rewards in the box are heroes, skins and
-                          runes.
+                        <LootItem src={LEvermoon} title="RUNE CAPSULE">
+                          A capsule that contain runes. You can purchase the
+                          capsule from Evermoon, the central store by using
+                          $EVM.
                         </LootItem>
                       </div>
                     </div>

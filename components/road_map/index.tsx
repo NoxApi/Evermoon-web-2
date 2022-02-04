@@ -73,7 +73,7 @@ export default function RoadMap() {
               />
               <MilestoneLeft title="MILESTONE 1" subtitle="Q1 / 2022">
                 game trailer
-                <br /> white paper
+                <br /> whitepaper
                 <br /> communities launching
                 <br /> seed & Private Sale
               </MilestoneLeft>

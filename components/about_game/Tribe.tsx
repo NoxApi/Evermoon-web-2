@@ -115,8 +115,8 @@ export default function Tribe() {
                 </div>
               </div>
               <div className="m-16 lg:m-0 lg:ml-16 ml-12 max-w-lg">
-                Evermoon is a planet similar to the Earth, waiting for human to
-                arrive. It{"'"}s the best place to begin a new mankind.
+                As the best place to begin a new life, Evermoon is similar to
+                the planet earth, waiting for humanity to arrive.
               </div>
             </div>
             <Scroller
@@ -131,7 +131,7 @@ export default function Tribe() {
               className="flex lg:hidden"
             />
 
-            <div className='hidden md:block'>
+            <div className="hidden md:block">
               {
                 tribesElement[
                   (5 -
@@ -140,11 +140,13 @@ export default function Tribe() {
                 ].element
               }
             </div>
-            <div className='md:hidden'>
+            <div className="md:hidden">
               {
                 tribesElement[
                   (5 -
-                    (tribeIndexSmall < 0 ? (tribeIndexSmall + 10) % 5 : tribeIndexSmall % 5)) %
+                    (tribeIndexSmall < 0
+                      ? (tribeIndexSmall + 10) % 5
+                      : tribeIndexSmall % 5)) %
                     5
                 ].element
               }
@@ -220,9 +222,9 @@ function TribeNakamatos() {
       <div className="h-[28rem] lg:h-0" />
       <TribeInfo
         title="Nakamatos"
-        detail="The first tribe to arrive on the Moon. They are the longest existing
-            tribes on the moon which make them acquire many ancient powers.They
-            are also known as a sacred tribe."
+        detail="The first arrival on Evermoon, 
+        Nakamatos was the longest exiting tribe that could reach to the hidden sources of the ancient power which make no other living on Evermoon can’t seek for. 
+        Indeed,every life on Evermoon would know them as a tribe with no substitute of their sacred power."
       />
 
       <div className="absolute lg:top-4 lg:bottom-0 lg:-left-20 inset-0 mx-auto pt-16 lg:pt-0 lg:mx-0 max-w-[21rem] lg:max-w-none lg:w-[29rem] floating">
@@ -245,9 +247,8 @@ function TribeEthern() {
       <div className="h-[30rem] lg:h-0" />
       <TribeInfo
         title="Ethern"
-        detail="The tribe that evolved from Nakamatos. 
-        With their intelligence and smartness, 
-        they start a new tribe making them a tribe with high technology."
+        detail="As the tribe that evolved from Nakamatos. Ethern try to use everything they could to survive in Evermoon with their intelligence and mentality.
+        After the  beginning of their new life, they were able to make themselves to rise with high performance technology."
       />
 
       <div className="absolute inset-0 lg:top-0 lg:bottom-0 lg:-left-28 mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[24rem] lg:max-w-none lg:w-[31rem] floating2">
@@ -265,9 +266,9 @@ function TribeByzan() {
       <div className="h-[30rem] lg:h-0" />
       <TribeInfo
         title="Byzan"
-        detail="They have escaped from Ethern since Ethern lacks resources, 
-        they have a crowded population, and a very high cost of living. 
-        They are good at farming, inventing new tactics, and developing new weapons. They love peace, but when it’s time to fight, they have no hesitation."
+        detail=" Being a crowded population along with awfully high cost of living, 
+        Byzan have escaped from Ethern since they lack of resources. They are capable of farming, inventing new tactics, and developing new weaponry. 
+        They love peace, but when it come to the time of war, they have no hesitations."
       />
 
       <div className="absolute inset-0 lg:-top-10 lg:bottom-0 lg:-left-44 lg:w-[35rem] mx-auto lg:mx-0 pt-14 lg:pt-0 max-w-[24rem] lg:max-w-none floating3">
@@ -284,9 +285,9 @@ function TribeSolis() {
       <div className="h-[clamp(210px,50vw+30px,400px)] sm:h-[22rem] lg:h-0" />
       <TribeInfo
         title="Solis"
-        detail="They have a very strong bonding with nature. 
-          They are connected to water, land, and forest. 
-          Their skill is an ability to communicate with nature and animals."
+        detail=" They have a very strong bonding with the nature. Solis are connected with water, 
+        earth, and forest. They are able to create the skill to communicate with nature and animals. 
+        They could blend their presence in any places they stepped foot it with their supernatural that somehow endorsed them"
       />
       <div className="lg:w-[30rem]" />
 
@@ -305,10 +306,9 @@ function TribeLunarian() {
       <div className="h-[30rem] lg:h-0" />
       <TribeInfo
         title="Lunarian"
-        detail="They migrated from another planet. 
-        They have very high-tech weapons and a space-warship. 
-        They appearance is very unique comparing to other tribe, 
-        since they came from another planet"
+        detail="Migrating from another planet. Lunarian have powerful high-tech weapons and space-warships. 
+        Since they came from another planet, 
+        their appearance are extremely unique comparing to other tribes on Evermoon."
       />
 
       <div className="absolute inset-0 lg:-top-5 lg:bottom-0 lg:-left-36 lg:w-[34rem] mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[24rem] lg:max-w-none floating2">
@@ -391,7 +391,7 @@ function Scroller({
             horizontal ? 'rotate-90' : 'mr-4'
           }`}
           onClick={up}
-          key='up'
+          key="up"
         >
           <ArrowLeft />
         </div>
@@ -400,7 +400,7 @@ function Scroller({
             horizontal ? 'rotate-90' : 'mr-4'
           }`}
           onClick={upSmall}
-          key='upSmall'
+          key="upSmall"
         >
           <ArrowLeft />
         </div>
@@ -479,7 +479,7 @@ function Scroller({
             horizontal ? 'rotate-90' : 'ml-2'
           }`}
           onClick={down}
-          key='down'
+          key="down"
         >
           <ArrowRight />
         </div>
@@ -488,7 +488,7 @@ function Scroller({
             horizontal ? 'rotate-90' : 'ml-2'
           }`}
           onClick={downSmall}
-          key='downSmall'
+          key="downSmall"
         >
           <ArrowRight />
         </div>
