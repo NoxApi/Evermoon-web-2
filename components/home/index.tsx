@@ -14,6 +14,9 @@ import WhitePaper from '../../assets/white-paper.svg'
 import LinkNewTab from '../LinkNewTab'
 import bgm from '../../assets/bgm.jpg'
 import ImageNext from 'next/image'
+import Byzan from '../../assets/Byzan.png'
+import Lunarian from '../../assets/Lunarian.png'
+import Nakamotos from '../../assets/Nakamotos.png'
 
 export default function Home() {
   return (
@@ -31,8 +34,11 @@ export default function Home() {
         <source src="/bg-video.webm#t=0.1" type="video/webm" />
         <source src="/bg-video.mp4#t=0.1" type="video/mp4" />
       </video>
-      <div className="lg:hidden inset-0 min-h-[844px] h-screen w-full">
+      <div className="relative lg:hidden inset-0 min-h-[844px] h-screen w-full overflow-hidden">
         <ImageNext src={bgm} alt="bg-mobile" objectFit='cover' layout='fill' objectPosition='center' />
+        <Image className='absolute left-0 bottom-0 w-52 md:w-80 floating-home' src={Lunarian} alt="Lunarian" />
+        <Image className='absolute right-0 bottom-36 md:bottom-60 w-52 md:w-80 floating-home2' src={Nakamotos} alt="Nakamotos" />
+        <Image className='absolute right-0 bottom-0 w-52 md:w-80 floating-home3' src={Byzan} alt="Byzan" />
       </div>
       <div className="absolute inset-0 bg-black-gradient" />
       <div className="absolute inset-0">
