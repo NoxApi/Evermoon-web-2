@@ -229,7 +229,7 @@ function TribeNakamatos() {
         Indeed,every life on Evermoon would know them as a tribe with no substitute of their sacred power."
       />
 
-      <div className="absolute lg:top-4 lg:bottom-0 lg:-left-20 inset-0 mx-auto pt-16 lg:pt-0 lg:mx-0 max-w-[21rem] lg:max-w-none lg:w-[29rem] floating">
+      <div className="absolute lg:top-4 lg:bottom-0 lg:-left-24 inset-0 mx-auto pt-16 lg:pt-0 lg:mx-0 max-w-[21rem] lg:max-w-none lg:w-[29rem] floating">
         <div className="relative">
           <Image
             src={Nakamatose}
@@ -320,7 +320,7 @@ function TribeSolis() {
       />
       <div className="lg:w-[30rem]" />
 
-      <div className="absolute inset-0 lg:left-auto lg:top-28 lg:bottom-0 lg:-right-44 w-full lg:w-[43rem] mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[36rem] lg:max-w-none floating">
+      <div className="absolute inset-0 lg:left-auto lg:top-28 lg:bottom-0 lg:-right-52 w-full lg:w-[43rem] mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[36rem] lg:max-w-none floating">
         <div className="relative">
           <Image
             src={Solise}
