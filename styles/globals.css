@@ -196,3 +196,20 @@ a {
     transform: translate(1px, -5px);
   }
 }
+
+
+.floating-title {
+  animation: 6s ease-in-out 0.33s infinite normal none running floatinanititle;
+}
+
+@keyframes floatinanititle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-1px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -28,7 +28,7 @@ export default function Feature() {
       </div> */}
       <div className="pb-16">
         <div className="flex flex-col items-center">
-          <div className={'relative z-0 mt-32  mb-10'}>
+          <div className={'relative z-0 mt-32  mb-10 floating-title'}>
             <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
               <Image className="" src={HeaderBox} alt="HeaderBox" />
             </div>

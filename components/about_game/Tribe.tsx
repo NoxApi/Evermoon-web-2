@@ -104,7 +104,7 @@ export default function Tribe() {
         <div className="flex h-full">
           <div className="flex flex-col  lg:pr-8 relative w-full">
             <div className="flex flex-col lg:flex-row mt-28 lg:mb-10 items-center">
-              <div className={'relative z-0 '}>
+              <div className={'relative z-0 floating-title'}>
                 <div className="absolute top-1/2 left-0 right-0 -z-10 -translate-y-1/2">
                   <Image className="" src={HeaderBox} alt="HeaderBox" />
                 </div>
