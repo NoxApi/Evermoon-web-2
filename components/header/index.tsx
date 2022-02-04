@@ -20,7 +20,7 @@ const Header = () => {
         <div className="">
           <NextLink href="/">
             <a>
-              <Image className="w-24 md:w-40" src={Logo} alt="logo" />
+              <Image className="w-28 md:w-48" src={Logo} alt="logo" />
             </a>
           </NextLink>
         </div>
@@ -126,7 +126,7 @@ function HeaderMobile() {
                   <div className="">
                     <NextLink href="/">
                       <a>
-                        <Image className="w-24 " src={Logo} alt="logo" />
+                        <Image className="w-28 " src={Logo} alt="logo" />
                       </a>
                     </NextLink>
                   </div>
