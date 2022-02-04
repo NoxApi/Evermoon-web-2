@@ -14,7 +14,7 @@ export default function SubFeature({
   imgWidth = 'w-24',
 }: SubFeatureProps) {
   return (
-    <div className=" grid grid-cols-[60px_1fr]  md:grid-cols-[120px_1fr_1.5fr] gap-x-14 my-4 items-center">
+    <div className=" grid grid-cols-[60px_1fr]  md:grid-cols-[90px_110px_1fr] gap-x-12 my-4 items-center">
       <Image src={src} className={imgWidth + ' mx-auto'} alt="NFTHero" />
       <div className="hidden md:block">
         <div className="uppercase font-source text-sm md:text-xl">{title}</div>
