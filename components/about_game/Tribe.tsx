@@ -405,7 +405,7 @@ function Scroller({
           <ArrowLeft />
         </div>
 
-        <div className="relative rounded-[50px]  bg-black/10 overflow-hidden">
+        <div className="relative rounded-[50px] z-0 bg-black/10 overflow-hidden">
           {/* small */}
           <div
             className={
