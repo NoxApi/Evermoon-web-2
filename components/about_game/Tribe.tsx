@@ -12,11 +12,13 @@ import Ethern from '../../assets/tribe/ethern.png'
 import Byzan from '../../assets/tribe/byzan.png'
 import Lunarian from '../../assets/tribe/lunarian.png'
 import Solis from '../../assets/tribe/solis.png'
+import Nakamatose from '../../assets/tribe/nakamatos-e.png'
+import Etherne from '../../assets/tribe/ethern-e.png'
+import Byzane from '../../assets/tribe/byzan-e.png'
+import Lunariane from '../../assets/tribe/lunarian-e.png'
+import Solise from '../../assets/tribe/solis-e.png'
 import { ArrowLeft, ArrowRight } from './Arrow'
-import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { title } from 'process'
-import { CarouselProvider, Slide, Slider } from 'pure-react-carousel'
 
 class TribeClass {
   title: string
@@ -228,12 +230,21 @@ function TribeNakamatos() {
       />
 
       <div className="absolute lg:top-4 lg:bottom-0 lg:-left-20 inset-0 mx-auto pt-16 lg:pt-0 lg:mx-0 max-w-[21rem] lg:max-w-none lg:w-[29rem] floating">
-        <Image
-          src={Nakamatos}
-          alt="Nakamatos"
-          key="NakamatosImage"
-          priority={true}
-        />
+        <div className="relative">
+          <Image
+            src={Nakamatose}
+            alt="Nakamatose"
+            key="NakamatosImagee"
+            priority={true}
+            className="absolute inset-0 fade"
+          />
+          <Image
+            src={Nakamatos}
+            alt="Nakamatos"
+            key="NakamatosImage"
+            priority={true}
+          />
+        </div>
       </div>
     </div>
   )
@@ -252,7 +263,16 @@ function TribeEthern() {
       />
 
       <div className="absolute inset-0 lg:top-0 lg:bottom-0 lg:-left-28 mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[24rem] lg:max-w-none lg:w-[31rem] floating2">
-        <Image src={Ethern} alt="Ethern" key="EthernImage" priority={true} />
+        <div className="relative">
+          <Image
+            src={Etherne}
+            alt="Etherne"
+            key="EthernImagee"
+            priority={true}
+            className="absolute inset-0 fade"
+          />
+          <Image src={Ethern} alt="Ethern" key="EthernImage" priority={true} />
+        </div>
       </div>
     </div>
   )
@@ -272,7 +292,16 @@ function TribeByzan() {
       />
 
       <div className="absolute inset-0 lg:-top-10 lg:bottom-0 lg:-left-44 lg:w-[35rem] mx-auto lg:mx-0 pt-14 lg:pt-0 max-w-[24rem] lg:max-w-none floating3">
-        <Image src={Byzan} alt="Byzan" key="ByzanImage" priority={true} />
+        <div className="relative">
+          <Image
+            src={Byzane}
+            alt="Byzane"
+            key="ByzanImagee"
+            priority={true}
+            className="absolute inset-0 fade"
+          />
+          <Image src={Byzan} alt="Byzan" key="ByzanImage" priority={true} />
+        </div>
       </div>
     </div>
   )
@@ -292,7 +321,16 @@ function TribeSolis() {
       <div className="lg:w-[30rem]" />
 
       <div className="absolute inset-0 lg:left-auto lg:top-28 lg:bottom-0 lg:-right-44 w-full lg:w-[43rem] mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[36rem] lg:max-w-none floating">
-        <Image src={Solis} alt="Solis" key="SolisImage" priority={true} />
+        <div className="relative">
+          <Image
+            src={Solise}
+            alt="Solise"
+            key="SolisImagee"
+            priority={true}
+            className="absolute inset-0 fade"
+          />
+          <Image src={Solis} alt="Solis" key="SolisImage" priority={true} />
+        </div>
       </div>
     </div>
   )
@@ -312,12 +350,21 @@ function TribeLunarian() {
       />
 
       <div className="absolute inset-0 lg:-top-5 lg:bottom-0 lg:-left-36 lg:w-[34rem] mx-auto lg:mx-0 pt-16 lg:pt-0 max-w-[24rem] lg:max-w-none floating2">
-        <Image
-          src={Lunarian}
-          alt="Lunarian"
-          key="LunarianImage"
-          priority={true}
-        />
+        <div className="relative">
+          <Image
+            src={Lunariane}
+            alt="Lunariane"
+            key="LunarianImagee"
+            priority={true}
+            className="absolute inset-0 fade"
+          />
+          <Image
+            src={Lunarian}
+            alt="Lunarian"
+            key="LunarianImage"
+            priority={true}
+          />
+        </div>
       </div>
     </div>
   )

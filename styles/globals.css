@@ -181,7 +181,7 @@ a {
 
   .floating-token-small2 {
     animation: 4s ease-in-out 0.33s infinite normal none running floatinani;
-    animation-delay: 3s;
+    animation-delay: -1s;
   }
 }
 
@@ -232,7 +232,7 @@ a {
 
 .floating-home2 {
   animation: 6s ease-in-out 0.33s infinite normal none running floatinanihome2;
-  animation-delay: 4s;
+  animation-delay: -2s;
 }
 
 @keyframes floatinanihome2 {
@@ -249,7 +249,7 @@ a {
 
 .floating-home3 {
   animation: 6s ease-in-out 0.33s infinite normal none running floatinanihome3;
-  animation-delay: 3s;
+  animation-delay: -3s;
 }
 
 @keyframes floatinanihome3 {
@@ -261,5 +261,25 @@ a {
   }
   100% {
     transform: translate(0px, 0px);
+  }
+}
+
+.fade {
+  animation: 4s ease-in-out 0.33s infinite normal none running fade;
+  animation-delay: -1s;
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(100%);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(103%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 0.6;
   }
 }
