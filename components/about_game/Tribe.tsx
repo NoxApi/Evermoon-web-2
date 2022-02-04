@@ -88,7 +88,7 @@ export default function Tribe() {
   }
 
   return (
-    <section id="Tribe" className="relative w-full  overflow-hidden">
+    <section id="Tribes" className="relative w-full  overflow-hidden">
       {/* <div className="h-full w-full ">
         <ImageNext
           // width="100%"
@@ -110,7 +110,7 @@ export default function Tribe() {
                 </div>
                 <div className=" mx-14 md:mx-20">
                   <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium  ">
-                    TRIBE
+                    TRIBES
                   </div>
                 </div>
               </div>

@@ -57,7 +57,7 @@ export default function Token() {
             </div>
             <div className=" mx-14">
               <div className="text-gold-gradient font-tavi text-3xl md:text-5xl font-medium ">
-                Tokens
+                TOKENS
               </div>
             </div>
           </div>
@@ -309,7 +309,7 @@ function EverMoonStoneDetail() {
         EVERSTONE
       </div>
       <div className="font-tavi text-sm md:text-2xl text-gold-gradient text-center">
-        #EVS
+        #ES
       </div>
       <div className="max-w-lg text-sm md:text-base mx-auto mt-8 text-center">
         Everstone, the most valuable tokens in the EVERMOON universe, is the

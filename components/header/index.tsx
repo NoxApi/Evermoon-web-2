@@ -45,7 +45,7 @@ function HeaderDesktop() {
           </Menu.Button>
           <Menu.Items className="absolute flex flex-col -bottom-2 translate-y-full left-0 ml-14  mt-2  text-white font-sans font-semibold">
             <div className="parallelogram px-7 py-4 w-44">
-              {['Feature', 'Tribe', 'Tokens'].map((stitle) => (
+              {['Features', 'Tribes', 'Tokens'].map((stitle) => (
                 <Menu.Item key={`stitle-${stitle}`}>
                   <div className="group my-1">
                     <NextLink href={'#' + stitle}>
@@ -145,8 +145,8 @@ function HeaderMobile() {
                           <NLink title="ABOUT GAME" />
                         </Disclosure.Button>
                         <Disclosure.Panel className="ml-12  pb-8 font-source text-white uppercase">
-                          <SubLink title="Feature" />
-                          <SubLink title="Tribe" />
+                          <SubLink title="Features" />
+                          <SubLink title="Tribes" />
                           <SubLink title="Tokens" />
                         </Disclosure.Panel>
                       </>

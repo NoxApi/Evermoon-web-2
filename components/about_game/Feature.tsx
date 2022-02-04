@@ -14,7 +14,7 @@ import LearnMore from './LearnMore'
 
 export default function Feature() {
   return (
-    <section id="Feature" className="relative  w-full">
+    <section id="Features" className="relative  w-full">
       {/* <div className="h-full w-full overflow-hidden">
       <ImageNext
           // width="100%"

@@ -12,6 +12,8 @@ import Twitter from '../../assets/socials/twitter.svg'
 import Youtube from '../../assets/socials/youtube.svg'
 import WhitePaper from '../../assets/white-paper.svg'
 import LinkNewTab from '../LinkNewTab'
+import bgm from '../../assets/bgm.jpg'
+import ImageNext from 'next/image'
 
 export default function Home() {
   return (
@@ -20,7 +22,7 @@ export default function Home() {
       className="relative bg-white min-h-[844px] h-screen w-full"
     >
       <video
-        className="inset-0 min-h-[844px] h-screen w-full object-cover"
+        className="hidden lg:block inset-0 min-h-[844px] h-screen w-full object-cover"
         loop
         autoPlay
         muted
@@ -29,6 +31,9 @@ export default function Home() {
         <source src="/bg-video.webm#t=0.1" type="video/webm" />
         <source src="/bg-video.mp4#t=0.1" type="video/mp4" />
       </video>
+      <div className="lg:hidden inset-0 min-h-[844px] h-screen w-full">
+        <ImageNext src={bgm} alt="bg-mobile" objectFit='cover' layout='fill' objectPosition='center' />
+      </div>
       <div className="absolute inset-0 bg-black-gradient" />
       <div className="absolute inset-0">
         <Header />
