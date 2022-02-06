@@ -226,7 +226,7 @@ function TribeNakamatos() {
         title="Nakamatos"
         detail="The first arrival on Evermoon, 
         Nakamatos was the longest exiting tribe that could reach to the hidden sources of the ancient power which make no other living on Evermoon can’t seek for. 
-        Indeed,every life on Evermoon would know them as a tribe with no substitute of their sacred power."
+        Indeed, every life on Evermoon would know them as a tribe with no substitute of their sacred power."
       />
 
       <div className="absolute lg:top-4 lg:bottom-0 lg:-left-24 inset-0 mx-auto pt-16 lg:pt-0 lg:mx-0 max-w-[21rem] lg:max-w-none lg:w-[29rem] floating">
