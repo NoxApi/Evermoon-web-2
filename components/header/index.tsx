@@ -36,7 +36,7 @@ export default Header
 function HeaderDesktop() {
   return (
     <div className="hidden 2xl:flex w-full ">
-      <div className="flex items-center mr-auto">
+      <div className="flex items-center mr-auto z-0">
         <Link title="HOME" href="#Home" current={true} />
         <div className="bg-white w-2 h-2 rounded-full" />
         <Menu as="div" className="relative  px-6">
