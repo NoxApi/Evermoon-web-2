@@ -34,6 +34,10 @@ a {
   box-sizing: border-box;
 }
 
+img {
+  transition-duration: 0.5s;
+}
+
 .bg {
   background-image: url('/bgn.png');
   background-size: 100% auto;
