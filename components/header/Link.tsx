@@ -1,4 +1,6 @@
 import NextLink from 'next/link'
+import Line from '../../assets/header/line.png'
+import Image from '../image'
 
 interface LinkProp {
   title: string
@@ -9,20 +11,23 @@ interface LinkProp {
 export function Link({ title, href, current }: LinkProp) {
   return (
     <NextLink href={href}>
-      <a className="px-2 min-w-[10.5rem] flex flex-col items-center justify-center">
-        <div>
+      <a className="px-2 min-w-[6rem] flex flex-col items-center justify-center">
+        <div className="relative">
           <div
-            className={`px-8 py-2 font-source text-lg text-center whitespace-nowrap ${
-              current && 'bg-gold-gradient'
-            } ${current ? 'text-gold' : 'text-white'}`}
+            className={`px-4 py-2 font-Glamode text-base text-center whitespace-nowrap 
+             ${current ? 'text-gold' : 'text-white'} ${
+              current && '-translate-y-1'
+            }`}
           >
             {title}
           </div>
           <div
-            className={`w-full h-[1.5px] rounded-xl -translate-y-1/2 ${
-              current && 'bg-gold'
-            }`}
-          />
+            className={`${
+              !current && 'hidden'
+            } absolute left-0 right-0 bottom-0 w-16  mx-auto translate-y-1 `}
+          >
+            <Image src={Line} alt="Line" />
+          </div>
         </div>
       </a>
     </NextLink>

@@ -38,17 +38,29 @@ export default function Home() {
         <Header />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="text-5xlr font-Glamode font-bold text-gold-gradient text-center">
+        <div className="text-5xlr font-Glamode font-bold text-gold-gradient text-center text-shadow-xl">
           MOBILE MOBA BLOCKCHAIN
         </div>
-        <div className="text-2xlr font-tavi text-center">
+        <div className="prose-xl font-Josefin text-center text-shadow-xl">
           JOIN OUR UNIVERSE TO BECOME A HERO
         </div>
 
         <div className="flex flex-col mt-16 items-center w-72 mx-auto">
-          <Image src={JoinProgram} alt="JoinProgram" className="w-[420px]" />
+          <LinkNewTab href="https://docs.google.com/forms/d/e/1FAIpQLSfBJTRBIPUIXd1g_0uadx__KC8x1y8NxD94bvwW_T6LgDbRPA/viewform">
+            <Image
+              src={JoinProgram}
+              alt="JoinProgram"
+              className="w-[420px] transition-transform hover:scale-110 duration-500"
+            />
+          </LinkNewTab>
           <div className="h-7" />
-          <Image src={JoinSale} alt="JoinSale" className="w-[420px]" />
+          <LinkNewTab href="https://docs.google.com/forms/d/e/1FAIpQLSf954l5vbU-LZ-VuR_iNPJM-yJCCJiCu3WIn4e4702j7kvDdw/viewform">
+            <Image
+              src={JoinSale}
+              alt="JoinSale"
+              className="w-[420px] transition-transform hover:scale-110 duration-500"
+            />
+          </LinkNewTab>
 
           <div className="flex mt-6">
             <Image src={AppStore} alt="AppStore" className="w-[150px]" />
@@ -56,7 +68,13 @@ export default function Home() {
             <Image src={GooglePlay} alt="GooglePlay" className="w-[150px]" />
           </div>
 
-          <Image src={Whitepaper} alt="Whitepaper" className="w-[300px]" />
+          <LinkNewTab href="https://docs.evermoon.games/evermoon/">
+            <Image
+              src={Whitepaper}
+              alt="Whitepaper"
+              className="w-[300px] mt-6 transition-transform hover:scale-110 duration-500"
+            />
+          </LinkNewTab>
         </div>
       </div>
     </section>

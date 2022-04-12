@@ -20,6 +20,8 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-textshadow'),
     plugin(function ({ addUtilities }) {
       const fonts = {
         '.font-tavi': {
@@ -30,6 +32,9 @@ module.exports = {
         },
         '.font-Glamode': {
           fontFamily: '"Glamode", sans-serif',
+        },
+        '.font-Josefin': {
+          fontFamily: '"Josefin", sans-serif',
         },
         '.bg-gold-gradient': {
           background: 'linear-gradient(180deg, #F9D39000 0%, #E2B15B44 100%)',
