@@ -28,6 +28,9 @@ module.exports = {
         '.font-source': {
           fontFamily: '"Source Sans Pro", sans-serif',
         },
+        '.font-Glamode': {
+          fontFamily: '"Glamode", sans-serif',
+        },
         '.bg-gold-gradient': {
           background: 'linear-gradient(180deg, #F9D39000 0%, #E2B15B44 100%)',
         },

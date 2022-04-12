@@ -31,8 +31,8 @@ export default function Home() {
         muted
         preload="metadata"
       >
-        <source src="/bg-video.webm#t=0.1" type="video/webm" />
-        <source src="/bg-video.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
+        <source src="/banner.mp4#t=0.1" type="video/mp4" />
       </video>
       <div className="relative lg:hidden inset-0 min-h-[844px] h-screen w-full overflow-hidden">
         <ImageNext src={bgm} alt="bg-mobile" objectFit='cover' layout='fill' objectPosition='center' />
@@ -45,7 +45,7 @@ export default function Home() {
         <Header />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="text-5xlr font-tavi font-bold text-gold-gradient text-center">
+        <div className="text-5xlr font-Glamode font-bold text-gold-gradient text-center">
           MOBILE MOBA BLOCKCHAIN
         </div>
         <div className="text-2xlr font-tavi text-center">
