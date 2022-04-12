@@ -9,9 +9,10 @@ import x from '../../assets/x.svg'
 import bg from '../../assets/starbg.svg'
 import NextImage from 'next/image'
 import MarketplaceSmall from '../../assets/marketsmall.svg'
+import marketplace from '../../assets/header/marketplace.svg'
+import team from '../../assets/header/team.svg'
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
-import Marketplace from './Marketplace'
 const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
@@ -20,7 +21,7 @@ const Header = () => {
         <div className="">
           <NextLink href="/">
             <a>
-              <Image className="w-28 md:w-48" src={Logo} alt="logo" />
+              <Image className="w-28 md:w-32" src={Logo} alt="logo" />
             </a>
           </NextLink>
         </div>
@@ -35,38 +36,21 @@ export default Header
 
 function HeaderDesktop() {
   return (
-    <div className="hidden 2xl:flex w-full ">
-      <div className="flex items-center mr-auto z-0">
+    <div className="hidden xl:flex w-full ">
+      <div className="ml-8 flex items-center mr-auto z-0">
         <Link title="HOME" href="#Home" current={true} />
-        <div className="bg-white w-2 h-2 rounded-full" />
-        <Menu as="div" className="relative  px-6">
-          <Menu.Button>
-            <Link title="ABOUT GAME" href="/" current={false} />
-          </Menu.Button>
-          <Menu.Items className="absolute flex flex-col -bottom-2 translate-y-full left-0 ml-14  mt-2  text-white font-sans font-semibold">
-            <div className="parallelogram px-7 py-4 w-44">
-              {['Features', 'Tribes', 'Tokens'].map((stitle) => (
-                <Menu.Item key={`stitle-${stitle}`}>
-                  <div className="group my-1">
-                    <NextLink href={'#' + stitle}>
-                      <a className={``}>{stitle.toUpperCase()}</a>
-                    </NextLink>
-                    <div className="h-[3px] w-8 mt-1 rounded-full bg-gold-light scale-x-0 group-hover:scale-x-100 transition-transform origin-top-left" />
-                  </div>
-                </Menu.Item>
-              ))}
-            </div>
-          </Menu.Items>
-        </Menu>
-
-        <div className="bg-white w-2 h-2 rounded-full" />
-        <Link title="ROADMAP" href="/#RoadMap" current={false} />
-        <div className="bg-[#767676] w-2 h-2 rounded-full" />
-        <ComingSoonLink title="PARTNERSHIP" />
-        <div className="bg-[#767676] w-2 h-2 rounded-full" />
-        <ComingSoonLink title="NEWS" />
+        <Link title="FEATURE" href="/#Feature" current={false} />
+        <Link title="HEROES" href="/#Heroes" current={false} />
+        <Link title="RUNES" href="/#Runes" current={false} />
+        <Link title="TICKETS" href="/#Tickets" current={false} />
+        <Link title="TOKENOMIC" href="/#Tokenomic" current={false} />
+        <Link title="ROADMAP" href="/#Roadmap" current={false} />
       </div>
-      <Marketplace className="mr-12" />
+
+      <div className='flex items-center'>
+        <Image src={team} alt="team" className="w-24 translate-x-1" />
+        <Image src={marketplace} alt="marketplace" className="w-44" />
+      </div>
     </div>
   )
 }
@@ -80,7 +64,7 @@ function HeaderMobile() {
     setIsOpen(false)
   }
   return (
-    <div className="2xl:hidden w-full flex justify-end ">
+    <div className="xl:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
         <Image className="w-8 ml-auto " src={Hamburger} alt="logo" />
       </button>
