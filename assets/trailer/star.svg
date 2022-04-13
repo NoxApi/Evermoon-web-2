@@ -1,0 +1,38 @@
+<svg width="61" height="100" viewBox="0 0 61 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="30.5" cy="20.5" r="20" stroke="url(#paint0_linear_2022_18016)"/>
+<circle cx="30.5" cy="20.5" r="20" stroke="url(#paint1_linear_2022_18016)"/>
+<circle cx="30.5" cy="79.5" r="20" stroke="url(#paint2_linear_2022_18016)"/>
+<circle cx="30.5" cy="50.5" r="20.5" fill="url(#paint3_linear_2022_18016)"/>
+<circle cx="30.5" cy="50.5" r="30" stroke="url(#paint4_linear_2022_18016)"/>
+<path d="M29.1321 31.8439L30.5 23.5391L31.8679 31.8439C33.3295 40.7169 40.2839 47.6714 49.1569 49.1329L57.4618 50.5009L49.1569 51.8688C40.2839 53.3303 33.3295 60.2848 31.8679 69.1578L30.5 77.4626L29.1321 69.1578C27.6705 60.2848 20.7161 53.3303 11.843 51.8688L3.53822 50.5009L11.8431 49.1329C20.7161 47.6714 27.6705 40.7169 29.1321 31.8439Z" fill="url(#paint5_linear_2022_18016)" stroke="url(#paint6_linear_2022_18016)" stroke-width="0.5"/>
+<defs>
+<linearGradient id="paint0_linear_2022_18016" x1="30.5" y1="0" x2="30.5" y2="41" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2022_18016" x1="30.5" y1="0" x2="30.5" y2="41" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2022_18016" x1="30.5" y1="59" x2="30.5" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+<linearGradient id="paint3_linear_2022_18016" x1="30.5" y1="30" x2="30.5" y2="71" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+<linearGradient id="paint4_linear_2022_18016" x1="30.5" y1="20" x2="30.5" y2="81" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+<linearGradient id="paint5_linear_2022_18016" x1="30.5" y1="22.0009" x2="30.5" y2="79.0009" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A0910"/>
+<stop offset="1" stop-color="#07162D"/>
+</linearGradient>
+<linearGradient id="paint6_linear_2022_18016" x1="30.5" y1="22.0009" x2="30.5" y2="79.0009" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9D390"/>
+<stop offset="1" stop-color="#E2B15B"/>
+</linearGradient>
+</defs>
+</svg>
