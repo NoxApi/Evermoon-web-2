@@ -3,8 +3,11 @@ import Head from 'next/head'
 import Footer from '../components/footer'
 import Home from '../components/home'
 import ImageNext from 'next/image'
+import Image from '../components/image'
 import Layout from '../components/layout'
 import { Trailer } from '../components/trailer'
+import { Tribe } from '../components/tribe'
+import Divider from '../assets/tribe/Divider.svg'
 
 const Index: NextPage = () => {
   return (
@@ -43,6 +46,18 @@ const Index: NextPage = () => {
             />
           </div>
           <Trailer />
+          <div className="relative w-full h-0 z-10">
+            <div
+              className="w-full h-64 -translate-y-[52%] flex flex-col  justify-center"
+              style={{
+                background:
+                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #0E0E15 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0) 100%)',
+              }}
+            >
+              <div className='w-full  mx-auto max-w-[840px]'><Image src={Divider} alt="Divider" className="" /></div>
+            </div>
+          </div>
+          <Tribe />
         </div>
       </main>
       <Footer />
