@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import { Trailer } from '../components/trailer'
 import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
+import { Features } from '../components/feature'
 
 const Index: NextPage = () => {
   return (
@@ -45,7 +46,9 @@ const Index: NextPage = () => {
               }}
             />
           </div>
+
           <Trailer />
+
           <div className="relative w-full h-0 z-10">
             <div
               className="w-full h-64 -translate-y-[52%] flex flex-col  justify-center"
@@ -54,10 +57,25 @@ const Index: NextPage = () => {
                   'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #0E0E15 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0) 100%)',
               }}
             >
-              <div className='w-full  mx-auto max-w-[840px]'><Image src={Divider} alt="Divider" className="" /></div>
+              <div className="w-full  mx-auto max-w-[840px]">
+                <Image src={Divider} alt="Divider" className="" />
+              </div>
             </div>
           </div>
+
           <Tribe />
+
+          <div className="relative w-full h-0 z-10">
+            <div
+              className="w-full h-40 -translate-y-[52%]"
+              style={{
+                background:
+                  'linear-gradient(180deg, rgba(13, 28, 48, 0) 0%, #0D1C30 51.78%, rgba(13, 28, 48, 0) 100%)',
+              }}
+            />
+          </div>
+
+          <Features />
         </div>
       </main>
       <Footer />

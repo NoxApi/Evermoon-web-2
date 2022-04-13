@@ -94,7 +94,7 @@ export const Tribe = () => {
         />
       </div>
 
-      <div className="pt-3 pb-12 bg-[#0D1325]  ">
+      <div className="pt-3 pb-16 bg-[#0D1325]  ">
         <div className="mt-4 mx-auto max-w-[660px] font-Josefin text-xl text-center relative">
           All incidents of the war started when Beyonder separated its power
           into fractions and spread them all over to prevent the collapse of the
