@@ -9,6 +9,7 @@ import { Trailer } from '../components/trailer'
 import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
 import { Features } from '../components/feature'
+import { Heroes } from '../components/heroes'
 
 const Index: NextPage = () => {
   return (
@@ -76,6 +77,8 @@ const Index: NextPage = () => {
           </div>
 
           <Features />
+
+          <Heroes />
         </div>
       </main>
       <Footer />
