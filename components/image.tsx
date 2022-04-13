@@ -5,8 +5,28 @@ interface ImageProps {
   src: StaticImageData
   alt: string
   priority?: boolean
+  blur?: boolean
+  fill?: boolean
 }
-function Image({ className, src, alt, priority }: ImageProps) {
+function Image({
+  className,
+  src,
+  alt,
+  priority,
+  blur = false,
+  fill = false,
+}: ImageProps) {
+  if (fill) {
+    return (
+      <ImageNext
+        src={src}
+        alt={alt}
+        layout="fill"
+        objectFit="cover"
+        className={className}
+      />
+    )
+  }
   if (src.src.includes('png')) {
     return (
       <div className={className}>
@@ -18,6 +38,7 @@ function Image({ className, src, alt, priority }: ImageProps) {
             alt={alt}
             priority={priority}
             placeholder="blur"
+            className={`${!blur && 'duration-[0s]'}`}
           />
         </div>
       </div>

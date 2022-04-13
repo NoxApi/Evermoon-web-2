@@ -45,10 +45,6 @@ module.exports = {
         '.bg-gold-gradient-sm': {
           background: 'linear-gradient(180deg, #F9D390 0%, #E2B15B 100%)',
         },
-        '.bg-black-gradient': {
-          background:
-            'linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 65%, rgba(255,255,255,0) 100%)',
-        },
         '.bg-gold-gradient-inv': {
           background: 'linear-gradient(0deg, #F9D39000 0%, #E2B15B66 140%)',
         },
@@ -67,6 +63,10 @@ module.exports = {
         },
         '.bg-disable': {
           background: '#c2c2c2',
+        },
+        '.bg-black-gradient': {
+          background:
+            'linear-gradient(180deg, #12151A 0%, rgba(15, 22, 36, 0.93) 39.58%, rgba(14, 22, 37, 0.96) 48.96%, rgba(14, 22, 38, 0.87) 56.77%, rgba(13, 22, 39, 0.79) 61.44%, rgba(13, 23, 41, 0.67) 67.71%, rgba(14, 23, 40, 0.57) 72.44%, rgba(17, 26, 43, 0.45) 77.6%, rgba(18, 22, 32, 0) 100%)',
         },
         '.text-gold': {
           color: 'var(--gold)',

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <section
       id="Home"
-      className="relative bg-white min-h-[844px] h-screen w-full"
+      className="relative bg-white min-h-[844px] h-screen w-full overflow-hidden"
     >
       <video
         className="hidden md:block inset-0 min-h-[844px] h-screen w-full object-cover"

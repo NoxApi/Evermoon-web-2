@@ -26,7 +26,7 @@ export function Link({ title, href, current }: LinkProp) {
               !current && 'hidden'
             } absolute left-0 right-0 bottom-0 w-16  mx-auto translate-y-1 `}
           >
-            <Image src={Line} alt="Line" />
+            <Image src={Line} alt="Line" blur={false} />
           </div>
         </div>
       </a>
