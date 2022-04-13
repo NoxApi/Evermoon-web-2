@@ -5,7 +5,7 @@ import Mapius from '../../assets/heroes/mapius.svg'
 import Mora from '../../assets/heroes/mora.svg'
 import Tazia from '../../assets/heroes/tazia.svg'
 import Dotler from '../../assets/heroes/dotler.svg'
-import Left from '../../assets/heroes/left.svg'
+import Left from '../../assets/heroes/Left.svg'
 
 import Orcai from '../../assets/heroes/orcai.png'
 import Yanoi from '../../assets/heroes/yanoi.png'
