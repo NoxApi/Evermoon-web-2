@@ -23,7 +23,6 @@ import {
 } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
-
 const herosString = [
   'orca',
   'yano',
@@ -49,8 +48,8 @@ export const Heroes = () => {
       </div>
       <div className="max-w-[1024px] mx-auto">
         <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={60}
+          naturalSlideWidth={1500}
+          naturalSlideHeight={1000}
           totalSlides={herosString.length}
           infinite={true}
           visibleSlides={1}
@@ -59,11 +58,11 @@ export const Heroes = () => {
           dragEnabled={false}
         >
           <Slider>
-            {herosString.map((hero, index) => (
+            {herosString.map((hero, hind) => (
               <ImageCarousel
-                key={`banner-${index}`}
-                path={`${zeroPad(index + 1, 2)}_${hero}`}
-                index={index}
+                key={`banner-${hind}`}
+                path={`${zeroPad(hind + 1, 2)}_${hero}`}
+                index={hind}
               />
             ))}
           </Slider>
@@ -89,10 +88,18 @@ export const Heroes = () => {
             className="flex-grow"
           >
             <Slider>
-              {[...(herosString.slice(-2)),...herosString,...(herosString.slice(0,2))].map((hero, index) => (
-                <ImageCarousel key={`hero-${index}`} path={hero} index={index} />
+              {[
+                ...herosString.slice(-2),
+                ...herosString,
+                ...herosString.slice(0, 2),
+              ].map((hero, hind) => (
+                <ImageCarousel
+                  key={`hero-${hind}`}
+                  path={hero}
+                  index={hind}
+                  
+                />
               ))}
-              
             </Slider>
           </CarouselProvider>
 
@@ -109,7 +116,15 @@ export const Heroes = () => {
   )
 }
 
-const ImageCarousel = ({ path, index }: { path: string; index: number }) => {
+const ImageCarousel = ({
+  path,
+  index,
+  className,
+}: {
+  path: string
+  index: number
+  className?: string
+}) => {
   const [image, setImage] = useState<StaticImageData | null>(null)
 
   ;(function (imageName) {
@@ -120,7 +135,9 @@ const ImageCarousel = ({ path, index }: { path: string; index: number }) => {
 
   return (
     <Slide index={index}>
-      {image && <Image alt={path} className="w-full" src={image} />}
+      {image && (
+        <Image alt={path} className={`w-full ${className}`} src={image} />
+      )}
     </Slide>
   )
 }
