@@ -12,6 +12,7 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 import BG from '../../assets/heroes/bg.png'
+import frame from '../../assets/heroes/on_light.png'
 
 const herosString = [
   'orca',
@@ -112,6 +113,7 @@ export const Heroes = () => {
           >
             <Image src={Left} alt="Left" className="w-10 rotate-180" />
           </button>
+          <div className='absolute inset-0 pointer-events-none'><Image src={frame} alt="frame" className='m-auto w-48 ' /></div>
         </div>
       </div>
     </section>
