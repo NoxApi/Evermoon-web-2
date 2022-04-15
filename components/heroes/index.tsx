@@ -1,18 +1,6 @@
 import React, { useRef, useState } from 'react'
-// import Orca from '../../assets/heroes/orca.svg'
-// import Yano from '../../assets/heroes/yano.svg'
-// import Mapius from '../../assets/heroes/mapius.svg'
-// import Mora from '../../assets/heroes/mora.svg'
-// import Tazia from '../../assets/heroes/tazia.svg'
-// import Dotler from '../../assets/heroes/dotler.svg'
 import Left from '../../assets/heroes/Left.svg'
 
-// import Orcai from '../../assets/heroes/orcai.png'
-// import Yanoi from '../../assets/heroes/yanoi.png'
-// import Mapiusi from '../../assets/heroes/mapiusi.png'
-// import Morai from '../../assets/heroes/morai.png'
-// import Taziai from '../../assets/heroes/taziai.png'
-// import Dotleri from '../../assets/heroes/dotleri.png'
 import Image from '../image'
 import {
   CarouselProvider,
@@ -22,6 +10,8 @@ import {
   ButtonNext,
 } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
+
+import BG from '../../assets/heroes/bg.png'
 
 const herosString = [
   'orca',
@@ -42,31 +32,48 @@ const zeroPad = (num: number, places: number) =>
 export const Heroes = () => {
   const [index, setIndex] = useState(0)
   return (
-    <section id="heroes">
-      <div className="pt-12 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">
-        HEROES
+    <section id="heroes" className="relative">
+      <div className="relative">
+        <Image src={BG} alt="BG" className="absolute inset-0 -z-10 " fill />
+        <div className="pt-24 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">
+          HEROES
+        </div>
+        <div className="relative max-w-[1024px] mx-auto -mt-20">
+          <CarouselProvider
+            naturalSlideWidth={1500}
+            naturalSlideHeight={1000}
+            totalSlides={herosString.length}
+            infinite={true}
+            visibleSlides={1}
+            currentSlide={index}
+            touchEnabled={false}
+            dragEnabled={false}
+            className="-mb-16"
+          >
+            <Slider>
+              {herosString.map((hero, hind) => (
+                <ImageCarousel
+                  key={`banner-${hind}`}
+                  path={`${zeroPad(hind + 1, 2)}_${hero}`}
+                  index={hind}
+                />
+              ))}
+            </Slider>
+          </CarouselProvider>
+        </div>
       </div>
-      <div className="max-w-[1024px] mx-auto">
-        <CarouselProvider
-          naturalSlideWidth={1500}
-          naturalSlideHeight={1000}
-          totalSlides={herosString.length}
-          infinite={true}
-          visibleSlides={1}
-          currentSlide={index}
-          touchEnabled={false}
-          dragEnabled={false}
-        >
-          <Slider>
-            {herosString.map((hero, hind) => (
-              <ImageCarousel
-                key={`banner-${hind}`}
-                path={`${zeroPad(hind + 1, 2)}_${hero}`}
-                index={hind}
-              />
-            ))}
-          </Slider>
-        </CarouselProvider>
+
+      <div className="relative w-full h-0 z-10 mt-16">
+        <div
+          className="w-full h-40 -translate-y-[52%]"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(13, 28, 48, 0) 0%, #0D1C30 51.78%, rgba(13, 28, 48, 0) 100%)',
+          }}
+        />
+      </div>
+
+      <div className="max-w-[1024px] mx-auto -mt-20 relative z-10">
         <div className="flex ">
           <button
             onClick={() =>
@@ -93,12 +100,7 @@ export const Heroes = () => {
                 ...herosString,
                 ...herosString.slice(0, 2),
               ].map((hero, hind) => (
-                <ImageCarousel
-                  key={`hero-${hind}`}
-                  path={hero}
-                  index={hind}
-                  
-                />
+                <ImageCarousel key={`hero-${hind}`} path={hero} index={hind} />
               ))}
             </Slider>
           </CarouselProvider>

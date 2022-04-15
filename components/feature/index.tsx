@@ -13,7 +13,7 @@ import Image from '../image'
 export const Features = () => {
   return (
     <section id="features" className="relative bg-sky-900 overflow-hidden pb-24">
-      <Image src={BG} alt="BG" className="absolute w-full " />
+      <Image src={BG} alt="BG" className="absolute w-full " fill />
       <div className="pt-12 relative text-center font-Josefin text-gold-light text-6xl ">
         FEATURES
       </div>

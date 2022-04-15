@@ -78,6 +78,19 @@ const Index: NextPage = () => {
 
           <Features />
 
+          <div className="relative w-full h-0 z-10">
+            <div
+              className="w-full h-64 -translate-y-[52%] flex flex-col  justify-center"
+              style={{
+                background:
+                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #0E0E15 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0) 100%)',
+              }}
+            >
+              <div className="w-full  mx-auto max-w-[840px]">
+                <Image src={Divider} alt="Divider" className="rotate-180" />
+              </div>
+            </div>
+          </div>
           <Heroes />
         </div>
       </main>
