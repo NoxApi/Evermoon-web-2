@@ -1,18 +1,18 @@
 import React, { useRef, useState } from 'react'
-import Orca from '../../assets/heroes/orca.svg'
-import Yano from '../../assets/heroes/yano.svg'
-import Mapius from '../../assets/heroes/mapius.svg'
-import Mora from '../../assets/heroes/mora.svg'
-import Tazia from '../../assets/heroes/tazia.svg'
-import Dotler from '../../assets/heroes/dotler.svg'
+// import Orca from '../../assets/heroes/orca.svg'
+// import Yano from '../../assets/heroes/yano.svg'
+// import Mapius from '../../assets/heroes/mapius.svg'
+// import Mora from '../../assets/heroes/mora.svg'
+// import Tazia from '../../assets/heroes/tazia.svg'
+// import Dotler from '../../assets/heroes/dotler.svg'
 import Left from '../../assets/heroes/Left.svg'
 
-import Orcai from '../../assets/heroes/orcai.png'
-import Yanoi from '../../assets/heroes/yanoi.png'
-import Mapiusi from '../../assets/heroes/mapiusi.png'
-import Morai from '../../assets/heroes/morai.png'
-import Taziai from '../../assets/heroes/taziai.png'
-import Dotleri from '../../assets/heroes/dotleri.png'
+// import Orcai from '../../assets/heroes/orcai.png'
+// import Yanoi from '../../assets/heroes/yanoi.png'
+// import Mapiusi from '../../assets/heroes/mapiusi.png'
+// import Morai from '../../assets/heroes/morai.png'
+// import Taziai from '../../assets/heroes/taziai.png'
+// import Dotleri from '../../assets/heroes/dotleri.png'
 import Image from '../image'
 import {
   CarouselProvider,
@@ -23,8 +23,22 @@ import {
 } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
-const herosList = [Orca, Yano, Mapius, Mora, Tazia, Dotler]
-const herosiList = [Orcai, Yanoi, Mapiusi, Morai, Taziai, Dotleri]
+
+const herosString = [
+  'orca',
+  'yano',
+  'mapius',
+  'mora',
+  'tazia',
+  'dotler',
+  'axolt',
+  'kwondo',
+  'bullock',
+  'ayla',
+]
+
+const zeroPad = (num: number, places: number) =>
+  String(num).padStart(places, '0')
 
 export const Heroes = () => {
   const [index, setIndex] = useState(0)
@@ -37,7 +51,7 @@ export const Heroes = () => {
         <CarouselProvider
           naturalSlideWidth={100}
           naturalSlideHeight={60}
-          totalSlides={herosList.length}
+          totalSlides={herosString.length}
           infinite={true}
           visibleSlides={1}
           currentSlide={index}
@@ -45,15 +59,19 @@ export const Heroes = () => {
           dragEnabled={false}
         >
           <Slider>
-            {herosList.map((hero, index) => (
-              <ImageCarousel key={`hero-${index}`} src={hero} index={index} />
+            {herosString.map((hero, index) => (
+              <ImageCarousel
+                key={`banner-${index}`}
+                path={`${zeroPad(index + 1, 2)}_${hero}`}
+                index={index}
+              />
             ))}
           </Slider>
         </CarouselProvider>
         <div className="flex ">
           <button
             onClick={() =>
-              index > 0 ? setIndex(index - 1) : setIndex(herosList.length - 1)
+              index > 0 ? setIndex(index - 1) : setIndex(herosString.length - 1)
             }
           >
             <Image src={Left} alt="Left" className="w-10" />
@@ -62,7 +80,7 @@ export const Heroes = () => {
           <CarouselProvider
             naturalSlideWidth={10}
             naturalSlideHeight={10}
-            totalSlides={herosiList.length * 2}
+            totalSlides={herosString.length + 4}
             infinite={true}
             visibleSlides={5}
             currentSlide={index}
@@ -71,18 +89,16 @@ export const Heroes = () => {
             className="flex-grow"
           >
             <Slider>
-              {herosiList.map((hero, index) => (
-                <ImageCarousel key={`hero-${index}`} src={hero} index={index} />
+              {[...(herosString.slice(-2)),...herosString,...(herosString.slice(0,2))].map((hero, index) => (
+                <ImageCarousel key={`hero-${index}`} path={hero} index={index} />
               ))}
-              {herosiList.map((hero, index) => (
-                <ImageCarousel key={`hero-${index}`} src={hero} index={index} />
-              ))}
+              
             </Slider>
           </CarouselProvider>
 
           <button
             onClick={() =>
-              index < herosList.length - 1 ? setIndex(index + 1) : setIndex(0)
+              index < herosString.length - 1 ? setIndex(index + 1) : setIndex(0)
             }
           >
             <Image src={Left} alt="Left" className="w-10 rotate-180" />
@@ -91,19 +107,20 @@ export const Heroes = () => {
       </div>
     </section>
   )
+}
 
-  function ImageCarousel({
-    src,
-    index,
-  }: {
-    src: StaticImageData
-    index: number
-  }) {
-    const path = src.src.split('/')
-    return (
-      <Slide index={index}>
-        <Image src={src} alt={path[path.length - 1]} className="w-full" />
-      </Slide>
+const ImageCarousel = ({ path, index }: { path: string; index: number }) => {
+  const [image, setImage] = useState<StaticImageData | null>(null)
+
+  ;(function (imageName) {
+    import(`../../assets/heroes/${imageName}.png`).then((image) =>
+      setImage(image.default)
     )
-  }
+  })(path)
+
+  return (
+    <Slide index={index}>
+      {image && <Image alt={path} className="w-full" src={image} />}
+    </Slide>
+  )
 }
