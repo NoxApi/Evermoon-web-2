@@ -13,6 +13,7 @@ import { Heroes } from '../components/heroes'
 import { Runes } from '../components/runes/runes'
 
 import BGRune from '../assets/runes/bg.png'
+import { Tokenomics } from '../components/tokenomics'
 
 const Index: NextPage = () => {
   return (
@@ -98,6 +99,7 @@ const Index: NextPage = () => {
           <div className="relative -mt-28 pt-28 bg-gray-900 ">
             <Image src={BGRune} alt="BG" className="absolute w-full " fill />
             <Runes />
+            <Tokenomics />
           </div>
         </div>
       </main>
