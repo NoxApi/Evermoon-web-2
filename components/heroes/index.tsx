@@ -36,7 +36,7 @@ export const Heroes = () => {
     <section id="heroes" className="relative">
       <div className="relative">
         <Image src={BG} alt="BG" className="absolute inset-0 -z-10 " fill />
-        <div className="pt-24 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">
+        <div className="pt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">
           HEROES
         </div>
         <div className="relative max-w-[1024px] mx-auto -mt-20">
@@ -69,7 +69,7 @@ export const Heroes = () => {
           className="w-full h-40 -translate-y-[52%]"
           style={{
             background:
-              'linear-gradient(180deg, rgba(13, 28, 48, 0) 0%, #0D1C30 51.78%, rgba(13, 28, 48, 0) 100%)',
+              'linear-gradient(180deg, rgba(12, 31, 55, 0) 0%, #082146 51.78%, rgba(4, 23, 48, 0) 100%)',
           }}
         />
       </div>
@@ -113,7 +113,9 @@ export const Heroes = () => {
           >
             <Image src={Left} alt="Left" className="w-10 rotate-180" />
           </button>
-          <div className='absolute inset-0 pointer-events-none'><Image src={frame} alt="frame" className='m-auto w-48 ' /></div>
+          <div className="absolute inset-0 pointer-events-none">
+            <Image src={frame} alt="frame" className="m-auto w-48 " />
+          </div>
         </div>
       </div>
     </section>
