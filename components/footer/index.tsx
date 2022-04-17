@@ -2,7 +2,7 @@ import React from 'react'
 import Image from '../image'
 import left from '../../assets/footer/left.png'
 import right from '../../assets/footer/right.png'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo2.png'
 import LinkNewTab from '../LinkNewTab'
 import Telegram from '../../assets/socials/telegram.svg'
 import Discord from '../../assets/socials/discord.svg'
@@ -10,6 +10,7 @@ import Facebook from '../../assets/socials/facebook.svg'
 import Twitter from '../../assets/socials/twitter.svg'
 import Youtube from '../../assets/socials/youtube.svg'
 import Link from 'next/link'
+import BG from '../../assets/footer/bg.png'
 
 interface Props {
   className?: string
@@ -18,37 +19,40 @@ interface Props {
 const Footer = ({ className }: Props) => {
   return (
     <footer
-      className={'relative z-0 ' + className}
+      className={'relative z-0  ' + className}
       style={{
         background:
-          'linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)',
+          'linear-gradient(180deg, #0B1B37 0%, #07162D 100%, #07162D 100%)',
       }}
     >
       <Image
-        className="hidden md:block absolute left-0 bottom-0 w-48 -z-10"
-        src={left}
-        alt="left"
-        priority={true}
+        src={BG}
+        alt="BG"
+        className="absolute inset-0 -z-20 mt-32 opacity-40"
+        fill
       />
+
       <Image
-        className="absolute right-0 bottom-0 w-28 md:w-40 -z-10"
+        className="absolute left-0 bottom-0 w-28 md:w-40 -z-10"
         src={right}
         alt="right"
         priority={true}
       />
       <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
       <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
+        <div className="w-5" />
         <div className="max-w-[187px] md:max-w-[217px]">
           <Image className="w-full" src={Logo} alt="Logo" priority={true} />
-          <div className="font-source text-center">
+          <div className="font-Josefin text-center">
             NFT multichain MOBA game
           </div>
         </div>
-        <div className="w-full max-w-[310px] mt-20 md:mt-0">
-          <div className="font-tavi font-semibold text-2xl text-gold-gradient">
+
+        <div className="w-full max-w-[110px] mt-20 md:mt-0">
+          <div className="font-Glamode text-2xl text-gold-gradient">
             EXPLORE
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-y-6 font-source">
+          <div className="mt-4 grid grid-cols-1 gap-y-2 font-Josefin">
             <Link href="/#Home">
               <a>HOME</a>
             </Link>
@@ -63,11 +67,12 @@ const Footer = ({ className }: Props) => {
             </LinkNewTab>
           </div>
         </div>
+
         <div className="max-w-[217px] mt-12 md:mt-0 mb-12 md:mb-0">
-          <div className="font-tavi font-semibold text-2xl text-gold-gradient">
+          <div className="font-Glamode text-2xl text-gold-gradient">
             COMMUNITY
           </div>
-          <div className="mt-4 grid grid-cols-3 gap-y-4">
+          <div className="mt-4 grid grid-cols-6 gap-x-12">
             <LinkNewTab href="https://t.me/Evermoon_Community">
               <Image className="w-8" src={Telegram} alt="Telegram" />
             </LinkNewTab>

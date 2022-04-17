@@ -107,6 +107,15 @@ const Index: NextPage = () => {
           </div>
         </div>
       </main>
+      <div className="relative w-full h-0 ">
+        <div
+          className="w-full h-40 -translate-y-[50%]"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(12, 31, 55, 0) 0%, #0b111d 51.78%, 0b111d 100%)',
+          }}
+        />
+      </div>
       <Footer />
     </Layout>
   )
