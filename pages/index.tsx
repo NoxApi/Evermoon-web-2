@@ -15,6 +15,7 @@ import { Runes } from '../components/runes/runes'
 import BGRune from '../assets/runes/bg.png'
 import { Tokenomics } from '../components/tokenomics'
 import { Team } from '../components/team'
+import { Roadmap } from '../components/roadmap'
 
 const Index: NextPage = () => {
   return (
@@ -102,6 +103,7 @@ const Index: NextPage = () => {
             <Runes />
             <Tokenomics />
             <Team />
+            <Roadmap />
           </div>
         </div>
       </main>

@@ -16,7 +16,7 @@ export const Team = () => {
         TEAM
       </div>
 
-      <div className="max-w-[1024px] mx-auto relative">
+      <div className="mt-8 max-w-[1024px] mx-auto relative">
         <div className="absolute inset-0">
           <ImageNext
             src={Content}
