@@ -6,7 +6,7 @@ import q422 from '../../assets/roadmap/22q4.svg'
 import q123 from '../../assets/roadmap/23q1.svg'
 import q223 from '../../assets/roadmap/23q2.svg'
 import Image from '../image'
-import styled, { jsx, css, keyframes } from '@emotion/react'
+import { css, keyframes } from '@emotion/css'
 import BG from '../../assets/roadmap/bg.png'
 
 const dotProgress = (index: number) => keyframes`
@@ -47,8 +47,11 @@ export const Roadmap = () => {
                 // <Dot key={index} index={index}></Dot>
                 <div
                   key={index}
-                  className="w-2 h-2 rounded-full"
-                  css={css`
+                  // className="w-2 h-2 rounded-full"
+                  className={css`
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 9999px;
                     animation: 1.5s infinite ${dotProgress(index)};
                     animation-timing-function: step-end;
                   `}
