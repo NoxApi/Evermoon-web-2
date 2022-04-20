@@ -18,7 +18,7 @@ import M3 from '../../assets/runes/m3.png'
 
 export const Runes = () => {
   return (
-    <section className="relative ">
+    <section id="Runes" className="relative ">
       
       <div className="mt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         RUNES

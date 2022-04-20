@@ -44,7 +44,7 @@ export const Tokenomics = () => {
   const [show, setShow] = useState(0)
 
   return (
-    <section className="relative">
+    <section id="Tokenomic" className="relative">
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         TOKENOMICS
       </div>

@@ -45,12 +45,12 @@ function HeaderDesktop() {
     <div className="hidden xl:flex w-full ">
       <div className="ml-8 flex items-center mr-auto z-0">
         <Link title="HOME" href="#Home" current={true} />
-        <Link title="FEATURE" href="/#Feature" current={false} />
-        <Link title="HEROES" href="/#Heroes" current={false} />
-        <Link title="RUNES" href="/#Runes" current={false} />
-        <Link title="TICKETS" href="/#Tickets" current={false} />
-        <Link title="TOKENOMIC" href="/#Tokenomic" current={false} />
-        <Link title="ROADMAP" href="/#Roadmap" current={false} />
+        <Link title="FEATURE" href="#Feature" current={false} />
+        <Link title="HEROES" href="#Heroes" current={false} />
+        <Link title="RUNES" href="#Runes" current={false} />
+        <Link title="TICKETS" href="#Tickets" current={false} />
+        <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
+        <Link title="ROADMAP" href="#Roadmap" current={false} />
       </div>
 
       <div className="flex items-center">
@@ -131,25 +131,14 @@ function HeaderMobile() {
                 </div>
 
                 <div className="mt-12 mx-4">
-                  <NLink title="HOME" href="/" />
+                  <NLink title="HOME" href="#Home" />
+                  <NLink title="FEATURE" href="#Feature" />
+                  <NLink title="HEROES" href="#Heroes" />
+                  <NLink title="RUNES" href="#Runes" />
+                  <NLink title="TICKETS" href="#Tickets" />
+                  <NLink title="TOKENOMIC" href="#Tokenomic" />
+                  <NLink title="ROADMAP" href="#Roadmap" />
 
-                  <Disclosure>
-                    {({ open }) => (
-                      <>
-                        <Disclosure.Button className="">
-                          <NLink title="ABOUT GAME" />
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="ml-12  pb-8 font-source text-white uppercase">
-                          <SubLink title="Features" />
-                          <SubLink title="Tribes" />
-                          <SubLink title="Tokens" />
-                        </Disclosure.Panel>
-                      </>
-                    )}
-                  </Disclosure>
-                  <NLink title="ROADMAP" href="/#RoadMap" />
-                  <CLink title="PARTNERSHIP" />
-                  <CLink title="NEWS" />
                   <Image
                     className="max-w-[300px] mx-6 md:mx-0 mt-8"
                     src={MarketplaceSmall}

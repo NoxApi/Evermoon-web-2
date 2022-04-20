@@ -33,7 +33,7 @@ const zeroPad = (num: number, places: number) =>
 export const Heroes = () => {
   const [index, setIndex] = useState(0)
   return (
-    <section id="heroes" className="relative">
+    <section id="Heroes" className="relative">
       <div className="relative">
         <Image src={BG} alt="BG" className="absolute inset-0 -z-10 " fill />
         <div className="pt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">

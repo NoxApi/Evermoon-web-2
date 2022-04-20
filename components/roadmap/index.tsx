@@ -20,7 +20,7 @@ const dotProgress = (index: number) => keyframes`
 
 export const Roadmap = () => {
   return (
-    <section className="relative z-0 overflow-hidden">
+    <section id="Roadmap" className="relative z-0 overflow-hidden">
       <Image src={BG} alt="BG" className=" absolute inset-0 -z-10 mt-32" />
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         ROADMAP
