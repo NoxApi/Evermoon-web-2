@@ -132,19 +132,19 @@ function RingToken({
 function Summary({ setShow }: { setShow: Function }) {
   return (
     <div className="relative mt-10 flex justify-evenly pt-12 pb-60">
-      <div className="flex flex-col items-center" onClick={() => setShow(1)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(1)}>
         <RingToken token={Evermoon} animate />
         <div className="font-Josefin text-3xl text-gold-light">
           EVERMOON TOKEN
         </div>
         <div className="font-Josefin text-xl">Total Supply 1,000,000,000</div>
-      </div>
+      </button>
 
-      <div className="flex flex-col items-center" onClick={() => setShow(2)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(2)}>
         <RingToken token={Everstone} animate />
         <div className="font-Josefin text-3xl text-gold-light">EVERSTONE</div>
         <div className="font-Josefin text-xl">Unlimited Supply</div>
-      </div>
+      </button>
     </div>
   )
 }
@@ -152,9 +152,9 @@ function Summary({ setShow }: { setShow: Function }) {
 function EVERMOON({ setShow }: { setShow: Function }) {
   return (
     <div className="relative mt-10 grid grid-cols-2  pt-12 pb-8">
-      <div className="flex flex-col items-center" onClick={() => setShow(0)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(0)}>
         <RingToken token={Evermoon} animate />
-      </div>
+      </button>
 
       <div className="flex flex-col items-left">
         <div className="font-Josefin text-4xl text-gold-light">
@@ -177,12 +177,12 @@ function EVERMOON({ setShow }: { setShow: Function }) {
         </div>
       </div>
 
-      <div
+      <button
         className="absolute top-7 left-7 flex flex-col items-center"
         onClick={() => setShow(2)}
       >
         <RingToken token={Everstone} width="w-20" />
-      </div>
+      </button>
     </div>
   )
 }
@@ -190,9 +190,9 @@ function EVERMOON({ setShow }: { setShow: Function }) {
 function EVERSTONE({ setShow }: { setShow: Function }) {
   return (
     <div className="relative mt-10 grid grid-cols-2  pt-12 pb-8">
-      <div className="flex flex-col items-center" onClick={() => setShow(0)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(0)}>
         <RingToken token={Everstone} animate />
-      </div>
+      </button>
 
       <div className="flex flex-col items-left">
         <div className="font-Josefin text-4xl text-gold-light">
@@ -216,12 +216,12 @@ function EVERSTONE({ setShow }: { setShow: Function }) {
         </div>
       </div>
 
-      <div
+      <button
         className="absolute top-7 left-7 flex flex-col items-center"
         onClick={() => setShow(1)}
       >
         <RingToken token={Evermoon} width="w-20" />
-      </div>
+      </button>
     </div>
   )
 }
