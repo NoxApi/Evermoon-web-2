@@ -19,11 +19,10 @@ import M3 from '../../assets/runes/m3.png'
 export const Runes = () => {
   return (
     <section id="Runes" className="relative ">
-      
       <div className="mt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         RUNES
       </div>
-      <div className="max-w-[1024px] mx-auto relative">
+      <div className="max-w-[1024px] mx-8 md:mx-auto relative">
         <div className="absolute inset-0">
           <ImageNext
             src={Content}
@@ -34,7 +33,7 @@ export const Runes = () => {
           />
         </div>
 
-        <div className="relative mt-10">
+        <div className="hidden md:block relative mt-10">
           <Tab.Group>
             <Tab.List className="pt-12 flex justify-evenly ">
               {['Attack', 'Defend', 'Mobility'].map((title) => (
@@ -95,7 +94,28 @@ export const Runes = () => {
           </Tab.Group>
         </div>
 
-        <div className='relative max-w-[500px] text-center mx-auto mt-12 pb-16'>
+        <div className="md:hidden relative mt-10">
+          <div className="font-Glamode text-xl py-6 text-center">Attack</div>
+          <div className="flex justify-evenly">
+            <Rune image={A1} />
+            <Rune image={A2} />
+            <Rune image={A3} />
+          </div>
+          <div className="font-Glamode text-xl py-6 text-center">Defend</div>
+          <div className="flex justify-evenly">
+            <Rune image={D1} />
+            <Rune image={D2} />
+            <Rune image={D3} />
+          </div>
+          <div className="font-Glamode text-xl py-6 text-center">Mobility</div>
+          <div className="flex justify-evenly">
+            <Rune image={M1} />
+            <Rune image={M2} />
+            <Rune image={M3} />
+          </div>
+        </div>
+
+        <div className="relative max-w-[500px] md:text-center mx-4 md:mx-auto mt-12 pb-16">
           An ancient stone that harbored a strong energy since ancient times. It
           can be obtained by opening it from loot boxes and market places.
         </div>
@@ -107,7 +127,7 @@ export const Runes = () => {
 function Rune({ image }: { image: StaticImageData }) {
   return (
     <div className="relative">
-      <Image src={Frame} alt="Frame" className="w-64" />
+      <Image src={Frame} alt="Frame" className="w-24 md:w-64" />
       <Image
         src={image}
         alt={image.src.split('/').slice(-1).join('')}

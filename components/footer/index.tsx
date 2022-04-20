@@ -33,15 +33,15 @@ const Footer = ({ className }: Props) => {
       />
 
       <Image
-        className="absolute left-0 bottom-0 w-28 md:w-40 -z-10"
+        className="absolute right-0 md:left-0 bottom-0 -scale-x-100 md:scale-x-100 w-40 -z-10"
         src={right}
         alt="right"
         priority={true}
       />
       <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
-      <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
+      <div className="relative flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
         <div className="w-5" />
-        <div className="max-w-[187px] md:max-w-[217px]">
+        <div className="max-w-[217px]">
           <Image className="w-full" src={Logo} alt="Logo" priority={true} />
           <div className="font-Josefin text-center">
             NFT multichain MOBA game
@@ -72,7 +72,7 @@ const Footer = ({ className }: Props) => {
           <div className="font-Glamode text-2xl text-gold-gradient">
             COMMUNITY
           </div>
-          <div className="mt-4 grid grid-cols-6 gap-x-12">
+          <div className="max-w-[124px] md:max-w-none mt-4 grid grid-cols-3 md:grid-cols-6 gap-x-12 gap-y-6">
             <LinkNewTab href="https://t.me/Evermoon_Community">
               <Image className="w-8" src={Telegram} alt="Telegram" />
             </LinkNewTab>

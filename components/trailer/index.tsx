@@ -13,9 +13,9 @@ export const Trailer = () => {
     <section id="trailer" className="relative flex flex-col">
       <Image src={BG} alt="BG" fill />
       <div className="max-w-[1024px] w-full mx-auto mt-12">
-        <Image src={Title} alt="Title" className="w-96 ml-auto translate-y-6" />
+        <Image src={Title} alt="Title" className="w-72 md:w-96 ml-auto translate-y-6" />
       </div>
-      <div className="relative max-w-[1024px] w-full mx-auto mb-12 z-10">
+      <div className="relative max-w-[1024px] lg:w-full mx-8 md:mx-12 lg:mx-auto mb-12 z-10">
         <YouTube
           videoId="piZkiA-mLx8"
           opts={{ height: '100%', width: '100%' }}
@@ -33,12 +33,12 @@ export const Trailer = () => {
         <Image
           src={Star}
           alt="Star"
-          className="w-16 absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="w-12 md:w-16 absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         />
         <Image
           src={Star}
           alt="Star"
-          className="w-16 absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="w-12 md:w-16 absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 pointer-events-none"
         />
       </div>
 
@@ -64,13 +64,13 @@ export const Trailer = () => {
           />
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center items-center pt-64">
-          <div className="flex items-center font-Glamode text-5xl">
+        <div className="absolute inset-0 flex flex-col justify-center items-center pt-20 md:pt-64">
+          <div className="flex items-center font-Glamode text-2xl md:text-5xl">
             <div>Play & Earn</div>
             <div className="mx-8 w-3 h-3 bg-white rounded-full" />
             <div>Free to Earn</div>
           </div>
-          <div className="mt-8 font-Josefin max-w-2xl text-lg text-center">
+          <div className="mt-8 mx-3 font-Josefin max-w-2xl text-base md:text-lg text-center">
             Play and have fun along with earning with a 5v5 MOBA three lanes
             experience, customize the strategy and gameplay of you and your
             teammates.

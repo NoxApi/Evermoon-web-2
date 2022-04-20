@@ -45,11 +45,11 @@ export const Tokenomics = () => {
 
   return (
     <section id="Tokenomic" className="relative">
-      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
+      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
         TOKENOMICS
       </div>
 
-      <div className="max-w-[1024px] mx-auto relative">
+      <div className="max-w-[1024px] mx-8 md:mx-auto relative">
         <div className="absolute inset-0">
           <ImageNext
             src={Content}
@@ -70,7 +70,7 @@ export const Tokenomics = () => {
 function RingToken({
   token,
   animate = false,
-  width = 'w-80',
+  width = 'w-60 md:w-80',
 }: {
   token: StaticImageData
   animate?: boolean
@@ -131,19 +131,19 @@ function RingToken({
 
 function Summary({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex justify-evenly pt-12 pb-60">
+    <div className="relative mt-10 flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60">
       <button className="flex flex-col items-center" onClick={() => setShow(1)}>
         <RingToken token={Evermoon} animate />
-        <div className="font-Josefin text-3xl text-gold-light">
+        <div className="font-Josefin text-xl md:text-3xl text-gold-light">
           EVERMOON TOKEN
         </div>
-        <div className="font-Josefin text-xl">Total Supply 1,000,000,000</div>
+        <div className="font-Josefin md:text-xl">Total Supply 1,000,000,000</div>
       </button>
 
       <button className="flex flex-col items-center" onClick={() => setShow(2)}>
         <RingToken token={Everstone} animate />
-        <div className="font-Josefin text-3xl text-gold-light">EVERSTONE</div>
-        <div className="font-Josefin text-xl">Unlimited Supply</div>
+        <div className="font-Josefin text-xl md:text-3xl text-gold-light">EVERSTONE</div>
+        <div className="font-Josefin md:text-xl">Unlimited Supply</div>
       </button>
     </div>
   )
@@ -151,24 +151,24 @@ function Summary({ setShow }: { setShow: Function }) {
 
 function EVERMOON({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 grid grid-cols-2  pt-12 pb-8">
+    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
       <button className="flex flex-col items-center" onClick={() => setShow(0)}>
         <RingToken token={Evermoon} animate />
       </button>
 
-      <div className="flex flex-col items-left">
+      <div className="flex flex-col items-left mx-4 md:mx-0">
         <div className="font-Josefin text-4xl text-gold-light">
           EVERMOON TOKEN ($ES)
         </div>
         <div className="font-Josefin text-2xl text-white mt-3">
           Total Supply 1,000,000,000
         </div>
-        <div className="font-Josefin text-sm text-white mr-20 mt-4">
+        <div className="font-Josefin text-sm text-white md:mr-20 mt-4 ">
           To the new dimension of NFT game industries of play and earn,
           moonstone is a core of our moon economy. Generating income to reach
           your dreams. Players may achieve a rewarding experience through…
         </div>
-        <div className="flex flex-col pr-20 gap-y-5 mt-8">
+        <div className="flex flex-col pr-20 gap-y-5 mt-8 ">
           {[UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
             (image: StaticImageData) => (
               <Image key={image.src} src={image} alt="" />
@@ -181,7 +181,7 @@ function EVERMOON({ setShow }: { setShow: Function }) {
         className="absolute top-7 left-7 flex flex-col items-center"
         onClick={() => setShow(2)}
       >
-        <RingToken token={Everstone} width="w-20" />
+        <RingToken token={Everstone} width="w-16 md:w-20" />
       </button>
     </div>
   )
@@ -189,12 +189,12 @@ function EVERMOON({ setShow }: { setShow: Function }) {
 
 function EVERSTONE({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 grid grid-cols-2  pt-12 pb-8">
+    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
       <button className="flex flex-col items-center" onClick={() => setShow(0)}>
         <RingToken token={Everstone} animate />
       </button>
 
-      <div className="flex flex-col items-left">
+      <div className="flex flex-col items-left mx-4 md:mx-0">
         <div className="font-Josefin text-4xl text-gold-light">
           EVERSTONE ($EVM)
         </div>
@@ -220,7 +220,7 @@ function EVERSTONE({ setShow }: { setShow: Function }) {
         className="absolute top-7 left-7 flex flex-col items-center"
         onClick={() => setShow(1)}
       >
-        <RingToken token={Evermoon} width="w-20" />
+        <RingToken token={Evermoon} width="w-16 md:w-20" />
       </button>
     </div>
   )

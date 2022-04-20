@@ -12,11 +12,11 @@ const teams = ['t1', 't2', 't3', 't4', 't5', 't6', 't7']
 export const Team = () => {
   return (
     <section className="relative">
-      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
+      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
         TEAM
       </div>
 
-      <div className="mt-8 max-w-[1024px] mx-auto relative">
+      <div className="mt-8 max-w-[1024px] mx-8 md:mx-auto relative">
         <div className="absolute inset-0">
           <ImageNext
             src={Content}
@@ -30,7 +30,7 @@ export const Team = () => {
           <Image
             src={Light}
             alt="Light"
-            className="w-[450px] -translate-y-1/2 mx-auto"
+            className="w-[250px] md:w-[450px] -translate-y-1/2 mx-auto"
           />
         </div>
 
@@ -69,7 +69,7 @@ const ImageTeam = ({
   return (
     <div>
       {image && (
-        <Image alt={path} className={`w-52 ${className}`} src={image} />
+        <Image alt={path} className={`w-44 md:w-52 ${className}`} src={image} />
       )}
     </div>
   )

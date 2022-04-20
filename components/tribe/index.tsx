@@ -17,7 +17,7 @@ export const Tribe = () => {
       {/* <Image src={BG} alt="BG" className="absolute w-full -z-10" /> */}
 
       <div
-        className="mb-32 relative max-w-[840px] mx-auto rounded-b-2xl border-[2px] border-gold-light"
+        className="mb-32 relative max-w-[840px] mx-8 md:mx-auto rounded-b-2xl border-[2px] border-gold-light"
         style={{
           background: 'linear-gradient(180deg, #191820 0%, #091A33 100%)',
         }}
@@ -27,10 +27,10 @@ export const Tribe = () => {
           alt="BG2"
           className="absolute w-full -z-10 scale-[116%] -translate-y-[40%]"
         />
-        <div className="mx-16 mt-20 font-Josefin text-gold-light text-6xl">
+        <div className="mx-8 md:mx-16 mt-20 font-Josefin text-gold-light text-6xl">
           TRIBES
         </div>
-        <div className="mx-16 font-Josefin text-xl my-8">
+        <div className="mx-8 md:mx-16 font-Josefin text-xl my-8">
           The power has been passed on to the selected individual through the
           {` tribe's`} sacred ritual that happens once every 100 years.
           <br />
@@ -38,12 +38,12 @@ export const Tribe = () => {
           pantheon.
         </div>
 
-        <div className="mx-16 mb-12 flex justify-between mt-10">
-          <Image src={Naka} alt="Naka" className="w-28" />
-          <Image src={Byza} alt="Byza" className="w-28" />
-          <Image src={Ethe} alt="Ethe" className="w-28" />
-          <Image src={Luna} alt="Luna" className="w-28" />
-          <Image src={Soli} alt="Soli" className="w-28" />
+        <div className="mx-8 md:mx-16 mb-12 flex flex-wrap md:flex-nowrap justify-evenly md:justify-between mt-10">
+          <Image src={Naka} alt="Naka" className="w-20 md:w-28" />
+          <Image src={Byza} alt="Byza" className="w-20 md:w-28" />
+          <Image src={Ethe} alt="Ethe" className="w-20 md:w-28" />
+          <Image src={Luna} alt="Luna" className="w-20 md:w-28" />
+          <Image src={Soli} alt="Soli" className="w-20 md:w-28" />
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export const Tribe = () => {
           alt="BG4"
           className="absolute w-full mix-blend-screen"
         />
-        <div className="pt-8 relative text-center font-Josefin text-gold-light text-6xl translate-y-6 z-10">
+        <div className="pt-8 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl translate-y-6 z-10">
           EVERFIELD
         </div>
         <div className=" relative z-10">
@@ -95,7 +95,7 @@ export const Tribe = () => {
       </div>
 
       <div className="pt-3 pb-16 bg-[#0D1325]  ">
-        <div className="mt-4 mx-auto max-w-[660px] font-Josefin text-xl text-center relative">
+        <div className="mt-4 mx-4 md:mx-auto max-w-[660px] font-Josefin  md:text-xl text-center relative">
           All incidents of the war started when Beyonder separated its power
           into fractions and spread them all over to prevent the collapse of the
           world. That power is called De-Zentrum and is one of the original
@@ -103,7 +103,6 @@ export const Tribe = () => {
           discovered.
         </div>
       </div>
-
     </section>
   )
 }

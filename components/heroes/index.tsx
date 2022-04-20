@@ -36,10 +36,10 @@ export const Heroes = () => {
     <section id="Heroes" className="relative">
       <div className="relative">
         <Image src={BG} alt="BG" className="absolute inset-0 -z-10 " fill />
-        <div className="pt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl ">
+        <div className="pt-40 max-w-[1024px] mx-8 md:mx-auto font-Josefin text-gold-light text-5xl md:text-6xl ">
           HEROES
         </div>
-        <div className="relative max-w-[1024px] mx-auto -mt-20">
+        <div className="relative max-w-[1024px] mx-auto -mt-8 md:-mt-20">
           <CarouselProvider
             naturalSlideWidth={1500}
             naturalSlideHeight={1000}
@@ -74,7 +74,7 @@ export const Heroes = () => {
         />
       </div>
 
-      <div className="max-w-[1024px] mx-auto -mt-20 relative z-10">
+      <div className="max-w-[1024px] m-8 md:mx-auto -mt-8 md:-mt-20 relative z-10">
         <div className="flex ">
           <button
             onClick={() =>
@@ -93,7 +93,7 @@ export const Heroes = () => {
             currentSlide={index}
             touchEnabled={false}
             dragEnabled={false}
-            className="flex-grow"
+            className="hidden md:block flex-grow"
           >
             <Slider>
               {[
@@ -101,7 +101,28 @@ export const Heroes = () => {
                 ...herosString,
                 ...herosString.slice(0, 2),
               ].map((hero, hind) => (
-                <ImageCarousel key={`hero-${hind}`} path={hero} index={hind} />
+                <ImageCarousel key={`hero-${hind}`} path={hero} index={hind} className="scale-125" />
+              ))}
+            </Slider>
+          </CarouselProvider>
+          <CarouselProvider
+            naturalSlideWidth={20}
+            naturalSlideHeight={20}
+            totalSlides={herosString.length + 4}
+            infinite={true}
+            visibleSlides={3}
+            currentSlide={index}
+            touchEnabled={false}
+            dragEnabled={false}
+            className=" md:hidden flex-grow"
+          >
+            <Slider>
+              {[
+                ...herosString.slice(-1),
+                ...herosString,
+                ...herosString.slice(0, 1),
+              ].map((hero, hind) => (
+                <ImageCarousel key={`hero-${hind}`} path={hero} index={hind}  />
               ))}
             </Slider>
           </CarouselProvider>
@@ -114,7 +135,7 @@ export const Heroes = () => {
             <Image src={Left} alt="Left" className="w-10 rotate-180" />
           </button>
           <div className="absolute inset-0 pointer-events-none">
-            <Image src={frame} alt="frame" className="m-auto w-48 " />
+            <Image src={frame} alt="frame" className="m-auto w-48 scale-125" />
           </div>
         </div>
       </div>

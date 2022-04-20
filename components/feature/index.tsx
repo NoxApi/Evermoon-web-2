@@ -14,18 +14,18 @@ export const Features = () => {
   return (
     <section id="Feature" className="relative bg-sky-900 overflow-hidden pb-24">
       <Image src={BG} alt="BG" className="absolute w-full " fill />
-      <div className="pt-12 relative text-center font-Josefin text-gold-light text-6xl ">
+      <div className="pt-12 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl ">
         FEATURES
       </div>
-      <div className="mx-auto flex max-w-[960px] gap-6 flex-wrap justify-between">
-        <Image src={F1} alt="F1" className="w-48" />
-        <Image src={F2} alt="F2" className="w-48" />
-        <Image src={F3} alt="F3" className="w-48" />
-        <Image src={F4} alt="F4" className="w-48" />
-        <Image src={F5} alt="F5" className="w-48" />
-        <Image src={F6} alt="F6" className="w-48" />
-        <Image src={F7} alt="F7" className="w-48" />
-        <Image src={F8} alt="F8" className="w-48" />
+      <div className="mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between">
+        <Image src={F1} alt="F1" className="w-40 md:w-48" />
+        <Image src={F2} alt="F2" className="w-40 md:w-48" />
+        <Image src={F3} alt="F3" className="w-40 md:w-48" />
+        <Image src={F4} alt="F4" className="w-40 md:w-48" />
+        <Image src={F5} alt="F5" className="w-40 md:w-48" />
+        <Image src={F6} alt="F6" className="w-40 md:w-48" />
+        <Image src={F7} alt="F7" className="w-40 md:w-48" />
+        <Image src={F8} alt="F8" className="w-40 md:w-48" />
       </div>
     </section>
   )

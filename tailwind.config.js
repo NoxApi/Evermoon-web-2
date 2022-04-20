@@ -14,7 +14,7 @@ module.exports = {
         ],
         '5xlr': [
           'clamp(1.875rem, 3vw + 1rem,3rem)',
-          'clamp(2.25rem, 3vw + 1rem,4.5rem)',
+          'clamp(2.25rem, 3vw + 1.2rem,4.5rem)',
         ],
       },
     },

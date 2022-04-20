@@ -19,6 +19,7 @@ import Whitepaper from '../../assets/home/whitepaper.svg'
 import CTA from '../../assets/socials/CTA.svg'
 import frameCTA from '../../assets/socials/frameCTA.svg'
 import { useState } from 'react'
+import Banner from '../../assets/Banner.png'
 
 export default function Home() {
   return (
@@ -37,23 +38,27 @@ export default function Home() {
         <source src="/banner.mp4#t=0.1" type="video/mp4" />
       </video>
 
+      <div className="md:hidden">
+        <Image src={Banner} alt="Banner" className=" h-screen w-full" fill />
+      </div>
+
       <div className="absolute inset-0">
         <Header />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center translate-x-72">
-        <div className="text-5xlr font-Glamode font-bold text-gold-gradient text-center text-shadow-xl">
+      <div className="absolute inset-0 flex flex-col items-center justify-start mt-32 xl:translate-x-72">
+        <div className="text-2xl sm:text-5xlr font-Glamode  text-gold-gradient text-center text-shadow-xl">
           MOBILE MOBA BLOCKCHAIN
         </div>
-        <div className="prose-xl font-Josefin text-center text-shadow-xl">
+        <div className="text-base sm:prose-xl font-Josefin text-center text-shadow-xl">
           JOIN OUR UNIVERSE TO BECOME A HERO
         </div>
 
-        <div className="flex flex-col mt-16 items-center w-72 mx-auto">
+        <div className="mt-auto lg:mt-16 mb-24 lg:mb-0 flex flex-col items-center w-72 mx-auto">
           <LinkNewTab href="https://docs.google.com/forms/d/e/1FAIpQLSfBJTRBIPUIXd1g_0uadx__KC8x1y8NxD94bvwW_T6LgDbRPA/viewform">
             <Image
               src={JoinProgram}
               alt="JoinProgram"
-              className="w-[420px] transition-transform hover:scale-110 duration-500"
+              className="w-[calc(100vw-48px)] sm:w-[420px] transition-transform hover:scale-110 duration-500"
             />
           </LinkNewTab>
           <div className="h-7" />
@@ -61,21 +66,21 @@ export default function Home() {
             <Image
               src={JoinSale}
               alt="JoinSale"
-              className="w-[420px] transition-transform hover:scale-110 duration-500"
+              className="w-[calc(100vw-48px)] sm:w-[420px] transition-transform hover:scale-110 duration-500"
             />
           </LinkNewTab>
 
           <div className="flex mt-6">
-            <Image src={AppStore} alt="AppStore" className="w-[150px]" />
+            <Image src={AppStore} alt="AppStore" className="w-[120px] md:w-[150px]" />
             <div className="w-5" />
-            <Image src={GooglePlay} alt="GooglePlay" className="w-[150px]" />
+            <Image src={GooglePlay} alt="GooglePlay" className="w-[120px] md:w-[150px]" />
           </div>
 
           <LinkNewTab href="https://docs.evermoon.games/evermoon/">
             <Image
               src={Whitepaper}
               alt="Whitepaper"
-              className="w-[300px] mt-6 transition-transform hover:scale-110 duration-500"
+              className="w-[240px] md:w-[300px] mt-6 transition-transform hover:scale-110 duration-500"
             />
           </LinkNewTab>
         </div>
@@ -88,7 +93,7 @@ export default function Home() {
 
 function SocialCTA() {
   return (
-    <div className='group '>
+    <div className="group ">
       <Image
         src={CTA}
         alt="cta"
