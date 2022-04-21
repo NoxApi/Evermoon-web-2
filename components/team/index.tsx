@@ -17,7 +17,7 @@ export const Team = () => {
         TEAM
       </div>
 
-      <div className="mt-8 max-w-[1024px] mx-8 md:mx-auto relative">
+      <div className="mt-8 max-w-[1024px] mx-8 lg:mx-auto relative">
         <GoldGradientFrame />
         <div className="absolute top-0 left-0 right-0">
           <Image

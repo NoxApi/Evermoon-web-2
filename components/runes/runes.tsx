@@ -23,7 +23,7 @@ export const Runes = () => {
       <div className="mt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         RUNES
       </div>
-      <div className="max-w-[1024px] mx-8 md:mx-auto relative">
+      <div className="max-w-[1024px] mx-8 lg:mx-auto relative">
         <GoldGradientFrame />
 
         <div className="hidden md:block relative mt-10">

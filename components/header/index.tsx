@@ -53,7 +53,7 @@ function HeaderDesktop() {
       </div>
 
       <div className="flex items-center">
-        <Image src={team} alt="team" className="w-24 translate-x-1" />
+        {/* <Image src={team} alt="team" className="w-24 translate-x-1" /> */}
         <div className="relative">
           <Image src={marketplace} alt="marketplace" className="w-44" />
           <div className="absolute bottom-0 left-0 font-Josefin text-xs translate-y-full pl-6 pt-1">

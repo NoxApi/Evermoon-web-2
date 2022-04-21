@@ -51,7 +51,7 @@ export const Tokenomics = () => {
         TOKENOMICS
       </div>
 
-      <div className="max-w-[1024px] mx-8 md:mx-auto relative transition-all">
+      <div className="max-w-[1024px] mx-8 lg:mx-auto relative transition-all">
         <GoldGradientFrame />
         {/* <Transition
           show={show === 0}
