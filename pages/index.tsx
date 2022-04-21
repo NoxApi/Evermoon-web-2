@@ -29,21 +29,6 @@ const Index: NextPage = () => {
       <main>
         <Home />
         <div className="relative z-0">
-          {/* <div className="absolute inset-0">
-            <ImageNext
-              // width="100%"
-              // height="100%"
-              layout="fill"
-              objectFit="cover"
-              src={BG}
-              alt="BG"
-              priority={true}
-            />
-          </div> */}
-          {/* <Feature />
-          <Tribe />
-          <Token />
-          <RoadMap /> */}
           <div className="relative w-full h-0 z-10">
             <div
               className="w-full h-56 -translate-y-[52%]"
@@ -98,8 +83,17 @@ const Index: NextPage = () => {
             </div>
           </div>
           <Heroes />
-          <div className="relative -mt-28 pt-28 bg-gray-900 ">
-            <Image src={BGRune} alt="BG" className="absolute w-full " fill />
+          <div className="relative -z-10 -mt-20 pt-20 md:-mt-36 md:pt-36 bg-gray-900 ">
+            <Image src={BGRune} alt="BG" className=" absolute w-full " fill />
+            <div className="relative w-full h-0 z-10 -mt-20 ">
+              <div
+                className="w-full h-40 -translate-y-[52%]"
+                style={{
+                  background:
+                    'linear-gradient(180deg, rgba(12, 31, 55, 0) 0%, #082146 51.78%, rgba(4, 23, 48, 0) 100%)',
+                }}
+              />
+            </div>
             <Runes />
             <Tokenomics />
             <Team />
