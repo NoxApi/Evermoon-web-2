@@ -19,8 +19,8 @@ export const Trailer = () => {
   const [showFadeUp, setShowFadeUp] = useState(false)
 
   useEffect(() => {
-    console.log(inViewport);
-    
+    console.log(inViewport)
+
     if (inViewport) {
       setShowFadeUp(true)
     }
@@ -35,7 +35,7 @@ export const Trailer = () => {
         <Image
           src={Title}
           alt="Title"
-          className="w-72 md:w-96 ml-auto translate-y-6"
+          className="w-72 md:w-96 mx-auto md:mr-0 md:ml-auto translate-y-3"
         />
       </div>
       <div className="relative max-w-[1024px] lg:w-full mx-8 md:mx-12 lg:mx-auto mb-12 z-10">
