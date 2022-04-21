@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+import { useState } from 'react'
 import Line from '../../assets/header/line.png'
 import Image from '../image'
 
@@ -9,22 +10,23 @@ interface LinkProp {
 }
 
 export function Link({ title, href, current }: LinkProp) {
+  const [isHover, setIsHover] = useState(false)
   return (
     <NextLink href={href}>
-      <a className="px-2 min-w-[6rem] flex flex-col items-center justify-center">
+      <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex flex-col items-center justify-center">
         <div className="relative">
           <div
-            className={`px-4 py-2 font-Glamode text-base text-center whitespace-nowrap 
-             ${current ? 'text-gold' : 'text-white'} ${
-              current && '-translate-y-1'
+            className={`px-4 py-2 font-Glamode text-base text-center whitespace-nowrap transition-all duration-300
+             ${isHover ? 'text-gold' : 'text-white'} ${
+              isHover && '-translate-y-1'
             }`}
           >
             {title}
           </div>
           <div
             className={`${
-              !current && 'hidden'
-            } absolute left-0 right-0 bottom-0 w-16  mx-auto translate-y-1 `}
+              !isHover ? 'opacity-0' :  'opacity-100'
+            } absolute left-0 right-0 bottom-0 w-16  mx-auto translate-y-1 transition-all duration-500 `}
           >
             <Image src={Line} alt="Line" blur={false} />
           </div>
