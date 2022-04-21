@@ -19,6 +19,7 @@ import ImageNext from 'next/image'
 import Image from '../image'
 import { css, keyframes } from '@emotion/css'
 import { GoldGradientFrame } from '../frame'
+import { Transition } from '@headlessui/react'
 
 const spin = keyframes`
   0% {
@@ -50,11 +51,41 @@ export const Tokenomics = () => {
         TOKENOMICS
       </div>
 
-      <div className="max-w-[1024px] mx-8 md:mx-auto relative">
-      <GoldGradientFrame />
-        {show === 0 && <Summary setShow={setShow} />}
-        {show === 1 && <EVERMOON setShow={setShow} />}
-        {show === 2 && <EVERSTONE setShow={setShow} />}
+      <div className="max-w-[1024px] mx-8 md:mx-auto relative transition-all">
+        <GoldGradientFrame />
+        {/* <Transition
+          show={show === 0}
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        > */}
+        <Summary setShow={setShow} />
+        {/* </Transition> */}
+        <Transition
+          show={show === 1}
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <EVERMOON setShow={setShow} />
+        </Transition>
+        <Transition
+          show={show === 2}
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <EVERSTONE setShow={setShow} />
+        </Transition>
       </div>
     </section>
   )
@@ -124,18 +155,22 @@ function RingToken({
 
 function Summary({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60">
-      <button className="flex flex-col items-center" onClick={() => setShow(1)} > 
+    <div className="relative mt-10 mb-64 flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60">
+      <button className="flex flex-col items-center" onClick={() => setShow(1)}>
         <RingToken token={Evermoon} animate />
         <div className="font-Josefin text-xl md:text-3xl text-gold-light">
           EVERMOON TOKEN
         </div>
-        <div className="font-Josefin md:text-xl">Total Supply 1,000,000,000</div>
+        <div className="font-Josefin md:text-xl">
+          Total Supply 1,000,000,000
+        </div>
       </button>
 
       <button className="flex flex-col items-center" onClick={() => setShow(2)}>
         <RingToken token={Everstone} animate />
-        <div className="font-Josefin text-xl md:text-3xl text-gold-light">EVERSTONE</div>
+        <div className="font-Josefin text-xl md:text-3xl text-gold-light">
+          EVERSTONE
+        </div>
         <div className="font-Josefin md:text-xl">Unlimited Supply</div>
       </button>
     </div>
@@ -144,77 +179,89 @@ function Summary({ setShow }: { setShow: Function }) {
 
 function EVERMOON({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
-      <button className="flex flex-col items-center" onClick={() => setShow(0)} >
-        <RingToken token={Evermoon} animate />
-      </button>
+    <div className="absolute inset-0">
+      <div className="relative flex flex-col md:grid md:grid-cols-2  pt-12 ">
+        <GoldGradientFrame />
+        <button
+          className="flex flex-col items-center"
+          onClick={() => setShow(0)}
+        >
+          <RingToken token={Evermoon} animate />
+        </button>
 
-      <div className="flex flex-col items-left mx-4 md:mx-0">
-        <div className="font-Josefin text-4xl text-gold-light">
-          EVERMOON TOKEN ($ES)
+        <div className="relative flex flex-col items-left mx-4 md:mx-0">
+          <div className="font-Josefin text-4xl text-gold-light">
+            EVERMOON TOKEN ($ES)
+          </div>
+          <div className="font-Josefin text-2xl text-white mt-3">
+            Total Supply 1,000,000,000
+          </div>
+          <div className="font-Josefin text-sm text-white md:mr-20 mt-4 ">
+            To the new dimension of NFT game industries of play and earn,
+            moonstone is a core of our moon economy. Generating income to reach
+            your dreams. Players may achieve a rewarding experience through…
+          </div>
+          <div className="flex flex-col pr-20 gap-y-5 mt-8 ">
+            {[UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
+              (image: StaticImageData) => (
+                <Image key={image.src} src={image} alt="" />
+              )
+            )}
+          </div>
         </div>
-        <div className="font-Josefin text-2xl text-white mt-3">
-          Total Supply 1,000,000,000
-        </div>
-        <div className="font-Josefin text-sm text-white md:mr-20 mt-4 ">
-          To the new dimension of NFT game industries of play and earn,
-          moonstone is a core of our moon economy. Generating income to reach
-          your dreams. Players may achieve a rewarding experience through…
-        </div>
-        <div className="flex flex-col pr-20 gap-y-5 mt-8 ">
-          {[UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
-            (image: StaticImageData) => (
-              <Image key={image.src} src={image} alt="" />
-            )
-          )}
-        </div>
+
+        <button
+          className="absolute top-7 left-7 flex flex-col items-center"
+          onClick={() => setShow(2)}
+        >
+          <RingToken token={Everstone} width="w-16 md:w-20" />
+        </button>
       </div>
-
-      <button
-        className="absolute top-7 left-7 flex flex-col items-center"
-        onClick={() => setShow(2)}
-      >
-        <RingToken token={Everstone} width="w-16 md:w-20" />
-      </button>
     </div>
   )
 }
 
 function EVERSTONE({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
-      <button className="flex flex-col items-center" onClick={() => setShow(0)}>
-        <RingToken token={Everstone} animate />
-      </button>
+    <div className="absolute inset-0">
+      <div className="relative flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
+        <GoldGradientFrame />
+        <button
+          className="flex flex-col items-center"
+          onClick={() => setShow(0)}
+        >
+          <RingToken token={Everstone} animate />
+        </button>
 
-      <div className="flex flex-col items-left mx-4 md:mx-0">
-        <div className="font-Josefin text-4xl text-gold-light">
-          EVERSTONE ($EVM)
+        <div className="relative flex flex-col items-left mx-4 md:mx-0">
+          <div className="font-Josefin text-4xl text-gold-light">
+            EVERSTONE ($EVM)
+          </div>
+          <div className="font-Josefin text-2xl text-white mt-3">
+            Unlimited Supply
+          </div>
+          <div className="font-Josefin text-sm text-white mr-20 mt-4">
+            Everstone, the most valuable tokens in the EVERMOON universe, is the
+            token that overcome the core economy of the game. As it always be,
+            Evermoon allows players to purchase loot boxes that contain rare
+            skins that never be found in the game
+          </div>
+          <div className="flex flex-col pr-20 gap-y-5 mt-8">
+            {[UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
+              (image: StaticImageData) => (
+                <Image key={image.src} src={image} alt="" />
+              )
+            )}
+          </div>
         </div>
-        <div className="font-Josefin text-2xl text-white mt-3">
-          Unlimited Supply
-        </div>
-        <div className="font-Josefin text-sm text-white mr-20 mt-4">
-          Everstone, the most valuable tokens in the EVERMOON universe, is the
-          token that overcome the core economy of the game. As it always be,
-          Evermoon allows players to purchase loot boxes that contain rare skins
-          that never be found in the game
-        </div>
-        <div className="flex flex-col pr-20 gap-y-5 mt-8">
-          {[UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
-            (image: StaticImageData) => (
-              <Image key={image.src} src={image} alt="" />
-            )
-          )}
-        </div>
+
+        <button
+          className="absolute top-7 left-7 flex flex-col items-center"
+          onClick={() => setShow(1)}
+        >
+          <RingToken token={Evermoon} width="w-16 md:w-20" />
+        </button>
       </div>
-
-      <button
-        className="absolute top-7 left-7 flex flex-col items-center"
-        onClick={() => setShow(1)}
-      >
-        <RingToken token={Evermoon} width="w-16 md:w-20" />
-      </button>
     </div>
   )
 }
