@@ -13,21 +13,22 @@ import Map from '../../assets/tribe/map.png'
 
 export const Tribe = () => {
   return (
-    <section id="tribe" className="relative overflow-hidden">
-      {/* <Image src={BG} alt="BG" className="absolute w-full -z-10" /> */}
+    <section id="tribe" className="relative overflow-hidden bg-gray-900">
+      <Image src={BG} alt="BG" className="absolute w-full " fill />
 
-      <div
-        className="mb-32 relative max-w-[840px] mx-8 md:mx-auto rounded-b-2xl border-[2px] border-gold-light"
-        style={{
-          background: 'linear-gradient(180deg, #191820 0%, #091A33 100%)',
-        }}
-      >
+      <div className="z-0 mb-32 relative max-w-[840px] mx-8 md:mx-auto rounded-b-2xl ">
         <Image
           src={BG2}
           alt="BG2"
-          className="absolute w-full -z-10 scale-[116%] -translate-y-[40%]"
+          className="absolute w-full -z-20 scale-[116%] -translate-y-[40%]"
         />
-        <div className="mx-8 md:mx-16 mt-20 font-Josefin text-gold-light text-6xl">
+        <div
+          className="-z-10 absolute inset-0 rounded-b-2xl border-[2px] border-gold-light"
+          style={{
+            background: 'linear-gradient(180deg, #191820 0%, #091A33 100%)',
+          }}
+        />
+        <div className="mx-8 md:mx-16 pt-20 font-Josefin text-gold-light text-6xl">
           TRIBES
         </div>
         <div className="mx-8 md:mx-16 font-Josefin text-xl my-8">
@@ -38,7 +39,7 @@ export const Tribe = () => {
           pantheon.
         </div>
 
-        <div className="mx-8 md:mx-16 mb-12 flex flex-wrap md:flex-nowrap justify-evenly md:justify-between mt-10">
+        <div className="mx-8 md:mx-16 pb-12 flex flex-wrap md:flex-nowrap justify-evenly md:justify-between mt-10">
           <Image src={Naka} alt="Naka" className="w-20 md:w-28" />
           <Image src={Byza} alt="Byza" className="w-20 md:w-28" />
           <Image src={Ethe} alt="Ethe" className="w-20 md:w-28" />
@@ -52,7 +53,7 @@ export const Tribe = () => {
           className="h-48 w-full -translate-y-1/2"
           style={{
             background:
-              'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, rgba(18, 32, 40, 1) 51.78%, rgba(7, 22, 45, 0) 100%)',
+              'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, rgba(18, 32, 50, 0.8) 31.78%, rgba(18, 32, 50, 1) 51.78%, rgba(7, 22, 45, 0) 100%)',
           }}
         />
       </div>
@@ -63,7 +64,7 @@ export const Tribe = () => {
           alt="BG4"
           className="absolute w-full mix-blend-screen"
         />
-        <div className="pt-8 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl translate-y-6 z-10">
+        <div className="pt-24 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl  z-10">
           EVERFIELD
         </div>
         <div className=" relative z-10">
