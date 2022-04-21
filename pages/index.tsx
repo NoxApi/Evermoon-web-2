@@ -43,7 +43,7 @@ const Index: NextPage = () => {
 
           <div className="relative w-full h-0 z-10">
             <div
-              className="w-full h-64 -translate-y-[52%] flex flex-col  justify-center"
+              className="w-full h-28 md:h-64 -translate-y-[52%] flex flex-col  justify-center"
               style={{
                 background:
                   'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #0E0E15 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0) 100%)',

@@ -96,19 +96,19 @@ export const Runes = () => {
 
         <div className="md:hidden relative mt-10">
           <div className="font-Glamode text-xl py-6 text-center">Attack</div>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly flex-wrap">
             <Rune image={A1} />
             <Rune image={A2} />
             <Rune image={A3} />
           </div>
           <div className="font-Glamode text-xl py-6 text-center">Defend</div>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly flex-wrap">
             <Rune image={D1} />
             <Rune image={D2} />
             <Rune image={D3} />
           </div>
           <div className="font-Glamode text-xl py-6 text-center">Mobility</div>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly flex-wrap">
             <Rune image={M1} />
             <Rune image={M2} />
             <Rune image={M3} />

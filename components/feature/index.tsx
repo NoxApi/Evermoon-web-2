@@ -17,7 +17,7 @@ export const Features = () => {
       <div className="pt-12 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl ">
         FEATURES
       </div>
-      <div className="mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between">
+      <div className="mx-4 md:mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between">
         <Image src={F1} alt="F1" className="w-40 md:w-48" />
         <Image src={F2} alt="F2" className="w-40 md:w-48" />
         <Image src={F3} alt="F3" className="w-40 md:w-48" />

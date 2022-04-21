@@ -136,6 +136,7 @@ export const Heroes = () => {
                 <ImageCarousel
                   key={`hero-${hind}`}
                   path={hero}
+                  className="scale-125"
                   index={hind}
                   showFrame
                   curIndex={index+1}
@@ -209,7 +210,7 @@ const ImageCarousel = ({
                 <Image
                   src={frame}
                   alt="frame"
-                  className="m-auto p-2 md:p-0  w-full  scale-125"
+                  className="m-auto  md:p-0  w-full  scale-125"
                 />
               </div>
             </Transition>
