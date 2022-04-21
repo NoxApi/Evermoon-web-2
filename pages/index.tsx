@@ -85,7 +85,7 @@ const Index: NextPage = () => {
           <Heroes />
           <div className="relative -z-10 -mt-20 pt-20 md:-mt-36 md:pt-36 bg-gray-900 ">
             <Image src={BGRune} alt="BG" className=" absolute w-full " fill />
-            <div className="relative w-full h-0 z-10 -mt-20 ">
+            <div className="relative w-full h-0 z-10 -mt-36 ">
               <div
                 className="w-full h-40 -translate-y-[52%]"
                 style={{

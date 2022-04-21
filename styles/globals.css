@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Glamode";
-  src: url("/fonts/Glamode/Glamode.ttf");
+  font-family: 'Glamode';
+  src: url('/fonts/Glamode/Glamode.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Josefin";
-  src: url("/fonts/JosefinSans/JosefinSans-Regular.ttf");
+  font-family: 'Josefin';
+  src: url('/fonts/JosefinSans/JosefinSans-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -22,6 +22,9 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
 html,
 body {
   padding: 0;
@@ -224,7 +227,6 @@ img {
   }
 }
 
-
 .floating-title {
   animation: 6s ease-in-out 0.33s infinite normal none running floatinanititle;
 }
@@ -312,8 +314,8 @@ img {
 }
 
 .current-progress > div:nth-child(1) {
-  animation: 6s infinite  dot1;
-  animation-timing-function: step-end; 
+  animation: 6s infinite dot1;
+  animation-timing-function: step-end;
   /* animation-delay: -3s; */
 }
 
@@ -327,8 +329,8 @@ img {
 }
 
 .current-progress > div:nth-child(2) {
-  animation: 6s infinite  dot2;
-  animation-timing-function: step-end; 
+  animation: 6s infinite dot2;
+  animation-timing-function: step-end;
   /* animation-delay: -3s; */
 }
 
@@ -342,8 +344,8 @@ img {
 }
 
 .current-progress > div:nth-child(3) {
-  animation: 6s infinite  dot3;
-  animation-timing-function: step-end; 
+  animation: 6s infinite dot3;
+  animation-timing-function: step-end;
   /* animation-delay: -3s; */
 }
 

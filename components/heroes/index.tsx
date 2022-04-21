@@ -43,7 +43,7 @@ export const Heroes = () => {
         <div className="pt-40 max-w-[1024px] mx-8 md:mx-auto font-Josefin text-gold-light text-5xl md:text-6xl ">
           HEROES
         </div>
-        <div className="relative max-w-[1024px] mx-auto -mt-8 md:-mt-20">
+        <div className="relative max-w-[1024px] mx-auto ">
           <CarouselProvider
             naturalSlideWidth={1500}
             naturalSlideHeight={1000}
@@ -53,7 +53,7 @@ export const Heroes = () => {
             currentSlide={index}
             touchEnabled={false}
             dragEnabled={false}
-            className="-mb-16"
+            className="hidden md:block -mt-8 md:-mt-20"
           >
             <Slider>
               {herosString.map((hero, hind) => (
@@ -65,10 +65,32 @@ export const Heroes = () => {
               ))}
             </Slider>
           </CarouselProvider>
+
+          <CarouselProvider
+            naturalSlideWidth={372}
+            naturalSlideHeight={660}
+            totalSlides={herosString.length}
+            infinite={true}
+            visibleSlides={1}
+            currentSlide={index}
+            touchEnabled={false}
+            dragEnabled={false}
+            className="md:hidden mt-8 mx-4"
+          >
+            <Slider>
+              {herosString.map((hero, hind) => (
+                <ImageCarousel
+                  key={`banner-${hind}`}
+                  path={`Mobile/${zeroPad(hind + 1, 2)}_${hero}_m`}
+                  index={hind}
+                />
+              ))}
+            </Slider>
+          </CarouselProvider>
         </div>
       </div>
 
-      <div className="relative w-full h-0 z-10 mt-16">
+      <div className="relative w-full h-0 -z-10 ">
         <div
           className="w-full h-40 -translate-y-[52%]"
           style={{
@@ -78,7 +100,7 @@ export const Heroes = () => {
         />
       </div>
 
-      <div className="max-w-[1024px] m-8 md:mx-auto -mt-8 md:-mt-20 relative z-10">
+      <div className="max-w-[1024px] m-8 md:mx-auto mt-4 relative z-10">
         <div className="flex ">
           <button
             onClick={() =>
@@ -109,7 +131,6 @@ export const Heroes = () => {
                   key={`hero-${hind}`}
                   path={hero}
                   index={hind}
-                  className="scale-125"
                   showFrame
                   curIndex={index + 2}
                 />
@@ -136,10 +157,9 @@ export const Heroes = () => {
                 <ImageCarousel
                   key={`hero-${hind}`}
                   path={hero}
-                  className="scale-125"
                   index={hind}
                   showFrame
-                  curIndex={index+1}
+                  curIndex={index + 1}
                 />
               ))}
             </Slider>
@@ -210,7 +230,7 @@ const ImageCarousel = ({
                 <Image
                   src={frame}
                   alt="frame"
-                  className="m-auto  md:p-0  w-full  scale-125"
+                  className="m-auto  md:p-0  w-full  "
                 />
               </div>
             </Transition>

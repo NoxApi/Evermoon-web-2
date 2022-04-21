@@ -31,14 +31,24 @@ export const Team = () => {
           MAIN CORE TEAM
         </div>
 
-        <div className="relative mt-10 flex flex-wrap justify-evenly pt-12  px-6 gap-x-2 gap-y-7">
-          {teams.map((team) => (
+        <div className="relative mt-10 flex flex-wrap justify-evenly pt-12  px-0  gap-y-7">
+          {teams.slice(0,4).map((team) => (
             <ImageTeam key={team} path={team} />
           ))}
         </div>
-        <div className="relative flex justify-center pb-12">
-          <button className="font-Glamode flex items-center">More <Image src={Arrow} alt='Arrow' className='w-6' /></button>
+
+        <div className="pt-8 relative font-Glamode text-4xl text-center">
+          ADVISOR
         </div>
+
+        <div className="relative mt-10 flex flex-wrap justify-evenly pt-12  px-0  gap-y-7">
+          {teams.slice(4).map((team) => (
+            <ImageTeam key={team} path={team} />
+          ))}
+        </div>
+        {/* <div className="relative flex justify-center pb-12">
+          <button className="font-Glamode flex items-center">More <Image src={Arrow} alt='Arrow' className='w-6' /></button>
+        </div> */}
       </div>
     </section>
   )
@@ -62,7 +72,7 @@ const ImageTeam = ({
   return (
     <div>
       {image && (
-        <Image alt={path} className={`w-44 md:w-52 ${className}`} src={image} />
+        <Image alt={path} className={`w-40 md:w-52 ${className}`} src={image} />
       )}
     </div>
   )

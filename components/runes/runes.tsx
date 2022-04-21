@@ -20,7 +20,7 @@ import { GoldGradientFrame } from '../frame'
 export const Runes = () => {
   return (
     <section id="Runes" className="relative ">
-      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
+      <div className="mt-40 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         RUNES
       </div>
       <div className="max-w-[1024px] mx-8 md:mx-auto relative">
@@ -125,6 +125,7 @@ function Rune({ image }: { image: StaticImageData }) {
         src={image}
         alt={image.src.split('/').slice(-1).join('')}
         className="absolute inset-0 p-3"
+        
       />
     </div>
   )
