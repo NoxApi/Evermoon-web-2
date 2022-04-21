@@ -132,7 +132,7 @@ function RingToken({
 function Summary({ setShow }: { setShow: Function }) {
   return (
     <div className="relative mt-10 flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60">
-      <button className="flex flex-col items-center" onClick={() => setShow(1)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(1)} onMouseEnter={() => setShow(1)}> 
         <RingToken token={Evermoon} animate />
         <div className="font-Josefin text-xl md:text-3xl text-gold-light">
           EVERMOON TOKEN
@@ -140,7 +140,7 @@ function Summary({ setShow }: { setShow: Function }) {
         <div className="font-Josefin md:text-xl">Total Supply 1,000,000,000</div>
       </button>
 
-      <button className="flex flex-col items-center" onClick={() => setShow(2)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(2)} onMouseEnter={() => setShow(2)}>
         <RingToken token={Everstone} animate />
         <div className="font-Josefin text-xl md:text-3xl text-gold-light">EVERSTONE</div>
         <div className="font-Josefin md:text-xl">Unlimited Supply</div>
@@ -151,8 +151,8 @@ function Summary({ setShow }: { setShow: Function }) {
 
 function EVERMOON({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
-      <button className="flex flex-col items-center" onClick={() => setShow(0)}>
+    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8" onMouseLeave={() => setShow(0)}>
+      <button className="flex flex-col items-center" onClick={() => setShow(0)} >
         <RingToken token={Evermoon} animate />
       </button>
 
@@ -189,7 +189,7 @@ function EVERMOON({ setShow }: { setShow: Function }) {
 
 function EVERSTONE({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
+    <div className="relative mt-10 flex flex-col md:grid md:grid-cols-2  pt-12 pb-8" onMouseLeave={() => setShow(0)}>
       <button className="flex flex-col items-center" onClick={() => setShow(0)}>
         <RingToken token={Everstone} animate />
       </button>
