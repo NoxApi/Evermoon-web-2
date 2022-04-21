@@ -48,7 +48,6 @@ function HeaderDesktop() {
         <Link title="FEATURE" href="#Feature" current={false} />
         <Link title="HEROES" href="#Heroes" current={false} />
         <Link title="RUNES" href="#Runes" current={false} />
-        <Link title="TICKETS" href="#Tickets" current={false} />
         <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
         <Link title="ROADMAP" href="#Roadmap" current={false} />
       </div>
@@ -135,7 +134,6 @@ function HeaderMobile() {
                   <NLink title="FEATURE" href="#Feature" />
                   <NLink title="HEROES" href="#Heroes" />
                   <NLink title="RUNES" href="#Runes" />
-                  <NLink title="TICKETS" href="#Tickets" />
                   <NLink title="TOKENOMIC" href="#Tokenomic" />
                   <NLink title="ROADMAP" href="#Roadmap" />
 

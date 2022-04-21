@@ -14,11 +14,13 @@ export const Trailer = () => {
   const triggerRef = useRef<HTMLElement>(null)
   const { inViewport } = useInViewport(
     triggerRef as MutableRefObject<HTMLElement>,
-    { threshold: 0.7 }
+    { threshold: 0.5 }
   )
   const [showFadeUp, setShowFadeUp] = useState(false)
 
   useEffect(() => {
+    console.log(inViewport);
+    
     if (inViewport) {
       setShowFadeUp(true)
     }
