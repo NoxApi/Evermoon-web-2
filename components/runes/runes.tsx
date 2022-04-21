@@ -15,6 +15,7 @@ import D3 from '../../assets/runes/d3.png'
 import M1 from '../../assets/runes/m1.png'
 import M2 from '../../assets/runes/m2.png'
 import M3 from '../../assets/runes/m3.png'
+import { GoldGradientFrame } from '../frame'
 
 export const Runes = () => {
   return (
@@ -23,15 +24,7 @@ export const Runes = () => {
         RUNES
       </div>
       <div className="max-w-[1024px] mx-8 md:mx-auto relative">
-        <div className="absolute inset-0">
-          <ImageNext
-            src={Content}
-            alt="Content"
-            className=" w-full h-full "
-            layout="fill"
-            objectFit="fill"
-          />
-        </div>
+        <GoldGradientFrame />
 
         <div className="hidden md:block relative mt-10">
           <Tab.Group>

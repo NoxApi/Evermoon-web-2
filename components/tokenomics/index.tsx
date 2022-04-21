@@ -18,6 +18,7 @@ import UseCase4S from '../../assets/tokenomics/everstone/Use case-4.svg'
 import ImageNext from 'next/image'
 import Image from '../image'
 import { css, keyframes } from '@emotion/css'
+import { GoldGradientFrame } from '../frame'
 
 const spin = keyframes`
   0% {
@@ -50,15 +51,7 @@ export const Tokenomics = () => {
       </div>
 
       <div className="max-w-[1024px] mx-8 md:mx-auto relative">
-        <div className="absolute inset-0">
-          <ImageNext
-            src={Content}
-            alt="Content"
-            className=" w-full h-full "
-            layout="fill"
-            objectFit="fill"
-          />
-        </div>
+      <GoldGradientFrame />
         {show === 0 && <Summary setShow={setShow} />}
         {show === 1 && <EVERMOON setShow={setShow} />}
         {show === 2 && <EVERSTONE setShow={setShow} />}

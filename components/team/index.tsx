@@ -6,6 +6,7 @@ import ImageNext from 'next/image'
 import Image from '../image'
 
 import Light from '../../assets/team/light.svg'
+import { GoldGradientFrame } from '../frame'
 
 const teams = ['t1', 't2', 't3', 't4', 't5', 't6', 't7']
 
@@ -17,15 +18,7 @@ export const Team = () => {
       </div>
 
       <div className="mt-8 max-w-[1024px] mx-8 md:mx-auto relative">
-        <div className="absolute inset-0">
-          <ImageNext
-            src={Content}
-            alt="Content"
-            className=" w-full h-full "
-            layout="fill"
-            objectFit="fill"
-          />
-        </div>
+        <GoldGradientFrame />
         <div className="absolute top-0 left-0 right-0">
           <Image
             src={Light}
