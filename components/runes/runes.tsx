@@ -108,7 +108,7 @@ export const Runes = () => {
           </div>
         </div>
 
-        <div className="relative max-w-[500px] md:text-center mx-4 md:mx-auto mt-12 pb-16">
+        <div className="relative max-w-[500px] text-center mx-4 md:mx-auto mt-12 pb-16">
           An ancient stone that harbored a strong energy since ancient times. It
           can be obtained by opening it from loot boxes and market places.
         </div>

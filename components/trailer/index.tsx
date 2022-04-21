@@ -97,7 +97,7 @@ export const Trailer = () => {
             enterFrom="opacity-0 translate-y-32"
             enterTo="opacity-100 translate-y-0"
           >
-            <div className="flex items-center font-Glamode text-2xl md:text-5xl">
+            <div className="flex items-center justify-center font-Glamode text-center text-xl md:text-5xl">
               <div>Play & Earn</div>
               <div className="mx-8 w-3 h-3 bg-white rounded-full" />
               <div>Free to Earn</div>

@@ -48,7 +48,7 @@ export const Tribe = () => {
         <div className="mx-8 md:mx-16 pt-20 font-Josefin text-gold-light text-6xl">
           TRIBES
         </div>
-        <div className="mx-8 md:mx-16 font-Josefin text-xl my-8">
+        <div className="mx-8 md:mx-16 font-Josefin text-lg md:text-xl my-8">
           The power has been passed on to the selected individual through the
           {` tribe's`} sacred ritual that happens once every 100 years.
           <br />

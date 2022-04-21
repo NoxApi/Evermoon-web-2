@@ -204,7 +204,7 @@ function EVERMOON({ setShow }: { setShow: Function }) {
           <div className="flex flex-col pr-20 gap-y-5 mt-8 ">
             {[UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
               (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" />
+                <Image key={image.src} src={image} alt="" className='-mr-20 md:mr-0' />
               )
             )}
           </div>
@@ -240,7 +240,7 @@ function EVERSTONE({ setShow }: { setShow: Function }) {
           <div className="font-Josefin text-2xl text-white mt-3">
             Unlimited Supply
           </div>
-          <div className="font-Josefin text-sm text-white mr-20 mt-4">
+          <div className="font-Josefin text-sm text-white md:mr-20 mt-4">
             Everstone, the most valuable tokens in the EVERMOON universe, is the
             token that overcome the core economy of the game. As it always be,
             Evermoon allows players to purchase loot boxes that contain rare
@@ -249,7 +249,7 @@ function EVERSTONE({ setShow }: { setShow: Function }) {
           <div className="flex flex-col pr-20 gap-y-5 mt-8">
             {[UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
               (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" />
+                <Image key={image.src} src={image} alt="" className='-mr-20 md:mr-0' />
               )
             )}
           </div>
