@@ -70,7 +70,7 @@ export const Tribe = () => {
         <div className=" relative z-10">
           <Image src={BG3} alt="BG3" className="w-full" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src={Map} alt="Map" className=" w-2/5  " />
+            <Image src={Map} alt="Map" className=" w-[70%]  " />
           </div>
         </div>
 
