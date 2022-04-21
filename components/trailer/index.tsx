@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 import Title from '../../assets/trailer/title.svg'
 import Frame from '../../assets/trailer/frame.svg'
 import BG from '../../assets/trailer/bg.png'
@@ -7,8 +7,25 @@ import Star from '../../assets/trailer/star.svg'
 import Image from '../image'
 import ImageNext from 'next/image'
 import YouTube from 'react-youtube'
+import { useInViewport } from 'react-in-viewport'
+import { Transition } from '@headlessui/react'
 
 export const Trailer = () => {
+  const triggerRef = useRef<HTMLElement>(null)
+  const { inViewport } = useInViewport(
+    triggerRef as MutableRefObject<HTMLElement>,
+    { threshold: 0.7 }
+  )
+  const [showFadeUp, setShowFadeUp] = useState(false)
+
+  useEffect(() => {
+    if (inViewport) {
+      setShowFadeUp(true)
+    }
+
+    return () => {}
+  }, [inViewport])
+
   return (
     <section id="trailer" className="relative flex flex-col">
       <Image src={BG} alt="BG" fill />
@@ -68,17 +85,27 @@ export const Trailer = () => {
           />
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center items-center pt-12 md:pt-64">
-          <div className="flex items-center font-Glamode text-2xl md:text-5xl">
-            <div>Play & Earn</div>
-            <div className="mx-8 w-3 h-3 bg-white rounded-full" />
-            <div>Free to Earn</div>
-          </div>
-          <div className="mt-8 mx-3 font-Josefin max-w-2xl text-base md:text-lg text-center">
-            Play and have fun along with earning with a 5v5 MOBA three lanes
-            experience, customize the strategy and gameplay of you and your
-            teammates.
-          </div>
+        <div
+          ref={triggerRef as React.RefObject<HTMLDivElement>}
+          className="absolute inset-0 flex flex-col justify-center items-center pt-12 md:pt-64 "
+        >
+          <Transition
+            show={showFadeUp}
+            enter="transition delay-200 duration-1000"
+            enterFrom="opacity-0 translate-y-32"
+            enterTo="opacity-100 translate-y-0"
+          >
+            <div className="flex items-center font-Glamode text-2xl md:text-5xl">
+              <div>Play & Earn</div>
+              <div className="mx-8 w-3 h-3 bg-white rounded-full" />
+              <div>Free to Earn</div>
+            </div>
+            <div className="mt-8 mx-3 font-Josefin max-w-2xl text-base md:text-lg text-center">
+              Play and have fun along with earning with a 5v5 MOBA three lanes
+              experience, customize the strategy and gameplay of you and your
+              teammates.
+            </div>
+          </Transition>
         </div>
       </div>
     </section>

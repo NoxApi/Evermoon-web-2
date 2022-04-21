@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 import Naka from '../../assets/tribe/naka.png'
 import Byza from '../../assets/tribe/byza.png'
 import Ethe from '../../assets/tribe/ethe.png'
@@ -10,8 +10,25 @@ import BG2 from '../../assets/tribe/bg2.png'
 import BG3 from '../../assets/tribe/bg3.svg'
 import BG4 from '../../assets/tribe/bg4.png'
 import Map from '../../assets/tribe/map.png'
+import { useInViewport } from 'react-in-viewport'
+import { Transition } from '@headlessui/react'
 
 export const Tribe = () => {
+  const triggerRef = useRef<HTMLElement>(null)
+  const { inViewport } = useInViewport(
+    triggerRef as MutableRefObject<HTMLElement>,
+    { threshold: 0.7 }
+  )
+  const [showFadeUp, setShowFadeUp] = useState(false)
+
+  useEffect(() => {
+    if (inViewport) {
+      setShowFadeUp(true)
+    }
+
+    return () => {}
+  }, [inViewport])
+
   return (
     <section id="tribe" className="relative overflow-hidden bg-gray-900">
       <Image src={BG} alt="BG" className="absolute w-full " fill />
@@ -58,7 +75,10 @@ export const Tribe = () => {
         />
       </div>
 
-      <div className="relative overflow-hidden ">
+      <div
+        className="relative overflow-hidden "
+        ref={triggerRef as React.RefObject<HTMLDivElement>}
+      >
         <Image
           src={BG4}
           alt="BG4"
@@ -69,9 +89,16 @@ export const Tribe = () => {
         </div>
         <div className=" relative z-10">
           <Image src={BG3} alt="BG3" className="w-full" />
-          <div className="absolute inset-0 flex items-center justify-center">
+          <Transition
+            className={`absolute inset-0 flex items-center justify-center`}
+            show={showFadeUp}
+            as="div"
+            enter="transition delay-200 duration-1000"
+            enterFrom="opacity-0 scale-[3]"
+            enterTo="opacity-100 scale-100"
+          >
             <Image src={Map} alt="Map" className=" w-[70%]  " />
-          </div>
+          </Transition>
         </div>
 
         <div className="h-0 w-full relative ">

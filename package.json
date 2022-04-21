@@ -18,6 +18,7 @@
     "pure-react-carousel": "^1.28.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-in-viewport": "^1.0.0-alpha.26",
     "react-youtube": "^7.14.0",
     "sharp": "^0.29.3",
     "tailwindcss-textshadow": "^2.1.3"
