@@ -72,7 +72,7 @@ const ImageTeam = ({
   return (
     <div>
       {image && (
-        <Image alt={path} className={`w-40 md:w-52 ${className}`} src={image} priority />
+        <Image alt={path} className={`w-40 md:w-52 ${className} -m-3 `} src={image} priority />
       )}
     </div>
   )
