@@ -40,7 +40,7 @@ export const Trailer = () => {
       </div>
       <div className="relative max-w-[1024px] lg:w-full mx-8 md:mx-12 lg:mx-auto mb-12 z-10">
         <YouTube
-          videoId="piZkiA-mLx8"
+          videoId="_UpRh3Wgv1M"
           opts={{ height: '100%', width: '100%' }}
           className="w-full h-full aspect-video"
           containerClassName="w-full h-full aspect-video"
