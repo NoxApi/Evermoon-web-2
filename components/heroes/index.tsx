@@ -214,7 +214,7 @@ const ImageCarousel = ({
     <Slide index={index}>
       {image && (
         <div className="relative ">
-          <Image alt={path} className={`w-full ${className}`} src={image} />
+          <Image alt={path} className={`w-full ${className}`} src={image} priority quality={85} />
           {showFrame && (
             <Transition
               as={Fragment}

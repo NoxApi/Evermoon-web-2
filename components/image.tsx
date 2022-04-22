@@ -7,6 +7,7 @@ interface ImageProps {
   priority?: boolean
   blur?: boolean
   fill?: boolean
+  quality?: string | number | undefined
 }
 function Image({
   className,
@@ -15,6 +16,7 @@ function Image({
   priority,
   blur = false,
   fill = false,
+  quality
 }: ImageProps) {
   if (fill) {
     return (
@@ -24,6 +26,7 @@ function Image({
         layout="fill"
         objectFit="cover"
         className={className}
+        quality={quality}
       />
     )
   }
@@ -39,6 +42,7 @@ function Image({
             priority={priority}
             placeholder="blur"
             className={`${!blur && 'duration-[0s]'}`}
+            quality={quality}
           />
         </div>
       </div>
@@ -54,6 +58,7 @@ function Image({
           src={src}
           alt={alt}
           priority={priority}
+          quality={quality}
         />
       </div>
     </div>

@@ -42,9 +42,9 @@ function RoadmapDesktop() {
   return (
     <div className="hidden md:block max-w-[780px] mx-auto mt-16 pb-32">
       <div className=" flex gap-x-4 justify-between">
-        <Image src={q122} alt="q122" className="w-52 -mr-20" />
+        <Image src={q122} alt="q122" className="w-52 -mr-20" priority />
         <DotDivider />
-        <Image src={q222} alt="q222" className="w-52 -mr-20" />
+        <Image src={q222} alt="q222" className="w-52 -mr-20" priority />
         <div className="flex gap-x-1 mt-14">
           {Array(9)
             .fill(0)
@@ -65,17 +65,17 @@ function RoadmapDesktop() {
         </div>
 
         <div>
-          <Image src={q322} alt="q322" className="w-52 -mr-20" />
+          <Image src={q322} alt="q322" className="w-52 -mr-20" priority />
           <DotDivider disabled horizontal className="items-end mr-[4rem]" />
         </div>
       </div>
 
       <div className="flex gap-x-4 justify-between">
-        <Image src={q422} alt="q422" className="w-52 -mr-20" />
+        <Image src={q223} alt="q223" className="w-52 -mr-20" priority />
         <DotDivider disabled />
-        <Image src={q123} alt="q123" className="w-52 -mr-20" />
+        <Image src={q123} alt="q123" className="w-52 -mr-20" priority />
         <DotDivider disabled />
-        <Image src={q223} alt="q223" className="w-52 -mr-20" />
+        <Image src={q422} alt="q422" className="w-52 -mr-20" priority />
       </div>
     </div>
   )
@@ -85,9 +85,9 @@ function RoadmapMobile() {
   return (
     <div className="md:hidden max-w-[380px] mx-auto mt-16 pb-32">
       <div className=" flex flex-col items-center">
-        <Image src={q122m} alt="q122m" className="w-full mx-8 -mr-4" />
+        <Image src={q122m} alt="q122m" className="w-full mx-8 -mr-4" priority />
         <DotDivider horizontal />
-        <Image src={q222m} alt="q222m" className="w-full mx-8 -mr-4" />
+        <Image src={q222m} alt="q222m" className="w-full mx-8 -mr-4" priority />
         <div className="my-8 flex flex-col gap-y-1">
           {Array(9)
             .fill(0)
@@ -104,13 +104,13 @@ function RoadmapMobile() {
               />
             ))}
         </div>
-        <Image src={q322m} alt="q322m" className="w-full mx-8" />
+        <Image src={q322m} alt="q322m" className="w-full mx-8" priority />
         <DotDivider disabled horizontal />
-        <Image src={q422m} alt="q422m" className="w-full mx-8" />
+        <Image src={q422m} alt="q422m" className="w-full mx-8" priority />
         <DotDivider disabled horizontal />
-        <Image src={q123m} alt="q123m" className="w-full mx-8" />
+        <Image src={q123m} alt="q123m" className="w-full mx-8" priority />
         <DotDivider disabled horizontal />
-        <Image src={q223m} alt="q223m" className="px-2 w-full mx-8 " />
+        <Image src={q223m} alt="q223m" className="px-2 w-full mx-8 " priority />
       </div>
     </div>
   )

@@ -180,7 +180,7 @@ function Summary({ setShow }: { setShow: Function }) {
 function EVERMOON({ setShow }: { setShow: Function }) {
   return (
     <div className="absolute inset-0">
-      <div className="relative flex flex-col md:grid md:grid-cols-2  pt-12 ">
+      <div className="relative flex flex-col md:grid md:grid-cols-2 pt-12 ">
         <GoldGradientFrame />
         <button
           className="flex flex-col items-center"
@@ -190,8 +190,8 @@ function EVERMOON({ setShow }: { setShow: Function }) {
         </button>
 
         <div className="relative flex flex-col items-left mx-4 md:mx-0">
-          <div className="font-Josefin text-4xl text-gold-light">
-            EVERMOON TOKEN ($ES)
+          <div className="font-Josefin text-[2rem] leading-10 text-gold-light">
+            EVERMOON TOKEN ($EVM)
           </div>
           <div className="font-Josefin text-2xl text-white mt-3">
             Total Supply 1,000,000,000
@@ -234,8 +234,8 @@ function EVERSTONE({ setShow }: { setShow: Function }) {
         </button>
 
         <div className="relative flex flex-col items-left mx-4 md:mx-0">
-          <div className="font-Josefin text-4xl text-gold-light">
-            EVERSTONE ($EVM)
+          <div className="font-Josefin text-[2rem] leading-10 text-gold-light">
+            EVERSTONE ($ES)
           </div>
           <div className="font-Josefin text-2xl text-white mt-3">
             Unlimited Supply
