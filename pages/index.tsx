@@ -17,6 +17,7 @@ import { Tokenomics } from '../components/tokenomics'
 import { Team } from '../components/team'
 import { Roadmap } from '../components/roadmap'
 import { Partner } from '../components/partner'
+import { Move } from '../components/movetoearn'
 
 const Index: NextPage = () => {
   return (
@@ -41,6 +42,7 @@ const Index: NextPage = () => {
           </div>
 
           <Trailer />
+          <Move/>
 
           <div className="relative w-full h-0 z-10">
             <div
@@ -55,7 +57,7 @@ const Index: NextPage = () => {
               </div>
             </div>
           </div>
-
+          
           <Tribe />
 
           <div className="relative w-full h-0 z-10">
