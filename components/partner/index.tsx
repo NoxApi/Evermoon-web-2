@@ -9,12 +9,12 @@ const teams = ['t1', 't2', 't3', 't4', 't5', 't6', 't7']
 
 export const Partner = () => {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
         PARTNERS
       </div>
 
-      <div className="mt-20 max-w-[900px] lgm:max-w-[600px] lgm:mx-auto lgm:px-[auto] mx-auto lg:mx-auto relative grid grid-cols-10 gap-y-6 gap-x-10 mdm:gap-x-1 lgm:grid-cols-auto  smm:hidden">
+      <div className="mt-20 max-w-[900px] lgm:max-w-[600px] lgm:mx-auto lgm:px-[auto] mx-auto lg:mx-auto relative grid grid-cols-10 gap-y-6 gap-x-10 mdm:gap-x-1 lgm:grid-cols- smm:hidden">
         <div className=' col-span-2  w-[150px] h-[150px] flex justify-center'  >
             <ImagePartner  path={"1"}  w={"150px"} ></ImagePartner>
         </div>

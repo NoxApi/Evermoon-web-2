@@ -13,6 +13,7 @@ import BG4 from '../../assets/tribe/bg4.png'
 import Map from '../../assets/tribe/map.png'
 import { useInViewport } from 'react-in-viewport'
 import { Transition } from '@headlessui/react'
+import { MoveM } from './mobile'
 
 export const Move = () => {
   const triggerRef = useRef<HTMLElement>(null)
@@ -31,29 +32,29 @@ export const Move = () => {
   }, [inViewport])
 
   return (
-    <section id="tribe" className="relative overflow-hidden bg-gray-900">
+    <section id="tribe" className="relative overflow-hidden min-h-[350px]">
       <Image src={BG} alt="BG" className="absolute w-full " fill />
 
-      <div className="z-0 mb-32 relative max-w-[1280px] mx-8 md:mx-auto rounded-b-2xl ">
-        <div className='w-full h-[725px] flex justify-center items-center'>
-            <div ref={triggerRef as React.RefObject<HTMLDivElement>} className='w-[100%] h-[70%]  flex items-center justify-start'>
+      <div className="z-0 mb-32 relative max-w-[1280px] mx-8 md:mx-auto rounded-b-2xl h-[40vw] py-3rem flex  ">
+        <div className='w-full h-[auto] flex justify-center items-center smm:hidden'>
+            <div ref={triggerRef as React.RefObject<HTMLDivElement>} className='w-[100%] h-[100%]  flex items-center justify-center  '>
             <Transition
             show={showFadeUp}
             enter="transition delay-200 duration-1000"
             enterFrom="opacity-0 -translate-y-[200px]"
             enterTo="opacity-100 translate-y-0"
             >
-            <Image src={run} alt="logo" className="h-[300px] w-[300px] "  />
+            <Image src={run} alt="logo" className="h-[300px] w-[300px] lgm:w-[25vw] lgm:h-[25vw] "  />
             </Transition>
-            <div className='w-[500px] px-8 mr-auto k h-[300px] flex flex-col py-8 mt-[40px] '>
-                < div className='ml-[10rem] w-[auto]    flex h-[100px] self-center items-start'>
+            <div className=' flex flex-col items-start w-auto'>
+                < div className='ml-[2rem] w-[auto]   flex h-[100px]  items-start lgm:h-[10vw] '>
                 <Transition
                   show={showFadeUp}
                   enter="transition delay-[300ms] duration-1000"
                   enterFrom="opacity-0 translate-x-[200px]"
                   enterTo="opacity-100 translate-x-0"
                 >
-                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px]  "  />
+                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[1vw] lgm:w-[10vw] lgm:h-[10vw]"  />
                 </Transition>
                 <Transition
                   show={showFadeUp}
@@ -61,7 +62,7 @@ export const Move = () => {
                   enterFrom="opacity-0 translate-x-[200px]"
                   enterTo="opacity-100 translate-x-0"
                 >
-                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px]"  />
+                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[1vw] lgm:w-[10vw] lgm:h-[10vw]"  />
                 </Transition>
                 <Transition
                   show={showFadeUp}
@@ -69,7 +70,7 @@ export const Move = () => {
                   enterFrom="opacity-0 translate-x-[300px]"
                   enterTo="opacity-100 translate-x-0"
                 >
-                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px]"  />
+                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[1vw] lgm:w-[10vw] lgm:h-[10vw]"  />
                 </Transition>
                 <Transition
                   show={showFadeUp}
@@ -77,7 +78,7 @@ export const Move = () => {
                   enterFrom="opacity-0 translate-x-[300px]"
                   enterTo="opacity-100 translate-x-0"
                 >
-                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px]"  />
+                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[1vw] lgm:w-[10vw] lgm:h-[10vw]"  />
                 </Transition>
                 <Transition
                   show={showFadeUp}
@@ -85,7 +86,7 @@ export const Move = () => {
                   enterFrom="opacity-0 translate-x-[300px]"
                   enterTo="opacity-100 translate-x-0"
                 >
-                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px]"  />
+                <Image src={evp} alt="logo" className="h-[100px] w-[100px] mr-[20px] lgm:w-[10vw] lgm:h-[10vw] lgm:hidden"  />
                 </Transition>
                 </div>
                 <Transition
@@ -94,11 +95,12 @@ export const Move = () => {
                   enterFrom="opacity-0 translate-y-[200px]"
                   enterTo="opacity-100 translate-y-0"
                   >
-                <div className='w-[600px]  h-[auto] flex flex-col justify-end mt-[30px]'>
-                    <div className=" font-Josefin text-gold-light text-4xl font-bold  w-[300px]">
+                <div className='w-[auto]  h-[auto] flex flex-col justify-end mt-[30px]  '>
+
+                    <div className=" font-Josefin text-gold-light text-4xl font-bold lgm:text-2xl w-[300px]">
                         MOVE TO EARN
                     </div>
-                    <div className=" font-Josefin text-lg mt-[10px] ">
+                    <div className=" font-Josefin text-lg mt-[10px] lgm:text-xs ">
                         Bridge your physic movements for in-game advantages ! .
                         <br />
                         move to gain extra stamina and earn more real rewards {"&"} exclusivity ! .
@@ -108,6 +110,7 @@ export const Move = () => {
             </div>
             </div>
         </div>
+        <MoveM></MoveM>
       </div>
 
       <div className="h-0 w-full relative z-10">
