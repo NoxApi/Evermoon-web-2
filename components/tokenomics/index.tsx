@@ -155,7 +155,7 @@ function RingToken({
 
 function Summary({ setShow }: { setShow: Function }) {
   return (
-    <div className="relative mt-10 mb-64 flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60">
+    <div className="relative mt-10  flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60 mdm:mb-[300px] smm:mb-[40vw]">
       <button className="flex flex-col items-center" onClick={() => setShow(1)}>
         <RingToken token={Evermoon} animate />
         <div className="font-Josefin text-xl md:text-3xl text-gold-light">

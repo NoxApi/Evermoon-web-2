@@ -37,7 +37,7 @@ export const Move = () => {
       <Image src={BG} alt="BG" className="absolute w-full h-full mdm:hidden"/>
       <Image src={BGM} alt="BG" className="absolute w-full bottom-0  md:hidden"/>
 
-      <div className="z-0 mb-32 relative max-w-[1280px] mx-8 md:mx-auto rounded-b-2xl h-[40vw] py-3rem flex min-h-[300px] ">
+      <div className="z-0 mb-32 relative max-w-[1280px] max-h-[1024px] mx-8 md:mx-auto rounded-b-2xl h-[40vw] py-3rem flex min-h-[300px] mt-[10vw] xlm:mt-0">
         <div className='w-full h-[auto] flex justify-center items-center smm:hidden'>
             <div ref={triggerRef as React.RefObject<HTMLDivElement>} className='w-[100%] h-[100%]  flex items-center justify-center  '>
             <Transition
