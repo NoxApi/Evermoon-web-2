@@ -6,7 +6,8 @@ import Ethe from '../../assets/tribe/ethe.png'
 import Luna from '../../assets/tribe/luna.png'
 import Soli from '../../assets/tribe/soli.png'
 import Image from '../image'
-import BG from '../../assets/movetoearn/bg.jpg'
+import BG from '../../assets/movetoearn/BG.png'
+import BGM from '../../assets/movetoearn/bgm.jpg'
 import run from '../../assets/movetoearn/runner.png'
 import evp from '../../assets/movetoearn/Everpoint.png'
 import BG4 from '../../assets/tribe/bg4.png'
@@ -32,10 +33,11 @@ export const Move = () => {
   }, [inViewport])
 
   return (
-    <section id="tribe" className="relative overflow-hidden min-h-[350px]">
-      <Image src={BG} alt="BG" className="absolute w-full " fill />
+    <section id="tribe" className="relative overflow-hidden  w-auto">
+      <Image src={BG} alt="BG" className="absolute w-full h-full mdm:hidden"/>
+      <Image src={BGM} alt="BG" className="absolute w-full bottom-0  md:hidden"/>
 
-      <div className="z-0 mb-32 relative max-w-[1280px] mx-8 md:mx-auto rounded-b-2xl h-[40vw] py-3rem flex  ">
+      <div className="z-0 mb-32 relative max-w-[1280px] mx-8 md:mx-auto rounded-b-2xl h-[40vw] py-3rem flex min-h-[300px] ">
         <div className='w-full h-[auto] flex justify-center items-center smm:hidden'>
             <div ref={triggerRef as React.RefObject<HTMLDivElement>} className='w-[100%] h-[100%]  flex items-center justify-center  '>
             <Transition

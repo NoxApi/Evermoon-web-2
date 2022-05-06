@@ -47,7 +47,7 @@ const Index: NextPage = () => {
               className="w-full h-28 md:h-64 -translate-y-[52%] flex flex-col  justify-center"
               style={{
                 background:
-                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #0E0E15 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0) 100%)',
+                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, #111111 51.78%, #0E0E15 55.78%, rgba(7, 22, 45, 0.0) 100%)',
               }}
             >
             </div>

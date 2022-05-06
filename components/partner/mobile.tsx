@@ -52,7 +52,7 @@ export const PartnerM = () => {
         <ImagePartner  path={"15"}  w={"165px"} ></ImagePartner>
         </div>
         <div className=' col-span-6 lgm:col-span-7 w-[100%] h-[110px] flex justify-center items-center '  >
-        <ImagePartner  path={"16"}  w={"200px"} ></ImagePartner>
+        <ImagePartner  path={"16"}  w={"220px"} ></ImagePartner>
         </div>
     </div> 
     </>

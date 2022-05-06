@@ -14,7 +14,7 @@ export const Partner = () => {
         PARTNERS
       </div>
 
-      <div className="mt-20 max-w-[900px] lgm:max-w-[600px] lgm:mx-auto lgm:px-[auto] mx-auto lg:mx-auto relative grid grid-cols-10 gap-y-6 gap-x-10 mdm:gap-x-1 lgm:grid-cols- smm:hidden">
+      <div className="mt-20 max-w-[900px] lgm:max-w-[600px] lgm:mx-auto lgm:px-[auto] mx-auto lg:mx-auto relative grid grid-cols-10 gap-y-6 gap-x-10 mdm:gap-x-1 lgm:grid-cols-7 smm:hidden">
         <div className=' col-span-2  w-[150px] h-[150px] flex justify-center'  >
             <ImagePartner  path={"1"}  w={"150px"} ></ImagePartner>
         </div>

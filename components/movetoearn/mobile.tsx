@@ -25,21 +25,22 @@ useEffect(() => {
 }, [inViewport])
   return (
      <div className=' w-[100%] h-[130%] flex justify-start items-center  sm:hidden mt-[30px] '>
-       <div ref={triggerRef as React.RefObject<HTMLDivElement>} className=' w-[100%] h-[40vw] flex sm:hidden justify-start items-center flex-col'>
+       <div ref={triggerRef as React.RefObject<HTMLDivElement>} className=' w-[100%] h-[60vw] flex sm:hidden justify-start items-center flex-col'>
        <Transition
                   show={showFadeUp}
                   enter="transition delay-200 duration-1000"
                   enterFrom="opacity-0 -translate-y-[100px]"
                   enterTo="opacity-100 translate-y-0"
                   >
-                <div className='w-[50vw]  h-[auto] flex flex-col justify-start  '>
+                <div className='w-[52vw]  h-[auto] flex flex-col justify-start mb-[20px] '>
 
-                    <div className=" font-Josefin text-gold-light text-md font-bold text-center">
+                    <div className=" font-Josefin text-gold-light text-lg font-bold text-left">
                         MOVE TO EARN
                     </div>
-                    <div className=" font-Josefin text-[2vw] mt-[0.3vwpx]">
+                    <div className=" font-Josefin text-xs mt-[0.3vwpx]">
                         Bridge your physic movements for in-game advantages ! .
-                        move to gain extra stamina and earn more real rewards {"&"} exclusivity ! .
+                        <br></br>
+                        ?ove to gain extra stamina and earn more real rewards {"&"} exclusivity ! .
                     </div>
                     </div>
                   </Transition>

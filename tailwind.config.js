@@ -19,6 +19,7 @@ module.exports = {
       },
     },
     screens: {
+      'xsm': '400px',
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -47,6 +48,7 @@ module.exports = {
 
       'smm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
+      'xsmm': {'max': '399px'},
       'pr': {'max': '816px'},
     }
   },
