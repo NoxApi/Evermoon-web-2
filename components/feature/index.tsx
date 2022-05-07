@@ -37,7 +37,7 @@ export const Features = () => {
       <div ref={triggerRef as React.RefObject<HTMLDivElement>} className="mx-4 md:mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between">
       <Transition
                   show={showFadeUp}
-                  enter="transition delay-[0ms] duration-500"
+                  enter="transition delay-[200ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
@@ -45,42 +45,42 @@ export const Features = () => {
         </Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[50ms] duration-500"
+                  enter="transition delay-[250ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
         <Image src={F2} alt="F2" className="w-40 md:w-48" /></Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[100ms] duration-500"
+                  enter="transition delay-[300ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
         <Image src={F3} alt="F3" className="w-40 md:w-48" /></Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[150ms] duration-500"
+                  enter="transition delay-[350ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
         <Image src={F4} alt="F4" className="w-40 md:w-48" /></Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[200ms] duration-500"
+                  enter="transition delay-[400ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
         <Image src={F5} alt="F5" className="w-40 md:w-48" /></Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[250ms] duration-500"
+                  enter="transition delay-[450ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
         <Image src={F6} alt="F6" className="w-40 md:w-48" /></Transition>
         <Transition
                   show={showFadeUp}
-                  enter="transition delay-[300ms] duration-500"
+                  enter="transition delay-[500ms] duration-500"
                   enterFrom="opacity-0 translate-y-[100px]"
                   enterTo="opacity-100 translate-x-0"
                 >
