@@ -9,12 +9,14 @@ import UseCase1 from '../../assets/tokenomics/Use case-1.svg'
 import UseCase2 from '../../assets/tokenomics/Use case-2.svg'
 import UseCase3 from '../../assets/tokenomics/Use case-3.svg'
 import UseCase4 from '../../assets/tokenomics/Use case-4.svg'
+import evs from '../../assets/tokenomics/evstext.svg'
+import evm from '../../assets/tokenomics/evmtext.svg'
 import UseCase0S from '../../assets/tokenomics/everstone/Use case-0.svg'
 import UseCase1S from '../../assets/tokenomics/everstone/Use case-1.svg'
 import UseCase2S from '../../assets/tokenomics/everstone/Use case-2.svg'
 import UseCase3S from '../../assets/tokenomics/everstone/Use case-3.svg'
 import UseCase4S from '../../assets/tokenomics/everstone/Use case-4.svg'
-
+import { TokenomicsM } from './tablet'
 import ImageNext from 'next/image'
 import Image from '../image'
 import { css, keyframes } from '@emotion/css'
@@ -43,68 +45,37 @@ const spinInv = keyframes`
 `
 
 export const Tokenomics = () => {
-  const [show, setShow] = useState(0)
-
   return (
-    <section id="Tokenomic" className="relative">
-      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
+    <>
+    <section id="Tokenomic" className="relative mdm:hidden" >
+      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative ">
         TOKENOMICS
       </div>
 
-      <div className="max-w-[1024px] mx-8 lg:mx-auto relative transition-all">
+      <div className="max-w-[1024px] h-[550px] mdm:h-[850px] mx-8 lg:mx-auto relative transition-all">
         <GoldGradientFrame />
-        {/* <Transition
-          show={show === 0}
-          enter="transition-opacity ease-linear duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity ease-linear duration-300"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        > */}
-        <Summary setShow={setShow} />
-        {/* </Transition> */}
-        <Transition
-          show={show === 1}
-          enter="transition-opacity ease-linear duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity ease-linear duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <EVERMOON setShow={setShow} />
-        </Transition>
-        <Transition
-          show={show === 2}
-          enter="transition-opacity ease-linear duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity ease-linear duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <EVERSTONE setShow={setShow} />
-        </Transition>
+        <Summary />   
       </div>
     </section>
+    <TokenomicsM/>
+    </>
   )
 }
 
 function RingToken({
   token,
   animate = false,
-  width = 'w-60 md:w-80',
+  width = 'w-[200px] md:w-80',
 }: {
   token: StaticImageData
   animate?: boolean
   width?: string
 }) {
   return (
-    <div className="flex ">
+    <div className="">
       <div className="relative ">
         <Image src={Ring} alt="ring" className={width} />
-        <div className="absolute inset-0 flex">
+        <div className="absolute inset-0 flex ">
           {animate ? (
             <Image
               src={SmallRing}
@@ -146,122 +117,75 @@ function RingToken({
           )}
         </div>
         <div className="absolute inset-0 flex items-center justify-center p-[8%]">
-          <Image src={token} alt="token" className="w-full " />
+          <Image src={token} alt="token" className="w-full mdm:w-[150px] " />
         </div>
       </div>
+      
     </div>
   )
 }
 
-function Summary({ setShow }: { setShow: Function }) {
+function Summary() {
   return (
-    <div className="relative mt-10  flex flex-col md:flex-row gap-y-12 md:gap-y-0 justify-evenly pt-12 pb-20 md:pb-60 mdm:mb-[300px] smm:mb-[40vw]">
-      <button className="flex flex-col items-center" onClick={() => setShow(1)}>
+    <div className="relative mt-10 flex flex-row  justify-between mdm:justify-between mdm:pb-[100px] mdm:flex-col  mdm:h-[850px]">
+   
+      <div className="flex flex-col items-center EVM-HOV w-[100%]    ">
+        <div className='tokenomic  mdm:flex-col mdm:items-center mdm:justify-center  mdm:px-[10vw]  '>
+        <div className='flex flex-col hoverA ml-[30px] mdm:ml-0'>
         <RingToken token={Evermoon} animate />
-        <div className="font-Josefin text-xl md:text-3xl text-gold-light">
-          EVERMOON TOKEN
+        <div className=''>
+          <div className="font-Josefin text-xl md:text-3xl text-gold-light">
+              EVERMOON TOKEN
+            </div>
+            <div className="font-Josefin md:text-xl text-center">
+              Total Supply 1,000,000,000
+            </div>
+      </div>
+      
         </div>
-        <div className="font-Josefin md:text-xl">
-          Total Supply 1,000,000,000
+        <div className=' tokenomicinfo '>
+          
+        <div className="relative flex flex-col text-left mx-[130px] lgm:mx-auto max-w-[400px]" >
+          <div className="flex flex-col gap-y-5 mt-8 justify-center  ">
+            {[evm,UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
+              (image: StaticImageData) => (
+                <Image key={image.src} src={image} alt="" className='' />
+              )
+            )}
+          </div>
+          
         </div>
-      </button>
+          
+        </div>
+        
+        </div>
+      </div>
 
-      <button className="flex flex-col items-center" onClick={() => setShow(2)}>
+      <button className="EVM flex flex-col items-center EVS-HOV w-[100%] ">
+      <div className='tokenomic2  mdm:flex-col mdm:items-center mdm:justify-center  mdm:px-[10vw]'>     
+      <div className=' tokenomicinfo  '>  
+          <div className="relative flex flex-col text-left mx-[130px] lgm:mx-auto max-w-[400px]">
+            <div className="flex flex-col  gap-y-5 mt-8 justify-center mdm:pt-[100px]">
+            {[evs,UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
+              (image: StaticImageData) => (
+                <Image key={image.src} src={image} alt="" className='' />
+              )
+            )}
+            </div>
+            
+          </div>
+          </div>
+      <div className='flex flex-col hoverA mr-[30px] mdm:mr-0'>
         <RingToken token={Everstone} animate />
-        <div className="font-Josefin text-xl md:text-3xl text-gold-light">
+        <div className="EVM font-Josefin text-xl md:text-3xl text-gold-light">
           EVERSTONE
         </div>
-        <div className="font-Josefin md:text-xl">Unlimited Supply</div>
+        <div className="EVM font-Josefin md:text-xl">Unlimited Supply</div>
+        </div>
+    
+          </div>
       </button>
     </div>
   )
 }
 
-function EVERMOON({ setShow }: { setShow: Function }) {
-  return (
-    <div className="absolute inset-0">
-      <div className="relative flex flex-col md:grid md:grid-cols-2 pt-12 ">
-        <GoldGradientFrame />
-        <button
-          className="flex flex-col items-center"
-          onClick={() => setShow(0)}
-        >
-          <RingToken token={Evermoon} animate />
-        </button>
-
-        <div className="relative flex flex-col items-left mx-4 md:mx-0">
-          <div className="font-Josefin text-[2rem] leading-10 text-gold-light">
-            EVERMOON TOKEN ($EVM)
-          </div>
-          <div className="font-Josefin text-2xl text-white mt-3">
-            Total Supply 1,000,000,000
-          </div>
-          <div className="font-Josefin text-sm text-white md:mr-20 mt-4 ">
-            To the new dimension of NFT game industries of play and earn,
-            moonstone is a core of our moon economy. Generating income to reach
-            your dreams. Players may achieve a rewarding experience through…
-          </div>
-          <div className="flex flex-col pr-20 gap-y-5 mt-8 ">
-            {[UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
-              (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" className='-mr-20 md:mr-0' />
-              )
-            )}
-          </div>
-        </div>
-
-        <button
-          className="absolute top-7 left-7 flex flex-col items-center"
-          onClick={() => setShow(2)}
-        >
-          <RingToken token={Everstone} width="w-16 md:w-20" />
-        </button>
-      </div>
-    </div>
-  )
-}
-
-function EVERSTONE({ setShow }: { setShow: Function }) {
-  return (
-    <div className="absolute inset-0">
-      <div className="relative flex flex-col md:grid md:grid-cols-2  pt-12 pb-8">
-        <GoldGradientFrame />
-        <button
-          className="flex flex-col items-center"
-          onClick={() => setShow(0)}
-        >
-          <RingToken token={Everstone} animate />
-        </button>
-
-        <div className="relative flex flex-col items-left mx-4 md:mx-0">
-          <div className="font-Josefin text-[2rem] leading-10 text-gold-light">
-            EVERSTONE ($ES)
-          </div>
-          <div className="font-Josefin text-2xl text-white mt-3">
-            Unlimited Supply
-          </div>
-          <div className="font-Josefin text-sm text-white md:mr-20 mt-4">
-            Everstone, the most valuable tokens in the EVERMOON universe, is the
-            token that overcome the core economy of the game. As it always be,
-            Evermoon allows players to purchase loot boxes that contain rare
-            skins that never be found in the game
-          </div>
-          <div className="flex flex-col pr-20 gap-y-5 mt-8">
-            {[UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
-              (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" className='-mr-20 md:mr-0' />
-              )
-            )}
-          </div>
-        </div>
-
-        <button
-          className="absolute top-7 left-7 flex flex-col items-center"
-          onClick={() => setShow(1)}
-        >
-          <RingToken token={Evermoon} width="w-16 md:w-20" />
-        </button>
-      </div>
-    </div>
-  )
-}

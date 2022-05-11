@@ -53,6 +53,8 @@ const Index: NextPage = () => {
             </div>
           </div>
           <Move/>
+          
+          
 
           <div className="relative w-full h-0 z-10">
             <div

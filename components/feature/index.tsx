@@ -34,7 +34,7 @@ export const Features = () => {
       <div className="pt-12 relative text-center font-Josefin text-gold-light text-5xl md:text-6xl ">
         FEATURES
       </div>
-      <div ref={triggerRef as React.RefObject<HTMLDivElement>} className="mx-4 md:mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between">
+      <div ref={triggerRef as React.RefObject<HTMLDivElement>} className="mx-4 md:mx-auto flex max-w-[960px] gap-6 flex-wrap justify-evenly md:justify-between smm:mx-0">
       <Transition
                   show={showFadeUp}
                   enter="transition delay-[200ms] duration-500"

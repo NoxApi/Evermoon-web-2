@@ -45,7 +45,7 @@ function HeaderDesktop() {
     <div className="hidden xl:flex w-full ">
       <div className="ml-8 flex items-center mr-auto z-0">
         <Link title="HOME" href="#Home" current={true} />
-        <Link title="FEATURE" href="#Feature" current={false} />
+        <Link title="FEATURES" href="#Feature" current={false} />
         <Link title="HEROES" href="#Heroes" current={false} />
         <Link title="RUNES" href="#Runes" current={false} />
         <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
