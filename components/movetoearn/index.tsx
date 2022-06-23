@@ -1,20 +1,15 @@
 
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
-import Naka from '../../assets/tribe/naka.png'
-import Byza from '../../assets/tribe/byza.png'
-import Ethe from '../../assets/tribe/ethe.png'
-import Luna from '../../assets/tribe/luna.png'
-import Soli from '../../assets/tribe/soli.png'
 import Image from '../image'
 import BG from '../../assets/movetoearn/BG.png'
-import BGM from '../../assets/movetoearn/bgm.jpg'
-import run from '../../assets/movetoearn/runner.png'
+import BGM from '../../assets/movetoearn/BGM.jpg'
+import run from '../../assets/movetoearn/Runner.png'
 import evp from '../../assets/movetoearn/Everpoint.png'
-import BG4 from '../../assets/tribe/bg4.png'
-import Map from '../../assets/tribe/map.png'
+
 import { useInViewport } from 'react-in-viewport'
 import { Transition } from '@headlessui/react'
 import { MoveM } from './mobile'
+import { redirect } from 'next/dist/server/api-utils'
 
 export const Move = () => {
   const triggerRef = useRef<HTMLElement>(null)
@@ -103,9 +98,9 @@ export const Move = () => {
                         MOVE TO EARN
                     </div>
                     <div className=" font-Josefin text-lg mt-[10px] lgm:text-xs ">
-                        Bridge your physical movements for in-game advantages ! .
+                        Bridge your physical movements for in-game advantages!
                         <br />
-                        move to gain extra stamina and earn more real rewards {"&"} exclusivity ! .
+                        Move to gain extra stamina and earn more real rewards {"&"} exclusivity !
                     </div>
                     </div>
                   </Transition>
@@ -114,16 +109,17 @@ export const Move = () => {
         </div>
         <MoveM></MoveM>
       </div>
-
-      <div className="h-0 w-full relative z-10">
-        <div
-          className="h-48 w-full -translate-y-1/2"
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, rgba(18, 32, 50, 0.8) 31.78%, rgba(18, 32, 50, 1) 51.78%, rgba(7, 22, 45, 0) 100%)',
-          }}
-        />
-      </div>
+      <div className="relative w-full h-0 z-10">
+            <div
+              className="w-full h-28 md:h-64 -translate-y-[55%] flex flex-col  justify-center "
+              style={{
+                background:
+                   'linear-gradient(180deg, rgba(10, 9, 16, 0.1) 0%, #111111 21.78%, #0E0E15 55.78%, rgba(7, 22, 45, 1) 100%)',
+              
+              }}
+            >
+            </div>
+          </div>
 
      
     </section>
