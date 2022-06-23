@@ -118,7 +118,7 @@ export const Tribe = () => {
           All incidents of the war started when Beyonder separated its power
           into fractions and spread them all over to prevent the collapse of the
           world. That power is called De-Zentrum and is one of the original
-          source that Nakamatos tribe obtained its power since the De-Zentrum
+          sources that Nakamatos tribe obtained its power since the De-Zentrum
           discovered.
         </div>
       </div>

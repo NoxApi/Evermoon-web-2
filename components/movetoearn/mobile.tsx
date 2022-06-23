@@ -1,6 +1,7 @@
 
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
-import run from '../../assets/movetoearn/Runner.png'
+import BG from '../../assets/movetoearn/bg.jpg'
+import run from '../../assets/movetoearn/runner.png'
 import evp from '../../assets/movetoearn/Everpoint.png'
 import Image from '../image'
 import { Transition } from '@headlessui/react'
@@ -37,9 +38,9 @@ useEffect(() => {
                         MOVE TO EARN
                     </div>
                     <div className=" font-Josefin text-sm mt-[0.3vw]">
-                        Bridge your physic movements for in-game advantages !
+                        Bridge your physical movements for in-game advantages ! .
                         <br></br>
-                        Move to gain extra stamina and earn more real rewards {"&"} exclusivity !
+                        ?ove to gain extra stamina and earn more real rewards {"&"} exclusivity ! .
                     </div>
                     </div>
                   </Transition>
