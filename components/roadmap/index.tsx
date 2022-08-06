@@ -1,16 +1,16 @@
 import React from 'react'
-import q122 from '../../assets/roadmap/22q1.svg'
-import q222 from '../../assets/roadmap/22q2.svg'
-import q322 from '../../assets/roadmap/22q3.svg'
-import q422 from '../../assets/roadmap/22q4.svg'
-import q123 from '../../assets/roadmap/23q1.svg'
-import q223 from '../../assets/roadmap/23q2.svg'
-import q122m from '../../assets/roadmap/22q1m.svg'
-import q222m from '../../assets/roadmap/22q2m.svg'
-import q322m from '../../assets/roadmap/22q3m.svg'
-import q422m from '../../assets/roadmap/22q4m.svg'
-import q123m from '../../assets/roadmap/23q1m.svg'
-import q223m from '../../assets/roadmap/23q2m.svg'
+import q122 from '../../assets/roadmap/Q1-2022.svg'
+import q222 from '../../assets/roadmap/Q2-2022.svg'
+import q322 from '../../assets/roadmap/Q3-2022.svg'
+import q422 from '../../assets/roadmap/Q4-2022.svg'
+import q123 from '../../assets/roadmap/Q1-2023.svg'
+import q223 from '../../assets/roadmap/Q2-2023.svg'
+import q122m from '../../assets/roadmap/Q1-2022m.svg'
+import q222m from '../../assets/roadmap/Q2-2022m.svg'
+import q322m from '../../assets/roadmap/Q3-2022m.svg'
+import q422m from '../../assets/roadmap/Q4-2022m.svg'
+import q123m from '../../assets/roadmap/Q1-2023m.svg'
+import q223m from '../../assets/roadmap/Q2-2023m.svg'
 import Image from '../image'
 import { css, keyframes } from '@emotion/css'
 import BG from '../../assets/roadmap/bg.png'
@@ -42,7 +42,7 @@ function RoadmapDesktop() {
   return (
     <div className="hidden md:block max-w-[780px] mx-auto mt-16 pb-32">
       <div className=" flex gap-x-4 justify-between">
-        <Image src={q122} alt="q122" className="w-52 -mr-20" priority />
+        <Image src={q122} alt="q122" className="w-40 -mr-20" priority />
         <DotDivider />
         <Image src={q222} alt="q222" className="w-52 -mr-20" priority />
         <div className="flex gap-x-1 mt-14">
@@ -65,7 +65,7 @@ function RoadmapDesktop() {
         </div>
 
         <div>
-          <Image src={q322} alt="q322" className="w-52 -mr-20" priority />
+          <Image src={q322} alt="q322" className="w-[14rem] -mr-20" priority />
           <DotDivider disabled horizontal className="items-end mr-[4rem]" />
         </div>
       </div>
@@ -73,7 +73,7 @@ function RoadmapDesktop() {
       <div className="flex gap-x-4 justify-between">
         <Image src={q223} alt="q223" className="w-52 -mr-20" priority />
         <DotDivider disabled />
-        <Image src={q123} alt="q123" className="w-52 -mr-20" priority />
+        <Image src={q123} alt="q123" className="w-[16rem] -mr-20" priority />
         <DotDivider disabled />
         <Image src={q422} alt="q422" className="w-52 -mr-20" priority />
       </div>
@@ -85,9 +85,9 @@ function RoadmapMobile() {
   return (
     <div className="md:hidden max-w-[380px] mx-auto mt-16 pb-32">
       <div className=" flex flex-col items-center">
-        <Image src={q122m} alt="q122m" className="w-full mx-8 -mr-4" priority />
+        <Image src={q122m} alt="q122m" className="w-[90%] mx-8 -mr-4" priority />
         <DotDivider horizontal />
-        <Image src={q222m} alt="q222m" className="w-full mx-8 -mr-4" priority />
+        <Image src={q222m} alt="q222m" className="w-[100%] mx-8 -mr-16" priority />
         <div className="my-8 flex flex-col gap-y-1">
           {Array(9)
             .fill(0)
@@ -104,13 +104,13 @@ function RoadmapMobile() {
               />
             ))}
         </div>
-        <Image src={q322m} alt="q322m" className="w-full mx-8" priority />
+        <Image src={q322m} alt="q322m" className="w-[105%] mx-8 ml-[9rem]" priority />
         <DotDivider disabled horizontal />
-        <Image src={q422m} alt="q422m" className="w-full mx-8" priority />
+        <Image src={q422m} alt="q422m" className="w-full mx-8 ml-[8rem]" priority />
         <DotDivider disabled horizontal />
-        <Image src={q123m} alt="q123m" className="w-full mx-8" priority />
+        <Image src={q123m} alt="q123m" className="w-[110%] mx-8 ml-[10rem]" priority />
         <DotDivider disabled horizontal />
-        <Image src={q223m} alt="q223m" className="px-2 w-full mx-8 " priority />
+        <Image src={q223m} alt="q223m" className=" w-[120%] ml-[10rem]" priority />
       </div>
     </div>
   )
