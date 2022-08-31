@@ -31,14 +31,10 @@ export const Trailer = () => {
   return (
     <section id="trailer" className="relative flex flex-col">
       <Image src={BG} alt="BG" fill />
-      <div className="max-w-[1024px] w-full mx-auto mt-12">
-        <Image
-          src={Title}
-          alt="Title"
-          className="w-72 md:w-96 mx-auto md:mr-0 md:ml-auto translate-y-3"
-        />
+      <div className="max-w-[1024px] w-full mx-auto mt-[10vw]">
+      
       </div>
-      <div className="relative max-w-[1024px] lg:w-full mx-8 md:mx-12 lg:mx-auto mb-12 z-10">
+      {/* <div className="relative max-w-[1024px] lg:w-full mx-8 md:mx-12 lg:mx-auto mb-12 z-10">
         <YouTube
           videoId="_UpRh3Wgv1M"
           opts={{ height: '100%', width: '100%' }}
@@ -63,18 +59,18 @@ export const Trailer = () => {
           alt="Star"
           className="w-12 md:w-16 absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 pointer-events-none"
         />
-      </div>
+      </div> */}
 
-      <div className="relative -mt-[15%] z-0">
-        <div className="relative w-full h-0 z-10">
+      <div className="relative  z-0">
+        {/* <div className="relative w-full h-0 z-10">
           <div
-            className="w-full h-52 -translate-y-1/2"
+            className="w-full h-32 -translate-y-1/2"
             style={{
               background:
                 'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%, rgba(18, 18, 40, 1) 51.78%, rgba(7, 22, 45, 0) 100%)',
             }}
           />
-        </div>
+        </div> */}
         <Image src={BG2} alt="BG2" className="w-full " />
 
         <div className="absolute inset-0 flex flex-col justify-center pt-64">

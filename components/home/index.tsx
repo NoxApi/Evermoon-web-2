@@ -11,82 +11,109 @@ import Facebook from '../../assets/socials/facebook.svg'
 import Twitter from '../../assets/socials/twitter.svg'
 import Youtube from '../../assets/socials/youtube.svg'
 import LinkNewTab from '../LinkNewTab'
-import bgm from '../../assets/bgm.jpg'
+import bg from '../../assets/home/BG.png'
+import text1 from '../../assets/home/text1.png'
+import div from '../../assets/home/divider.png'
+import store1 from '../../assets/home/store1.png'
+import store2 from '../../assets/home/store2.png'
+import store2h from '../../assets/home/store2h.png'
+import store1h from '../../assets/home/store1h.png'
+import storebg from '../../assets/home/storebg.png'
+import card1 from '../../assets/home/card1.png'
+import card2 from '../../assets/home/card2.png'
+import card3 from '../../assets/home/card3.png'
+import card4 from '../../assets/home/card4.png'
+import footer from '../../assets/home/bottom.svg'
 import ImageNext from 'next/image'
 import JoinProgram from '../../assets/home/joinprogram.svg'
 import JoinSale from '../../assets/home/joinsale.svg'
 import Whitepaper from '../../assets/home/whitepaper.svg'
+import wp1 from '../../assets/home/wp1.png'
+import wp2 from '../../assets/home/wp2.png'
+import wp3 from '../../assets/home/wp3.png'
 import CTA from '../../assets/socials/CTA.svg'
 import frameCTA from '../../assets/socials/frameCTA.svg'
 import { useState } from 'react'
 import Banner from '../../assets/Banner.png'
+import { ModalController } from '../globalmodal'
 
 export default function Home() {
+  const [open,setopen] = useState(false)
   return (
     <section
       id="Home"
-      className="relative bg-white min-h-[844px] h-screen w-full overflow-hidden"
+      className="relative  max-h-[1080px] w-full overflow-hidden bg-bgs1 bg-center" 
     >
-      <video
-        className="hidden md:block inset-0 min-h-[844px] h-screen w-full object-cover"
-        loop
-        autoPlay
-        muted
-        preload="metadata"
-      >
-        {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
-        <source src="/banner.mp4#t=0.1" type="video/mp4" />
-      </video>
+      <ModalController status={open} setStatus={setopen}/>
+      {/* <Image src={bg} alt="Banner" 
+        className=" bg-contain"
+      /> */}
+    
 
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <Image src={Banner} alt="Banner" className=" h-screen w-full" fill />
-      </div>
+      </div> */}
 
       <div className="absolute inset-0">
         <Header />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center justify-start mt-32 xl:translate-x-72">
-        <div className="text-2xl sm:text-5xlr font-Glamode  text-gold-gradient text-center text-shadow-xl">
-          MOBILE MOBA BLOCKCHAIN
+      <div className=" flex flex-col items-center justify-start h-[1080px] ">
+        <div className="flex flex-col items-center w-[100%] mx-auto h-[80%] justify-center ">
+          <div className='flex flex-col items-center  relative mt-[500px] '  >
+          <Image src={text1} alt="AppStore" className="max-w-[1280px] w-[100vw]" />
+            <div className="flex">
+              <Image src={div} alt="AppStore" className=" absolute inset-0 top-[63%] left-[34.5%]  w-[400px]   mix-blend-screen" />
+            </div>
+            <LinkNewTab href="https://docs.evermoon.games/evermoon/">
+              <div className='w-[300px]  mt-[50px] relative  whitepaper cursor-pointer'>
+              <Image
+                src={wp1}
+                alt="Whitepaper"
+                className=" absolute inset-0 whitepaper1"
+              />
+              <Image
+                src={wp2}
+                alt="Whitepaper"
+                className=" absolute inset-0 opacity-0 whitepaper2"
+              />
+              <Image
+                src={wp3}
+                alt="Whitepaper"
+                className=" w-[330px] absolute inset-0 top-[-50px] left-[-15px] opacity-0 mix-blend-screen whitepaper3 "
+              />
+              </div>
+            </LinkNewTab>
+          </div>  
+          
         </div>
-        <div className="text-base sm:prose-xl font-Josefin text-center text-shadow-xl">
-          JOIN OUR UNIVERSE TO BECOME A HERO
-        </div>
-
-        <div className="mt-auto lg:mt-16 mb-24 lg:mb-0 flex flex-col items-center w-72 mx-auto">
-          <LinkNewTab href="https://docs.google.com/forms/d/e/1FAIpQLSfBJTRBIPUIXd1g_0uadx__KC8x1y8NxD94bvwW_T6LgDbRPA/viewform">
-            <Image
-              src={JoinProgram}
-              alt="JoinProgram"
-              className="w-[calc(100vw-48px)] sm:w-[420px] transition-transform hover:scale-110 duration-500"
-            />
-          </LinkNewTab>
-          <div className="h-7" />
-          <LinkNewTab href="https://docs.google.com/forms/d/e/1FAIpQLSf954l5vbU-LZ-VuR_iNPJM-yJCCJiCu3WIn4e4702j7kvDdw/viewform">
-            <Image
-              src={JoinSale}
-              alt="JoinSale"
-              className="w-[calc(100vw-48px)] sm:w-[420px] transition-transform hover:scale-110 duration-500"
-            />
-          </LinkNewTab>
-
-          <div className="flex mt-6">
-            <Image src={AppStore} alt="AppStore" className="w-[120px] md:w-[150px]" />
-            <div className="w-5" />
-            <Image src={GooglePlay} alt="GooglePlay" className="w-[120px] md:w-[150px]" />
+        <div className=' relative flex h-[20%] justify-center w-[100%] items-end pb-[18px]'>
+          <Image src={storebg} alt="AppStore" className="w-[250px]  absolute  z-20 " />
+          <div className='flex -translate-y-[48px] z-30  cursor-pointer'>
+            <div className='w-[250px] cursor-pointer  relative store2'>
+              <Image src={store2} alt="AppStore" className="absolute inset-0 store2c1" />
+              <Image src={store2h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
+            </div>
+            <div className='w-[250px] cursor-pointer   relative store2'>
+              <Image src={store1} alt="AppStore" className="absolute inset-0 store2c1" />
+              <Image src={store1h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
+            </div>
           </div>
-
-          <LinkNewTab href="https://docs.evermoon.games/evermoon/">
-            <Image
-              src={Whitepaper}
-              alt="Whitepaper"
-              className="w-[240px] md:w-[300px] mt-6 transition-transform hover:scale-110 duration-500"
-            />
-          </LinkNewTab>
+            
+          </div>  
+        <div className=' absolute  top-[70%] left-0 z-20 translate-y-[4vw] xlm:top-[63%] lgm:top-[60%] lgm:translate-x-[20vw] lgm:mx-auto w-[450px] h-[130px] '>\
+          <div className='relative'>
+            <div onClick={()=>setopen(true)} className="w-[65px]  absolute inset-0 left-[19%] translate-y-6 trailer z-20  cursor-pointer mix-blend-luminosity hover:mix-blend-normal  ">
+              <Image src={card3}  alt="AppStore"  />
+            </div>
+              <Image src={card1} alt="AppStore" className="w-[250px] absolute top-[-30px] card1" />
+              <Image src={card2} alt="AppStore" className="w-[250px] absolute top-[-30px] card2" />
+              <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext" />
+          </div>
         </div>
       </div>
 
       <SocialCTA />
+      {/* <Image src={footer} alt="banner"/> */}
     </section>
   )
 }

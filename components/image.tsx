@@ -8,9 +8,11 @@ interface ImageProps {
   blur?: boolean
   fill?: boolean
   quality?: string | number | undefined
+  onClick?:any
 }
 function Image({
   className,
+  onClick,
   src,
   alt,
   priority,
@@ -27,6 +29,7 @@ function Image({
         objectFit="cover"
         className={className}
         quality={quality}
+        onClick={onClick}
       />
     )
   }

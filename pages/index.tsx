@@ -6,9 +6,10 @@ import ImageNext from 'next/image'
 import Image from '../components/image'
 import Layout from '../components/layout'
 import { Trailer } from '../components/trailer'
+import  PTR  from '../components/playandearn'
 import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
-import { Features } from '../components/feature'
+import  Features from '../components/feature'
 import { Heroes } from '../components/heroes'
 import { Runes } from '../components/runes/runes'
 
@@ -17,7 +18,8 @@ import { Tokenomics } from '../components/tokenomics'
 import { Team } from '../components/team'
 import { Roadmap } from '../components/roadmap'
 import { Partner } from '../components/partner'
-import { Move } from '../components/movetoearn'
+
+import  sec1footer  from "../assets/home/bottom.svg"
 
 const Index: NextPage = () => {
   return (
@@ -29,19 +31,37 @@ const Index: NextPage = () => {
       </Head>
 
       <main>
-        <Home />
+    
         <div className="relative z-0">
-          <div className="relative w-full h-0 z-10">
-            <div
+        <Home />
+          <div className="relative w-full h-0 z-20">
+            <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
+                <Image src={sec1footer} alt="banner" className='w-[1920px]'/>
+            </div> 
+             <div
               className="w-full h-56 -translate-y-[52%]"
               style={{
                 background:
-                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 0%,rgba(22, 22, 55, 1) 45%, rgba(22, 22, 55, 1) 50%, rgba(7, 22, 45, 0) 100%)',
+                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 20%,rgba(22, 22, 55, 1) 45%, rgba(22, 22, 55, 1) 50%, rgba(7, 22, 45, 0) 100%)',
               }}
-            />
+            /> 
+             
           </div>
 
-          <Trailer />
+            <PTR/>
+            <div className="relative w-full h-0 z-20">
+            <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
+             <div
+              className="w-full h-56 -translate-y-[52%]"
+              style={{
+                background:
+                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 20%,rgba(22, 22, 55, 1) 45%, rgba(22, 22, 55, 1) 50%, rgba(7, 22, 45, 0) 100%)',
+              }}
+            /> 
+            </div>
+            </div>
+            <Features />
+          {/* 
           <div className="relative w-full h-0 z-10">
             <div
               className="w-full h-28 md:h-64 -translate-y-[52%] flex flex-col  justify-center"
@@ -64,7 +84,7 @@ const Index: NextPage = () => {
             />
           </div>
 
-          <Features />
+       
 
           <div className="relative w-full h-0 z-10">
             <div
@@ -96,18 +116,18 @@ const Index: NextPage = () => {
             <Team />
             <Partner/>
             <Roadmap />
-          </div>
+          </div>*/}
         </div>
       </main>
-      <div className="relative w-full h-0 ">
+      {/* <div className="relative w-full h-0 mt-[]y">
         <div
           className="w-full h-40 -translate-y-[50%]"
           style={{
             background:
               'linear-gradient(180deg, rgba(12, 31, 55, 0) 0%, #0b111d 51.78%, 0b111d 100%)',
           }}
-        />
-      </div>
+        /> 
+      </div> */}
       <Footer />
     </Layout>
   )
