@@ -601,3 +601,17 @@ img {
 .whitepaper:hover > .whitepaper3{
   opacity: 1;
 }
+.evmanimate{
+}
+@media (prefers-reduced-motion: no-preference) {
+  .evmanimate {
+    animation: evmanimated infinite 6s linear;
+}
+}
+@keyframes evmanimated {
+  0%    {top: 32vh;}
+  25%   {top: 33vh;}
+  50%   {top: 34vh;}
+  75%   {top: 33vh;}
+  100%  {top: 32vh;}
+}
