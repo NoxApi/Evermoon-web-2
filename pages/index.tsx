@@ -5,7 +5,6 @@ import Home from '../components/home'
 import ImageNext from 'next/image'
 import Image from '../components/image'
 import Layout from '../components/layout'
-import { Trailer } from '../components/trailer'
 import  PTR  from '../components/playandearn'
 import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
@@ -20,6 +19,7 @@ import { Roadmap } from '../components/roadmap'
 import { Partner } from '../components/partner'
 
 import  sec1footer  from "../assets/home/bottom.svg"
+import MAP from '../components/map'
 
 const Index: NextPage = () => {
   return (
@@ -61,6 +61,7 @@ const Index: NextPage = () => {
             </div>
             </div>
             <Features />
+            <MAP />
           {/* 
           <div className="relative w-full h-0 z-10">
             <div
