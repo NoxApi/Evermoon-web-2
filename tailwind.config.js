@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'bgs1' : "url('../public/bgs1.png')",
+        'bgs2' : "url('../public/bgs2.png')",
+        'bgs3' : "url('../public/bgs3.png')",
+      },
+      
       fontSize: {
         '2xlr': [
           'clamp(1rem, 1vw + 0.7rem,1.5rem)',

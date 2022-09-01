@@ -16,8 +16,8 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
-      <div className="hidden 2xl:block absolute inset-0 w-full h-16 bg-gold-gradient-inv" />
-      <div className="absolute top-0 left-0 right-0 w-full h-24 bg-black-gradient" />
+      <div className="hidden 2xl:block absolute inset-0 w-full h-32 bg-gold-gradient-inv" />
+      <div className="absolute top-0 left-0 right-0 w-full h-36 bg-black-gradient" />
       <div className="px-4 md:px-10 py-5 flex items-center">
         <div className="">
           <NextLink href="/">
@@ -56,9 +56,6 @@ function HeaderDesktop() {
         {/* <Image src={team} alt="team" className="w-24 translate-x-1" /> */}
         <div className="relative">
           <Image src={marketplace} alt="marketplace" className="w-44" />
-          <div className="absolute bottom-0 left-0 font-Josefin text-xs translate-y-full pl-6 pt-1">
-            Coming Soon
-          </div>
         </div>
       </div>
     </div>

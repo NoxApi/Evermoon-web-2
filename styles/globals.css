@@ -510,3 +510,108 @@ img {
   opacity: 1;
   border-radius: 20px;
 }
+
+.trailer{
+  transition: all 0.3s ease-in-out;
+}
+
+
+.card1{
+  width: 250px;
+  transition: all 0.3s ease-in-out;
+  }
+
+  .card2{
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+    }
+    .trailertext{
+      transition: all 0.3s ease-in-out;
+      }
+
+.trailer:hover{
+  
+    width: 80px;
+    transform : translateX(10px) translateY(20px);
+  
+}
+
+.trailer:hover ~ .card1{
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  
+  transform : rotate(20deg) ;
+}
+
+.trailer:hover ~ .card2{
+ 
+  width: 350px;
+  transform : rotate(-20deg) translateX(-20px) translateY(-40px);
+  
+}
+.trailer:hover ~ .trailertext{
+ 
+  transform : rotate(40deg) translateX(100px);
+  
+}
+.store2{
+  
+}
+.store2c1{
+  transition: all 0.3s ease-in-out;
+}
+.store2:hover >  .store2c1{
+  opacity: 0.9;
+}
+.store2c2{
+  transition: all 0.2s ease-in-out;
+}
+.store2:hover > .store2c2{
+  opacity: 1;
+}
+
+.store1{
+  
+}
+.store1c1{
+  transition: all 0.3s ease-in-out;
+}
+.store1:hover >  .store1c1{
+  opacity: 0.9;
+}
+.store1c2{
+  transition: all 0.2s ease-in-out;
+}
+.store1:hover > .store1c2{
+  opacity: 1;
+}
+.whitepaper{
+}
+.whitepaper2{
+  transition: all 0.2s ease-in-out;
+}
+.whitepaper3{
+  transition: opacity 0.3s ease-in 0.2s;
+  transition: opacity 0.05s ease-out 0;
+}
+
+.whitepaper:hover > .whitepaper2{
+  opacity: 1;
+}
+.whitepaper:hover > .whitepaper3{
+  opacity: 1;
+}
+.evmanimate{
+}
+@media (prefers-reduced-motion: no-preference) {
+  .evmanimate {
+    animation: evmanimated infinite 6s linear;
+}
+}
+@keyframes evmanimated {
+  0%    {top: 32vh;}
+  25%   {top: 33vh;}
+  50%   {top: 34vh;}
+  75%   {top: 33vh;}
+  100%  {top: 32vh;}
+}
