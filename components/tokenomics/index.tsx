@@ -47,7 +47,10 @@ const spinInv = keyframes`
 export const Tokenomics = () => {
   return (
     <>
-    <section id="Tokenomic" className="relative mdm:hidden" >
+    <section
+      id="Home"
+      className="relative  h-[1080px] w-full overflow-hidden bg-bgs4 bg-center" 
+    >
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative ">
         TOKENOMICS
       </div>

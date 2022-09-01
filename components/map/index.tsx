@@ -1,10 +1,8 @@
-import Header from '../header'
 import Image from '../image'
 import topc from '../../assets/map/topc.png'
 import botc from '../../assets/map/botc.png'
 import mm from '../../assets/map/minimap.svg'
-import evm from '../../assets/playandearn/evm.png'
-import footer from '../../assets/home/bottom.svg'
+
 
 export default function MAP() {
   return (

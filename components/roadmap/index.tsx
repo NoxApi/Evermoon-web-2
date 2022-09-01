@@ -11,9 +11,13 @@ import q322m from '../../assets/roadmap/Q3-2022m.svg'
 import q422m from '../../assets/roadmap/Q4-2022m.svg'
 import q123m from '../../assets/roadmap/Q1-2023m.svg'
 import q223m from '../../assets/roadmap/Q2-2023m.svg'
+import logo from '../../assets/roadmap/logo.svg'
+import s1 from '../../assets/roadmap/twitter.png'
+import tm from '../../assets/roadmap/trademark.svg'
 import Image from '../image'
 import { css, keyframes } from '@emotion/css'
 import BG from '../../assets/roadmap/bg.png'
+import { ComingSoonLink, Link } from '../header/Link'
 
 const dotProgress = (index: number) => keyframes`
 	0% {
@@ -26,14 +30,31 @@ const dotProgress = (index: number) => keyframes`
 
 export const Roadmap = () => {
   return (
-    <section id="Roadmap" className="relative z-0 overflow-hidden">
-      <Image src={BG} alt="BG" className=" absolute inset-0 -z-10 mt-32" />
+    <section
+      id="Home"
+      className="relative  h-[1500px] w-full overflow-hidden bg-bgs7 bg-center" 
+    >
+      <div className='h-[980px]'>
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         ROADMAP
       </div>
 
       <RoadmapDesktop />
       <RoadmapMobile />
+      </div>
+      <div className='h-[520px] w-[100%] flex flex-col justify-between items-center pb-36'>
+        <Image src={logo} alt="q122" className=" w-72 " priority />
+        <div className='flex'>
+          <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
+          <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
+          <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
+          <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
+          <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
+        </div>
+        <HeaderDesktop/>
+        <Image src={tm} alt="q122" className=" w-56" priority />
+        
+      </div>
     </section>
   )
 }
@@ -166,6 +187,28 @@ function DotDivider({
             className="w-2 h-2 rounded-full bg-[color:var(--gold-disabled)]"
           />
         ))}
+    </div>
+  )
+}
+
+function HeaderDesktop() {
+  return (
+    <div className="">
+      <div className="ml-8 flex items-center justify-center ">
+        <Link title="HOME" href="#Home" current={true} />
+        <Link title="FEATURES" href="#Feature" current={false} />
+        <Link title="HEROES" href="#Heroes" current={false} />
+        <Link title="RUNES" href="#Runes" current={false} />
+        <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
+        <Link title="ROADMAP" href="#Roadmap" current={false} />
+      </div>
+
+      <div className="flex items-center">
+        {/* <Image src={team} alt="team" className="w-24 translate-x-1" /> */}
+        <div className="relative">
+          {/* <Image src={marketplace} alt="marketplace" className="w-44" /> */}
+        </div>
+      </div>
     </div>
   )
 }

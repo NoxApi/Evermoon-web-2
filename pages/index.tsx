@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Footer from '../components/footer'
 import Home from '../components/home'
 import ImageNext from 'next/image'
 import Image from '../components/image'
@@ -9,7 +8,7 @@ import  PTR  from '../components/playandearn'
 import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
 import  Features from '../components/feature'
-import { Heroes } from '../components/heroes'
+import  Heroes  from '../components/heroes'
 import { Runes } from '../components/runes/runes'
 
 import BGRune from '../assets/runes/bg.png'
@@ -62,6 +61,11 @@ const Index: NextPage = () => {
             </div>
             <Features />
             <MAP />
+            <Heroes />
+            <Tokenomics />
+            <Team />
+            <Partner/>
+            <Roadmap />
           {/* 
           <div className="relative w-full h-0 z-10">
             <div
@@ -100,7 +104,7 @@ const Index: NextPage = () => {
               </div>
             </div>
           </div>
-          <Heroes />
+          
           <div className="relative -z-10 -mt-20 pt-20 md:-mt-36 md:pt-36 bg-gray-900 ">
             <Image src={BGRune} alt="BG" className=" absolute w-full " fill />
             <div className="relative w-full h-0 z-10 -mt-36 ">
@@ -113,10 +117,7 @@ const Index: NextPage = () => {
               />
             </div>
             <Runes />
-            <Tokenomics />
-            <Team />
-            <Partner/>
-            <Roadmap />
+            
           </div>*/}
         </div>
       </main>
@@ -129,7 +130,6 @@ const Index: NextPage = () => {
           }}
         /> 
       </div> */}
-      <Footer />
     </Layout>
   )
 }
