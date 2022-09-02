@@ -615,3 +615,22 @@ img {
   75%   {top: 33vh;}
   100%  {top: 32vh;}
 }
+
+.pinanimate{
+  transition: height 0.4s ease-in;
+  transition: height 1.4s ease-out;
+}
+.pinactivate{
+  transition: all 0.7s ease-in;
+}
+.activated{
+  transform: translateY(-4.1vw);
+  width: 7vw;
+}
+
+.roleo{
+  transition: opacity 1s ease-in-out;
+}
+.roleactivated{
+  opacity: 1;
+}
