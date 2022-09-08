@@ -609,11 +609,11 @@ img {
 }
 }
 @keyframes evmanimated {
-  0%    {top: 32vh;}
-  25%   {top: 33vh;}
-  50%   {top: 34vh;}
-  75%   {top: 33vh;}
-  100%  {top: 32vh;}
+  0%    {top: 320px;}
+  25%   {top: 330px;}
+  50%   {top: 340px;}
+  75%   {top: 330px;}
+  100%  {top: 320px;}
 }
 
 .pinanimate{
