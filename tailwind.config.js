@@ -47,6 +47,11 @@ module.exports = {
       '2xlm': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
 
+      'fscreen': '1920px',
+      // => @media (min-width: 1536px) { ... }
+      'fscreenm': {'max': '1919px'},
+      // => @media (max-width: 1535px) { ... }
+
       'xlm': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
 

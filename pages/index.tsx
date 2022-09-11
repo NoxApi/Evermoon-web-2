@@ -5,12 +5,9 @@ import ImageNext from 'next/image'
 import Image from '../components/image'
 import Layout from '../components/layout'
 import  PTR  from '../components/playandearn'
-import { Tribe } from '../components/tribe'
 import Divider from '../assets/tribe/Divider.svg'
 import  Features from '../components/feature'
 import  Heroes  from '../components/heroes'
-import { Runes } from '../components/runes/runes'
-
 import BGRune from '../assets/runes/bg.png'
 import { Tokenomics } from '../components/tokenomics'
 import { Team } from '../components/team'
@@ -35,7 +32,7 @@ const Index: NextPage = () => {
         <Home />
           <div className="relative w-full h-0 z-20">
             <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
-                <Image src={sec1footer} alt="banner" className='w-[1920px]'/>
+                {/* <Image src={sec1footer} alt="banner" className='w-[1920px]'/> */}
             </div> 
              <div
               className="w-full h-56 -translate-y-[52%]"

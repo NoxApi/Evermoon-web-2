@@ -42,7 +42,7 @@ export default function Heroes() {
   return (
     <section
       id="Home"
-      className="relative h-[1080px] w-full overflow-hidden bg-center font-Josefin " 
+      className="relative h-[1080px] w-full overflow-hidden bg-center font-Josefin max-w-[1920px] " 
     >
       <Image src={topc} alt="icon" className=' w-[100%] absolute top-0'/>
       <BG index={heroes[selector].index} isskin={isskin} />
@@ -115,7 +115,7 @@ const Tribe = ({
   return (
     <div>
       {image && (      
-        <Image src={image} alt="icon" className='w-[140px] '/>
+        <Image src={image} alt="icon" className='w-[200px] h-[400px] '/>
       )}
     </div>
   )
@@ -146,7 +146,7 @@ const BG = ({
   return (
     <div>
       {image && (      
-        <Image src={image} alt="icon" className='-z-20 w-[1920px] absolute top-0 right-0'/>
+        <Image src={image} alt="icon" className='-z-20 w-[1920px] absolute top-0 right-0 '/>
       )}
     </div>
   )
@@ -209,8 +209,8 @@ const Selector = ({
             leaveFrom="opacity-100"
             leaveTo="opacity-0 translate-y-[130px]"
           >
-            {skin&&<div onClick={()=>setisskin(true)} className="flex w-[130px] justify-center" >
-            {!isskin&&image3&&<Image  src={image3} alt="icon" className='w-[120px] mb-[10px]'/>}
+            {skin&&<div onClick={()=>setisskin(true)} className="flex w-[130px] justify-center " >
+            {!isskin&&image3&&<Image  src={image3} alt="icon" className='w-[120px] mb-[10px] '/>}
             {isskin&&image4&&<Image  src={image4} alt="icon" className='w-[120px] mb-[10px]'/>}
             </div>}
             <div onClick={()=>setisskin(false)} className="flex w-[130px] justify-center" >

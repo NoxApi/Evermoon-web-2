@@ -111,9 +111,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <SocialCTA />
-      {/* <Image src={footer} alt="banner"/> */}
+      <div className='lg:hidden'>
+        <SocialCTA />
+      </div>
+       <Image src={footer} alt="banner" className='w-[100%] absolute bottom-0 z-30'/> 
     </section>
   )
 }

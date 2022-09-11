@@ -18,19 +18,19 @@ import { useState } from 'react'
 
 export default function MAP() {
   const [videoplay,setvideoplay]= useState(1)
-  const [v1,setv1]= useState("h-[0vw]")
+  const [v1,setv1]= useState("h-[8vw]")
   const [v2,setv2]= useState("h-[0vw]")
   const [v3,setv3]= useState("h-[0vw]")
   const [v4,setv4]= useState("h-[0vw]")
   const [v5,setv5]= useState("h-[0vw]")
 
-  const [status1,setstatus1]= useState("")
+  const [status1,setstatus1]= useState("activated")
   const [status2,setstatus2]= useState("")
   const [status3,setstatus3]= useState("")
   const [status4,setstatus4]= useState("")
   const [status5,setstatus5]= useState("")
 
-  const [role1,setrole1]= useState("")
+  const [role1,setrole1]= useState("roleactivated")
   const [role2,setrole2]= useState("")
   const [role3,setrole3]= useState("")
   const [role4,setrole4]= useState("")
@@ -103,7 +103,7 @@ export default function MAP() {
 
 
 
-      <div  className='z-30 w-[30vw] absolute top-0 right-0 '>
+      <div  className='z-30 w-[30vw] absolute top-0 right-0 max-w-[600px]'>
         <div className='w-[100%] h-[100%]'>
         <Image  src={mm} alt="icon" className=''/>
         <div className={`absolute bottom-[11vw] right-[23.05vw] w-[0.5vw]  overflow-hidden  cursor-pointer z-30 flex items-end  pinanimate `+v2}>

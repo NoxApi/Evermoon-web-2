@@ -1,194 +1,101 @@
 import React, { useState } from 'react'
-import Content from '../../assets/runes/content.svg'
-import Ring from '../../assets/tokenomics/ring.svg'
-import SmallRing from '../../assets/tokenomics/smallring.svg'
-import Evermoon from '../../assets/tokenomics/evermoon.png'
-import Everstone from '../../assets/tokenomics/everstone.png'
-import UseCase0 from '../../assets/tokenomics/Use case-0.svg'
-import UseCase1 from '../../assets/tokenomics/Use case-1.svg'
-import UseCase2 from '../../assets/tokenomics/Use case-2.svg'
-import UseCase3 from '../../assets/tokenomics/Use case-3.svg'
-import UseCase4 from '../../assets/tokenomics/Use case-4.svg'
-import evs from '../../assets/tokenomics/evstext.svg'
-import evm from '../../assets/tokenomics/evmtext.svg'
-import UseCase0S from '../../assets/tokenomics/everstone/Use case-0.svg'
-import UseCase1S from '../../assets/tokenomics/everstone/Use case-1.svg'
-import UseCase2S from '../../assets/tokenomics/everstone/Use case-2.svg'
-import UseCase3S from '../../assets/tokenomics/everstone/Use case-3.svg'
-import UseCase4S from '../../assets/tokenomics/everstone/Use case-4.svg'
-import { TokenomicsM } from './tablet'
-import ImageNext from 'next/image'
 import Image from '../image'
-import { css, keyframes } from '@emotion/css'
-import { GoldGradientFrame } from '../frame'
-import { Transition } from '@headlessui/react'
-
-const spin = keyframes`
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(15px, 0) rotate(180deg);
-  }
-  100% {
-    transform: translate(0px, 0) rotate(360deg);
-  }
-`
-
-const spinInv = keyframes`
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-`
+import effect from '../../assets/tokenomics/effect.png'
+import option from '../../assets/tokenomics/option.svg'
+import light from '../../assets/tokenomics/Light1.svg'
+import option2 from '../../assets/tokenomics/option2.svg'
+import light2 from '../../assets/tokenomics/Light2.svg'
+import evm from '../../assets/tokenomics/evm.gif'
+import evs from '../../assets/tokenomics/evs.gif'
+import ed1 from '../../assets/tokenomics/ed1.svg'
+import ed2 from '../../assets/tokenomics/ed2.svg'
+import ed3 from '../../assets/tokenomics/ed3.svg'
+import ed4 from '../../assets/tokenomics/ed4.svg'
+import ed5 from '../../assets/tokenomics/ed5.svg'
+import esd1 from '../../assets/tokenomics/esd1.svg'
+import esd2 from '../../assets/tokenomics/esd2.svg'
+import esd3 from '../../assets/tokenomics/esd3.svg'
+import esd4 from '../../assets/tokenomics/esd4.svg'
+import esd5 from '../../assets/tokenomics/esd5.svg'
+import esd0 from '../../assets/tokenomics/esd0.svg'
 
 export const Tokenomics = () => {
+  const [isevm,setisevm] = useState(true)
   return (
     <>
     <section
       id="Home"
-      className="relative  h-[1080px] w-full overflow-hidden bg-bgs4 bg-center" 
-    >
-      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative ">
+      className="h-[1080px] max-w-[1920px] overflow-hidden bg-bgs4 bg-center font-Josefin" 
+    > 
+      
+      <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-[#F1E3B5] text-5xl md:text-6xl text-center ">
         TOKENOMICS
       </div>
-
-      <div className="max-w-[1024px] h-[550px] mdm:h-[850px] mx-8 lg:mx-auto relative transition-all">
-        <GoldGradientFrame />
-        <Summary />   
-      </div>
-    </section>
-    <TokenomicsM/>
-    </>
-  )
-}
-
-function RingToken({
-  token,
-  animate = false,
-  width = 'w-[200px] md:w-80',
-}: {
-  token: StaticImageData
-  animate?: boolean
-  width?: string
-}) {
-  return (
-    <div className="">
-      <div className="relative ">
-        <Image src={Ring} alt="ring" className={width} />
-        <div className="absolute inset-0 flex ">
-          {animate ? (
-            <Image
-              src={SmallRing}
-              alt="SmallRing"
-              className={
-                'w-full my-auto ' +
-                css`
-                  animation: 7s linear infinite ${spinInv};
-                  animation-delay: -3000ms;
-                `
-              }
-            />
-          ) : (
-            <Image
-              src={SmallRing}
-              alt="SmallRing"
-              className={'w-full my-auto '}
-            />
-          )}
+      <div className='relative w-[auto]  flex justify-center items-center mx-auto flex-col mt-6'>
+        <div>
+        <Image src={effect} alt="q122" className=" w-[400px] mix-blend-overlay absolute translate-x-[25%]" priority />
+        {isevm?
+        (<Image src={evm} alt="q122" className=" w-[900px]  absolute -translate-x-[17%] translate-y-[30%]" priority />):
+        (<Image src={evs} alt="q122" className=" w-[1100px]  absolute -translate-x-[17%] translate-y-[30%] -m-[60px] -mt-[100px]" priority />)}
+        <div className='w-[600px] h-[100px]  relative flex'>
+          {isevm &&<Image src={option} alt="q122" className=" w-[600px] absolute" priority />}
+          {!isevm &&<Image src={option2} alt="q122" className=" w-[600px] absolute" priority />}
+          <div onClick={()=>setisevm(true)} className='w-[50%] h-full cursor-pointer z-10'></div>
+          <div onClick={()=>setisevm(false)} className='w-[50%] h-full cursor-pointer z-10'></div>
         </div>
-        <div className="absolute inset-0 flex">
-          {animate ? (
-            <Image
-              src={SmallRing}
-              alt="SmallRing"
-              className={
-                'w-full my-auto ' +
-                css`
-                  animation: 7s linear infinite ${spin};
-                `
-              }
-            />
-          ) : (
-            <Image
-              src={SmallRing}
-              alt="SmallRing"
-              className={'w-full my-auto rotate-45'}
-            />
-          )}
+        {isevm &&<Image src={light} alt="q122" className=" w-[290px] absolute top-0 mix-blend-screen -translate-x-[10px]" priority />}
+        {!isevm &&<Image src={light2} alt="q122" className=" w-[290px] absolute top-0 mix-blend-screen translate-x-[325px]" priority />}
         </div>
-        <div className="absolute inset-0 flex items-center justify-center p-[8%]">
-          <Image src={token} alt="token" className="w-full mdm:w-[150px] " />
-        </div>
-      </div>
-      
-    </div>
-  )
-}
-
-function Summary() {
-  return (
-    <div className="relative mt-10 flex flex-row  justify-between mdm:justify-between mdm:pb-[100px] mdm:flex-col  mdm:h-[850px]">
-   
-      <div className="flex flex-col items-center EVM-HOV w-[100%]    ">
-        <div className='tokenomic  mdm:flex-col mdm:items-center mdm:justify-center  mdm:px-[10vw]  '>
-        <div className='flex flex-col hoverA ml-[30px] mdm:ml-0'>
-        <RingToken token={Evermoon} animate />
-        <div className=''>
-          <div className="font-Josefin text-xl md:text-3xl text-gold-light">
-              EVERMOON TOKEN
-            </div>
-            <div className="font-Josefin md:text-xl text-center">
-              Total Supply 1,000,000,000
-            </div>
-      </div>
-      
-        </div>
-        <div className=' tokenomicinfo '>
-          
-        <div className="relative flex flex-col text-left mx-[130px] lgm:mx-auto max-w-[400px]" >
-          <div className="flex flex-col gap-y-5 mt-8 justify-center  ">
-            {[evm,UseCase0, UseCase1, UseCase2, UseCase3, UseCase4].map(
-              (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" className='' />
-              )
-            )}
+        <div className='flex h-[600px]'>
+        <div className='flex justify-end items-center'>
+            <Image src={esd0} alt="q122" className={` w-[400px]  `+ (isevm?` opacity-0 `:` opacity-1 `)} priority />
           </div>
-          
-        </div>
-          
-        </div>
-        
+          <div className='w-[380px]'>
+          </div>
+          {isevm?(
+            (<div className='flex flex-col items-start justify-center'>
+            <Image src={ed1} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={ed2} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={ed3} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={ed4} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={ed5} alt="q122" className=" w-[400px] mt-2" priority />  
+          </div>)
+          ):
+          (<div className='flex flex-col items-start justify-center'>
+            <Image src={esd1} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={esd2} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={esd3} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={esd4} alt="q122" className=" w-[400px] mt-2" priority />
+            <Image src={esd5} alt="q122" className=" w-[400px] mt-2" priority />  
+          </div>)
+          }
         </div>
       </div>
-
-      <button className="EVM flex flex-col items-center EVS-HOV w-[100%] ">
-      <div className='tokenomic2  mdm:flex-col mdm:items-center mdm:justify-center  mdm:px-[10vw]'>     
-      <div className=' tokenomicinfo  '>  
-          <div className="relative flex flex-col text-left mx-[130px] lgm:mx-auto max-w-[400px]">
-            <div className="flex flex-col  gap-y-5 mt-8 justify-center mdm:pt-[100px]">
-            {[evs,UseCase0S, UseCase1S, UseCase2S, UseCase3S, UseCase4S].map(
-              (image: StaticImageData) => (
-                <Image key={image.src} src={image} alt="" className='' />
-              )
-            )}
-            </div>
-            
-          </div>
-          </div>
-      <div className='flex flex-col hoverA mr-[30px] mdm:mr-0'>
-        <RingToken token={Everstone} animate />
-        <div className="EVM font-Josefin text-xl md:text-3xl text-gold-light">
+      {isevm?(
+      <div>
+        <div className=" max-w-[1024px] mx-auto font-Josefin text-[#F1E3B5] text-5xl md:text-6xl text-center ">
+          EVERMOON
+        </div>
+        <div className=" max-w-[1024px] mx-auto font-Josefin text-[#F1E3B5] text-5xl md:text-6xl text-center ">
+          TOKEN
+        </div>
+        <div className=" max-w-[1024px] mx-auto font-Josefin text-white text-xl md:text-xl text-center ">
+          {"total supply 1,000,000,000"}
+        </div>
+      </div>
+      ):(
+      <div>
+        <div className=" max-w-[1024px] mx-auto font-Josefin text-[#F1E3B5] text-5xl md:text-6xl text-center ">
           EVERSTONE
         </div>
-        <div className="EVM font-Josefin md:text-xl">Unlimited Supply</div>
+        <div className=" max-w-[1024px] mx-auto font-Josefin text-white text-xl md:text-xl text-center ">
+          {"Unlimited Supply"}
         </div>
-    
-          </div>
-      </button>
-    </div>
+      </div>
+      )
+      }
+    </section>
+    </>
   )
 }
 
