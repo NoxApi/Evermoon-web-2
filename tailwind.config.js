@@ -18,6 +18,7 @@ module.exports = {
         'bgs7m' : "url('../public/bgs7m.png')",
         'bgs1m' : "url('../public/bgs1m.png')",
         'bgs2m' : "url('../public/bgs2m.svg')",
+        'bgs4m' : "url('../public/bgs4m.png')",
       },
       
       fontSize: {

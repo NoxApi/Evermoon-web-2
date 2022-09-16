@@ -39,7 +39,7 @@ export const Roadmap = () => {
       id="Home"
       className="relative  h-[1500px] w-full overflow-hidden bg-bgs7 bg-center mdm:bg-bgs7m mdm:h-[440vw] mdm:bg-cover" 
     >
-      <div className='h-[980px]'>
+      <div className='h-[980px] mdm:h-[330vw]'>
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">
         ROADMAP
       </div>
@@ -47,8 +47,8 @@ export const Roadmap = () => {
       <RoadmapDesktop />
       <RoadmapMobile />
       </div>
-      <div className='h-[520px] w-[100%] flex flex-col justify-between items-center pb-36'>
-        <Image src={logo} alt="q122" className=" w-72 " priority />
+      <div className='h-[520px] mdm:h-[120vw] w-[100%] flex flex-col justify-between items-center pb-36 mdm:pb-[20vw] mdm:hidden'>
+        <Image src={logo} alt="q122" className=" w-72 mdm:w-[40vw]" priority />
         <div className='flex'>
           <LinkNewTab href="https://t.me/Evermoon_Community">
             <Image src={s1} alt="q122" className=" w-12 mx-3" priority />

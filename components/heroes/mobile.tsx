@@ -15,9 +15,9 @@ export default function HeroMobile(){
   }
   const {heroes} = HeroList()
     return(
-       <div className='lg:hidden h-[216vw] relative pt-[70vw]'>
+       <div className='lg:hidden h-[216vw] relative pt-[70vw] '>
             <Image src={topcm} alt="icon" className=' w-[100%] absolute top-0'/>
-            <Image src={botcm} alt="icon" className=' w-[100%] absolute bottom-0'/>
+            <Image src={botcm} alt="icon" className=' w-[100%] absolute bottom-[-5px]'/>
             <BG index={heroes[selector].index} isskin={isskin} />
             <div className='w-[100%] h-[80vw] relative px-[10vw]'>
                     <Image src={frame} alt="icon" className=' -z-10 w-[80%] mx-auto absolute inset-0 '/>
