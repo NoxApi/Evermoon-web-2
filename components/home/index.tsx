@@ -12,7 +12,8 @@ import Twitter from '../../assets/socials/twitter.svg'
 import Youtube from '../../assets/socials/youtube.svg'
 import LinkNewTab from '../LinkNewTab'
 import bg from '../../assets/home/BG.png'
-import text1 from '../../assets/home/text1.png'
+import text1 from '../../assets/home/text1.svg'
+import text2 from '../../assets/home/text2.svg'
 import div from '../../assets/home/divider.png'
 import store1 from '../../assets/home/store1.png'
 import store2 from '../../assets/home/store2.png'
@@ -42,7 +43,7 @@ export default function Home() {
   return (
     <section
       id="Home"
-      className="relative  max-h-[1080px] w-full overflow-hidden bg-bgs1 bg-center" 
+      className="relative  h-[960px] smm:h-[180vw] w-full overflow-hidden bg-bgs1 smm:bg-bgs1m bg-cover bg-center" 
     >
       <ModalController status={open} setStatus={setopen}/>
       {/* <Image src={bg} alt="Banner" 
@@ -57,15 +58,16 @@ export default function Home() {
       <div className="absolute inset-0">
         <Header />
       </div>
-      <div className=" flex flex-col items-center justify-start h-[1080px] ">
-        <div className="flex flex-col items-center w-[100%] mx-auto h-[80%] justify-center ">
-          <div className='flex flex-col items-center  relative mt-[500px] '  >
-          <Image src={text1} alt="AppStore" className="max-w-[1280px] w-[100vw]" />
-            <div className="flex">
-              <Image src={div} alt="AppStore" className=" absolute inset-0 top-[63%] left-[34.5%]  w-[400px]   mix-blend-screen" />
+      <div className=" flex flex-col items-center justify-start h-[960px] smm:h-[180vw] ">
+        <div className="flex flex-col items-center w-[100%]  justify-start h-full ">
+          <div className='flex flex-col items-center  relative mt-[500px] smm:mt-[100px] h-full'  >
+          <Image src={text1} alt="AppStore" className="max-w-[1280px] w-[100vw] mx-[5vw] smm:hidden" />
+          <Image src={text2} alt="AppStore" className="max-w-[1280px] w-[100vw] mx-[5vw] sm:hidden" />
+            <div className="flex smm:hidden">
+              <Image src={div} alt="AppStore" className=" inset-0  w-[400px] mdm:w-[300px] -my-[20px] mix-blend-screen " />
             </div>
             <LinkNewTab href="https://docs.evermoon.games/evermoon/">
-              <div className='w-[300px]  mt-[50px] relative  whitepaper cursor-pointer'>
+              <div className='w-[300px] mdm:w-[200px]  relative  whitepaper cursor-pointer smm:hidden'>
               <Image
                 src={wp1}
                 alt="Whitepaper"
@@ -79,39 +81,50 @@ export default function Home() {
               <Image
                 src={wp3}
                 alt="Whitepaper"
-                className=" w-[330px] absolute inset-0 top-[-50px] left-[-15px] opacity-0 mix-blend-screen whitepaper3 "
+                className=" w-[330px] mdm:w-[220px] absolute inset-0 top-[-50px] mdm:top-[-33px] left-[-15px] mdm:left-[-10.5px] opacity-0  whitepaper3 z-0 mix-blend-screen "
               />
               </div>
             </LinkNewTab>
           </div>  
           
         </div>
-        <div className=' relative flex h-[20%] justify-center w-[100%] items-end pb-[18px]'>
-          <Image src={storebg} alt="AppStore" className="w-[250px]  absolute  z-20 " />
-          <div className='flex -translate-y-[48px] z-30  cursor-pointer'>
-            <div className='w-[250px] cursor-pointer  relative store2'>
+        <div className='md:hidden h-[250px] flex flex-col justify-start items-center'>
+          <div className='relative pr-[210px]'>
+            <div onClick={()=>setopen(true)} className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12   ">
+              <Image src={card3}  alt="AppStore"  />
+            </div>
+              <Image src={card1} alt="AppStore" className="w-[220px] absolute " />
+              <Image src={card2} alt="AppStore" className="w-[220px] absolute " />
+          </div>
+          <a className='pt-[140px] pb-[20px] font-Josefin text-3xl heroes-text-gold font-bold'>Game Trailer</a>
+        </div> 
+        <div className=' relative flex h-[10%] justify-center w-[100%] items-end pb-[18px]'>
+          <Image src={storebg} alt="AppStore" className="w-[250px] smm:w-[40vw]  absolute  z-20 " />
+          <div className='flex -translate-y-[48px] smm:-translate-y-[10vw] z-30  cursor-pointer'>
+            <div className='w-[250px] smm:w-[50vw] cursor-pointer  relative store2'>
               <Image src={store2} alt="AppStore" className="absolute inset-0 store2c1" />
               <Image src={store2h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
             </div>
-            <div className='w-[250px] cursor-pointer   relative store2'>
+            <div className='w-[250px] smm:w-[50vw] cursor-pointer   relative store2'>
               <Image src={store1} alt="AppStore" className="absolute inset-0 store2c1" />
               <Image src={store1h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
             </div>
           </div>
             
-          </div>  
-        <div className=' absolute  top-[70%] left-0 z-20 translate-y-[4vw] xlm:top-[63%] lgm:top-[60%] lgm:translate-x-[20vw] lgm:mx-auto w-[450px] h-[130px] '>\
+          </div>
+        <div className=' absolute  top-[67%] left-0 z-20 translate-y-[6vw] w-[450px] h-[130px] mdm:hidden  '>
           <div className='relative'>
             <div onClick={()=>setopen(true)} className="w-[65px]  absolute inset-0 left-[19%] translate-y-6 trailer z-20  cursor-pointer mix-blend-luminosity hover:mix-blend-normal  ">
               <Image src={card3}  alt="AppStore"  />
             </div>
               <Image src={card1} alt="AppStore" className="w-[250px] absolute top-[-30px] card1" />
               <Image src={card2} alt="AppStore" className="w-[250px] absolute top-[-30px] card2" />
-              <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext" />
+              <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext xlm:hidden" />
+              <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0  left-0 translate-y-32 translate-x-12 xl:hidden" />
           </div>
         </div>
       </div>
-      <div className='lg:hidden'>
+      <div className='md:hidden'>
         <SocialCTA />
       </div>
        <Image src={footer} alt="banner" className='w-[100%] absolute bottom-0 z-30'/> 

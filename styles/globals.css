@@ -634,3 +634,11 @@ img {
 .roleactivated{
   opacity: 1;
 }
+
+.heroes-text-gold{
+  background: linear-gradient(270.8deg, #D9AE5F 22.01%, #F1E3B5 56.33%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

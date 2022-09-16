@@ -13,6 +13,7 @@ import topb from '../../assets/map/top.svg'
 import jungb from '../../assets/map/jungle.svg'
 import midb from '../../assets/map/mid.svg'
 import botb from '../../assets/map/bot.svg'
+import MapMobile from './mobile'
 import { useState } from 'react'
 
 
@@ -89,10 +90,12 @@ export default function MAP() {
   return (
     <section
       id="Home"
-      className="relative h-[auto] w-full overflow-hidden bg-center " 
+      className="relative  w-full overflow-hidden bg-center h-[50vw] lgm:h-auto " 
     >
-      <div className='z-20 w-[100%] absolute top-0 flex justify-center'>
-      <Image src={topc} alt="icon"  className='absolute w-[100%]'/>
+      <MapMobile/>
+      <div className='lgm:hidden'>
+      <div className='z-20 w-[100%] absolute top-0 flex justify-center lgm:static'>
+      <Image src={topc} alt="icon"  className='absolute w-[100%] lgm:hidden'/>
       <Image src={topb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo  `+role1} />
       <Image src={jungb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role2} />
       <Image src={midb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role3} />
@@ -103,7 +106,7 @@ export default function MAP() {
 
 
 
-      <div  className='z-30 w-[30vw] absolute top-0 right-0 max-w-[600px]'>
+      <div  className='z-30 w-[30vw] absolute top-0 right-0 max-w-[600px] lgm:hidden'>
         <div className='w-[100%] h-[100%]'>
         <Image  src={mm} alt="icon" className=''/>
         <div className={`absolute bottom-[11vw] right-[23.05vw] w-[0.5vw]  overflow-hidden  cursor-pointer z-30 flex items-end  pinanimate `+v2}>
@@ -142,13 +145,15 @@ export default function MAP() {
 
         </div>
       </div>
+    
       {videoplay==1&& <video
-        className="w-[100%] right-0"
+        className="w-[100%]  top-0"
         loop
         autoPlay
         muted
       >
-         <source src="/benz3.webm#t=0.1" type="video/webm" />
+      
+         <source src="/1.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
@@ -159,7 +164,7 @@ export default function MAP() {
         muted
       >
          {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
-         <source src="/benz3.webm#t=0.1" type="video/webm" /> 
+         <source src="/2.webm#t=0.1" type="video/webm" /> 
       </video>}
 
       {videoplay==3&& <video
@@ -168,7 +173,7 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/benz3.webm#t=0.1" type="video/webm" />
+         <source src="/3.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
@@ -179,7 +184,7 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/benz3.webm#t=0.1" type="video/webm" />
+         <source src="/4.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
@@ -189,11 +194,12 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/benz3.webm#t=0.1" type="video/webm" />
+         <source src="/5.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
       <Image src={botc} alt="icon" className='z-20 w-[100%] absolute bottom-0'/>
+    </div>
     </section>
   )
 }

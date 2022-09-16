@@ -37,7 +37,7 @@ export const Roadmap = () => {
   return (
     <section
       id="Home"
-      className="relative  h-[1500px] w-full overflow-hidden bg-bgs7 bg-center" 
+      className="relative  h-[1500px] w-full overflow-hidden bg-bgs7 bg-center mdm:bg-bgs7m mdm:h-[440vw] mdm:bg-cover" 
     >
       <div className='h-[980px]'>
       <div className="mt-20 max-w-[1024px] mx-auto font-Josefin text-gold-light text-6xl text-center relative">

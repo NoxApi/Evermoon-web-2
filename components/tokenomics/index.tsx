@@ -35,7 +35,7 @@ export const Tokenomics = () => {
         <div>
         <Image src={effect} alt="q122" className=" w-[400px] mix-blend-overlay absolute translate-x-[25%]" priority />
         {isevm?
-        (<Image src={evm} alt="q122" className=" w-[900px]  absolute -translate-x-[17%] translate-y-[30%]" priority />):
+        (<Image src={evm} alt="q122" className=" w-[900px]  absolute -translate-x-[17%] translate-y-[30%] " priority />):
         (<Image src={evs} alt="q122" className=" w-[1100px]  absolute -translate-x-[17%] translate-y-[30%] -m-[60px] -mt-[100px]" priority />)}
         <div className='w-[600px] h-[100px]  relative flex'>
           {isevm &&<Image src={option} alt="q122" className=" w-[600px] absolute" priority />}
@@ -46,14 +46,14 @@ export const Tokenomics = () => {
         {isevm &&<Image src={light} alt="q122" className=" w-[290px] absolute top-0 mix-blend-screen -translate-x-[10px]" priority />}
         {!isevm &&<Image src={light2} alt="q122" className=" w-[290px] absolute top-0 mix-blend-screen translate-x-[325px]" priority />}
         </div>
-        <div className='flex h-[600px]'>
+        <div className='flex h-[550px]'>
         <div className='flex justify-end items-center'>
             <Image src={esd0} alt="q122" className={` w-[400px]  `+ (isevm?` opacity-0 `:` opacity-1 `)} priority />
           </div>
           <div className='w-[380px]'>
           </div>
           {isevm?(
-            (<div className='flex flex-col items-start justify-center'>
+            (<div className='flex flex-col items-start justify-center '>
             <Image src={ed1} alt="q122" className=" w-[400px] mt-2" priority />
             <Image src={ed2} alt="q122" className=" w-[400px] mt-2" priority />
             <Image src={ed3} alt="q122" className=" w-[400px] mt-2" priority />
@@ -61,7 +61,7 @@ export const Tokenomics = () => {
             <Image src={ed5} alt="q122" className=" w-[400px] mt-2" priority />  
           </div>)
           ):
-          (<div className='flex flex-col items-start justify-center'>
+          (<div className='flex flex-col items-start justify-center '>
             <Image src={esd1} alt="q122" className=" w-[400px] mt-2" priority />
             <Image src={esd2} alt="q122" className=" w-[400px] mt-2" priority />
             <Image src={esd3} alt="q122" className=" w-[400px] mt-2" priority />
@@ -72,7 +72,7 @@ export const Tokenomics = () => {
         </div>
       </div>
       {isevm?(
-      <div>
+      <div className=''>
         <div className=" max-w-[1024px] mx-auto font-Josefin text-[#F1E3B5] text-5xl md:text-6xl text-center ">
           EVERMOON
         </div>

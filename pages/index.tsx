@@ -45,17 +45,6 @@ const Index: NextPage = () => {
           </div>
 
             <PTR/>
-            <div className="relative w-full h-0 z-20">
-            <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
-             <div
-              className="w-full h-56 -translate-y-[52%]"
-              style={{
-                background:
-                  'linear-gradient(180deg, rgba(10, 9, 16, 0) 20%,rgba(22, 22, 55, 1) 45%, rgba(22, 22, 55, 1) 50%, rgba(7, 22, 45, 0) 100%)',
-              }}
-            /> 
-            </div>
-            </div>
             <Features />
             <MAP />
             <Heroes />
