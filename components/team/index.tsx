@@ -3,22 +3,25 @@ import Image from '../image'
 import linkin from "../../assets/team/linkin.png"
 
 
-const teams = ['t1', 't2', 't3', 't4', 't5', 't6', 't7']
+const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"xx"},
+              {name:"Tanachot A.",path:'t2',role:"CTO,CFO,SMART CONTRACT & WEB APPLICATION DEVELOPER" ,link:"xx"},
+              {name:"Suphitcha L.",path:'t3',role:"CMO" ,link:"xx"},
+              {name:"Chonnathan W.",path:'t4',role:"CPO,GAME DIRECTOR,VFX DEVELOPER",link:""}]
 
 export const Team = () => {
   return (
     <section
       id="Home"
-      className="relative  h-[1080px] w-full overflow-hidden bg-bgs5 bg-center" 
+      className="relative  h-[1080px] w-full overflow-hidden bg-bgs5 bg-center smm:bg-bgs5m smm:bg-cover bg-[#04032C] smm:h-auto smm:pb-[200px]" 
     >
-      <div className=" mt-20 smm:mt-0 max-w-[1280px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
+      <div className=" mt-20 lgm:mt-2 smm:mt-0 max-w-[1280px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
         TEAM
       </div>
 
-      <div className=" mt-20 smm:mt-6 max-w-[1280px] mx-8 smm:mx-[2vw] lg:mx-auto relative">
-        <div className="relative lgm:-mt-10 flex flex-wrap justify-evenly pt-12  px-0  gap-y-7 gap-x-8 smm:gap-y-14 smm:gap-x-2">
+      <div className=" mt-20  max-w-[1280px] mx-8 smm:mx-[2vw] lg:mx-auto relative  ">
+        <div className="relative lgm:-mt-10 flex flex-wrap justify-evenly pt-12  px-0  gap-y-7 gap-x-8 smm:gap-y-1 h-full">
           {teams.slice(0,4).map((team) => (
-            <ImageTeam key={team} path={team} className=""/>
+            <ImageTeam key={team.path} path={team.path} className="" link={team.link} name={team.name} role={team.role}/>
           ))}
         </div>
       </div>
@@ -28,10 +31,16 @@ export const Team = () => {
 
 const ImageTeam = ({
   path,
+  name,
   className,
+  link,
+  role,
 }: {
   path: string
   className?: string
+  name: string
+  role: string
+  link?: string
 }) => {
   const [image, setImage] = useState<StaticImageData | null>(null)
 
@@ -42,17 +51,17 @@ const ImageTeam = ({
   })(path)
 
   return (
-    <div className=' h-[500px] xlm:h-[400px]'>
+    <div className=' h-[500px] lgm:h-[380px]'>
       {image && (
-        <Image alt={path} className={`w-[19rem] xlm:w-[16rem] smm:w-[43vw] ${className} -m-3 `} src={image} priority />
+        <Image alt={path} className={`w-[19rem] xlm:w-[14rem]  ${className} -m-3 `} src={image} priority />
       )}
-      <div className=' flex justify-between px-[5px] mt-[15px]'>
-        <div className='flex flex-col'>
-          <a className='text-3xl xlm:text-xl'>Patipol A.</a>
-          <a className='text-xl xlm-text-base'>CEO</a>
+      <div className=' flex justify-between px-[5px] lg:px-0 mt-[15px]'>
+        <div className='flex flex-col w-[180px] xlm:w-[140px]'>
+          <a className='text-3xl xlm:text-xl'>{name}</a>
+          <a className='text-sm xlm:text-xs text-[#F1E3B5] '>{role}</a>
         </div>
-        <div className='flex items-center'>
-          <Image alt="" className={`w-[60px] xlm:w-[50px]`} src={linkin} priority />
+        <div className='flex items-start'>
+          {link&&<Image alt="" className={`w-[60px] xlm:w-[50px]`} src={linkin} priority />}
         </div>
       </div>
     </div>

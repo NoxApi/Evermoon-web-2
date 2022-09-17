@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Image from '../image'
-import { PartnerM } from './mobile'
 import Link from 'next/link'
 import topc from '../../assets/heroes/topc.png'
 import botc from '../../assets/heroes/botc.png'
@@ -13,15 +12,11 @@ export const Partner = () => {
   return (
     <section
       id="Home"
-      className="relative  h-[auto] w-full overflow-hidden bg-bgs6 bg-center " 
+      className="relative  h-[56vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center lgm:bg-bgs6m bg-cover " 
     >
-      <Image src={topc} alt="icon" className='z-30 w-[100%] absolute top-0'/>
-      <Image src={botc} alt="icon" className='z-20 w-[100%] absolute bottom-0'/>
-      <div className="mt-36 mb-12 max-w-[1024px] mx-auto font-Josefin text-gold-light text-4xl md:text-7xl text-center ">
-        PARTNERS
-      </div>
+      <Image src={topc} alt="icon" className='z-30 w-[100%] absolute top-0 lgm:hidden'/>
+      <Image src={botc} alt="icon" className='z-20 w-[100%] absolute bottom-0 lgm:hidden'/>
       <div className='mx-[5vw] flex justify-center items-start'> 
-      <Image src={all} alt="icon" className=' w-[90%] mb-36'/>
       </div>
     </section>
   )

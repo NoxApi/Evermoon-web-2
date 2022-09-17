@@ -198,7 +198,7 @@ export default function MAP() {
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
-      <Image src={botc} alt="icon" className='z-20 w-[100%] absolute bottom-0'/>
+      <Image src={botc} alt="icon" className='z-20 w-[100%] absolute -bottom-2'/>
     </div>
     </section>
   )

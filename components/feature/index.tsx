@@ -4,6 +4,11 @@ import bg from '../../assets/playandearn/bgs2.png'
 import evm from '../../assets/playandearn/evm.png'
 import footer from '../../assets/home/bottom.svg'
 import f1 from '../../assets/features/f1.svg'
+import f2 from '../../assets/features/f2.svg'
+import f3 from '../../assets/features/f3.svg'
+import f4 from '../../assets/features/f4.svg'
+import f5 from '../../assets/features/f5.svg'
+import f6 from '../../assets/features/f6.svg'
 
 
 export default function Features() {
@@ -21,15 +26,15 @@ export default function Features() {
         <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/>
         </div>
         <div> 
-        <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
+        <Image src={f2} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
         <div>
-        <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
+        <Image src={f3} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
         <div>
-        <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
+        <Image src={f4} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
         <div>
-        <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
+        <Image src={f5} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
         <div>
-        <Image src={f1} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
+        <Image src={f6} alt="icon" className=' w-[220px] mx-[10px] mdm:w-[160px]'/></div>
       </div>
       </div>
     </section>

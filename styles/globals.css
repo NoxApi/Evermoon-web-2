@@ -629,7 +629,7 @@ img {
 }
 
 .roleo{
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .roleactivated{
   opacity: 1;
@@ -640,5 +640,8 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+}
+
+.text-shadow-black{
+    text-shadow: 2px 2px #000000;
 }
