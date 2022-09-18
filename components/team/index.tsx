@@ -11,7 +11,7 @@ const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"xx"},
 export const Team = () => {
   return (
     <section
-      id="Home"
+      id="Team"
       className="relative  h-[1080px] w-full overflow-hidden bg-bgs5 bg-center smm:bg-bgs5m smm:bg-cover bg-[#04032C] smm:h-auto smm:pb-[200px]" 
     >
       <div className=" mt-20 lgm:mt-2 smm:mt-0 max-w-[1280px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
@@ -55,13 +55,13 @@ const ImageTeam = ({
       {image && (
         <Image alt={path} className={`w-[19rem] xlm:w-[14rem]  ${className} -m-3 `} src={image} priority />
       )}
-      <div className=' flex justify-between px-[5px] lg:px-0 mt-[15px]'>
+      <div className=' flex justify-between px-[5px] lg:px-0 mt-[20px]'>
         <div className='flex flex-col w-[180px] xlm:w-[140px]'>
           <a className='text-3xl xlm:text-xl'>{name}</a>
           <a className='text-sm xlm:text-xs text-[#F1E3B5] '>{role}</a>
         </div>
         <div className='flex items-start'>
-          {link&&<Image alt="" className={`w-[60px] xlm:w-[50px]`} src={linkin} priority />}
+          {link&&<Image alt="" className={`w-[60px] xlm:w-[50px] mt-[10px]`} src={linkin} priority />}
         </div>
       </div>
     </div>

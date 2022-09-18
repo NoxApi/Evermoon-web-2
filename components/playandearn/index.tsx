@@ -8,7 +8,7 @@ import footer from '../../assets/home/bottom.svg'
 export default function PAR() {
   return (
     <section
-      id="Home"
+      id="Playandearn"
       className="relative  max-h-[1080px] w-full overflow-hidden bg-center mdm:h-[auto]  mdm:bg-bgs2m bg-cover  smm:h-[200vw]" 
     >   
        <Image src={bg} alt="Banner " 

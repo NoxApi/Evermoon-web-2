@@ -45,10 +45,13 @@ function HeaderDesktop() {
     <div className="hidden xl:flex w-full ">
       <div className="ml-8 flex items-center mr-auto z-0">
         <Link title="HOME" href="#Home" current={true} />
+        <Link title="ABOUT THE GAME" href="#Playandearn" current={false} />
         <Link title="FEATURES" href="#Feature" current={false} />
-        <Link title="HEROES" href="#Heroes" current={false} />
-        <Link title="RUNES" href="#Runes" current={false} />
+        <Link title="MAP" href="#Map" current={false} />
+        <Link title="HEROES" href="#Heroes" current={false} /> 
         <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
+        <Link title="TEAM" href="#Team" current={false} />
+        <Link title="PARTNER" href="#Partner" current={false} />
         <Link title="ROADMAP" href="#Roadmap" current={false} />
       </div>
 
@@ -91,7 +94,7 @@ function HeaderMobile() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black/60" />
+              <Dialog.Overlay className="fixed inset-0 " />
             </Transition.Child>
 
             <Transition.Child
@@ -103,7 +106,7 @@ function HeaderMobile() {
               leaveFrom="opacity-100 translate-x-0"
               leaveTo="opacity-0 translate-x-full"
             >
-              <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-[#0E0E16] shadow-xl ">
+              <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-bgs8m bg-cover shadow-xl ">
                 <div className="absolute inset-0 -z-10">
                   <NextImage
                     layout="fill"
@@ -113,7 +116,7 @@ function HeaderMobile() {
                     alt="bgstart"
                   />
                 </div>
-                <div className="px-4 pt-2 flex items-center bg-[#0E0E16] border-b-[1px] border-[#5c503a]">
+                <div className="px-4 pt-2 flex items-center  border-b-[1px] border-[#5c503a]">
                   <div className="">
                     <NextLink href="/">
                       <a>
@@ -128,17 +131,18 @@ function HeaderMobile() {
 
                 <div className="mt-12 mx-4">
                   <NLink title="HOME" href="#Home" />
+                  <NLink title="ABOUT THE GAME" href="#Playandearn" />
                   <NLink title="FEATURE" href="#Feature" />
+                  <NLink title="MAP" href="#Map"  />
                   <NLink title="HEROES" href="#Heroes" />
-                  <NLink title="RUNES" href="#Runes" />
                   <NLink title="TOKENOMIC" href="#Tokenomic" />
+                  <NLink title="TEAM" href="#Team"  />
+                  <NLink title="PARTNER" href="#Partner" />
                   <NLink title="ROADMAP" href="#Roadmap" />
-
-                  <Image
-                    className="max-w-[300px] mx-6 md:mx-0 mt-8"
-                    src={MarketplaceSmall}
-                    alt="MarketplaceSmall"
-                  />
+                  <NextLink href="https://docs.evermoon.games/evermoon/">
+                    <a className="block font-Glamode m-6 mt-0 text-white mdm:text-2xl">WHITE PAPER</a>
+                  </NextLink>
+                            
                 </div>
               </div>
             </Transition.Child>
@@ -158,24 +162,14 @@ function HeaderMobile() {
           }}
         >
           <NextLink href={href}>
-            <a className="block font-source m-6 mt-0 text-white">{title}</a>
+            <a className="block font-Glamode m-6 mt-0 text-white mdm:text-2xl">{title}</a>
           </NextLink>
         </div>
       )
     }
-    return <div className="block font-source m-6 mt-0 text-white">{title}</div>
+    return <div className="block font-Glamode m-6 mt-0 text-white">{title}</div>
   }
 
-  function CLink({ title }: { title: string }) {
-    return (
-      <div className="flex items-center">
-        <a className="block font-source m-6 mt-0 text-disable">{title}</a>
-        <div className="text-[10px] text-gold font-source mb-5">
-          COMING SOON
-        </div>
-      </div>
-    )
-  }
 
   function SubLink({ title }: { title: string }) {
     return (

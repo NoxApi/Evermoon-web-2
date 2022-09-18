@@ -16,6 +16,7 @@ module.exports = {
         'bgs6' : "url('../public/bgs6.svg')",
         'bgs7' : "url('../public/bgs7.png')",
         'bgs7m' : "url('../public/bgs7m.svg')",
+        'bgs8m' : "url('../public/bgs8m.svg')",
         'bgs6m' : "url('../public/bgs6m.svg')",
         'bgs5m' : "url('../public/bgs5m.svg')",
         'bgs1m' : "url('../public/bgs1m.png')",

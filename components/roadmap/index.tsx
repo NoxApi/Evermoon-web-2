@@ -36,7 +36,7 @@ const dotProgress = (index: number) => keyframes`
 export const Roadmap = () => {
   return (
     <section
-      id="Home"
+      id="Roadmap"
       className="relative  h-[1500px] w-full overflow-hidden bg-bgs7 bg-center mdm:bg-bgs7m mdm:h-[440vw] mdm:bg-cover" 
     >
       <div className='h-[980px] mdm:h-[330vw]'>
@@ -69,6 +69,25 @@ export const Roadmap = () => {
         <Image src={tm} alt="q122" className=" w-56" priority />
         
       </div>
+      
+      <div className='flex md:hidden w-fill items-center justify-center mt-[38vw]'>
+          <LinkNewTab href="https://t.me/Evermoon_Community">
+            <Image src={s1} alt="q122" className=" w-[7vw] mx-[1vw]" priority />
+          </LinkNewTab>
+          <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
+            <Image src={s2} alt="q122" className=" w-[7vw] mx-[1vw]" priority />
+          </LinkNewTab>
+          <LinkNewTab href="https://www.facebook.com/EvermoonOfficialGameFi">
+            <Image src={s3} alt="q122" className=" w-[7vw] mx-[1vw]" priority />
+          </LinkNewTab>
+          <LinkNewTab href="https://twitter.com/EverMoon_nft">
+            <Image src={s4} alt="q122" className=" w-[7vw] mx-[1vw]" priority />
+          </LinkNewTab>
+          <LinkNewTab href="https://www.youtube.com/c/Evermoon">
+            <Image src={s5} alt="q122" className=" w-[7vw] mx-[1vw]" priority />
+          </LinkNewTab>           
+        </div>
+        <HeaderDesktop/> 
     </section>
   )
 }
@@ -111,41 +130,6 @@ function RoadmapDesktop() {
         <Image src={q123} alt="q123" className="w-[16rem] -mr-36 -ml-8" priority />
         <DotDivider disabled />
         <Image src={q422} alt="q422" className="w-52 -mr-[65px] " priority />
-      </div>
-    </div>
-  )
-}
-
-function RoadmapMobile() {
-  return (
-    <div className="md:hidden max-w-[380px] mx-auto mt-16 pb-32">
-      <div className=" flex flex-col items-center">
-        <Image src={q122m} alt="q122m" className="w-[90%] mx-8 -mr-4" priority />
-        <DotDivider horizontal />
-        <Image src={q222m} alt="q222m" className="w-[100%] mx-8 -mr-16" priority />
-        <div className="my-8 flex flex-col gap-y-1">
-          {Array(9)
-            .fill(0)
-            .map((e, index) => (
-              <div
-                key={index}
-                className={css`
-                  width: 8px;
-                  height: 8px;
-                  border-radius: 9999px;
-                  animation: 1.5s infinite ${dotProgress(index)};
-                  animation-timing-function: step-end;
-                `}
-              />
-            ))}
-        </div>
-        <Image src={q322m} alt="q322m" className="w-[105%] mx-8 ml-[9rem]" priority />
-        <DotDivider disabled horizontal />
-        <Image src={q422m} alt="q422m" className="w-full mx-8 ml-[8rem]" priority />
-        <DotDivider disabled horizontal />
-        <Image src={q123m} alt="q123m" className="w-[110%] mx-8 ml-[10rem]" priority />
-        <DotDivider disabled horizontal />
-        <Image src={q223m} alt="q223m" className=" w-[120%] ml-[10rem]" priority />
       </div>
     </div>
   )
@@ -208,13 +192,16 @@ function DotDivider({
 function HeaderDesktop() {
   return (
     <div className="">
-      <div className="ml-8 flex items-center justify-center ">
-        <Link title="HOME" href="#Home" current={true} />
-        <Link title="FEATURES" href="#Feature" current={false} />
-        <Link title="HEROES" href="#Heroes" current={false} />
-        <Link title="RUNES" href="#Runes" current={false} />
-        <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
-        <Link title="ROADMAP" href="#Roadmap" current={false} />
+      <div className="ml-8 flex items-center mr-auto z-0 mdm:flex-col mdm:mt-[5vw] mdm:ml-0">
+        <Links title="HOME" href="#Home" current={true} />
+        <Links title="ABOUT THE GAME" href="#Playandearn" current={false} />
+        <Links title="FEATURES" href="#Feature" current={false} />
+        <Links title="MAP" href="#Map" current={false} />
+        <Links title="HEROES" href="#Heroes" current={false} /> 
+        <Links title="TOKENOMIC" href="#Tokenomic" current={false} />
+        <Links title="TEAM" href="#Team" current={false} />
+        <Links title="PARTNER" href="#Partner" current={false} />
+        <Links title="ROADMAP" href="#Roadmap" current={false} />
       </div>
 
       <div className="flex items-center">
@@ -224,5 +211,31 @@ function HeaderDesktop() {
         </div>
       </div>
     </div>
+  )
+}
+
+import NextLink from 'next/link'
+import { useState } from 'react'
+
+interface LinkProp {
+  title: string
+  href: string
+  current: boolean
+}
+
+ function Links({ title, href, current }: LinkProp) {
+  return (
+    <NextLink href={href}>
+      <a  className="px-2  flex flex-col items-center justify-center xlm:px-0 h-[4vw]">
+        <div className="relative">
+          <div
+            className={`px-4 lgm:px-2 py-2 font-Glamode text-base mdm:text-[2vw]  mdm:px-0 mdm:py-0 xlm:text-xs text-center whitespace-nowrap transition-all duration-300
+            }`}
+          >
+            {title}
+          </div>
+        </div>
+      </a>
+    </NextLink>
   )
 }

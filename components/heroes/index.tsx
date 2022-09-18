@@ -19,7 +19,7 @@ export default function Heroes() {
   }
   return (
     <section
-      id="Home"
+      id="Heroes"
       className="" 
     >
       <HeroMobile/>

@@ -126,8 +126,8 @@ export default function Home() {
               <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext xlm:hidden" />
           </div>
         </div>
-        <div className='flex absolute  bottom-0 mdm:hidden right-0 translate-y-[-2vw] xlm:flex-col xlm:mb-[70px] xlm:right-5  '>
-          <div className='flex xlm:pl-[36px]'>
+        <div className='flex absolute  bottom-0 mdm:hidden right-0 translate-y-[-2vw] xlm:flex-col xlm:mb-[70px] xlm:right-5 z-30  '>
+          <div className='flex xlm:pl-[36px] z-30'>
           <LinkNewTab href="https://t.me/Evermoon_Community">
             <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
           </LinkNewTab>

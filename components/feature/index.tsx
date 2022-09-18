@@ -14,7 +14,7 @@ import f6 from '../../assets/features/f6.svg'
 export default function Features() {
   return (
     <section
-      id="Home"
+      id="Feature"
       className="relative  max-h-[1080px] w-full overflow-hidden bg-center bg-bgs3 h-[700px] flex flex-col justify-center font-Josefin text-[#F1E3B5] " 
     >
       <div className='flex items-start justify-center'>

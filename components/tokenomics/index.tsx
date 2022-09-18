@@ -24,7 +24,7 @@ export const Tokenomics = () => {
   return (
     <>
     <section
-      id="Home"
+      id="Tokenomic"
       className="h-[1080px] lgm:h-[140vw] max-w-[1920px] overflow-hidden bg-bgs4 lgm:bg-bgs4m lg:bg-center lgm:bg-cover font-Josefin -mb-[5px]" 
     > 
       

@@ -89,7 +89,7 @@ export default function MAP() {
   }
   return (
     <section
-      id="Home"
+      id="Map"
       className="relative  w-full overflow-hidden bg-center h-[50vw] lgm:h-auto " 
     >
       <MapMobile/>
