@@ -13,13 +13,100 @@ import { Tokenomics } from '../components/tokenomics'
 import { Team } from '../components/team'
 import { Roadmap } from '../components/roadmap'
 import { Partner } from '../components/partner'
-
-import  sec1footer  from "../assets/home/bottom.svg"
+import {useEffect,useRef,useState} from 'react'
 import MAP from '../components/map'
+import nav from '../assets/nav.svg'
+import down from '../assets/down.svg'
+import up from '../assets/up.svg'
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 const Index: NextPage = () => {
+  const [section,setsection] = useState(0)
+  const [scrollY, setScrollY] = useState(0);
+  var refy= useRef(0);
+  const home = useRef<null | HTMLDivElement>(null);
+  const roadmap = useRef<null | HTMLDivElement>(null);
+  const hero = useRef<null | HTMLDivElement>(null);
+  const partner = useRef<null | HTMLDivElement>(null);
+  const token = useRef<null | HTMLDivElement>(null);
+  const map = useRef<null | HTMLDivElement>(null);
+  const playtoearn = useRef<null | HTMLDivElement>(null);
+  const feature = useRef<null | HTMLDivElement>(null);
+  const team = useRef<null | HTMLDivElement>(null);
+
+  console.log(section)
+    
+    function add(){
+      if (section < 10)
+       setsection(section+1)
+    }
+    function sub(){
+      if (section > 1)
+       setsection(section-1)
+    }
+    if (section == 1)
+    home.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 2)
+    playtoearn.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 3)
+    feature.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 4)
+    map.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 5)
+    hero.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 6)
+    token.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 7)
+    team.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 8)
+    partner.current?.scrollIntoView({behavior: 'smooth'});
+    if (section == 9)
+    roadmap.current?.scrollIntoView({behavior: 'smooth'});
+    
+  useEffect(() => {
+    
+  }, []);
+   
+  
+  //   // const onArrow = () => {
+  //   //   let offset = this.parallax.offset || 0;
+  //   //   if (key.keyCode === 39 || key.keyCode === 40) {
+  //   //     offset = (Math.floor(offset) + 1) % this.parallax.layers.length;
+  //   //   }
+  //   //   if (key.keyCode === 37 || key.keyCode === 38) {
+  //   //     offset = Math.ceil(offset) - 1;
+  //   //     if (offset < 0) {
+  //   //       offset = this.parallax.layers.length - 1;
+  //   //     }
+  //   //   }
+  //   //};
+  //   useEffect(() => {
+  // //     const handleScroll = (e:any) => {
+  // //       // console.log("kuy")
+  // //       // if (e.wheelDelta > 0) {
+  // //       //   add()
+  // //       // } else if (e.wheelDelta < 0) {
+  // //       //  sub()
+  // //       // }
+  // //     };
+  // //     // window.addEventListener("keydown", this.onArrow, false);
+  // //     window.addEventListener("wheel", handleScroll, false);
+
+  // // // returned function will be called on component unmount 
+  // //   return () => {
+  // //     // window.removeEventListener("keydown", this.onArrow, false);
+  // //     window.removeEventListener("wheel", handleScroll, false);
+  // //    }
+  //   }, []);
   return (
     <Layout>
+      <ReactScrollWheelHandler
+        upHandler={(e) => sub()}
+        downHandler={(e) => add()}
+        preventScroll={true}
+        timeout={200}
+        // wheelConfig={[0,0,0,0]}
+      >
       <Head>
         <title>Evermoon</title>
         <meta name="description" content="Evermoon's NFT Marketplace" />
@@ -27,8 +114,21 @@ const Index: NextPage = () => {
       </Head>
 
       <main>
-    
         <div className="relative z-0">
+        <div className='fixed right-7 top-[20vw] h-[10.5vw] w-[3vw] z-50 '>
+          <div className='relative w-full h-full flex flex-col justify-between items-center'>
+            <div onClick={()=>sub()} className='w-full z-[60] mt-[1vw] flex justify-center cursor-pointer'>
+              <Image src={up} alt='' className={"w-[80%]"}/>
+            </div>
+           <Image src={nav} alt='' className={"w-full absolute"}/>
+           <a className='text-[1.5vw] font-Glamode text-[#F1E3B5] z-30'>{section}</a>
+           <div onClick={()=>add()} className='w-full z-[60] mb-[1vw] flex justify-center cursor-pointer'>
+              <Image src={down} alt='' className={"w-[80%]"}/>
+            </div>
+
+          </div>
+        </div>
+        <div ref={home}/>
         <Home />
           <div className="relative w-full h-0 z-20">
             <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
@@ -43,14 +143,21 @@ const Index: NextPage = () => {
             /> 
              
           </div>
-
+            <div ref={playtoearn}/>
             <PTR/>
+            <div ref={feature}/>
             <Features />
+            <div ref={map}/>
             <MAP />
+            <div ref={hero}/>
             <Heroes />
+            <div ref={token}/>
             <Tokenomics />
+            <div ref={team}/>
             <Team />
+            <div ref={partner}/>
             <Partner/>
+            <div ref={roadmap}/>
             <Roadmap />
           {/* 
           <div className="relative w-full h-0 z-10">
@@ -116,6 +223,7 @@ const Index: NextPage = () => {
           }}
         /> 
       </div> */}
+      </ReactScrollWheelHandler>
     </Layout>
   )
 }

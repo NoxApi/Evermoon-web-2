@@ -30,6 +30,7 @@ function Image({
         className={className}
         quality={quality}
         onClick={onClick}
+        priority={true}
       />
     )
   }

@@ -12,7 +12,7 @@ export const Partner = () => {
   return (
     <section
       id="Partner"
-      className="relative  h-[56vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center lgm:bg-bgs6m bg-cover " 
+      className="relative  h-[50vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center lgm:bg-bgs6m bg-cover " 
     >
       <Image src={topc} alt="icon" className='z-30 w-[100%] absolute top-0 lgm:hidden'/>
       <Image src={botc} alt="icon" className='z-20 w-[100%] absolute bottom-0 lgm:hidden'/>

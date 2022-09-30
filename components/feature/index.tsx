@@ -15,7 +15,7 @@ export default function Features() {
   return (
     <section
       id="Feature"
-      className="relative  max-h-[1080px] w-full overflow-hidden bg-center bg-bgs3 h-[700px] flex flex-col justify-center font-Josefin text-[#F1E3B5] " 
+      className="relative  max-h-[960px] w-full overflow-hidden bg-center bg-bgs3 h-[50vw] flex flex-col justify-center font-Josefin text-[#F1E3B5] " 
     >
       <div className='flex items-start justify-center'>
         <a className=' text-6xl mdm:text-4xl'>FEATURES</a>

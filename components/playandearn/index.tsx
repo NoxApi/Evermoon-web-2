@@ -9,10 +9,10 @@ export default function PAR() {
   return (
     <section
       id="Playandearn"
-      className="relative  max-h-[1080px] w-full overflow-hidden bg-center mdm:h-[auto]  mdm:bg-bgs2m bg-cover  smm:h-[200vw]" 
+      className="relative  max-h-[960px] w-full overflow-hidden bg-center mdm:h-[auto]  mdm:bg-bgs2m bg-cover  smm:h-[200vw]" 
     >   
        <Image src={bg} alt="Banner " 
-        className=" absolute top-0 h-[1080px]  w-[1920px] right-0 xlm:right-[-300px] mdm:hidden"     
+        className=" absolute top-0 h-[960px]  w-[1920px] right-0 xlm:right-[-300px] mdm:hidden"     
       />
       <Image alt='icon' src={evm} className="w-[600px] h-[200px] absolute right-[250px] xlm:right-[-50px] evmanimate mdm:hidden "/> \
     <div className='h-[1080px] smm:h-[170vw]  flex relative mdm:flex-col mdm:items-center '>
