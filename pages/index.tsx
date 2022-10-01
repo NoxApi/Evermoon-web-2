@@ -4,7 +4,8 @@ import Home from '../components/home'
 import ImageNext from 'next/image'
 import Image from '../components/image'
 import Layout from '../components/layout'
-import  PTR  from '../components/playandearn'
+import  PAE  from '../components/playandearn'
+import  PAED  from '../components/playandearn/desktop'
 import Divider from '../assets/tribe/Divider.svg'
 import  Features from '../components/feature'
 import  Heroes  from '../components/heroes'
@@ -114,7 +115,7 @@ const Index: NextPage = () => {
                 />           
               </div>
                 <div ref={playtoearn}/>
-                <PTR/>
+                <PAED/>
                 <div ref={feature}/>
                 <Features />
                 <div ref={map}/>
@@ -151,7 +152,7 @@ const Index: NextPage = () => {
                   }}
                 />           
               </div>
-                <PTR/>
+                <PAE/>
                 <Features />
                 <MAP />
                 <Heroes />
