@@ -37,7 +37,6 @@ export default function MAP() {
   const [role4,setrole4]= useState("")
   const [role5,setrole5]= useState("")
 
-  console.log(v2)
   function setv(x:any){
     setv1("h-[0vw]")
     setv2("h-[0vw]")

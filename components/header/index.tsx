@@ -24,13 +24,13 @@ const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50 ">
       <div className="absolute top-0 left-0 right-0 w-full h-[8vw] bg-black-gradient" />
-      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden `+width }>
+      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden cursor-pointer `+width }>
         <div className='w-[88vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[12vw]'/>
         <div className='flex ml-[11vw]'>
-        <SubLink title="ABOUT THE GAME" href="#Playandearn" current={false} />
-        <SubLink title="FEATURES" href="#Feature" current={false} />
-        <SubLink title="MAP" href="#Map" current={false} />
-        <SubLink title="HEROES" href="#Heroes" current={false} /> 
+        <SubLink title="ABOUT THE GAME" section={2} current={false} />
+        <SubLink title="FEATURES" section={3} current={false} />
+        <SubLink title="MAP" section={4} current={false} />
+        <SubLink title="HEROES" section={5} current={false} /> 
         </div>
       </div>
       <div className="px-4 md:px-[9vw] py-5 flex items-center">
@@ -38,7 +38,7 @@ const Header = () => {
           <NextLink href="/">
             <a>
               <Image
-                className="w-28 md:w-[10vw] absolute top-[10px] left-[10px]"
+                className="w-28 lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
                 src={Logo}
                 alt="logo"
                 blur={false}
@@ -65,9 +65,9 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
   return (
     <div className="hidden lg:flex w-full  ">
       <div className="ml-8 flex items-start mr-auto z-0">
-        <Link title="HOME" href="#Home" current={true} />
+        <Link title="HOME" section={1} current={true} />
         
-        <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
+        <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
         <div className="relative">
           <div
             className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.5vw]  text-center whitespace-nowrap transition-all duration-300
@@ -86,10 +86,10 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
           </div>
         </div>
       </a>
-        <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
-        <Link title="TEAM" href="#Team" current={false} />
-        <Link title="PARTNER" href="#Partner" current={false} />
-        <Link title="ROADMAP" href="#Roadmap" current={false} />
+        <Link title="TOKENOMIC" section={6} current={false} />
+        <Link title="TEAM" section={7} current={false} />
+        <Link title="PARTNER" section={8} current={false} />
+        <Link title="ROADMAP" section={9} current={false} />
       </div>
 
       <div className="flex items-center">

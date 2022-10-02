@@ -12,7 +12,7 @@ export const Team = () => {
   return (
     <section
       id="Team"
-      className="relative  h-[960px] lg:h-[50vw] w-full overflow-hidden bg-bgs5 bg-center smm:bg-bgs5m smm:bg-cover bg-[#04032C] smm:h-auto smm:pb-[200px]" 
+      className="relative  h-[960px] lg:h-[50vw] w-full overflow-hidden bg-bgs5 bg-center mdm:bg-bgs5m mdm:bg-cover bg-[#04032C] smm:h-auto smm:pb-[200px]" 
     >
       <div className=" mt-20 lgm:mt-2 smm:mt-0 max-w-[1280px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
         TEAM

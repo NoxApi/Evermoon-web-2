@@ -1,19 +1,22 @@
 import NextLink from 'next/link'
 import { useState } from 'react'
 import Line from '../../assets/header/line.png'
+import { useGlobalContext } from '../../state'
 import Image from '../image'
+
 
 interface LinkProp {
   title: string
-  href: string
+  section: number
   current: boolean
 }
 
-export function Link({ title, href, current }: LinkProp) {
+export function Link({ title, section, current }: LinkProp) {
   const [isHover, setIsHover] = useState(false)
+  const {setsection} = useGlobalContext()!
   return (
-    <NextLink href={href}>
-      <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
+    <div onClick={()=>setsection(section)}>
+      <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
         <div className="relative">
           <div
             className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.5vw] text-center whitespace-nowrap transition-all duration-300
@@ -32,7 +35,7 @@ export function Link({ title, href, current }: LinkProp) {
           </div>
         </div>
       </a>
-    </NextLink>
+    </div>
   )
 }
 
@@ -58,11 +61,12 @@ export function ComingSoonLink({ title }: ComingSoonLinkProp) {
     </div>
   )
 }
-export function SubLink({ title, href, current }: LinkProp) {
+export function SubLink({ title, section, current }: LinkProp) {
   const [isHover, setIsHover] = useState(false)
+  const {setsection} = useGlobalContext()!
   return (
-    <NextLink href={href}>
-      <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
+    <div onClick={()=>setsection(section) }>
+      <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 cursor-pointer ">
         <div className="relative">
           <div
             className={`px-4 lgm:px-2 py-2 font-Glamode text-[0.8vw] text-center whitespace-nowrap transition-all duration-300
@@ -74,6 +78,6 @@ export function SubLink({ title, href, current }: LinkProp) {
           </div>
         </div>
       </a>
-    </NextLink>
+    </div>
   )
 }

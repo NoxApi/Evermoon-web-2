@@ -48,18 +48,9 @@ export default function Home() {
   return (
     <section
       id="Home"
-      className="relative  h-[960px] smm:h-[180vw] w-full overflow-hidden bg-bgs1 smm:bg-bgs1m bg-cover bg-center " 
+      className="relative  h-[960px] smm:h-[180vw] w-full overflow-hidden bg-bgs1 lgm:bg-bgs1t smm:bg-bgs1m bg-cover bg-center " 
     >
       <ModalController status={open} setStatus={setopen}/>
-      {/* <Image src={bg} alt="Banner" 
-        className=" bg-contain"
-      /> */}
-    
-
-      {/* <div className="md:hidden">
-        <Image src={Banner} alt="Banner" className=" h-screen w-full" fill />
-      </div> */}
-
       <div className="absolute inset-0">
         <Header />
       </div>
@@ -69,10 +60,10 @@ export default function Home() {
           <Image src={text1} alt="AppStore" className="max-w-[1280px] w-[100vw] mx-[5vw] smm:hidden" />
           <Image src={text2} alt="AppStore" className="max-w-[1280px] w-[100vw] mx-[5vw] sm:hidden" />
             <div className="flex smm:hidden">
-              <Image src={div} alt="AppStore" className=" inset-0  w-[400px] mdm:w-[300px] -my-[20px] mix-blend-screen " />
+              <Image src={div} alt="AppStore" className=" inset-0  w-[400px] lgm:w-[300px] -my-[20px] mix-blend-screen " />
             </div>
             <LinkNewTab href="https://docs.evermoon.games/evermoon/">
-              <div className='w-[300px] mdm:w-[200px]  relative  whitepaper cursor-pointer smm:hidden '>
+              <div className='w-[300px] lgm:w-[200px]  relative  whitepaper cursor-pointer smm:hidden lgm:hidden'>
               <Image
                 src={wp1}
                 alt="Whitepaper"
@@ -86,14 +77,14 @@ export default function Home() {
               <Image
                 src={wp3}
                 alt="Whitepaper"
-                className=" w-[330px] mdm:w-[220px] absolute inset-0 top-[-50px] mdm:top-[-33px] left-[-15px] mdm:left-[-10.5px] opacity-0  whitepaper3 z-0 mix-blend-screen "
+                className=" w-[330px] lgm:w-[220px] absolute inset-0 top-[-50px] lgm:top-[-33px] left-[-15px] lgm:left-[-10.5px] opacity-0  whitepaper3 z-0 mix-blend-screen "
               />
               </div>
             </LinkNewTab>
           </div>  
           
         </div>
-        <div className='md:hidden h-[250px] flex flex-col justify-start items-center'>
+        <div className='lg:hidden h-[250px] flex flex-col justify-start items-center'>
           <div className='relative pr-[210px]'>
             <div onClick={()=>setopen(true)} className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
               <Image src={card3}  alt="AppStore" className='' />
@@ -116,7 +107,7 @@ export default function Home() {
             </div>
           </div>           
         </div>
-        <div className=' absolute  bottom-0 left-0 z-20 translate-y-[-3vw] xlm:mb-[50px] w-[450px] h-[130px] mdm:hidden  '>
+        <div className=' absolute  bottom-0 left-0 z-20 translate-y-[-3vw] xlm:mb-[50px] w-[450px] h-[130px] lgm:hidden  '>
           <div className='relative'>
             <div onClick={()=>setopen(true)} className="w-[65px]  absolute inset-0 left-[19%] translate-y-6 trailer z-20  cursor-pointer mix-blend-luminosity hover:mix-blend-normal  ">
               <Image src={card3}  alt="AppStore"  />
@@ -126,7 +117,7 @@ export default function Home() {
               <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext xlm:hidden" />
           </div>
         </div>
-        <div className='flex absolute  bottom-0 mdm:hidden right-0 translate-y-[-2vw] xlm:flex-col xlm:mb-[70px] xlm:right-5 z-30  '>
+        <div className='flex absolute  bottom-0 lgm:hidden right-0 translate-y-[-2vw] xlm:flex-col xlm:mb-[70px] xlm:right-5 z-30  '>
           <div className='flex xlm:pl-[36px] z-30'>
           <LinkNewTab href="https://t.me/Evermoon_Community">
             <Image src={s1} alt="q122" className=" w-12 mx-3" priority />
@@ -148,7 +139,7 @@ export default function Home() {
           </div>        
         </div>
       </div>
-      <div className='md:hidden'>
+      <div className='lg:hidden'>
         <SocialCTA />
       </div>
        <Image src={footer} alt="banner" className='w-[100%] absolute bottom-0 z-30'/> 

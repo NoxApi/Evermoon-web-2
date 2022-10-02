@@ -39,7 +39,6 @@ export default function MapMobile(){
       role5 = "roleactivated"
    }
    useEffect(() => { 
-      console.log(lane)
     });
  return(
     <div className='lg:hidden font-Josefin'>

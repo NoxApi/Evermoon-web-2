@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'bgs1' : "url('../public/bgs1.png')",
+        'bgs1t' : "url('../public/bgs1t.png')",
         'bgs2' : "url('../public/bgs2.svg')",
         'bgs3' : "url('../public/bgs3.png')",
         'bgs3f' : "url('../public/bgs3f.png')",
