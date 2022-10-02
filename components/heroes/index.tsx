@@ -32,13 +32,13 @@ export default function Heroes() {
         <div className=' h-[auto] flex justify-start items-center absolute top-[24%] px-[7%] '>  
           <Role role={heroes[selector].role}/>
         </div> 
-        <div className=' h-[auto] flex justify-center items-center absolute top-[37%] left-[4%] w-[40%]'>  
+        <div className=' h-[auto] flex justify-center items-center absolute top-[40%] left-[4%] w-[40%]'>  
           <a className='text-[3.5vw] heroes-text-gold text-center'>{heroes[selector].name}</a>
         </div> 
-        <div className=' h-[auto] flex justify-center items-center absolute top-[52.5%] left-[16.4%] '>  
+        <div className=' h-[auto] flex justify-center items-center absolute top-[57%] left-[16.4%] '>  
           <Tribe tribe={heroes[selector].tribe}/>
         </div> 
-        <div className=' flex justify-center items-start absolute top-[65%] left-[1%] px-[4vw] w-[45vw] '>  
+        <div className=' flex justify-center items-start absolute top-[69%] left-[1%] px-[4vw] w-[45vw] '>  
           <a  className='text-[1.1vw] text-center leading-[1.4vw]'>{heroes[selector].des}</a>
         </div> 
       </div>

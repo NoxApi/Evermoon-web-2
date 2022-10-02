@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 import Image from '../image'
 import linkin from "../../assets/team/linkin.png"
+import Link from 'next/link'
 
 
-const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"xx"},
+const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"www.google.com"},
               {name:"Tanachot A.",path:'t2',role:"CTO,CFO,SMART CONTRACT & WEB APPLICATION DEVELOPER" ,link:"xx"},
               {name:"Suphitcha L.",path:'t3',role:"CMO" ,link:"xx"},
               {name:"Chonnathan W.",path:'t4',role:"CPO,GAME DIRECTOR,VFX DEVELOPER",link:""}]
 
-export const Team = () => {
+export const TeamD = () => {
   return (
     <section
       id=""
-      className="relative h-[50vw] w-full overflow-hidden bg-bgs5 bg-center  bg-[#04032C] " 
+      className="relative h-[50vw] w-full overflow-hidden bg-bgs5 bg-cover  bg-[#04032C] " 
     >
-      <div className=" mt-20 lgm:mt-2 smm:mt-0 max-w-[1280px] mx-auto font-Josefin text-gold-light text-5xl md:text-6xl text-center relative">
+      <div className=" mt-[4vw]  mx-auto font-Josefin text-gold-light text-[5vw] text-center relative">
         TEAM
       </div>
 
-      <div className=" mt-20  max-w-[1280px] mx-8 smm:mx-[2vw] lg:mx-auto relative  ">
-        <div className="relative lgm:-mt-10 flex flex-wrap justify-evenly pt-12  px-0  gap-y-7 gap-x-8 smm:gap-y-1 h-full">
+      <div className=" mt-[2vw] lg:mx-auto relative  ">
+        <div className="relative  flex flex-wrap justify-evenly pt-[2vw] h-full">
           {teams.slice(0,4).map((team) => (
             <ImageTeam key={team.path} path={team.path} className="" link={team.link} name={team.name} role={team.role}/>
           ))}
@@ -51,17 +52,17 @@ const ImageTeam = ({
   })(path)
 
   return (
-    <div className=' h-[500px] lgm:h-[380px]'>
+    <div className=' h-[26vw] lgm:h-[380px]'>
       {image && (
-        <Image alt={path} className={`w-[19rem] xlm:w-[14rem]  ${className} -m-3 `} src={image} priority />
+        <Image alt={path} className={`w-[17vw]   ${className}  `} src={image} priority />
       )}
-      <div className=' flex justify-between px-[5px] lg:px-0 mt-[20px]'>
-        <div className='flex flex-col w-[180px] xlm:w-[140px]'>
-          <a className='text-3xl xlm:text-xl'>{name}</a>
-          <a className='text-sm xlm:text-xs text-[#F1E3B5] '>{role}</a>
+      <div className=' flex justify-between px-[1vw]  mt-[1vw]'>
+        <div className='flex flex-col w-[11vw]'>
+          <a className='text-[1.6vw] '>{name}</a>
+          <a className='text-[0.6vw]  text-[#F1E3B5] '>{role}</a>
         </div>
-        <div className='flex items-start'>
-          {link&&<Image alt="" className={`w-[60px] xlm:w-[50px] mt-[10px]`} src={linkin} priority />}
+        <div  className='flex items-start cursor-pointer'>
+          {link&&<Link href={link} ><Image alt="" className={`w-[3vw] mt-[0.7vw]`} src={linkin} priority /></Link>}
         </div>
       </div>
     </div>

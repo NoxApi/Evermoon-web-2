@@ -517,12 +517,12 @@ img {
 
 
 .card1{
-  width: 250px;
+  width: 13vw;
   transition: all 0.3s ease-in-out;
   }
 
   .card2{
-    width: 250px;
+    width: 13vw;
     transition: all 0.3s ease-in-out;
     }
     .trailertext{
@@ -609,11 +609,11 @@ img {
 }
 }
 @keyframes evmanimated {
-  0%    {top: 320px;}
-  25%   {top: 330px;}
-  50%   {top: 340px;}
-  75%   {top: 330px;}
-  100%  {top: 320px;}
+  0%    {top: 14vw;}
+  25%   {top: 13.5vw;}
+  50%   {top: 13vw;}
+  75%   {top: 13.5vw;}
+  100%  {top: 14vw;}
 }
 
 .pinanimate{
@@ -644,4 +644,21 @@ img {
 
 .text-shadow-black{
     text-shadow: 2px 2px #000000;
+}
+
+.pintop {
+  z-index: 30;
+  width: 6vw;
+  height: 6vw;
+  background-image: url("/jungt.png");
+  background-repeat: no-repeat;
+  animation: play 1.5s steps(40) forwards; 
+  background-size:cover;
+}
+@keyframes play {
+  from {background-position-x: 0vw;}
+  to {background-position-x: -239.7vw;}
+}
+.navbar{
+  transition: width 0.5s ease-in-out;
 }

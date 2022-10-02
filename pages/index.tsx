@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Home from '../components/home'
+import HomeD from '../components/home/desktop'
 import ImageNext from 'next/image'
 import Image from '../components/image'
 import Layout from '../components/layout'
@@ -8,10 +9,13 @@ import  PAE  from '../components/playandearn'
 import  PAED  from '../components/playandearn/desktop'
 import Divider from '../assets/tribe/Divider.svg'
 import  Features from '../components/feature'
+import  FeaturesD from '../components/feature/desktop'
 import  Heroes  from '../components/heroes'
 import BGRune from '../assets/runes/bg.png'
 import { Tokenomics } from '../components/tokenomics'
+import { TokenomicsM } from '../components/tokenomics/tablet'
 import { Team } from '../components/team'
+import { TeamD } from '../components/team/desktop'
 import { Roadmap } from '../components/roadmap'
 import { Partner } from '../components/partner'
 import {useEffect,useRef,useState} from 'react'
@@ -21,9 +25,10 @@ import down from '../assets/down.svg'
 import up from '../assets/up.svg'
 import { Footer } from '../components/footer'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import { useGlobalContext } from '../state'
 
 const Index: NextPage = () => {
-  const [section,setsection] = useState(1)
+  const {section,setsection} = useGlobalContext()!
   const [scrollY, setScrollY] = useState(0);
   var refy= useRef(0);
   const home = useRef<null | HTMLDivElement>(null);
@@ -101,7 +106,7 @@ const Index: NextPage = () => {
               </div>
             </div>
             <div ref={home}/>
-            <Home />
+            <HomeD />
               <div className="relative w-full h-0 z-20">
                 <div className='  flex items-start lgm:items-center  justify-center  absolute right-0 translate-y-[-85px] z-20'>
                     {/* <Image src={sec1footer} alt="banner" className='w-[1920px]'/> */}
@@ -117,7 +122,7 @@ const Index: NextPage = () => {
                 <div ref={playtoearn}/>
                 <PAED/>
                 <div ref={feature}/>
-                <Features />
+                <FeaturesD />
                 <div ref={map}/>
                 <MAP />
                 <div ref={hero}/>
@@ -125,7 +130,7 @@ const Index: NextPage = () => {
                 <div ref={token}/>
                 <Tokenomics />
                 <div ref={team}/>
-                <Team />
+                <TeamD />
                 <div ref={partner}/>
                 <Partner/>
                 <div ref={roadmap}/>
@@ -156,7 +161,7 @@ const Index: NextPage = () => {
                 <Features />
                 <MAP />
                 <Heroes />
-                <Tokenomics />
+                <TokenomicsM />
                 <Team />
                 <Partner/>
                 <Roadmap />
