@@ -44,13 +44,11 @@ import s4 from '../../assets/roadmap/twitter.png'
 import s5 from '../../assets/roadmap/youtube.png'
 
 export default function Home() {
-  const [open,setopen] = useState(false)
   return (
     <section
       id="Home"
       className="relative  h-[960px] smm:h-[180vw] w-full overflow-hidden bg-bgs1 lgm:bg-bgs1t smm:bg-bgs1m bg-cover bg-center " 
     >
-      <ModalController status={open} setStatus={setopen}/>
       <div className="absolute inset-0">
         <Header />
       </div>
@@ -86,9 +84,11 @@ export default function Home() {
         </div>
         <div className='lg:hidden h-[250px] flex flex-col justify-start items-center'>
           <div className='relative pr-[210px]'>
-            <div onClick={()=>setopen(true)} className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
-              <Image src={card3}  alt="AppStore" className='' />
-            </div>
+            <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+              <div className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
+                <Image src={card3}  alt="AppStore" className='' />
+              </div>
+            </LinkNewTab>
               <Image src={card1} alt="AppStore" className="w-[220px] absolute " />
               <Image src={card2} alt="AppStore" className="w-[220px] absolute  " />
           </div>
@@ -109,9 +109,11 @@ export default function Home() {
         </div>
         <div className=' absolute  bottom-0 left-0 z-20 translate-y-[-3vw] xlm:mb-[50px] w-[450px] h-[130px] lgm:hidden  '>
           <div className='relative'>
-            <div onClick={()=>setopen(true)} className="w-[65px]  absolute inset-0 left-[19%] translate-y-6 trailer z-20  cursor-pointer mix-blend-luminosity hover:mix-blend-normal  ">
+          <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <div  className="w-[65px]  absolute inset-0 left-[19%] translate-y-6 trailer z-20  cursor-pointer mix-blend-luminosity hover:mix-blend-normal  ">
               <Image src={card3}  alt="AppStore"  />
             </div>
+          </LinkNewTab>
               <Image src={card1} alt="AppStore" className="w-[250px] absolute top-[-30px] card1" />
               <Image src={card2} alt="AppStore" className="w-[250px] absolute top-[-30px] card2" />
               <Image src={card4} alt="AppStore" className="w-[170px]  absolute inset-0 left-[60%] translate-y-16 trailertext xlm:hidden" />

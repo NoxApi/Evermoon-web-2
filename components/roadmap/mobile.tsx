@@ -39,8 +39,8 @@ export const RoadmapM = () => {
 
   function HeaderDesktop() {
     return (
-      <div className="mt-[5vw]">
-        <div className="flex flex-col items-center mr-auto z-0   justify-center">
+      <div className="mt-[5vw] ">
+        <div className="flex flex-col items-center  z-0   justify-center">
           <Links title="HOME" section={"#Home"} current={true} />
           <Links title="EXOLORE" section={"#Playandearn"} current={false} />
           <Links title="TOKENOMIC" section={"#Tokenomics"} current={false} />
@@ -71,12 +71,12 @@ interface LinkProp {
     const {setsection} = useGlobalContext()!
     return (
       <NextLink href={section}>
-        <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="px-2 min-w-[6rem] flex  items-center justify-center xlm:px-0 xlm:min-w-0 cursor-pointer ">
-          <div className="relative">
+        <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="  flex  items-center justify-center cursor-pointer ">
+          <div className="relative ">
             <div
-              className={`px-4 lgm:px-2 py-2 font-Glamode text-[3vw] text-center whitespace-nowrap transition-all duration-300
+              className={` font-Glamode text-[3vw] leading-[6.5vw] text-center whitespace-nowrap transition-all duration-300
                ${isHover ? 'text-gold' : 'text-white'} ${
-                isHover && '-translate-y-0'
+                isHover && ''
               }`}
             >
               {title}
