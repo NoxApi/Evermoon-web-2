@@ -19,7 +19,7 @@ export function Link({ title, section, current }: LinkProp) {
       <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
         <div className="relative">
           <div
-            className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.5vw] text-center whitespace-nowrap transition-all duration-300
+            className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.2vw] text-center whitespace-nowrap transition-all duration-300
              ${isHover ? 'text-gold' : 'text-white'} ${
               isHover && '-translate-y-1'
             }`}

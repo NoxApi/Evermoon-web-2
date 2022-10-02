@@ -17,7 +17,6 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false)
-  console.log(isHover)
   let width = "w-0"
   if (isHover)
     width = " w-full "
@@ -70,7 +69,7 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
         <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
         <div className="relative">
           <div
-            className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.5vw]  text-center whitespace-nowrap transition-all duration-300
+            className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.2vw]  text-center whitespace-nowrap transition-all duration-300
              ${isHover ? 'text-gold' : 'text-white'} ${
               isHover && '-translate-y-1'
             }`}
@@ -145,7 +144,7 @@ function HeaderMobile() {
               leaveTo="opacity-0 translate-x-full"
             >
               <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-bgs8m bg-cover shadow-xl ">
-                <div className="absolute inset-0 -z-10">
+                <div className="relative inset-0 -z-10">
                   <NextImage
                     layout="fill"
                     objectFit="cover"
@@ -169,14 +168,11 @@ function HeaderMobile() {
 
                 <div className="mt-12 mx-4">
                   <NLink title="HOME" href="#Home" />
-                  <NLink title="ABOUT THE GAME" href="#Playandearn" />
-                  <NLink title="FEATURE" href="#Feature" />
-                  <NLink title="MAP" href="#Map"  />
-                  <NLink title="HEROES" href="#Heroes" />
-                  <NLink title="TOKENOMIC" href="#Tokenomic" />
-                  <NLink title="TEAM" href="#Team"  />
+                  <NLink title="EXPLORE" href="#Playandearn" />
+                  <NLink title="TOKENOMIC" href="#Tokenomics" />
+                  <NLink title="TEAM" href="#Teamm"  />
                   <NLink title="PARTNER" href="#Partner" />
-                  <NLink title="ROADMAP" href="#Roadmap" />
+                  <NLink title="ROADMAP" href="#Roadmapm" />
                   <NextLink href="https://docs.evermoon.games/evermoon/">
                     <a className="block font-Glamode m-6 mt-0 text-white mdm:text-2xl">WHITE PAPER</a>
                   </NextLink>

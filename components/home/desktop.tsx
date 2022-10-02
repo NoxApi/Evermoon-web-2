@@ -52,7 +52,6 @@ export default function HomeD() {
   const [open,setopen] = useState(false)
   return (
     <section
-      id="Home"
       className="relative  h-[50vw] w-full overflow-hidden bg-bgs1 bg-cover " 
     >
       <ModalController status={open} setStatus={setopen}/>

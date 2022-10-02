@@ -24,7 +24,6 @@ export const Tokenomics = () => {
   return (
     <>
     <section
-      id="Tokenomic"
       className="h-[50vw] lgm:h-[140vw] max-w-[1920px] overflow-hidden bg-bgs4 lgm:bg-bgs4m bg-cover font-Josefin -mb-[5px] lgm:hidden" 
     > 
       <div className='relative w-[auto]  flex justify-center items-center mx-auto flex-col mt-[10vw]  '>

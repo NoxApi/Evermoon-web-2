@@ -11,13 +11,15 @@ import Divider from '../assets/tribe/Divider.svg'
 import  Features from '../components/feature'
 import  FeaturesD from '../components/feature/desktop'
 import  Heroes  from '../components/heroes'
-import BGRune from '../assets/runes/bg.png'
+import  HeroesM  from '../components/heroes/mobile'
 import { Tokenomics } from '../components/tokenomics'
 import { TokenomicsM } from '../components/tokenomics/tablet'
 import { Team } from '../components/team'
 import { TeamD } from '../components/team/desktop'
 import { Roadmap } from '../components/roadmap'
+import { RoadmapM } from '../components/roadmap/mobile'
 import { Partner } from '../components/partner'
+import { PartnerM } from '../components/partner/mobile'
 import {useEffect,useRef,useState} from 'react'
 import MAP from '../components/map'
 import nav from '../assets/nav.svg'
@@ -29,8 +31,6 @@ import { useGlobalContext } from '../state'
 
 const Index: NextPage = () => {
   const {section,setsection} = useGlobalContext()!
-  const [scrollY, setScrollY] = useState(0);
-  var refy= useRef(0);
   const home = useRef<null | HTMLDivElement>(null);
   const roadmap = useRef<null | HTMLDivElement>(null);
   const hero = useRef<null | HTMLDivElement>(null);
@@ -49,32 +49,32 @@ const Index: NextPage = () => {
       if (section > 1)
        setsection(section-1)
     }
+
+    useEffect(()=>{
     if (section == 1)
-    home.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 2)
-    playtoearn.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 3)
-    feature.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 4)
-    map.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 5)
-    hero.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 6)
-    token.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 7)
-    team.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 8)
-    partner.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 9)
-    roadmap.current?.scrollIntoView({behavior: 'smooth'});
-    if (section == 10)
-    footerref.current?.scrollIntoView({behavior: 'smooth'});
+      home.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 2)
+      playtoearn.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 3)
+      feature.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 4)
+      map.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 5)
+      hero.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 6)
+      token.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 7)
+      team.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 8)
+      partner.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 9)
+      roadmap.current?.scrollIntoView({behavior: 'smooth'});
+    else if (section == 10)
+      footerref.current?.scrollIntoView({behavior: 'smooth'});
+    },[section]
+
+    )
     
-  useEffect(() => {
-    
-  }, []);
-   
-  
   return (
     <Layout>
       <Head>
@@ -84,10 +84,10 @@ const Index: NextPage = () => {
       </Head>
       <div className='lgm:hidden'>
         <ReactScrollWheelHandler
-          upHandler={(e) => sub()}
-          downHandler={(e) => add()}
+          upHandler={() => sub()}
+          downHandler={() => add()}
           preventScroll={true}
-          timeout={200}
+          timeout={150}
           // wheelConfig={[0,0,0,0]}
         >
           <main>
@@ -160,12 +160,11 @@ const Index: NextPage = () => {
                 <PAE/>
                 <Features />
                 <MAP />
-                <Heroes />
+                <HeroesM />
                 <TokenomicsM />
                 <Team />
-                <Partner/>
-                <Roadmap />
-                <Footer />
+                <PartnerM/>
+                <RoadmapM />
             </div>
           </main>
       </div>

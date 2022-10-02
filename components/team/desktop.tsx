@@ -12,7 +12,6 @@ const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"www.google.com"},
 export const TeamD = () => {
   return (
     <section
-      id=""
       className="relative h-[50vw] w-full overflow-hidden bg-bgs5 bg-cover  bg-[#04032C] " 
     >
       <div className=" mt-[4vw]  mx-auto font-Josefin text-gold-light text-[5vw] text-center relative">

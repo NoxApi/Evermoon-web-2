@@ -8,7 +8,6 @@ import footer from '../../assets/home/bottom.svg'
 export default function PAED() {
   return (
     <section
-      id="Playandearn"
       className="relative bg-bgs2 bg-cover h-[50vw]" 
     >   
         <Image alt='icon' src={evm} className="w-[31vw] absolute right-[13vw] evmanimate  "/> \

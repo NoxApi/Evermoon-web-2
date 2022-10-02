@@ -24,7 +24,7 @@ export const TokenomicsM = () => {
   return (
     <>
     <section
-      id="Tokenomic"
+      id="Tokenomics"
       className="h-[50vw] lgm:h-[140vw] max-w-[1920px] overflow-hidden bg-bgs4 lgm:bg-bgs4m lg:bg-center lgm:bg-cover font-Josefin -mb-[5px] lg:hidden" 
     > 
       
