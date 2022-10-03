@@ -646,19 +646,39 @@ img {
     text-shadow: 2px 2px #000000;
 }
 
-.pintop {
-  z-index: 30;
-  width: 100px;
-  height: 100px;
+.pintop1 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
   background-image: url("/jungt.png");
   background-repeat: no-repeat;
-  animation: play 1.5s steps(48) forwards; 
+  animation: play2 1.5s steps(48) forwards; 
   background-size:cover;
 }
-@keyframes play {
+@keyframes play1 {
   from {background-position-x: 0vw;}
   to {background-position-x: -4800px;}
 }
+@keyframes play2 {
+  from {background-position-x: 0vw;}
+  to {background-position-x: -7200px;}
+}
 .navbar{
   transition: width 0.5s ease-in-out;
+}
+
+
+@media screen and (max-width: 1279px) {
+  .pintop1 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .pintop1 {
+    width: 100px;
+    height: 100px;
+    animation: play1 1.5s steps(48) forwards; 
+  }
 }

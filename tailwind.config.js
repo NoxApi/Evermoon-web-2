@@ -52,9 +52,9 @@ module.exports = {
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1536px',
+      '2xl': '1600px',
       // => @media (min-width: 1536px) { ... }
-      '2xlm': {'max': '1535px'},
+      '2xlm': {'max': '1599px'},
       // => @media (max-width: 1535px) { ... }
 
       'fscreen': '1920px',
