@@ -86,7 +86,7 @@ export default function HomeD() {
         </div>
         <div className='md:hidden h-[30vw] flex flex-col justify-start items-center bg-black'>
           <div className='relative'>
-          <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
             <div className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
               <Image src={card3}  alt="AppStore" className='' />
             </div>
@@ -99,9 +99,11 @@ export default function HomeD() {
         
         <div className=' absolute  bottom-0 left-0 z-30 translate-y-[-3vw] translate-x-[4vw] w-[25vw] h-[7vw] '>
           <div className='relative'>
-            <div onClick={()=>setopen(true)} className="w-[3.3vw]  absolute inset-0 left-[19%] translate-y-[1.2vw] trailer z-50  cursor-pointer mix-blend-normal hover:mix-blend-luminosity  ">
+          <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <div className="w-[3.3vw]  absolute inset-0 left-[19%] translate-y-[1.2vw]  z-50  cursor-pointer mix-blend-normal hover:mix-blend-luminosity  ">
               <Image src={card3}  alt="AppStore"  />
             </div>
+          </LinkNewTab>
               <Image src={card1} alt="AppStore" className=" absolute top-[-1.5vw] card1 z-20" />
               <Image src={card2} alt="AppStore" className=" absolute top-[-1.5vw] card2 z-30" />
               <Image src={card4} alt="AppStore" className=" absolute inset-0 left-[60%] translate-y-[2vw] trailertext" />
