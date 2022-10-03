@@ -10,7 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
  });
   return(
   <GlobalProvider>
-    {!isloading? (<Component {...pageProps} />):(<a className='text-white text-5xl'>loading</a>)}
+    {isloading&&<div className='w-full h-full flex justify-center items-center absolute inset-0 z-30'>
+        <a className='text-6xl heroes-text-gold'>LOADING</a>
+        </div>}
+    <Component {...pageProps} />
   </GlobalProvider>   
   )
 }
