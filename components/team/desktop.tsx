@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import Image from '../image'
 import linkin from "../../assets/team/linkin.png"
-import Link from 'next/link'
+import LinkNewTab from '../LinkNewTab'
 
 
-const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"www.google.com"},
-              {name:"Tanachot A.",path:'t2',role:"CTO,CFO,SMART CONTRACT & WEB APPLICATION DEVELOPER" ,link:"xx"},
-              {name:"Suphitcha L.",path:'t3',role:"CMO" ,link:"xx"},
-              {name:"Chonnathan W.",path:'t4',role:"CPO,GAME DIRECTOR,VFX DEVELOPER",link:""}]
-
-export const TeamD = () => {
-  return (
+const teams = [{name:"Patipol A.",path:'t1',role:"CEO",link:"https://www.linkedin.com/in/patipol-anantarattana-007502214"},
+                {name:"Tanachot A.",path:'t2',role:"CTO,CFO,SMART CONTRACT & WEB APPLICATION DEVELOPER" ,link:"https://www.linkedin.com/in/tanachot"},
+                {name:"Suphitcha L.",path:'t3',role:"CMO" ,link:"https://www.linkedin.com/in/suphitcha-latthikul-494588160"},
+                {name:"Chonnathan W.",path:'t4',role:"CPO,GAME DIRECTOR,VFX DEVELOPER",link:""}]
+                export const TeamD = () => {
+                  return (
     <section
       className="relative h-[50vw] w-full overflow-hidden bg-bgs5 bg-cover  bg-[#04032C] " 
     >
@@ -61,7 +60,7 @@ const ImageTeam = ({
           <a className='text-[0.6vw]  text-[#F1E3B5] '>{role}</a>
         </div>
         <div  className='flex items-start cursor-pointer'>
-          {link&&<Link href={link} ><Image alt="" className={`w-[3vw] mt-[0.7vw]`} src={linkin} priority /></Link>}
+          {link&&<LinkNewTab href={link}><Image alt="" className={`w-[3vw] mt-[0.7vw]`} src={linkin} priority /></LinkNewTab>}
         </div>
       </div>
     </div>

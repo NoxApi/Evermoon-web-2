@@ -44,14 +44,14 @@ export const Tokenomics = () => {
         </div>
         {/* usecase */}
         <div className='flex h-[26vw] '>
-        <div className='flex justify-end items-center lgm:hidden'>
-            <Image src={esd0} alt="q122" className={` w-[21vw]  `+ (isevm?` opacity-0 `:` opacity-1 `)} priority />
+        <div className='flex justify-end items-center lgm:hidden w-[28vw]'>
+            <Image src={esd0} alt="q122" className={`w-[28vw]`+ (isevm?` opacity-0 `:` opacity-1 `)} priority />
           </div>
-          <div className='w-[19vw] lgm:w-[50vw]'>
+          <div className='w-[19vw] '>
           <Image src={effect} alt="q122" className=" w-[50vw] mix-blend-overlay lg:hidden" priority />
           </div>
           {isevm?(
-            (<div className='flex flex-col items-start justify-center w-[20.9vw] lgm:w-[50vw]  '>
+            (<div className='flex flex-col items-start justify-center w-[27vw] lgm:w-[50vw]  '>
             <Image src={ed1} alt="q122" className=" w-full mt-2" priority />
             <Image src={ed2} alt="q122" className=" w-full mt-2" priority />
             <Image src={ed3} alt="q122" className=" w-full mt-2" priority />
@@ -59,7 +59,7 @@ export const Tokenomics = () => {
             <Image src={ed5} alt="q122" className=" w-full mt-2" priority />  
           </div>)
           ):
-          (<div className='flex flex-col items-start justify-center w-[20.9vw] lgm:w-[50vw] '>
+          (<div className='flex flex-col items-start justify-center w-[27vw] lgm:w-[50vw] '>
             <Image src={esd1} alt="q122" className=" w-full mt-2" priority />
             <Image src={esd2} alt="q122" className=" w-full mt-2" priority />
             <Image src={esd3} alt="q122" className=" w-full mt-2" priority />
@@ -71,10 +71,10 @@ export const Tokenomics = () => {
         {isevm?(
       <div className='flex flex-col items-center lgm:items-start lgm:-mt-[15vw]'>
         <div className='flex flex-col w-[40vw]  lgm:ml-[5vw]'>
-          <div className="   font-Josefin text-[#F1E3B5]   text-[2.5vw] text-center inset-[0.1vw] h-[2.5vw]">
+          <div className="   font-Josefin text-[#F1E3B5]   text-[2.2vw] text-center inset-[0.1vw] h-[2.5vw]">
             EVERMOON
           </div>
-          <div className="   font-Josefin text-[#F1E3B5]   text-[2.5vw] text-center inset-[0.1vw]">
+          <div className="   font-Josefin text-[#F1E3B5]   text-[2.2vw] text-center inset-[0.1vw]">
             TOKEN
           </div>
           <div className="   font-Josefin text-white text-[1.3vw]  text-center ">
@@ -85,7 +85,7 @@ export const Tokenomics = () => {
       ):(
       <div className='flex flex-col items-center lgm:items-start lgm:-mt-[15vw]'>
         <div className='flex flex-col w-[40vw] lgm:ml-[5vw]'>
-          <div className="   font-Josefin text-[#F1E3B5]   text-[2vw] text-center ">
+          <div className="   font-Josefin text-[#F1E3B5]   text-[2.2vw] text-center ">
             EVERSTONE
           </div>
           <div className="  font-Josefin text-white text-[1vw]  text-center ">

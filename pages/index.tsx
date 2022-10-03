@@ -22,6 +22,7 @@ import { Partner } from '../components/partner'
 import { PartnerM } from '../components/partner/mobile'
 import {useEffect,useRef,useState} from 'react'
 import MAP from '../components/map'
+import MAPM from '../components/map/mobile'
 import nav from '../assets/nav.svg'
 import down from '../assets/down.svg'
 import up from '../assets/up.svg'
@@ -94,11 +95,13 @@ const Index: NextPage = () => {
             <div className="relative z-0">
             <div className='fixed right-7 top-[20vw] h-[10.5vw] w-[3vw] z-50 '>
               <div className='relative w-full h-full flex flex-col justify-between items-center'>
-                <div onClick={()=>sub()} className='w-full z-[60] mt-[1vw] flex justify-center cursor-pointer'>
+                <div onClick={()=>sub()} className='w-full z-[60] mt-[0.5vw] flex justify-center cursor-pointer'>
                   <Image src={up} alt='' className={"w-[80%]"}/>
                 </div>
-              <Image src={nav} alt='' className={"w-full absolute"}/>
+                <Image src={nav} alt='' className={"w-full absolute"}/>
+              {section!==1?(<a className='text-[1vw] font-Glamode text-[#637F9E] z-30 mt-[0.6vw]'>{section-1}</a>):(<a className='text-[1vw] font-Glamode z-30 mt-[0.6vw] invisible'>{section-1}</a>)}
               <a className='text-[1.5vw] font-Glamode text-[#F1E3B5] z-30'>{section}</a>
+              {section!==10?(<a className='text-[1vw] font-Glamode text-[#637F9E] z-30 mb-[0.7vw]'>{section+1}</a>):(<a className='text-[1vw] font-Glamode z-30 mb-[0.7vw] invisible'>{section-1}</a>)}
               <div onClick={()=>add()} className='w-full z-[60] mb-[1vw] flex justify-center cursor-pointer'>
                   <Image src={down} alt='' className={"w-[80%]"}/>
                 </div>
@@ -159,7 +162,7 @@ const Index: NextPage = () => {
               </div>
                 <PAE/>
                 <Features />
-                <MAP />
+                <MAPM />
                 <HeroesM />
                 <TokenomicsM />
                 <Team />

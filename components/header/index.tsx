@@ -22,10 +22,11 @@ const Header = () => {
     width = " w-full "
   return (
     <header className="relative mx-auto w-full z-50 ">
-      <div className="absolute top-0 left-0 right-0 w-full h-[8vw] bg-black-gradient" />
+      <div className="absolute top-0 left-0 right-0 w-full h-[5vw] bg-black-gradient" />
+      <HeaderDesktop isHover={isHover} setIsHover={setIsHover}/>
       <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden cursor-pointer `+width }>
-        <div className='w-[88vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[12vw]'/>
-        <div className='flex ml-[11vw]'>
+        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw]'/>
+        <div className='flex ml-[12vw]'>
         <SubLink title="ABOUT THE GAME" section={2} current={false} />
         <SubLink title="FEATURES" section={3} current={false} />
         <SubLink title="MAP" section={4} current={false} />
@@ -45,7 +46,7 @@ const Header = () => {
             </a>
           </NextLink>
         </div>
-        <HeaderDesktop isHover={isHover} setIsHover={setIsHover}/>
+        
         <HeaderMobile />
       </div>
       
@@ -62,16 +63,16 @@ interface Prop {
 function HeaderDesktop({isHover,setIsHover}:Prop) {
 
   return (
-    <div className="hidden lg:flex w-full  ">
-      <div className="ml-8 flex items-start mr-auto z-0">
+    <div className="hidden lg:flex w-full ml-[10vw] ">
+      <div className="ml-[1.5vw] flex items-end mr-auto  h-[3.5vw] z-30 w-[55vw] justify-between px-[1vw]">
         <Link title="HOME" section={1} current={true} />
         
         <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
         <div className="relative">
           <div
-            className={`px-4 lgm:px-2 py-2 font-Glamode text-[1.2vw]  text-center whitespace-nowrap transition-all duration-300
+            className={`  font-Glamode text-[1.2vw]  text-center whitespace-nowrap transition-all duration-300
              ${isHover ? 'text-gold' : 'text-white'} ${
-              isHover && '-translate-y-1'
+              isHover && '-translate-y-[0.7vw]'
             }`}
           >
             {"EXPLORE"}

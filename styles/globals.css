@@ -648,16 +648,16 @@ img {
 
 .pintop {
   z-index: 30;
-  width: 6vw;
-  height: 6vw;
+  width: 100px;
+  height: 100px;
   background-image: url("/jungt.png");
   background-repeat: no-repeat;
-  animation: play 1.5s steps(40) forwards; 
+  animation: play 1.5s steps(48) forwards; 
   background-size:cover;
 }
 @keyframes play {
   from {background-position-x: 0vw;}
-  to {background-position-x: -239.7vw;}
+  to {background-position-x: -4800px;}
 }
 .navbar{
   transition: width 0.5s ease-in-out;

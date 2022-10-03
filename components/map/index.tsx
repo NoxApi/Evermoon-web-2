@@ -128,7 +128,7 @@ export default function MAP() {
         <div onClick={()=>setv(5)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=5&&<Image   src={pin} alt="icon" className='w-[1vw] absolute top-[7.8vw] right-[6.3vw]'/>}
         </div>
-        {videoplay==5&&<div className='pintop absolute top-[4vw] right-[1.45vw] ' />}
+        {videoplay==5&&<div className='pintop absolute ' />}
         <div onClick={()=>setv(4)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=4&&<Image   src={pin} alt="icon" className='w-[1vw] absolute top-[12.8vw] right-[3.3vw]'/>}
         </div>
