@@ -22,7 +22,7 @@ function show() {
   return(
   <GlobalProvider>
     {isloading&&<div className='w-full h-full flex justify-center items-center absolute inset-0 z-30'>
-        <a className='text-6xl heroes-text-gold'>LOADING</a>
+        <a className='text-6xl heroes-text-gold bg-bgs6'>LOADING</a>
         </div>}
     <Component {...pageProps} />
   </GlobalProvider>   
