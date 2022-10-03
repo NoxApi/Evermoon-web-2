@@ -9,12 +9,15 @@ module.exports = {
     extend: {
       backgroundImage: {
         'bgs1' : "url('../public/bgs1.png')",
-        'bgs2' : "url('../public/bgs2.png')",
+        'bgs1t' : "url('../public/bgs1t.png')",
+        'bgs2' : "url('../public/bgs2.svg')",
         'bgs3' : "url('../public/bgs3.png')",
+        'bgs3f' : "url('../public/bgs3f.png')",
         'bgs4' : "url('../public/bgs4.png')",
         'bgs5' : "url('../public/bgs5.png')",
         'bgs6' : "url('../public/bgs6.svg')",
-        'bgs7' : "url('../public/bgs7.png')",
+        'bgs7' : "url('../public/bgs7.svg')",
+        'bgs9' : "url('../public/bgs9.svg')",
         'bgs7m' : "url('../public/bgs7m.svg')",
         'bgs8m' : "url('../public/bgs8m.svg')",
         'bgs6m' : "url('../public/bgs6m.svg')",
@@ -49,9 +52,9 @@ module.exports = {
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1536px',
+      '2xl': '1600px',
       // => @media (min-width: 1536px) { ... }
-      '2xlm': {'max': '1535px'},
+      '2xlm': {'max': '1599px'},
       // => @media (max-width: 1535px) { ... }
 
       'fscreen': '1920px',

@@ -2,7 +2,7 @@ import Image from '../image'
 import topc from '../../assets/map/topc.png'
 import botc from '../../assets/map/botc.png'
 import mm from '../../assets/map/minimap.svg'
-import FP from '../../assets/map/fullpin.png'
+import pin from '../../assets/map/pin.svg'
 import top from '../../assets/map/top.png'
 import jung from '../../assets/map/jungle.png'
 import mid from '../../assets/map/mid.png'
@@ -14,7 +14,7 @@ import jungb from '../../assets/map/jungle.svg'
 import midb from '../../assets/map/mid.svg'
 import botb from '../../assets/map/bot.svg'
 import MapMobile from './mobile'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function MAP() {
@@ -37,7 +37,6 @@ export default function MAP() {
   const [role4,setrole4]= useState("")
   const [role5,setrole5]= useState("")
 
-  console.log(v2)
   function setv(x:any){
     setv1("h-[0vw]")
     setv2("h-[0vw]")
@@ -87,12 +86,17 @@ export default function MAP() {
       setrole5("roleactivated")
     }
   }
+
+  
+  useEffect(() => {
+    
+  },[])
+
   return (
     <section
       id="Map"
       className="relative  w-full overflow-hidden bg-center h-[50vw] lgm:h-auto " 
     >
-      <MapMobile/>
       <div className='lgm:hidden'>
       <div className='z-20 w-[100%] absolute top-0 flex justify-center lgm:static'>
       <Image src={topc} alt="icon"  className='absolute w-[100%] lgm:hidden'/>
@@ -106,43 +110,51 @@ export default function MAP() {
 
 
 
-      <div  className='z-30 w-[30vw] absolute top-0 right-0 max-w-[600px] lgm:hidden'>
-        <div className='w-[100%] h-[100%]'>
+      <div  className='z-30 w-[500px] 2xlm:w-[400px] xlm:w-[300px] absolute top-0 right-0  lgm:hidden'>
+        <div className='w-[100%] h-[100%] relative'>
         <Image  src={mm} alt="icon" className=''/>
-        <div className={`absolute bottom-[11vw] right-[23.05vw] w-[0.5vw]  overflow-hidden  cursor-pointer z-30 flex items-end  pinanimate `+v2}>
-        <Image   src={FP} alt="icon" className='w-[1vw]'/>
+        <div onClick={()=>setv(1)} className='w-auto h-auto cursor-pointer'>
+        {videoplay!=1&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[65px] right-[303.5px] 2xl:right-[380px] 2xl:top-[94px] z-10 xlm:right-[230px] xlm:top-[50px]'/>}
         </div>
-        <div onClick={()=>setv(1)} className={`absolute bottom-[14vw] left-[2.3vw] w-[1.4vw] h-[3vw] overflow-hidden  cursor-pointer z-50 flex items-end  pinactivate `+status1}>
-        <Image   src={top} alt="icon" className='w-[7vw] absolute '/>
+        {videoplay==1&&<div className=' pintop1 absolute top-[5px] right-[225px] 2xl:right-[262px]  xlm:right-[166.7px] xlm:top-[6px]' />}
+        
+        
+        
+        
+        <div onClick={()=>setv(2)} className='w-auto h-auto cursor-pointer'>
+        {videoplay!=2&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[90px] right-[273px] 2xl:right-[328.5px] 2xl:top-[125px] z-10 xlm:right-[198.5px] xlm:top-[79px]'/>}
         </div>
-        <div className={`absolute bottom-[14vw] right-[26.75vw] w-[0.5vw] overflow-hidden  cursor-pointer z-40 flex items-end pinanimate `+v1}>
-        <Image   src={FP} alt="icon" className='w-[1vw]'/>
+        {videoplay==2&&<div className='pintop1  absolute top-[36px] right-[195px] 2xl:right-[210px] xlm:right-[135.4px] xlm:top-[30px]' />}
+        
+        
+        
+        
+        <div onClick={()=>setv(3)} className='w-auto h-auto cursor-pointer'>
+        {videoplay!=3&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[85px] right-[188.5px] 2xl:right-[228.5px] 2xl:top-[90px] z-10 xlm:right-[135px] xlm:top-[60px]'/>}
         </div>
-        <div onClick={()=>setv(2)} className={`absolute bottom-[11vw] left-[6vw] w-[1.4vw] h-[3vw] overflow-hidden  cursor-pointer z-50 flex items-end  pinactivate `+status2}>
-        <Image   src={jung} alt="icon" className='w-[7vw] absolute '/>
+        {videoplay==3&&<div className='pintop1  absolute top-[31px] 2xl:top-[5px] right-[110px] xlm:right-[72.5px] xlm:top-[17px] ' />}
+        
+        
+        
+        
+        
+        <div onClick={()=>setv(4)} className='w-auto h-auto cursor-pointer'>
+        {videoplay!=4&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[190px] right-[45px] z-10 2xl:right-[85.5px] 2xl:top-[225px] xlm:right-[80px] xlm:top-[85px]'/>}
         </div>
-
-        <div className={`absolute bottom-[12vw] right-[14.56vw] w-[0.5vw] overflow-hidden  cursor-pointer z-40 flex items-end pinanimate `+v3}>
-        <Image   src={FP} alt="icon" className='w-[1vw]'/>
+        {videoplay==4&&<div className='pintop1  absolute top-[136px] -right-[32.5px] xlm:right-[17.5px] xlm:top-[40px]' />}
+        
+        
+        
+        
+        
+        <div onClick={()=>setv(5)} className='w-auto h-auto cursor-pointer'>
+        {videoplay!=5&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[115px] right-[95px] z-10 2xl:right-[135.5px] 2xl:top-[140px] xlm:right-[50px] xlm:top-[137px]'/>}
         </div>
-        <div onClick={()=>setv(3)} className={`absolute bottom-[12vw] left-[14.5vw] w-[1.4vw] h-[3vw] overflow-hidden  cursor-pointer z-50 flex items-end  pinactivate `+status3}>
-        <Image   src={mid} alt="icon" className='w-[7vw] absolute '/>
-        </div>
-
-        <div className={`absolute bottom-[4vw] right-[11.56vw] w-[0.5vw] overflow-hidden  cursor-pointer z-40 flex items-end pinanimate `+v4}>
-        <Image   src={FP} alt="icon" className='w-[1vw]'/>
-        </div>
-        <div onClick={()=>setv(4)} className={`absolute bottom-[4vw] left-[17.5vw] w-[1.4vw] h-[3vw] overflow-hidden  cursor-pointer z-50 flex items-end  pinactivate `+status4}>
-        <Image   src={bot} alt="icon" className='w-[7vw] absolute '/>
-        </div>
-
-        <div className={`absolute bottom-[7.1vw] right-[4.56vw] w-[0.5vw] overflow-hidden  cursor-pointer z-40 flex items-end pinanimate `+v5}>
-        <Image   src={FP} alt="icon" className='w-[1vw]'/>
-        </div>
-        <div onClick={()=>setv(5)} className={`absolute bottom-[7vw] left-[24.45vw] w-[1.5vw] h-[3vw] overflow-hidden  cursor-pointer z-50 flex items-end  pinactivate `+status5}>
-        <Image   src={sup} alt="icon" className='w-[7vw] absolute '/>
-        </div>
-
+        {videoplay==5&&<div className='pintop1  absolute top-[54px] right-[17px] xlm:right-[-13px] xlm:top-[91px]' />}
+        
+        
+        
+        
         </div>
       </div>
     
@@ -153,18 +165,7 @@ export default function MAP() {
         muted
       >
       
-         <source src="/1.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
-
-      {videoplay==2&& <video
-        className="w-[100%] right-0"
-        loop
-        autoPlay
-        muted
-      >
-         {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
-         <source src="/2.webm#t=0.1" type="video/webm" /> 
+         <source src="/S1.mp4#t=0.1" type="video/mp4" />
       </video>}
 
       {videoplay==3&& <video
@@ -173,10 +174,9 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/3.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+         {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
+         <source src="/S2.mp4#t=0.1" type="video/mp4" />
       </video>}
-
 
       {videoplay==4&& <video
         className="w-[100%] right-0"
@@ -184,7 +184,18 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/4.webm#t=0.1" type="video/webm" />
+         <source src="/S3.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+      </video>}
+
+
+      {videoplay==2&& <video
+        className="w-[100%] right-0"
+        loop
+        autoPlay
+        muted
+      >
+         <source src="/S4.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
@@ -194,7 +205,7 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/5.webm#t=0.1" type="video/webm" />
+         <source src="/S5.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 

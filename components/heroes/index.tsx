@@ -4,7 +4,6 @@ import { Transition } from '@headlessui/react'
 import topc from '../../assets/heroes/topc.png'
 import botc from '../../assets/heroes/botc.png'
 import frame from '../../assets/heroes/frame.svg'
-import HeroMobile from './mobile'
 import { useState } from 'react'
 import { HeroList } from './herolist'
 
@@ -19,10 +18,9 @@ export default function Heroes() {
   }
   return (
     <section
-      id="Heroes"
+      id=""
       className="" 
     >
-      <HeroMobile/>
       <div className='relative h-[50vw] w-full overflow-hidden bg-center font-Josefin max-w-[1920px] lgm:hidden'> 
       <Image src={topc} alt="icon" className=' w-[100%] absolute top-0'/>
       <BG index={heroes[selector].index} isskin={isskin} />
@@ -32,13 +30,19 @@ export default function Heroes() {
         <div className=' h-[auto] flex justify-start items-center absolute top-[24%] px-[7%] '>  
           <Role role={heroes[selector].role}/>
         </div> 
-        <div className=' h-[auto] flex justify-center items-center absolute top-[37%] left-[4%] w-[40%]'>  
+        <div className=' h-[auto] flex justify-center items-center absolute top-[40%] left-[4%] w-[40%]'>  
           <a className='text-[3.5vw] heroes-text-gold text-center'>{heroes[selector].name}</a>
         </div> 
-        <div className=' h-[auto] flex justify-center items-center absolute top-[52.5%] left-[16.4%] '>  
+        {isskin&&<div className=' h-[auto] flex justify-end items-end absolute top-[23%] right-[58.5%] w-[40%]'>  
+          <a className='text-[1.4vw] text-white text-right'>{heroes[selector].sname}</a>
+        </div>}
+        <div className=' h-[auto] flex justify-center items-center absolute top-[57%] left-[16.4%] '>  
           <Tribe tribe={heroes[selector].tribe}/>
         </div> 
-        <div className=' flex justify-center items-start absolute top-[65%] left-[1%] px-[4vw] w-[45vw] '>  
+        {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[30%] left-[31.4%] '>  
+          <Skintype role={heroes[selector].rarity}/>
+        </div> }
+        <div className=' flex justify-center items-start absolute top-[69%] left-[1%] px-[4vw] w-[45vw] '>  
           <a  className='text-[1.1vw] text-center leading-[1.4vw]'>{heroes[selector].des}</a>
         </div> 
       </div>
@@ -75,6 +79,28 @@ const Role = ({
     <div>
       {image && (      
         <Image src={image} alt="icon" className='w-[15vw] ' priority/> 
+      )}
+    </div>
+  )
+}
+
+const Skintype = ({
+  role,
+}: {
+  role: number
+}) => {
+  const [image, setImage] = useState<StaticImageData | null>(null)
+
+  ;(function (imageName) {
+    import(`../../assets/heroes/r${role}.svg`).then((image) =>
+      setImage(image.default)
+    )
+  })(role)
+
+  return (
+    <div>
+      {image && (      
+        <Image src={image} alt="icon" className='w-[10vw] ' priority/> 
       )}
     </div>
   )

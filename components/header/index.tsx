@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Moon from '../assets/moon.png'
 import Image from '../image'
-import { ComingSoonLink, Link } from './Link'
+import { ComingSoonLink, Link , SubLink } from './Link'
 import NextLink from 'next/link'
 import Logo from '../../assets/logo.png'
 import Hamburger from '../../assets/hamburger.svg'
@@ -9,21 +9,36 @@ import x from '../../assets/x.svg'
 import bg from '../../assets/starbg.svg'
 import NextImage from 'next/image'
 import MarketplaceSmall from '../../assets/marketsmall.svg'
-import marketplace from '../../assets/header/marketplace.svg'
+import login from '../../assets/header/marketplace.svg'
 import team from '../../assets/header/team.svg'
+import Line from '../../assets/header/line.png'
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+
 const Header = () => {
+  const [isHover, setIsHover] = useState(false)
+  let width = "w-0"
+  if (isHover)
+    width = " w-full "
   return (
-    <header className="relative mx-auto w-full z-50">
-      <div className="hidden 2xl:block absolute inset-0 w-full h-32 bg-gold-gradient-inv" />
-      <div className="absolute top-0 left-0 right-0 w-full h-36 bg-black-gradient" />
-      <div className="px-4 md:px-10 py-5 flex items-center">
+    <header className="relative mx-auto w-full z-50 ">
+      <div className="absolute top-0 left-0 right-0 w-full h-[5vw] bg-black-gradient" />
+      <HeaderDesktop isHover={isHover} setIsHover={setIsHover}/>
+      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden cursor-pointer `+width }>
+        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw]'/>
+        <div className='flex ml-[12vw]'>
+        <SubLink title="ABOUT THE GAME" section={2} current={false} />
+        <SubLink title="FEATURES" section={3} current={false} />
+        <SubLink title="MAP" section={4} current={false} />
+        <SubLink title="HEROES" section={5} current={false} /> 
+        </div>
+      </div>
+      <div className="px-4 md:px-[9vw] py-5 flex items-center">
         <div className="">
           <NextLink href="/">
             <a>
               <Image
-                className="w-28 md:w-32"
+                className="w-28 lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
                 src={Logo}
                 alt="logo"
                 blur={false}
@@ -31,36 +46,59 @@ const Header = () => {
             </a>
           </NextLink>
         </div>
-        <HeaderDesktop />
+        
         <HeaderMobile />
       </div>
+      
+      
     </header>
   )
 }
 
 export default Header
+interface Prop {
+  isHover: any
+  setIsHover: any
+}
+function HeaderDesktop({isHover,setIsHover}:Prop) {
 
-function HeaderDesktop() {
   return (
-    <div className="hidden xl:flex w-full ">
-      <div className="ml-8 flex items-center mr-auto z-0">
-        <Link title="HOME" href="#Home" current={true} />
-        <Link title="ABOUT THE GAME" href="#Playandearn" current={false} />
-        <Link title="FEATURES" href="#Feature" current={false} />
-        <Link title="MAP" href="#Map" current={false} />
-        <Link title="HEROES" href="#Heroes" current={false} /> 
-        <Link title="TOKENOMIC" href="#Tokenomic" current={false} />
-        <Link title="TEAM" href="#Team" current={false} />
-        <Link title="PARTNER" href="#Partner" current={false} />
-        <Link title="ROADMAP" href="#Roadmap" current={false} />
+    <div className="hidden lg:flex w-full ml-[10vw] ">
+      <div className="ml-[1.5vw] flex items-end mr-auto  h-[3.5vw] z-30 w-[55vw] justify-between px-[1vw]">
+        <Link title="HOME" section={1} current={true} />
+        
+        <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="cursor-pointer px-2 min-w-[6rem] flex flex-col items-center justify-center xlm:px-0 xlm:min-w-0 ">
+        <div className="relative">
+          <div
+            className={`  font-Glamode text-[1.2vw]  text-center whitespace-nowrap transition-all duration-300
+             ${isHover ? 'text-gold' : 'text-white'} ${
+              isHover && '-translate-y-[0.7vw]'
+            }`}
+          >
+            {"EXPLORE"}
+          </div>
+          <div
+            className={`${
+              !isHover ? 'opacity-0' :  'opacity-100'
+            } absolute left-0 right-0 bottom-0 w-[5vw]  mx-auto translate-y-1 transition-all duration-500 `}
+          >
+            <Image src={Line} alt="Line" blur={false} />
+          </div>
+        </div>
+      </a>
+        <Link title="TOKENOMIC" section={6} current={false} />
+        <Link title="TEAM" section={7} current={false} />
+        <Link title="PARTNER" section={8} current={false} />
+        <Link title="ROADMAP" section={9} current={false} />
       </div>
 
       <div className="flex items-center">
         {/* <Image src={team} alt="team" className="w-24 translate-x-1" /> */}
         <div className="relative">
-          <Image src={marketplace} alt="marketplace" className="w-44" />
+          {/* <Image src={login} alt="marketplace" className="w-44" /> */}
         </div>
       </div>
+      
     </div>
   )
 }
@@ -74,7 +112,7 @@ function HeaderMobile() {
     setIsOpen(false)
   }
   return (
-    <div className="xl:hidden w-full flex justify-end ">
+    <div className="lg:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
         <Image className="w-8 ml-auto " src={Hamburger} alt="logo" />
       </button>
@@ -107,7 +145,7 @@ function HeaderMobile() {
               leaveTo="opacity-0 translate-x-full"
             >
               <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-bgs8m bg-cover shadow-xl ">
-                <div className="absolute inset-0 -z-10">
+                <div className="relative inset-0 -z-10">
                   <NextImage
                     layout="fill"
                     objectFit="cover"
@@ -131,14 +169,11 @@ function HeaderMobile() {
 
                 <div className="mt-12 mx-4">
                   <NLink title="HOME" href="#Home" />
-                  <NLink title="ABOUT THE GAME" href="#Playandearn" />
-                  <NLink title="FEATURE" href="#Feature" />
-                  <NLink title="MAP" href="#Map"  />
-                  <NLink title="HEROES" href="#Heroes" />
-                  <NLink title="TOKENOMIC" href="#Tokenomic" />
-                  <NLink title="TEAM" href="#Team"  />
+                  <NLink title="EXPLORE" href="#Playandearn" />
+                  <NLink title="TOKENOMIC" href="#Tokenomics" />
+                  <NLink title="TEAM" href="#Teamm"  />
                   <NLink title="PARTNER" href="#Partner" />
-                  <NLink title="ROADMAP" href="#Roadmap" />
+                  <NLink title="ROADMAP" href="#Roadmapm" />
                   <NextLink href="https://docs.evermoon.games/evermoon/">
                     <a className="block font-Glamode m-6 mt-0 text-white mdm:text-2xl">WHITE PAPER</a>
                   </NextLink>

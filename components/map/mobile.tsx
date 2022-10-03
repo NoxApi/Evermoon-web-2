@@ -26,22 +26,25 @@ export default function MapMobile(){
    if (lane==1){
       role1 = "roleactivated"
    }
-   if (lane==2){
+   else if (lane==2){
       role2 = "roleactivated"
    }
-   if (lane==3){
+   else if (lane==3){
       role3 = "roleactivated"
    }
-   if (lane==4){
+   else if (lane==4){
       role4 = "roleactivated"
    }
-   if (lane==5){
+   else if (lane==5){
       role5 = "roleactivated"
    }
    useEffect(() => { 
-      console.log(lane)
     });
  return(
+   <section
+      id="Map"
+      className="relative  w-full overflow-hidden bg-center h-[50vw] lgm:h-auto " 
+    >
     <div className='lg:hidden font-Josefin'>
    <div className='h-[58.4vw] relative'>
     <Image src={topcm} alt="icon"  className=' w-[100%] absolute z-[-10]'/>
@@ -81,12 +84,57 @@ export default function MapMobile(){
       <Image src={supb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role5} />
    </div>
    <div className='h-[98vw] flex items-start'>
-    <Image src={pic1} alt="icon"  className={` w-[100%] opacity-0 roleo absolute -z-10 `+role1}/>
-    <Image src={pic1} alt="icon"  className={` w-[100%] opacity-0 roleo absolute `+role2}/>
-    <Image src={pic1} alt="icon"  className={` w-[100%] opacity-0 roleo absolute `+role3}/>
-    <Image src={pic2} alt="icon"  className={` w-[100%] opacity-0 roleo absolute `+role4}/>
-    <Image src={pic2} alt="icon"  className={` w-[100%] opacity-0 roleo absolute `+role5}/>
-    <div className='flex justify-between w-full px-[3vw] mt-[30vw]'>
+   {lane==1&& <video
+        className="w-[100%]  top-0 -z-10"
+        loop
+        autoPlay
+        muted
+      >
+      
+         <source src="/S1M.mp4#t=0.1" type="video/mp4" />
+      </video>}
+
+      {lane==3&& <video
+        className="w-[100%] right-0"
+        loop
+        autoPlay
+        muted
+      >
+         {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
+         <source src="/S2M.mp4#t=0.1" type="video/mp4" />
+      </video>}
+
+      {lane==4&& <video
+        className="w-[100%] right-0"
+        loop
+        autoPlay
+        muted
+      >
+         <source src="/S3M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+      </video>}
+
+
+      {lane==2&& <video
+        className="w-[100%] right-0"
+        loop
+        autoPlay
+        muted
+      >
+         <source src="/S4M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+      </video>}
+
+      {lane==5&& <video
+        className="w-[100%] right-0"
+        loop
+        autoPlay
+        muted
+      >
+         <source src="/S5M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+      </video>}
+    <div className='flex justify-between w-full px-[3vw] mt-[30vw] absolute'>
       <div>
       {lane!=1&&<div onClick={()=>setlane(lane-1)}>
          <Image src={left} alt="icon"  className={`w-[8vw]`}/>
@@ -99,7 +147,8 @@ export default function MapMobile(){
       </div>
     </div>
    </div>
-    <Image src={botcm} alt="icon"  className=' w-[100%] absolute bottom-0'/>
+    <Image src={botcm} alt="icon"  className=' w-[100%] absolute bottom-0 z-100'/>
     </div>
+    </section>
  )
 } 

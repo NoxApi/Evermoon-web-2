@@ -22,14 +22,20 @@ export default function HeroMobile(){
             <div className='w-[100%] h-[80vw] relative px-[10vw]'>
                     <Image src={frame} alt="icon" className=' -z-10 w-[80%] mx-auto absolute inset-0 '/>
                     <div className=' h-[auto] flex justify-start items-center absolute top-[4%] px-[3%] '>  
-                    <Role role={heroes[selector].role}/>
+                      <Role role={heroes[selector].role}/>
                     </div> 
                     <div className=' h-[auto] flex justify-center items-center absolute top-[13%] left-[30%] w-[40%]'>  
                     <a className='text-[9vw] heroes-text-gold text-center'>{heroes[selector].name}</a>
                     </div> 
+                    {isskin&&<div className=' h-[auto] flex justify-end items-end absolute top-[2%] right-[15%] w-[40%]'>  
+                    <a className='text-[3vw] text-white text-right'>{heroes[selector].sname}</a>
+                    </div>}
                     <div className=' h-[auto] flex justify-center items-center absolute top-[31.5%] left-[36%] '>  
-                    <Tribe tribe={heroes[selector].tribe}/>
+                      <Tribe tribe={heroes[selector].tribe}/>
                     </div> 
+                    {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[8%] left-[71.4%] '>  
+                      <Skintype role={heroes[selector].rarity}/>
+                    </div> }
                     <div className=' flex justify-center items-start absolute top-[45%] left-[15%] w-[70vw] '>  
                     <a  className='text-[2.5vw] text-center leading-[4vw]'>{heroes[selector].des}</a>
                 </div>
@@ -80,6 +86,27 @@ export default function HeroMobile(){
       <div>
         {image && (      
           <Image src={image} alt="icon" className='-z-20 w-[100%] absolute top-0 right-0 '/>
+        )}
+      </div>
+    )
+  }
+  const Skintype = ({
+    role,
+  }: {
+    role: number
+  }) => {
+    const [image, setImage] = useState<StaticImageData | null>(null)
+  
+    ;(function (imageName) {
+      import(`../../assets/heroes/r${role}.svg`).then((image) =>
+        setImage(image.default)
+      )
+    })(role)
+  
+    return (
+      <div>
+        {image && (      
+          <Image src={image} alt="icon" className='w-[10vw] ' priority/> 
         )}
       </div>
     )
