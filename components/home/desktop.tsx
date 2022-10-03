@@ -86,9 +86,11 @@ export default function HomeD() {
         </div>
         <div className='md:hidden h-[30vw] flex flex-col justify-start items-center bg-black'>
           <div className='relative'>
-            <div onClick={()=>setopen(true)} className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
+          <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <div className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
               <Image src={card3}  alt="AppStore" className='' />
             </div>
+          </LinkNewTab>
               <Image src={card1} alt="AppStore" className="w-[220px] absolute " />
               <Image src={card2} alt="AppStore" className="w-[220px] absolute  " />
           </div>
