@@ -23,7 +23,7 @@ function show() {
  );
   return(
   <GlobalProvider>
-    {isloading&&<div className='w-full h-full flex justify-center items-center absolute inset-0 z-30 bg-black font-Josefin'>
+    {isloading&&<div className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-black font-Josefin overflow-hidden'>
         <a className='text-6xl heroes-text-gold '>LOADING</a>
         </div>}
     <div className={``+visible}>
