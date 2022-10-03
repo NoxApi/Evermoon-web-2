@@ -655,6 +655,21 @@ img {
   animation: play2 1.5s steps(48) forwards; 
   background-size:cover;
 }
+@media screen and (max-width: 1279px) {
+  .pintop1 {
+    width: 80px;
+    height: 80px;
+    animation: play3 1.5s steps(48) forwards;
+  }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
+  .pintop1 {
+    width: 100px;
+    height: 100px;
+    animation: play1 1.5s steps(48) forwards; 
+  }
+}
 @keyframes play1 {
   from {background-position-x: 0vw;}
   to {background-position-x: -4800px;}
@@ -672,8 +687,17 @@ img {
 }
 
 
+.pin2 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("/assasin.png");
+  background-repeat: no-repeat;
+  animation: play2 1.5s steps(48) forwards; 
+  background-size:cover;
+}
 @media screen and (max-width: 1279px) {
-  .pintop1 {
+  .pin2 {
     width: 80px;
     height: 80px;
     animation: play3 1.5s steps(48) forwards;
@@ -681,7 +705,82 @@ img {
 }
 
 @media screen and (max-width: 1599px) and (min-width: 1280px) {
-  .pintop1 {
+  .pin2 {
+    width: 100px;
+    height: 100px;
+    animation: play1 1.5s steps(48) forwards; 
+  }
+}
+
+.pin3 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("/mage.png");
+  background-repeat: no-repeat;
+  animation: play2 1.5s steps(48) forwards; 
+  background-size:cover;
+}
+@media screen and (max-width: 1279px) {
+  .pin3 {
+    width: 80px;
+    height: 80px;
+    animation: play3 1.5s steps(48) forwards;
+  }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
+  .pin3 {
+    width: 100px;
+    height: 100px;
+    animation: play1 1.5s steps(48) forwards; 
+  }
+}
+
+.pin4 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("/marksman.png");
+  background-repeat: no-repeat;
+  animation: play2 1.5s steps(48) forwards; 
+  background-size:cover;
+}
+@media screen and (max-width: 1279px) {
+  .pin4 {
+    width: 80px;
+    height: 80px;
+    animation: play3 1.5s steps(48) forwards;
+  }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
+  .pin4 {
+    width: 100px;
+    height: 100px;
+    animation: play1 1.5s steps(48) forwards; 
+  }
+}
+
+.pin5 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("/sup.png");
+  background-repeat: no-repeat;
+  animation: play2 1.5s steps(48) forwards; 
+  background-size:cover;
+}
+@media screen and (max-width: 1279px) {
+  .pin5 {
+    width: 80px;
+    height: 80px;
+    animation: play3 1.5s steps(48) forwards;
+  }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
+  .pin5 {
     width: 100px;
     height: 100px;
     animation: play1 1.5s steps(48) forwards; 

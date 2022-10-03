@@ -94,7 +94,7 @@ export default function MapMobile(){
          <source src="/S1M.mp4#t=0.1" type="video/mp4" />
       </video>}
 
-      {lane==3&& <video
+      {lane==2&& <video
         className="w-[100%] right-0"
         loop
         autoPlay
@@ -104,7 +104,7 @@ export default function MapMobile(){
          <source src="/S2M.mp4#t=0.1" type="video/mp4" />
       </video>}
 
-      {lane==4&& <video
+      {lane==3&& <video
         className="w-[100%] right-0"
         loop
         autoPlay
@@ -115,7 +115,7 @@ export default function MapMobile(){
       </video>}
 
 
-      {lane==2&& <video
+      {lane==4&& <video
         className="w-[100%] right-0"
         loop
         autoPlay

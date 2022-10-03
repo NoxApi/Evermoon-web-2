@@ -124,7 +124,7 @@ export default function MAP() {
         <div onClick={()=>setv(2)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=2&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[90px] right-[273px] 2xl:right-[328.5px] 2xl:top-[125px] z-10 xlm:right-[198.5px] xlm:top-[79px]'/>}
         </div>
-        {videoplay==2&&<div className='pintop1  absolute top-[36px] right-[195px] 2xl:right-[210px] xlm:right-[135.4px] xlm:top-[30px]' />}
+        {videoplay==2&&<div className='pin2  absolute top-[36px] right-[195px] 2xl:right-[210px] xlm:right-[135.4px] xlm:top-[30px]' />}
         
         
         
@@ -132,7 +132,7 @@ export default function MAP() {
         <div onClick={()=>setv(3)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=3&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[85px] right-[188.5px] 2xl:right-[228.5px] 2xl:top-[90px] z-10 xlm:right-[135px] xlm:top-[60px]'/>}
         </div>
-        {videoplay==3&&<div className='pintop1  absolute top-[31px] 2xl:top-[5px] right-[110px] xlm:right-[72.5px] xlm:top-[17px] ' />}
+        {videoplay==3&&<div className='pin3  absolute top-[31px] 2xl:top-[5px] right-[110px] xlm:right-[72.5px] xlm:top-[17px] ' />}
         
         
         
@@ -141,7 +141,7 @@ export default function MAP() {
         <div onClick={()=>setv(4)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=4&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[190px] right-[45px] z-10 2xl:right-[85.5px] 2xl:top-[225px] xlm:right-[80px] xlm:top-[85px]'/>}
         </div>
-        {videoplay==4&&<div className='pintop1  absolute top-[136px] -right-[32.5px] xlm:right-[17.5px] xlm:top-[40px]' />}
+        {videoplay==4&&<div className='pin4  absolute top-[136px] -right-[32.5px] xlm:right-[17.5px] xlm:top-[40px]' />}
         
         
         
@@ -150,7 +150,7 @@ export default function MAP() {
         <div onClick={()=>setv(5)} className='w-auto h-auto cursor-pointer'>
         {videoplay!=5&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[115px] right-[95px] z-10 2xl:right-[135.5px] 2xl:top-[140px] xlm:right-[50px] xlm:top-[137px]'/>}
         </div>
-        {videoplay==5&&<div className='pintop1  absolute top-[54px] right-[17px] xlm:right-[-13px] xlm:top-[91px]' />}
+        {videoplay==5&&<div className='pin5  absolute top-[54px] right-[17px] xlm:right-[-13px] xlm:top-[91px]' />}
         
         
         
