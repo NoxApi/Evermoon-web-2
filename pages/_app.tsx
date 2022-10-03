@@ -5,8 +5,10 @@ import { GlobalProvider } from '../state'
 
 function MyApp({ Component, pageProps }: AppProps) {
  const [isloading,setisloading] = useState(true)
+ const [visible,setvisible] = useState("invisible")
 function show() {
   setisloading(false);
+  setvisible("visible");
 }
  useEffect(()=>{
   if (document.readyState === "complete") {
@@ -21,10 +23,12 @@ function show() {
  );
   return(
   <GlobalProvider>
-    {isloading&&<div className='w-full h-full flex justify-center items-center absolute inset-0 z-30 bg-bgs6'>
+    {isloading&&<div className='w-full h-full flex justify-center items-center absolute inset-0 z-30 bg-black'>
         <a className='text-6xl heroes-text-gold '>LOADING</a>
         </div>}
+    <div className={``+visible}>
     <Component {...pageProps} />
+    </div>
   </GlobalProvider>   
   )
 }
