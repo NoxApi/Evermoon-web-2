@@ -114,25 +114,43 @@ export default function MAP() {
         <div className='w-[100%] h-[100%] relative'>
         <Image  src={mm} alt="icon" className=''/>
         <div onClick={()=>setv(1)} className='w-auto h-auto cursor-pointer'>
-        {videoplay!=1&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] absolute top-[65px] right-[303.5px] 2xl:right-[380px] 2xl:top-[94px] z-10 xlm:right-[380px] xlm:top-[94px]'/>}
+        {videoplay!=1&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[65px] right-[303.5px] 2xl:right-[380px] 2xl:top-[94px] z-10 xlm:right-[230px] xlm:top-[50px]'/>}
         </div>
-        {videoplay==1&&<div className=' pintop1 absolute top-[5px] right-[225px] 2xl:right-[262px] xlm:right-[380px] xlm:top-[94px]' />}
+        {videoplay==1&&<div className=' pintop1 absolute top-[5px] right-[225px] 2xl:right-[262px]  xlm:right-[166.7px] xlm:top-[6px]' />}
+        
+        
+        
+        
         <div onClick={()=>setv(2)} className='w-auto h-auto cursor-pointer'>
-        {videoplay!=2&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] absolute top-[90px] right-[273px] 2xl:right-[328.5px] 2xl:top-[125px] z-10 xlm:right-[380px] xlm:top-[94px]'/>}
+        {videoplay!=2&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[90px] right-[273px] 2xl:right-[328.5px] 2xl:top-[125px] z-10 xlm:right-[198.5px] xlm:top-[79px]'/>}
         </div>
-        {videoplay==2&&<div className='pintop1  absolute top-[36px] right-[195px] 2xl:right-[210px] xlm:right-[380px] xlm:top-[94px]' />}
+        {videoplay==2&&<div className='pintop1  absolute top-[36px] right-[195px] 2xl:right-[210px] xlm:right-[135.4px] xlm:top-[30px]' />}
+        
+        
+        
+        
         <div onClick={()=>setv(3)} className='w-auto h-auto cursor-pointer'>
-        {videoplay!=3&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] absolute top-[85px] right-[188.5px] 2xl:right-[228.5px] 2xl:top-[90px] z-10 xlm:right-[380px] xlm:top-[94px]'/>}
+        {videoplay!=3&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[85px] right-[188.5px] 2xl:right-[228.5px] 2xl:top-[90px] z-10 xlm:right-[135px] xlm:top-[60px]'/>}
         </div>
-        {videoplay==3&&<div className='pintop1  absolute top-[31px] 2xl:top-[5px] right-[110px] xlm:right-[380px] xlm:top-[94px] ' />}
+        {videoplay==3&&<div className='pintop1  absolute top-[31px] 2xl:top-[5px] right-[110px] xlm:right-[72.5px] xlm:top-[17px] ' />}
+        
+        
+        
+        
+        
         <div onClick={()=>setv(4)} className='w-auto h-auto cursor-pointer'>
-        {videoplay!=4&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] absolute top-[190px] right-[45px] z-10 2xl:right-[85.5px] 2xl:top-[225px] xlm:right-[380px] xlm:top-[94px]'/>}
+        {videoplay!=4&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[190px] right-[45px] z-10 2xl:right-[85.5px] 2xl:top-[225px] xlm:right-[80px] xlm:top-[85px]'/>}
         </div>
-        {videoplay==4&&<div className='pintop1  absolute top-[136px] -right-[32.5px] xlm:right-[380px] xlm:top-[94px]' />}
+        {videoplay==4&&<div className='pintop1  absolute top-[136px] -right-[32.5px] xlm:right-[17.5px] xlm:top-[40px]' />}
+        
+        
+        
+        
+        
         <div onClick={()=>setv(5)} className='w-auto h-auto cursor-pointer'>
-        {videoplay!=5&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] absolute top-[115px] right-[95px] z-10 2xl:right-[135.5px] 2xl:top-[140px] xlm:right-[380px] xlm:top-[94px]'/>}
+        {videoplay!=5&&<Image   src={pin} alt="icon" className='w-[20px] 2xl:w-[27px] xlm:w-[15.5px] absolute top-[115px] right-[95px] z-10 2xl:right-[135.5px] 2xl:top-[140px] xlm:right-[50px] xlm:top-[137px]'/>}
         </div>
-        {videoplay==5&&<div className='pintop1  absolute top-[54px] right-[17px] xlm:right-[380px] xlm:top-[94px]' />}
+        {videoplay==5&&<div className='pintop1  absolute top-[54px] right-[17px] xlm:right-[-13px] xlm:top-[91px]' />}
         
         
         

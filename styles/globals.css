@@ -663,6 +663,10 @@ img {
   from {background-position-x: 0vw;}
   to {background-position-x: -7200px;}
 }
+@keyframes play3 {
+  from {background-position-x: 0vw;}
+  to {background-position-x: -3840px;}
+}
 .navbar{
   transition: width 0.5s ease-in-out;
 }
@@ -670,12 +674,13 @@ img {
 
 @media screen and (max-width: 1279px) {
   .pintop1 {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    animation: play3 1.5s steps(48) forwards;
   }
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
   .pintop1 {
     width: 100px;
     height: 100px;
