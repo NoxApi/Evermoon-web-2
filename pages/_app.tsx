@@ -10,28 +10,21 @@ import loading3 from '../public/100.gif'
 function MyApp({ Component, pageProps }: AppProps) {
  const [isloading,setisloading] = useState(true)
  const [visible,setvisible] = useState("invisible")
- const [load1,setload1] = useState(true)
- const [load2,setload2] = useState(false)
+ const [load1,setload1] = useState("visible")
  const [load3,setload3] = useState(false)
 
 function show() {
   ;
-  setvisible("visible");
-  setload2(false)
   setload3(true)
+  setload1("invisible")
+  setvisible("visible");
   setTimeout(function() {
     setisloading(false)
-   }, 1000);
+   }, 2000);
 }
 
 
  useEffect(()=>{
-  setTimeout(function() {
-     setload1(false)
-       }, 6000);
-  setTimeout(function() {
-        setload2(true)
-       }, 6000);
   if (document.readyState === "complete") {
   } else {
     window.addEventListener("load", show);
@@ -44,9 +37,9 @@ function show() {
   return(
   <GlobalProvider>
     {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
-      {load1 &&<Image alt="" src={loading} priority={true} className="w-[100vw] absolute"/>}
-      {load2 &&<Image alt="" src={loading2} priority={true} className="w-[100vw] absolute p-[3.7vw]"/>}
-      {load3 &&<Image alt="" src={loading3} className="w-[100vw] absolute p-[3.7vw]"/>}
+      {<Image alt="" src={loading}  priority={true} className={`w-[100vw] absolute z-40 `+load1}/>}
+      {<Image alt="" src={loading2} priority={true} className={`w-[100vw] absolute p-[3.7vw] z-30 `+load1}/>}
+      {load3&&<Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute p-[3.7vw] z-40 `}/>}
     </div>}
     <div className={``+visible}>
     <Component {...pageProps} />
