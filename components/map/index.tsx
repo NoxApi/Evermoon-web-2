@@ -19,71 +19,33 @@ import { useEffect, useState } from 'react'
 
 export default function MAP() {
   const [videoplay,setvideoplay]= useState(1)
-  const [v1,setv1]= useState("h-[8vw]")
-  const [v2,setv2]= useState("h-[0vw]")
-  const [v3,setv3]= useState("h-[0vw]")
-  const [v4,setv4]= useState("h-[0vw]")
-  const [v5,setv5]= useState("h-[0vw]")
-
-  const [status1,setstatus1]= useState("activated")
-  const [status2,setstatus2]= useState("")
-  const [status3,setstatus3]= useState("")
-  const [status4,setstatus4]= useState("")
-  const [status5,setstatus5]= useState("")
-
-  const [role1,setrole1]= useState("roleactivated")
-  const [role2,setrole2]= useState("")
-  const [role3,setrole3]= useState("")
-  const [role4,setrole4]= useState("")
-  const [role5,setrole5]= useState("")
-
+  let role1 = ""
+  let role2 = ""
+  let role3 = ""
+  let role4 = ""
+  let role5 = ""
   function setv(x:any){
-    setv1("h-[0vw]")
-    setv2("h-[0vw]")
-    setv3("h-[0vw]")
-    setv4("h-[0vw]")
-    setv5("h-[0vw]")
-    setstatus1("")
-    setstatus2("")
-    setstatus3("")
-    setstatus4("")
-    setstatus5("")
-    setrole1("")
-    setrole2("")
-    setrole3("")
-    setrole4("")
-    setrole5("")
     if (x==1){
       setvideoplay(1)
-      setv1("h-[8vw]")
-      setstatus1("activated")
-      setrole1("roleactivated")
+      role1 ="roleactivated"
     }
-    if (x==2){
+    else if (x==2){
       setvideoplay(2)
-      setv2("h-[8vw]")
-      setstatus2("activated")
-      setrole2("roleactivated")
+      role2 ="roleactivated"
     }
-    if (x==3){
+    else if (x==3){
       setvideoplay(3)
-      setv3("h-[8vw]")
-      setstatus3("activated")
-      setrole3("roleactivated")
+      role3 ="roleactivated"
     }
 
-    if (x==4){
+    else if (x==4){
       setvideoplay(4)
-      setv4("h-[8vw]")
-      setstatus4("activated")
-      setrole4("roleactivated")
+      role4 ="roleactivated"
     }
 
-    if (x==5){
+    else if (x==5){
       setvideoplay(5)
-      setv5("h-[8vw]")
-      setstatus5("activated")
-      setrole5("roleactivated")
+      role5 ="roleactivated"
     }
   }
 
