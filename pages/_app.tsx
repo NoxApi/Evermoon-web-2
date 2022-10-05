@@ -38,7 +38,7 @@ function show() {
   <GlobalProvider>
     {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
       {<Image alt="" src={loading}  priority={true} className={`w-[100vw] absolute z-40 `+load1}/>}
-      {<Image alt="" src={loading2} priority={true} className={`w-[100vw] absolute p-[3.7vw] z-30 `+load1}/>}
+      <Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute p-[3.7vw] z-10 invisible `}/>
       {load3&&<Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute p-[3.7vw] z-40 `}/>}
     </div>}
     <div className={``+visible}>
