@@ -28,10 +28,10 @@ function show() {
  useEffect(()=>{
   setTimeout(function() {
      setload1(false)
-       }, 7300);
+       }, 6000);
   setTimeout(function() {
         setload2(true)
-       }, 7100);
+       }, 6000);
   if (document.readyState === "complete") {
   } else {
     window.addEventListener("load", show);
@@ -44,8 +44,8 @@ function show() {
   return(
   <GlobalProvider>
     {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
-      {load1 &&<Image alt="" src={loading} className="w-[100vw] absolute"/>}
-      {load2 &&<Image alt="" src={loading2} className="w-[100vw] absolute p-[3.7vw]"/>}
+      {load1 &&<Image alt="" src={loading} priority={true} className="w-[100vw] absolute"/>}
+      {load2 &&<Image alt="" src={loading2} priority={true} className="w-[100vw] absolute p-[3.7vw]"/>}
       {load3 &&<Image alt="" src={loading3} className="w-[100vw] absolute p-[3.7vw]"/>}
     </div>}
     <div className={``+visible}>
