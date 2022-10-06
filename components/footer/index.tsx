@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <section
       id="Roadmap"
-      className="relative  h-[27.08vw] w-full overflow-hidden bg-bgs9 bg-cover mdm:hidden" 
+      className="relative  h-[27.08vw] w-full overflow-hidden bg-bgs9 bg-cover mt-[-1vw]" 
     >
       <div className='h-auto mt-[12.08vw] mdm:h-[120vw] w-[100%] flex flex-col justify-between items-center pb-36 mdm:pb-[20vw] mdm:hidden'>
         <div className='flex mb-[2vw]'>

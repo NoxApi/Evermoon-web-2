@@ -8,16 +8,16 @@ const teams = ['t1', 't2', 't3', 't4', 't5', 't6', 't7']
 export const Partner = () => {
   return (
     <section
-      className="relative  h-[50vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center lgm:bg-bgs6m bg-cover flex justify-center flex-col" 
+      className="relative  h-[50vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center bg-cover flex justify-center flex-col" 
     >
-      <div className='w-[73.9vw] mt-[7vw] ml-[15.8vw]'>
+      <div className='w-[74vw] mt-[7.4vw] ml-[15.8vw]'>
       <video
         className="w-[100%] right-0"
         loop
         autoPlay
         muted
       >
-         <source src="/investor.mp4#t=0.1" type="video/mp4" />
+         <source src="/investor.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>
       </div>
@@ -28,7 +28,7 @@ export const Partner = () => {
         autoPlay
         muted
       >
-         <source src="/partner.mp4#t=0.1" type="video/mp4" />
+         <source src="/partner.webm#t=0.1" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>
       </div>
