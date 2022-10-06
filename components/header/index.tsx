@@ -5,7 +5,6 @@ import NextLink from 'next/link'
 import Logo from '../../assets/logo.png'
 import Hamburger from '../../assets/hamburger.svg'
 import x from '../../assets/x.svg'
-import bg from '../../assets/starbg.svg'
 import NextImage from 'next/image'
 import Line from '../../assets/header/line.png'
 
@@ -141,14 +140,7 @@ function HeaderMobile() {
               leaveTo="opacity-0 translate-x-full"
             >
               <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-bgs8m bg-cover shadow-xl ">
-                <div className="relative inset-0 -z-10">
-                  <NextImage
-                    layout="fill"
-                    objectFit="cover"
-                    className="h-screen"
-                    src={bg}
-                    alt="bgstart"
-                  />
+                <div className="relative inset-0 -z-10"> 
                 </div>
                 <div className="px-4 pt-2 flex items-center  border-b-[1px] border-[#5c503a]">
                   <div className="">
