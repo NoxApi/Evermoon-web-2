@@ -52,10 +52,10 @@ export default function MAP() {
       <Image src={botb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 4 ? 'roleactivated' : '')} />
       <Image src={supb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 5 ? 'roleactivated' : '')} />
       </div>
-
-
-
-
+      <div className='pin2 hidden' />
+      <div className='pin3 hidden' />
+      <div className='pin4 hidden' />
+      <div className='pin5 hidden' />
       <div  className='z-30 w-[500px] 2xlm:w-[400px] xlm:w-[300px] absolute top-0 right-0  lgm:hidden'>
         <div className='w-[100%] h-[100%] relative'>
         <Image  src={mm} alt="icon" className=''/>

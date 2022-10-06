@@ -88,7 +88,7 @@ export default function HomeD() {
         
         <div className=' absolute  bottom-0 left-0 z-30 translate-y-[-3vw] translate-x-[4vw] w-[25vw] h-[7vw] '>
           <div className='relative'>
-          <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+          <LinkNewTab href={'https://www.youtube.com/watch?v=nHP5dS11kKc&ab_channel=Evermoon'} >
             <div className="w-[3.3vw]  inset-0 left-[22%] translate-y-[2.2vw]  z-50  cursor-pointer relative">
               <Image src={card3a}  alt="AppStore" className='absolute w-[3.9vw] opacity-0 hover:opacity-100 z-50' />
               <Image src={card3}  alt="AppStore" className='absolute w-[3.9vw] z-30 opacity-1'  />        
