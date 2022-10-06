@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import Moon from '../assets/moon.png'
 import Image from '../image'
 import { ComingSoonLink, Link , SubLink } from './Link'
 import NextLink from 'next/link'
@@ -83,9 +82,9 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
           </div>
         </div>
       </a>
-        <Link title="TOKENOMIC" section={6} current={false} />
+        <Link title="TOKENOMICS" section={6} current={false} />
         <Link title="TEAM" section={7} current={false} />
-        <Link title="PARTNER" section={8} current={false} />
+        <Link title="PARTNERS" section={8} current={false} />
         <Link title="ROADMAP" section={9} current={false} />
       </div>
 
