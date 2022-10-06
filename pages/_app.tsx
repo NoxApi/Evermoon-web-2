@@ -20,7 +20,7 @@ function show() {
   setvisible("visible");
   setTimeout(function() {
     setisloading(false)
-   }, 1000);
+   }, 1200);
 }
 
 
@@ -37,6 +37,7 @@ function show() {
   return(
   <GlobalProvider>
     {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
+      <Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute z-40 hidden`}/>
       {<Image alt="" src={loading}  priority={true} className={`w-[100vw] absolute z-30 `+load1}/>}
       {load3&&<Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute z-40 `}/>} 
     </div>}
