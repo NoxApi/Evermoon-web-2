@@ -111,7 +111,7 @@ export default function MAP() {
         muted
       >
       
-         <source src="/S1.mp4#t=0.1" type="video/mp4" />
+         <source src="/S1.webm#t=0.1" type="video/webm" />
       </video>
 
      <video
@@ -121,7 +121,7 @@ export default function MAP() {
         muted
       >
          {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
-         <source src="/S2.mp4#t=0.1" type="video/mp4" />
+         <source src="/S2.webm#t=0.1" type="video/webm" />
       </video>
 
       <video
@@ -130,8 +130,8 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/S3.mp4#t=0.1" type="video/mp4" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+         <source src="/S3.webm#t=0.1" type="video/webm" />
+        {/* <source src="/bonner.webm" type="video/webm" /> */}
       </video>
 
 
@@ -141,8 +141,8 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/S4.mp4#t=0.1" type="video/mp4" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+         <source src="/S4.webm#t=0.1" type="video/webm" />
+        {/* <source src="/bonner.webm" type="video/webm" /> */}
       </video>
 
       <video
@@ -151,8 +151,8 @@ export default function MAP() {
         autoPlay
         muted
       >
-         <source src="/S5.mp4#t=0.1" type="video/mp4" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
+         <source src="/S5.webm#t=0.1" type="video/webm" />
+        {/* <source src="/bonner.webm" type="video/webm" /> */}
       </video>
 
       <Image src={botc} alt="icon" className='z-20 w-[100%] absolute -bottom-2'/>
