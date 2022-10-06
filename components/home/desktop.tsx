@@ -22,7 +22,8 @@ import store1h from '../../assets/home/store1h.png'
 import storebg from '../../assets/home/storebg.png'
 import card1 from '../../assets/home/card1.png'
 import card2 from '../../assets/home/card2.png'
-import card3 from '../../assets/home/card3.png'
+import card3 from '../../assets/home/card3a.svg'
+import card3a from '../../assets/home/card3.svg'
 import card4 from '../../assets/home/card4.png'
 import footer from '../../assets/home/bottom.svg'
 import ImageNext from 'next/image'
@@ -84,29 +85,18 @@ export default function HomeD() {
           </div>  
           
         </div>
-        <div className='md:hidden h-[30vw] flex flex-col justify-start items-center bg-black'>
-          <div className='relative'>
-            <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
-            <div className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
-              <Image src={card3}  alt="AppStore" className='' />
-            </div>
-          </LinkNewTab>
-              <Image src={card1} alt="AppStore" className="w-[220px] absolute " />
-              <Image src={card2} alt="AppStore" className="w-[220px] absolute  " />
-          </div>
-          <a className='pt-[140px] pb-[20px] font-Josefin text-3xl text-[#F1E3B5] font-bold text-shadow-black'>Game Trailer</a>
-        </div> 
         
         <div className=' absolute  bottom-0 left-0 z-30 translate-y-[-3vw] translate-x-[4vw] w-[25vw] h-[7vw] '>
           <div className='relative'>
           <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
-            <div className="w-[3.3vw]  absolute inset-0 left-[19%] translate-y-[1.2vw]  z-50  cursor-pointer mix-blend-normal hover:mix-blend-luminosity  ">
-              <Image src={card3}  alt="AppStore"  />
+            <div className="w-[3.3vw]  inset-0 left-[22%] translate-y-[2.2vw]  z-50  cursor-pointer relative">
+              <Image src={card3a}  alt="AppStore" className='absolute w-[3.9vw] opacity-0 hover:opacity-100 z-50' />
+              <Image src={card3}  alt="AppStore" className='absolute w-[3.9vw] z-30 opacity-1'  />        
             </div>
           </LinkNewTab>
-              <Image src={card1} alt="AppStore" className=" absolute top-[-1.5vw] card1 z-20" />
-              <Image src={card2} alt="AppStore" className=" absolute top-[-1.5vw] card2 z-30" />
-              <Image src={card4} alt="AppStore" className=" absolute inset-0 left-[60%] translate-y-[2vw] trailertext" />
+              <Image src={card1} alt="AppStore" className=" absolute top-[-1vw] w-[15vw] z-20" />
+              <Image src={card2} alt="AppStore" className=" absolute top-[-1vw] w-[15vw]  z-30" />
+              <Image src={card4} alt="AppStore" className=" absolute inset-0 left-[60%] translate-y-[4vw] w-[8vw]" />
           </div>
         </div>
         <div className=' absolute flex  justify-center w-[100%] items-center h-[5vw] bottom-[0.5vw]   '>
@@ -122,71 +112,34 @@ export default function HomeD() {
             </div>
           </div>           
         </div>
-        <div className='flex absolute  bottom-0  right-0 translate-y-[-1vw] z-40 translate-x-[-5vw]'>
+        <div className='flex absolute  bottom-0  right-0 translate-y-[-0.8vw] z-40 translate-x-[-5vw]'>
           <div className='flex z-40'>
             <LinkNewTab href="https://t.me/Evermoon_Community">
-                <Image src={s1} alt="q122" className="absolute w-[3vw] mx-[0.5vw]" priority />
-                <Image src={s1s} alt="q122" className=" w-[3vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
+                <Image src={s1} alt="q122" className="absolute w-[2.2vw] mx-[0.5vw]" priority />
+                <Image src={s1s} alt="q122" className=" w-[2.2vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
             </LinkNewTab>
           <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
-            <Image src={s2} alt="q122" className="absolute w-[3vw] mx-[0.5vw]" priority />
-            <Image src={s2s} alt="q122" className=" w-[3vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
+            <Image src={s2} alt="q122" className="absolute w-[2.2vw] mx-[0.5vw]" priority />
+            <Image src={s2s} alt="q122" className=" w-[2.2vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
           </LinkNewTab>
           </div>
           <div className='flex'>
           <LinkNewTab href="https://www.facebook.com/EvermoonOfficialGameFi">
-            <Image src={s3} alt="q122" className="absolute w-[3vw] mx-[0.5vw]" priority />
-            <Image src={s3s} alt="q122" className=" w-[3vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
+            <Image src={s3} alt="q122" className="absolute w-[2.2vw] mx-[0.5vw]" priority />
+            <Image src={s3s} alt="q122" className=" w-[2.2vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
           </LinkNewTab>
           <LinkNewTab href="https://twitter.com/EverMoon_nft">
-            <Image src={s4} alt="q122" className="absolute w-[3vw] mx-[0.5vw]" priority />
-            <Image src={s4s} alt="q122" className=" w-[3vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
+            <Image src={s4} alt="q122" className="absolute w-[2.2vw] mx-[0.5vw]" priority />
+            <Image src={s4s} alt="q122" className=" w-[2.2vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
           </LinkNewTab>
           <LinkNewTab href="https://www.youtube.com/c/Evermoon">
-            <Image src={s5} alt="q122" className="absolute w-[3vw] mx-[0.5vw]" priority />
-            <Image src={s5s} alt="q122" className=" w-[3vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
+            <Image src={s5} alt="q122" className="absolute w-[2.2vw] mx-[0.5vw]" priority />
+            <Image src={s5s} alt="q122" className=" w-[2.2vw] mx-[0.5vw] opacity-0 hover:opacity-100 store2c2" priority />
           </LinkNewTab>
           </div>        
         </div>
       </div>
-      <div className='md:hidden'>
-        <SocialCTA />
-      </div>
        <Image src={footer} alt="banner" className='w-[100%] absolute bottom-0 z-30'/> 
     </section>
-  )
-}
-
-function SocialCTA() {
-  return (
-    <div className="group ">
-      <Image
-        src={CTA}
-        alt="cta"
-        className="absolute top-1/2 left-0 w-8 -translate-y-1/2 group-hover:translate-x-[3.5rem] transition-transform"
-      />
-      <div className="absolute top-1/2 left-0 w-14 -translate-y-1/2 -translate-x-[3.5rem] group-hover:translate-x-[0] transition-transform">
-        <div className="relative">
-          <Image src={frameCTA} alt="frameCTA" className="" />
-          <div className="absolute inset-0 flex flex-col justify-evenly py-6 items-center">
-            <LinkNewTab href="https://t.me/Evermoon_Community">
-              <Image className="w-8" src={Telegram} alt="Telegram" />
-            </LinkNewTab>
-            <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
-              <Image className="w-8" src={Discord} alt="Discord" />
-            </LinkNewTab>
-            <LinkNewTab href="https://www.facebook.com/EvermoonOfficialGameFi">
-              <Image className="w-8" src={Facebook} alt="Facebook" />
-            </LinkNewTab>
-            <LinkNewTab href="https://twitter.com/EverMoon_nft">
-              <Image className="w-8" src={Twitter} alt="Twitter" />
-            </LinkNewTab>
-            <LinkNewTab href="https://www.youtube.com/channel/UCFxqPU4dTufi07B13w_mMuw/videos">
-              <Image className="w-8" src={Youtube} alt="Youtube" />
-            </LinkNewTab>
-          </div>
-        </div>
-      </div>
-    </div>
   )
 }

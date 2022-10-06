@@ -21,9 +21,9 @@ const Header = () => {
     <header className="relative mx-auto w-full z-50 ">
       <div className="absolute top-0 left-0 right-0 w-full h-[5vw] bg-black-gradient" />
       <HeaderDesktop isHover={isHover} setIsHover={setIsHover}/>
-      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden cursor-pointer `+width }>
-        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw]'/>
-        <div className='flex ml-[12vw]'>
+      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-[black]/[0.5] navbar overflow-hidden cursor-pointer `+width }>
+        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw] mb-[0.5vw]'/>
+        <div className='flex ml-[12vw] '>
         <SubLink title="ABOUT THE GAME" section={2} current={false} />
         <SubLink title="FEATURES" section={3} current={false} />
         <SubLink title="MAP" section={4} current={false} />

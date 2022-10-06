@@ -19,41 +19,25 @@ import { useEffect, useState } from 'react'
 
 export default function MAP() {
   const [videoplay,setvideoplay]= useState(1)
-  let role1 = ""
-  let role2 = ""
-  let role3 = ""
-  let role4 = ""
-  let role5 = ""
   function setv(x:any){
     if (x==1){
       setvideoplay(1)
-      role1 ="roleactivated"
     }
     else if (x==2){
       setvideoplay(2)
-      role2 ="roleactivated"
     }
     else if (x==3){
       setvideoplay(3)
-      role3 ="roleactivated"
     }
 
     else if (x==4){
       setvideoplay(4)
-      role4 ="roleactivated"
     }
 
     else if (x==5){
       setvideoplay(5)
-      role5 ="roleactivated"
     }
   }
-
-  
-  useEffect(() => {
-    
-  },[])
-
   return (
     <section
       id="Map"
@@ -62,11 +46,11 @@ export default function MAP() {
       <div className='lgm:hidden'>
       <div className='z-20 w-[100%] absolute top-0 flex justify-center lgm:static'>
       <Image src={topc} alt="icon"  className='absolute w-[100%] lgm:hidden'/>
-      <Image src={topb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo  `+role1} />
-      <Image src={jungb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role2} />
-      <Image src={midb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role3} />
-      <Image src={botb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role4} />
-      <Image src={supb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+role5} />
+      <Image src={topb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo  `+(videoplay== 1 ? 'roleactivated' : '')} />
+      <Image src={jungb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 2 ? 'roleactivated' : '')} />
+      <Image src={midb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 3 ? 'roleactivated' : '')} />
+      <Image src={botb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 4 ? 'roleactivated' : '')} />
+      <Image src={supb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 5 ? 'roleactivated' : '')} />
       </div>
 
 
@@ -120,56 +104,56 @@ export default function MAP() {
         </div>
       </div>
     
-      {videoplay==1&& <video
-        className="w-[100%]  top-0"
+       <video
+        className={`w-[100%]  top-0 `+(videoplay== 1 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
       
          <source src="/S1.mp4#t=0.1" type="video/mp4" />
-      </video>}
+      </video>
 
-      {videoplay==3&& <video
-        className="w-[100%] right-0"
+     <video
+        className={`w-[100%]  top-0 `+(videoplay== 3 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
          <source src="/S2.mp4#t=0.1" type="video/mp4" />
-      </video>}
+      </video>
 
-      {videoplay==4&& <video
-        className="w-[100%] right-0"
+      <video
+        className={`w-[100%]  top-0 `+(videoplay==4 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S3.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
 
 
-      {videoplay==2&& <video
-        className="w-[100%] right-0"
+      <video
+        className={`w-[100%]  top-0 `+(videoplay== 2 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S4.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
 
-      {videoplay==5&& <video
-        className="w-[100%] right-0"
+      <video
+        className={`w-[100%]  top-0 `+(videoplay== 5 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S5.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
 
       <Image src={botc} alt="icon" className='z-20 w-[100%] absolute -bottom-2'/>
     </div>
