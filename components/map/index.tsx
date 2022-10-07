@@ -3,11 +3,11 @@ import topc from '../../assets/map/topc.png'
 import botc from '../../assets/map/botc.png'
 import mm from '../../assets/map/minimap.png'
 import pin from '../../assets/map/pin.svg'
-import top from '../../assets/map/top.png'
-import jung from '../../assets/map/jungle.png'
-import mid from '../../assets/map/mid.png'
-import bot from '../../assets/map/bot.png'
-import sup from '../../assets/map/sup.png'
+import top from '../../public/top.png'
+import jung from '../../public/jung.png'
+import mid from '../../public/mage.png'
+import bot from '../../public/marksman.png'
+import sup from '../../public/sup.png'
 import supb from '../../assets/map/sup.svg'
 import topb from '../../assets/map/top.svg'
 import jungb from '../../assets/map/jungle.svg'
@@ -43,6 +43,10 @@ export default function MAP() {
       id="Map"
       className="relative  w-full overflow-hidden bg-center h-[50vw] lgm:h-auto " 
     >
+      <div className='pin2  absolute top-[400px] right-[195px] z-50 invisible' />
+      <div className='pin5  absolute top-[400px] right-[195px] z-50 invisible' />
+      <div className='pin4  absolute top-[400px] right-[195px] z-50 invisible' />
+      <div className='pin3  absolute top-[400px] right-[195px] z-50 invisible' />
       <div className='lgm:hidden'>
       <div className='z-20 w-[100%] absolute top-0 flex justify-center lgm:static'>
       <Image src={topc} alt="icon"  className='absolute w-[100%] lgm:hidden'/>
@@ -52,7 +56,7 @@ export default function MAP() {
       <Image src={botb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 4 ? 'roleactivated' : '')} />
       <Image src={supb} alt="icon" className={`z-30 w-[30vw] pt-[3.5vw] absolute opacity-0 roleo `+(videoplay== 5 ? 'roleactivated' : '')} />
       </div>
-      <div className='pin2 hidden' />
+      
       <div className='pin3 hidden' />
       <div className='pin4 hidden' />
       <div className='pin5 hidden' />

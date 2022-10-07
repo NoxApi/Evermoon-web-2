@@ -91,7 +91,7 @@ export default function MapMobile(){
         muted
       >
       
-         <source src="/S1M.webm#t=0.1" type="video/webm" />
+         <source src="/S1M.mp4#t=0.1" type="video/mp4" />
       </video>}
 
       {lane==2&& <video
@@ -100,8 +100,8 @@ export default function MapMobile(){
         autoPlay
         muted
       >
-         {/* <source src="/bg-video.webm#t=0.1" type="video/webm" /> */}
-         <source src="/S2M.webm#t=0.1" type="video/webm" />
+         {/* <source src="/bg-video.mp4#t=0.1" type="video/mp4" /> */}
+         <source src="/S2M.mp4#t=0.1" type="video/mp4" />
       </video>}
 
       {lane==3&& <video
@@ -110,8 +110,8 @@ export default function MapMobile(){
         autoPlay
         muted
       >
-         <source src="/S3M.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.webm" type="video/webm" /> */}
+         <source src="/S3M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
 
@@ -121,8 +121,8 @@ export default function MapMobile(){
         autoPlay
         muted
       >
-         <source src="/S4M.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.webm" type="video/webm" /> */}
+         <source src="/S4M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
 
       {lane==5&& <video
@@ -131,8 +131,8 @@ export default function MapMobile(){
         autoPlay
         muted
       >
-         <source src="/S5M.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.webm" type="video/webm" /> */}
+         <source src="/S5M.mp4#t=0.1" type="video/mp4" />
+        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>}
     <div className='flex justify-between w-full px-[3vw] mt-[30vw] absolute'>
       <div>
