@@ -33,7 +33,7 @@ const Header = () => {
           <NextLink href="/">
             <a>
               <Image
-                className="w-28 lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
+                className="w-[20vw] max-w-[7rem] lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
                 src={Logo}
                 alt="logo"
                 blur={false}
@@ -109,7 +109,7 @@ function HeaderMobile() {
   return (
     <div className="lg:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
-        <Image className="w-8 ml-auto " src={Hamburger} alt="logo" />
+        <Image className="w-[8vw] max-w-[2rem] ml-auto " src={Hamburger} alt="logo" />
       </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
