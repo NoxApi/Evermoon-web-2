@@ -1,20 +1,6 @@
 import Header from '../header'
 import Image from '../image'
-import JoinButton from '../../assets/join_button.svg'
-import JoinOutlineButton from '../../assets/join_outline_button.svg'
-import DividerDiamond from '../../assets/divider-diamond.svg'
-import GooglePlay from '../../assets/google-play.png'
-import AppStore from '../../assets/app-store.png'
-import Telegram from '../../assets/socials/telegram.svg'
-import Discord from '../../assets/socials/discord.svg'
-import Facebook from '../../assets/socials/facebook.svg'
-import Twitter from '../../assets/socials/twitter.svg'
-import Youtube from '../../assets/socials/youtube.svg'
 import LinkNewTab from '../LinkNewTab'
-import bg from '../../assets/home/BG.png'
-import text1 from '../../assets/home/text1.svg'
-import text2 from '../../assets/home/text2.svg'
-import div from '../../assets/home/divider.png'
 import store1 from '../../assets/home/store1.png'
 import store2 from '../../assets/home/store2.png'
 import store2h from '../../assets/home/store2h.png'
@@ -26,18 +12,9 @@ import card3 from '../../assets/home/card3a.svg'
 import card3a from '../../assets/home/card3.svg'
 import card4 from '../../assets/home/card4.png'
 import footer from '../../assets/home/bottom.svg'
-import ImageNext from 'next/image'
-import JoinProgram from '../../assets/home/joinprogram.svg'
-import JoinSale from '../../assets/home/joinsale.svg'
-import Whitepaper from '../../assets/home/whitepaper.svg'
 import wp1 from '../../assets/home/WP1.png'
 import wp2 from '../../assets/home/wp2.png'
 import wp3 from '../../assets/home/wp3.png'
-import CTA from '../../assets/socials/CTA.svg'
-import frameCTA from '../../assets/socials/frameCTA.svg'
-import { useState } from 'react'
-import Banner from '../../assets/Banner.png'
-import { ModalController } from '../globalmodal'
 import s1 from '../../assets/roadmap/telegram.png'
 import s2 from '../../assets/roadmap/discord.png'
 import s3 from '../../assets/roadmap/facebook.png'
@@ -50,12 +27,10 @@ import s4s from '../../assets/roadmap/s4s.png'
 import s5s from '../../assets/roadmap/s5s.png'
 
 export default function HomeD() {
-  const [open,setopen] = useState(false)
   return (
     <section
       className="relative  h-[50vw] w-full overflow-hidden bg-bgs1 bg-cover " 
     >
-      <ModalController status={open} setStatus={setopen}/>
 
       <div className="absolute inset-0">
         <Header />

@@ -1,17 +1,6 @@
 import Header from '../header'
 import Image from '../image'
-import JoinButton from '../../assets/join_button.svg'
-import JoinOutlineButton from '../../assets/join_outline_button.svg'
-import DividerDiamond from '../../assets/divider-diamond.svg'
-import GooglePlay from '../../assets/google-play.png'
-import AppStore from '../../assets/app-store.png'
-import Telegram from '../../assets/socials/telegram.svg'
-import Discord from '../../assets/socials/discord.svg'
-import Facebook from '../../assets/socials/facebook.svg'
-import Twitter from '../../assets/socials/twitter.svg'
-import Youtube from '../../assets/socials/youtube.svg'
 import LinkNewTab from '../LinkNewTab'
-import bg from '../../assets/home/BG.png'
 import text1 from '../../assets/home/text1.svg'
 import text2 from '../../assets/home/text2.svg'
 import div from '../../assets/home/divider.png'
@@ -25,18 +14,11 @@ import card2 from '../../assets/home/card2.png'
 import card3 from '../../assets/home/card3.png'
 import card4 from '../../assets/home/card4.png'
 import footer from '../../assets/home/bottom.svg'
-import ImageNext from 'next/image'
-import JoinProgram from '../../assets/home/joinprogram.svg'
-import JoinSale from '../../assets/home/joinsale.svg'
-import Whitepaper from '../../assets/home/whitepaper.svg'
 import wp1 from '../../assets/home/WP1.png'
 import wp2 from '../../assets/home/wp2.png'
 import wp3 from '../../assets/home/wp3.png'
 import CTA from '../../assets/socials/CTA.svg'
 import frameCTA from '../../assets/socials/frameCTA.svg'
-import { useState } from 'react'
-import Banner from '../../assets/Banner.png'
-import { ModalController } from '../globalmodal'
 import s1 from '../../assets/roadmap/telegram.png'
 import s2 from '../../assets/roadmap/discord.png'
 import s3 from '../../assets/roadmap/facebook.png'
@@ -142,43 +124,9 @@ export default function Home() {
         </div>
       </div>
       <div className='lg:hidden'>
-        <SocialCTA />
       </div>
        <Image src={footer} alt="banner" className='w-[100%] absolute bottom-0 z-30'/> 
     </section>
   )
 }
 
-function SocialCTA() {
-  return (
-    <div className="group ">
-      <Image
-        src={CTA}
-        alt="cta"
-        className="absolute top-1/2 left-0 w-8 -translate-y-1/2 group-hover:translate-x-[3.5rem] transition-transform"
-      />
-      <div className="absolute top-1/2 left-0 w-14 -translate-y-1/2 -translate-x-[3.5rem] group-hover:translate-x-[0] transition-transform">
-        <div className="relative">
-          <Image src={frameCTA} alt="frameCTA" className="" />
-          <div className="absolute inset-0 flex flex-col justify-evenly py-6 items-center">
-            <LinkNewTab href="https://t.me/Evermoon_Community">
-              <Image className="w-8" src={Telegram} alt="Telegram" />
-            </LinkNewTab>
-            <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
-              <Image className="w-8" src={Discord} alt="Discord" />
-            </LinkNewTab>
-            <LinkNewTab href="https://www.facebook.com/EvermoonOfficialGameFi">
-              <Image className="w-8" src={Facebook} alt="Facebook" />
-            </LinkNewTab>
-            <LinkNewTab href="https://twitter.com/EverMoon_nft">
-              <Image className="w-8" src={Twitter} alt="Twitter" />
-            </LinkNewTab>
-            <LinkNewTab href="https://www.youtube.com/channel/UCFxqPU4dTufi07B13w_mMuw/videos">
-              <Image className="w-8" src={Youtube} alt="Youtube" />
-            </LinkNewTab>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}

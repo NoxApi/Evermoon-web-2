@@ -33,6 +33,7 @@ export const Tokenomics = () => {
         <div className=''>
         
         {/* selector */}
+
         <div className='w-[31.25vw] lgm:w-[80vw]  h-[5.21vw] lgm:h-[12vw]   relative flex'>
           {isevm &&<Image src={option} alt="q122" className=" w-[31.25vw] lgm:w-full absolute" priority />}
           {!isevm &&<Image src={option2} alt="q122" className=" w-[31.25vw] lgm:w-full absolute" priority />}
@@ -42,7 +43,9 @@ export const Tokenomics = () => {
         {isevm &&<Image src={light} alt="q122" className=" w-[15vw] absolute top-0 mix-blend-screen -translate-x-[0.4vw] lgm:hidden" priority />}
         {!isevm &&<Image src={light2} alt="q122" className=" w-[15vw] absolute top-0 mix-blend-screen translate-x-[16.5vw] lgm:hidden" priority />}
         </div>
+        
         {/* usecase */}
+
         <div className='flex h-[26vw] '>
         <div className='flex justify-end items-center lgm:hidden w-[28vw]'>
             <Image src={esd0} alt="q122" className={`w-[28vw]`+ (isevm?` opacity-0 `:` opacity-1 `)} priority />

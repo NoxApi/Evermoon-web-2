@@ -17,29 +17,6 @@ import { useEffect, useState } from 'react'
 export default function MapMobile(){
    const [lane,setlane] = useState(1)
    
-   let role1 = ""
-   let role2 = ""
-   let role3 = ""
-   let role4 = ""
-   let role5 = ""
-
-   if (lane==1){
-      role1 = "roleactivated"
-   }
-   else if (lane==2){
-      role2 = "roleactivated"
-   }
-   else if (lane==3){
-      role3 = "roleactivated"
-   }
-   else if (lane==4){
-      role4 = "roleactivated"
-   }
-   else if (lane==5){
-      role5 = "roleactivated"
-   }
-   useEffect(() => { 
-    });
  return(
    <section
       id="Map"
@@ -51,37 +28,37 @@ export default function MapMobile(){
     <div className='w-[100vw] h-[32vw]  flex items-end'>
       <div className='w-[100vw] h-[7vw]  flex items-center px-[7vw]'>
          <div onClick={()=>setlane(1)} className='flex items-center w-[19vw]  h-[7vw]'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+role1}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
             <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Top Lane</a>
          </div>
          <div onClick={()=>setlane(2)} className='flex items-center w-[20vw]  h-[7vw]'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+role2}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
             <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Mid Lane</a>
          </div>
          <div onClick={()=>setlane(3)} className='flex items-center w-[21vw]  h-[7vw]'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+role3}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
             <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Bottom Lane</a>
          </div>
          <div onClick={()=>setlane(4)} className='flex items-center w-[18.5vw]  h-[7vw]'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+role4}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
             <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Jungle</a>
          </div>
          <div onClick={()=>setlane(5)} className='flex items-center w-[17vw]  h-[7vw]'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+role5}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
             <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Support</a>
          </div>
       </div>
     </div>
-      <Image src={topb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role1} />
-      <Image src={midb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role2} />
-      <Image src={botb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role3} />
-      <Image src={jungb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role4} />
-      <Image src={supb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+role5} />
+      <Image src={topb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 1 ? 'roleactivated' : '')} />
+      <Image src={midb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 1 ? 'roleactivated' : '')} />
+      <Image src={botb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 1 ? 'roleactivated' : '')} />
+      <Image src={jungb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 1 ? 'roleactivated' : '')} />
+      <Image src={supb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 1 ? 'roleactivated' : '')} />
    </div>
    <div className='h-[98vw] flex items-start'>
    {lane==1&& <video
