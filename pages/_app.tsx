@@ -34,7 +34,7 @@ function show() {
  );
   return(
   <GlobalProvider>
-    {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
+    {isloading&&<div id='#load0' className='w-full h-[100vh] lgm:h-[99vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
       <Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-40 hidden`}/>
       {<Image alt="" src={loading}  priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-30 `+load1}/>}
       {load3&&<Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto lgm:w-[100vw] absolute z-40 `}/>} 

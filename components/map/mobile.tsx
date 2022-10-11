@@ -61,56 +61,56 @@ export default function MapMobile(){
       <Image src={supb} alt="icon" className={`z-30 w-[84.4vw] pt-[1.7vw] left-[7.8vw] absolute opacity-0 roleo `+(lane== 5 ? 'roleactivated' : '')} />
    </div>
    <div className='h-[98vw] flex items-start mt-[-2vw]'>
-   {lane==1&& <video
-        className="w-[100%]  top-0 "
+    <video
+        className={`w-[100%]  top-0 `+(lane== 1 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
       
          <source src="/S1M.mp4#t=0.1" type="video/mp4" />
-      </video>}
+      </video>
 
-      {lane==2&& <video
-        className="w-[100%] right-0 mt-[-2vw]" 
+      <video
+        className={`w-[100%]  top-0 `+(lane== 2 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          {/* <source src="/bg-video.mp4#t=0.1" type="video/mp4" /> */}
          <source src="/S2M.mp4#t=0.1" type="video/mp4" />
-      </video>}
+      </video>
 
-      {lane==3&& <video
-        className="w-[100%] right-0 mt-[-2vw]"
+      <video
+        className={`w-[100%]  top-0 `+(lane== 3 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S3M.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
 
 
-      {lane==4&& <video
-        className="w-[100%] right-0 mt-[-2vw]"
+      <video
+        className={`w-[100%]  top-0 `+(lane== 4 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S4M.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
 
-      {lane==5&& <video
-        className="w-[100%] right-0 mt-[-2vw]"
+      <video
+        className={`w-[100%]  top-0 `+(lane== 5 ? '' : 'hidden')}
         loop
         autoPlay
         muted
       >
          <source src="/S5M.mp4#t=0.1" type="video/mp4" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>}
+      </video>
     <div className='flex justify-between w-full px-[3vw] mt-[30vw] absolute'>
       <div>
       {lane!=1&&<div onClick={()=>setlane(lane-1)}>
