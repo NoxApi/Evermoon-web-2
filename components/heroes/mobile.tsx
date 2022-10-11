@@ -33,11 +33,11 @@ export default function HeroMobile(){
                     <div className=' h-[auto] flex justify-center items-center absolute top-[31.5%] left-[36%] '>  
                       <Tribe tribe={heroes[selector].tribe}/>
                     </div> 
-                    {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[8%] left-[71.4%] '>  
+                    {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[8%] left-[64.7%] '>  
                       <Skintype role={heroes[selector].rarity}/>
                     </div> }
                     <div className=' flex justify-center items-start absolute top-[45%] left-[15%] w-[70vw] '>  
-                    <a  className='text-[2.5vw] text-center leading-[4vw]'>{heroes[selector].des}</a>
+                    <a  className='text-[2.5vw] text-center leading-[3vw] font-Josefin'>{heroes[selector].des}</a>
                 </div>
             </div>
             <div className=' h-[40vw] flex-col  items-center justify-end flex'>
@@ -106,7 +106,7 @@ export default function HeroMobile(){
     return (
       <div>
         {image && (      
-          <Image src={image} alt="icon" className='w-[10vw] ' priority/> 
+          <Image src={image} alt="icon" className='w-[20vw] ' priority/> 
         )}
       </div>
     )

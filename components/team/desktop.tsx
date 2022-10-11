@@ -55,7 +55,7 @@ const ImageTeam = ({
         <Image alt={path} className={`w-[17vw]   ${className}  `} src={image} priority />
       )}
       <div className=' flex justify-between px-[1vw]  mt-[1vw] '>
-        <div className='flex flex-col w-[11vw] '>
+        <div className='flex flex-col w-[12vw] '>
           <a className='text-[1.6vw] font-Josefin '>{name}</a>
           <a className='text-[0.6vw]  text-[#F1E3B5] font-Josefin '>{role}</a>
         </div>

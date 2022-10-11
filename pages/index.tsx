@@ -27,6 +27,7 @@ import up from '../assets/up.svg'
 import { Footer } from '../components/footer'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useGlobalContext } from '../state'
+import { workerData } from 'worker_threads'
 
 const Index: NextPage = () => {
   const {section,setsection} = useGlobalContext()!
@@ -39,7 +40,8 @@ const Index: NextPage = () => {
   const playtoearn = useRef<null | HTMLDivElement>(null);
   const feature = useRef<null | HTMLDivElement>(null);
   const team = useRef<null | HTMLDivElement>(null);
-  const footerref = useRef<null | HTMLDivElement>(null);    
+  const footerref = useRef<null | HTMLDivElement>(null); 
+  const [width,setwidth]=useState(0)
     function add(){
       if (section < 10)
        setsection(section+1)
@@ -48,8 +50,12 @@ const Index: NextPage = () => {
       if (section > 1)
        setsection(section-1)
     }
-
     useEffect(()=>{
+      setwidth(window.innerWidth)
+      window.addEventListener('resize', ()=> {
+        setwidth(window.innerWidth)
+    })
+      console.log(width)
     if (section == 1)
       home.current?.scrollIntoView({behavior: 'smooth'});
     else if (section == 2)
@@ -69,8 +75,9 @@ const Index: NextPage = () => {
     else if (section == 9)
       roadmap.current?.scrollIntoView({behavior: 'smooth'});
     else if (section == 10)
-      footerref.current?.scrollIntoView({behavior: 'smooth'});
-    },[section]
+      footerref.current?.scrollIntoView({behavior: 'smooth'});       
+    }
+    ,[section,width]
 
     )
     
@@ -81,7 +88,7 @@ const Index: NextPage = () => {
             <meta name="description" content="Evermoon's NFT Marketplace" />
             <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='lgm:hidden'>
+      {width>1023&&<div className='lgm:hidden'>
         <ReactScrollWheelHandler
           upHandler={() => sub()}
           downHandler={() => add()}
@@ -141,8 +148,8 @@ const Index: NextPage = () => {
             </div>
           </main>
         </ReactScrollWheelHandler>
-      </div>
-      <div className='lg:hidden'>
+      </div>}
+      {width<1024&&<div className='lg:hidden'>
       <main>
             <div className="relative z-0">
             <Home />
@@ -168,7 +175,7 @@ const Index: NextPage = () => {
                 <RoadmapM />
             </div>
           </main>
-      </div>
+      </div>}
     </Layout>
   )
 }

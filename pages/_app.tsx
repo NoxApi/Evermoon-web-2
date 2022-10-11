@@ -9,7 +9,6 @@ import loading3 from '../public/100.gif'
 
 function MyApp({ Component, pageProps }: AppProps) {
  const [isloading,setisloading] = useState(true)
- const [visible,setvisible] = useState("invisible")
  const [load1,setload1] = useState("visible")
  const [load3,setload3] = useState(false)
 
@@ -17,9 +16,8 @@ function show() {
   ;
   setload3(true)
   setload1("invisible")
-  setvisible("visible");
   setTimeout(function() {
-    setisloading(false)
+  setisloading(false)
    }, 1200);
 }
 
@@ -37,11 +35,11 @@ function show() {
   return(
   <GlobalProvider>
     {isloading&&<div id='#load0' className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
-      <Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute z-40 hidden`}/>
-      {<Image alt="" src={loading}  priority={true} className={`w-[100vw] absolute z-30 `+load1}/>}
-      {load3&&<Image alt="" src={loading3} priority={true} className={`w-[100vw] absolute z-40 `}/>} 
+      <Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-40 hidden`}/>
+      {<Image alt="" src={loading}  priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-30 `+load1}/>}
+      {load3&&<Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto lgm:w-[100vw] absolute z-40 `}/>} 
     </div>}
-    <div className={``+visible}>
+    <div className={``+(!isloading ? '' : 'invisible')}>
     <Component {...pageProps} />
     </div>
   </GlobalProvider>   

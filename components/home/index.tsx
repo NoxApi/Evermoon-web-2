@@ -63,7 +63,7 @@ export default function Home() {
         </div>
         <div className='lg:hidden h-[250px] flex flex-col justify-start items-center smm:hidden'>
           <div className='relative pr-[210px]'>
-            <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <LinkNewTab href={'https://www.youtube.com/watch?v=nHP5dS11kKc&ab_channel=Evermoon'} >
               <div className="w-[50px]  absolute inset-0 z-20  cursor-pointer translate-x-[170%] translate-y-12 ">
                 <Image src={card3}  alt="AppStore" className='' />
               </div>
@@ -77,7 +77,7 @@ export default function Home() {
 
         <div className='sm:hidden h-[30vw] flex flex-col justify-start items-center'>
           <div className='relative'>
-            <LinkNewTab href={'https://www.youtube.com/watch?v=_UpRh3Wgv1M&feature=emb_title&ab_channel=Evermoon'} >
+            <LinkNewTab href={'https://www.youtube.com/watch?v=nHP5dS11kKc&ab_channel=Evermoon'} >
               <div className="w-[56vw]  inset-0 z-20  cursor-pointer ">
                 <Image src={trailer}  alt="AppStore" className='' />
               </div>
