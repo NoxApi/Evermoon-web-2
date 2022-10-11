@@ -44,7 +44,7 @@ function Image({
             src={src}
             alt={alt}
             priority={priority}
-            placeholder="empty"
+            placeholder="blur"
             className={`${!blur && 'duration-[0s]'}`}
             quality={quality}
           />
