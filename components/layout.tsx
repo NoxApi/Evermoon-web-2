@@ -21,7 +21,7 @@ const Layout = (props: any) => {
    );
   return (
     <>
-      <div  className={`bg-black p-0 text-white flex flex-col h-[100vh] relative overflow-hidden `+(isloading ? '' : 'lgm:overflow-visible lgm:h-auto')}>        
+      <div  className={`bg-black p-0 text-white flex flex-col lg:h-[100vh] h-[90vh]  relative overflow-hidden `+(isloading ? '' : 'lgm:overflow-visible lgm:h-auto')}>        
           <div>{props.children}</div>         
       </div>
     </>

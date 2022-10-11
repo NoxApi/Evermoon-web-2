@@ -24,32 +24,32 @@ export default function MapMobile(){
     >
     <div className='lg:hidden font-Josefin'>
    <div className='h-[58.4vw] relative'>
-    <Image src={topcm} alt="icon"  className=' w-[100%] absolute z-[-10]'/>
+    <Image src={topcm} alt="icon"  className=' w-[100%] absolute z-[10]'/>
     <div className='w-[100vw] h-[32vw]  flex items-end'>
       <div className='w-[100vw] h-[7vw]  flex items-center px-[7vw]'>
          <div onClick={()=>setlane(1)} className='flex items-center w-[19vw]  h-[7vw] cursor-pointer'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+(lane== 1 ? 'roleactivated' : '')}/>
-            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-20 `+(lane== 1 ? 'roleactivated' : '')}/>
+            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-20 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Top Lane</a>
          </div>
          <div onClick={()=>setlane(2)} className='flex items-center w-[20vw]  h-[7vw] cursor-pointer'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 2 ? 'roleactivated' : '')}/>
-            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-20 `+(lane== 2 ? 'roleactivated' : '')}/>
+            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-20 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Mid Lane</a>
          </div>
          <div onClick={()=>setlane(3)} className='flex items-center w-[21vw]  h-[7vw] cursor-pointer'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 3 ? 'roleactivated' : '')}/>
-            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-20 `+(lane== 3 ? 'roleactivated' : '')}/>
+            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-20 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Bottom Lane</a>
          </div>
          <div onClick={()=>setlane(4)} className='flex items-center w-[18.5vw]  h-[7vw] cursor-pointer'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-10 `+(lane== 4 ? 'roleactivated' : '')}/>
-            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3.5vw]  opacity-0 roleo absolute z-20 `+(lane== 4 ? 'roleactivated' : '')}/>
+            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-20 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Jungle</a>
          </div>
          <div onClick={()=>setlane(5)} className='flex items-center w-[17vw]  h-[7vw] cursor-pointer'>
-            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-10 `+(lane== 5 ? 'roleactivated' : '')}/>
-            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-10 `}/>
+            <Image src={lights} alt="icon"  className={` w-[13vw] mb-[0.3vw] ml-[3vw]  opacity-0 roleo absolute z-20 `+(lane== 5 ? 'roleactivated' : '')}/>
+            <Image src={light} alt="icon"  className={` w-[15vw] mb-[0.3vw] ml-[2.5vw]  opacity-100 roleo absolute -z-20 `}/>
             <a className='ml-[5.5vw] text-[2vw] z-20 text-[#F1E3B5]'> Support</a>
          </div>
       </div>
@@ -62,7 +62,7 @@ export default function MapMobile(){
    </div>
    <div className='h-[98vw] flex items-start mt-[-2vw]'>
    {lane==1&& <video
-        className="w-[100%]  top-0 -z-10"
+        className="w-[100%]  top-0 "
         loop
         autoPlay
         muted
@@ -124,7 +124,7 @@ export default function MapMobile(){
       </div>
     </div>
    </div>
-    <Image src={botcm} alt="icon"  className=' w-[100%] absolute bottom-0 z-100'/>
+    <Image src={botcm} alt="icon"  className=' w-[100%] absolute bottom-0 z-200'/>
     </div>
     </section>
  )
