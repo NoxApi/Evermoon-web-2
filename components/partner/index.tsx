@@ -10,16 +10,15 @@ export const Partner = () => {
     <section
       className="relative  h-[50vw] lgm:h-[197vw] w-full overflow-hidden bg-bgs6 bg-center bg-cover flex justify-center flex-col" 
     >
-      <div className='w-[74vw] mt-[7.4vw] ml-[15.8vw]'>
-      <video
+      <div className='w-[74vw] mt-[7.4vw] ml-[15.8vw] h-[6.8vw] invisible'>
+      {/* <video
         className="w-[100%] right-0"
         loop
         autoPlay
         muted
       >
          <source src="/investor.webm#t=0.1" type="video/webm" />
-        {/* <source src="/bonner.mp4" type="video/mp4" /> */}
-      </video>
+      </video> */}
       </div>
       <div className='w-[73.9vw] mt-[1.3vw] ml-[15.8vw]'>
       <video
