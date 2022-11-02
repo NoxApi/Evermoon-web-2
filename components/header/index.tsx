@@ -1,16 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import Moon from '../assets/moon.png'
 import Image from '../image'
 import { ComingSoonLink, Link , SubLink } from './Link'
 import NextLink from 'next/link'
 import Logo from '../../assets/logo.png'
 import Hamburger from '../../assets/hamburger.svg'
 import x from '../../assets/x.svg'
-import bg from '../../assets/starbg.svg'
 import NextImage from 'next/image'
-import MarketplaceSmall from '../../assets/marketsmall.svg'
-import login from '../../assets/header/marketplace.svg'
-import team from '../../assets/header/team.svg'
 import Line from '../../assets/header/line.png'
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
@@ -22,11 +17,11 @@ const Header = () => {
     width = " w-full "
   return (
     <header className="relative mx-auto w-full z-50 ">
-      <div className="absolute top-0 left-0 right-0 w-full h-[5vw] bg-black-gradient" />
+      <div className="absolute top-0 left-0 right-0 w-full h-[6vw] bg-black-gradient" />
       <HeaderDesktop isHover={isHover} setIsHover={setIsHover}/>
-      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-black-gradient navbar overflow-hidden cursor-pointer `+width }>
-        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw]'/>
-        <div className='flex ml-[12vw]'>
+      <div onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className={`flex flex-col items-start absolute top-0 left-0 right-0  h-[7vw] bg-[black]/[0.5] navbar overflow-hidden cursor-pointer `+width }>
+        <div className='w-[52vw] h-[0.1vw] bg-[#F4DFB7] mt-[4vw] ml-[13vw] mb-[0.5vw]'/>
+        <div className='flex ml-[12vw] '>
         <SubLink title="ABOUT THE GAME" section={2} current={false} />
         <SubLink title="FEATURES" section={3} current={false} />
         <SubLink title="MAP" section={4} current={false} />
@@ -38,7 +33,7 @@ const Header = () => {
           <NextLink href="/">
             <a>
               <Image
-                className="w-28 lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
+                className="w-[20vw] max-w-[12rem] lg:w-[10vw] absolute top-[10px] left-[10px] cursor-default"
                 src={Logo}
                 alt="logo"
                 blur={false}
@@ -54,7 +49,6 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header
 interface Prop {
   isHover: any
@@ -86,9 +80,9 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
           </div>
         </div>
       </a>
-        <Link title="TOKENOMIC" section={6} current={false} />
+        <Link title="TOKENOMICS" section={6} current={false} />
         <Link title="TEAM" section={7} current={false} />
-        <Link title="PARTNER" section={8} current={false} />
+        <Link title="PARTNERS" section={8} current={false} />
         <Link title="ROADMAP" section={9} current={false} />
       </div>
 
@@ -114,7 +108,7 @@ function HeaderMobile() {
   return (
     <div className="lg:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
-        <Image className="w-8 ml-auto " src={Hamburger} alt="logo" />
+        <Image className="w-[8vw] max-w-[3rem] ml-auto " src={Hamburger} alt="logo" />
       </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
@@ -145,14 +139,7 @@ function HeaderMobile() {
               leaveTo="opacity-0 translate-x-full"
             >
               <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-bgs8m bg-cover shadow-xl ">
-                <div className="relative inset-0 -z-10">
-                  <NextImage
-                    layout="fill"
-                    objectFit="cover"
-                    className="h-screen"
-                    src={bg}
-                    alt="bgstart"
-                  />
+                <div className="relative inset-0 -z-10"> 
                 </div>
                 <div className="px-4 pt-2 flex items-center  border-b-[1px] border-[#5c503a]">
                   <div className="">

@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <section
       id="Roadmap"
-      className="relative  h-[27.08vw] w-full overflow-hidden bg-bgs9 bg-cover mdm:hidden" 
+      className="relative  h-[27.08vw] w-full overflow-hidden bg-bgs9 bg-cover mt-[-1vw]" 
     >
       <div className='h-auto mt-[12.08vw] mdm:h-[120vw] w-[100%] flex flex-col justify-between items-center pb-36 mdm:pb-[20vw] mdm:hidden'>
         <div className='flex mb-[2vw]'>
@@ -47,10 +47,10 @@ function HeaderDesktop() {
     <div className="">
       <div className=" flex items-center mr-auto z-0 mdm:flex-col mdm:mt-[5vw] ">
         <Links title="HOME" section={(1)} current={true} />
-        <Links title="EXOLORE" section={(2)} current={false} />
-        <Links title="TOKENOMIC" section={(6)} current={false} />
+        <Links title="EXPLORE" section={(2)} current={false} />
+        <Links title="TOKENOMICS" section={(6)} current={false} />
         <Links title="TEAM" section={(7)} current={false} />
-        <Links title="PARTNER" section={(8)} current={false} />
+        <Links title="PARTNERS" section={(8)} current={false} />
         <Links title="ROADMAP" section={(9)} current={false} />
       </div>
 

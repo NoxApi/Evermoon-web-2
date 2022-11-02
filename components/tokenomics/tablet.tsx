@@ -5,8 +5,8 @@ import option from '../../assets/tokenomics/option.svg'
 import light from '../../assets/tokenomics/Light1.svg'
 import option2 from '../../assets/tokenomics/option2.svg'
 import light2 from '../../assets/tokenomics/Light2.svg'
-import evm from '../../assets/tokenomics/evm.gif'
-import evs from '../../assets/tokenomics/evs.gif'
+import evm from '../../assets/tokenomics/evm.png'
+import evs from '../../assets/tokenomics/evs.png'
 import ed1 from '../../assets/tokenomics/ed1.svg'
 import ed2 from '../../assets/tokenomics/ed2.svg'
 import ed3 from '../../assets/tokenomics/ed3.svg'
@@ -34,8 +34,8 @@ export const TokenomicsM = () => {
       <div className='relative w-[auto]  flex justify-center items-center mx-auto flex-col mt-6 lgm:mt-[2vw] '>
       <Image src={effect} alt="q122" className=" w-[400px] mix-blend-overlay absolute  lgm:-translate-x-[50%] lgm:hidden" priority />
       {isevm?
-        (<Image src={evm} alt="q122" className=" w-[900px]  absolute lgm:left-[-30vw]  lgm:translate-y-[8%] lgm:w-[110vw] " priority />):
-        (<Image src={evs} alt="q122" className=" w-[1100px]  absolute lgm:left-[-30vw] lgm:translate-y-[10%] -m-[60px] -mt-[100px] lgm:w-[130vw] lgm:-m-[10vw] lgm:-mt-[20vw]" priority />)}
+        (<Image src={evm} alt="q122" className=" w-[900px]  absolute lgm:left-[5vw]  lgm:translate-y-[3%] lgm:w-[40vw] " priority />):
+        (<Image src={evs} alt="q122" className=" w-[1100px]  absolute lgm:left-[13vw] lgm:translate-y-[10%] -m-[60px] -mt-[100px] lgm:w-[42vw] lgm:-m-[10vw] lgm:-mt-[20vw]" priority />)}
         <div className=''>
         
         {/* selector */}

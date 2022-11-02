@@ -5,8 +5,8 @@ import option from '../../assets/tokenomics/option.svg'
 import light from '../../assets/tokenomics/Light1.svg'
 import option2 from '../../assets/tokenomics/option2.svg'
 import light2 from '../../assets/tokenomics/Light2.svg'
-import evm from '../../assets/tokenomics/evm.gif'
-import evs from '../../assets/tokenomics/evs.gif'
+import evm from '../../assets/tokenomics/evm.png'
+import evs from '../../assets/tokenomics/evs.png'
 import ed1 from '../../assets/tokenomics/ed1.svg'
 import ed2 from '../../assets/tokenomics/ed2.svg'
 import ed3 from '../../assets/tokenomics/ed3.svg'
@@ -28,11 +28,12 @@ export const Tokenomics = () => {
     > 
       <div className='relative w-[auto]  flex justify-center items-center mx-auto flex-col mt-[10vw]  '>
       {isevm?
-        (<Image src={evm} alt="q122" className=" w-[55vw]  absolute translate-y-[-5%] translate-x-[-1%] lgm:w-[110vw] " priority />):
-        (<Image src={evs} alt="q122" className=" w-[65vw]  absolute lgm:left-[-30vw] lgm:translate-y-[10%]" priority />)}
+        (<Image src={evm} alt="q122" className=" w-[17vw]  absolute translate-y-[-5%] translate-x-[-1%] lgm:w-[110vw] " priority />):
+        (<Image src={evs} alt="q122" className=" w-[17vw]  absolute lgm:left-[-30vw] lgm:translate-y-[10%]" priority />)}
         <div className=''>
         
         {/* selector */}
+
         <div className='w-[31.25vw] lgm:w-[80vw]  h-[5.21vw] lgm:h-[12vw]   relative flex'>
           {isevm &&<Image src={option} alt="q122" className=" w-[31.25vw] lgm:w-full absolute" priority />}
           {!isevm &&<Image src={option2} alt="q122" className=" w-[31.25vw] lgm:w-full absolute" priority />}
@@ -42,7 +43,9 @@ export const Tokenomics = () => {
         {isevm &&<Image src={light} alt="q122" className=" w-[15vw] absolute top-0 mix-blend-screen -translate-x-[0.4vw] lgm:hidden" priority />}
         {!isevm &&<Image src={light2} alt="q122" className=" w-[15vw] absolute top-0 mix-blend-screen translate-x-[16.5vw] lgm:hidden" priority />}
         </div>
+        
         {/* usecase */}
+
         <div className='flex h-[26vw] '>
         <div className='flex justify-end items-center lgm:hidden w-[28vw]'>
             <Image src={esd0} alt="q122" className={`w-[28vw]`+ (isevm?` opacity-0 `:` opacity-1 `)} priority />

@@ -26,24 +26,24 @@ export default function Heroes() {
       <BG index={heroes[selector].index} isskin={isskin} />
       <Image src={botc} alt="icon" className=' w-[100%] absolute bottom-0'/>
       <div className='w-[100%] h-[67%] flex justify-start items-start   relative '>
-        <Image src={frame} alt="icon" className=' -z-10 w-[40%] absolute inset-0 top-[20%] left-[4%]'/>
-        <div className=' h-[auto] flex justify-start items-center absolute top-[24%] px-[7%] '>  
+        <Image src={frame} alt="icon" className=' -z-10 w-[35%] absolute inset-0 top-[23%] left-[6%]'/>
+        <div className=' h-[auto] flex justify-start items-center absolute top-[25%] px-[7%] '>  
           <Role role={heroes[selector].role}/>
         </div> 
         <div className=' h-[auto] flex justify-center items-center absolute top-[40%] left-[4%] w-[40%]'>  
           <a className='text-[3.5vw] heroes-text-gold text-center'>{heroes[selector].name}</a>
         </div> 
-        {isskin&&<div className=' h-[auto] flex justify-end items-end absolute top-[23%] right-[58.5%] w-[40%]'>  
+        {isskin&&<div className=' h-[auto] flex justify-end items-end absolute top-[25%] right-[61.5%] w-[40%]'>  
           <a className='text-[1.4vw] text-white text-right'>{heroes[selector].sname}</a>
         </div>}
-        <div className=' h-[auto] flex justify-center items-center absolute top-[57%] left-[16.4%] '>  
+        <div className=' h-[auto] flex justify-center items-center absolute top-[54.5%] left-[16.4%] '>  
           <Tribe tribe={heroes[selector].tribe}/>
         </div> 
-        {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[30%] left-[31.4%] '>  
+        {isskin&&<div className=' h-[auto] flex justify-center items-center absolute top-[32%] left-[28.5%] '>  
           <Skintype role={heroes[selector].rarity}/>
         </div> }
-        <div className=' flex justify-center items-start absolute top-[69%] left-[1%] px-[4vw] w-[45vw] '>  
-          <a  className='text-[1.1vw] text-center leading-[1.4vw]'>{heroes[selector].des}</a>
+        <div className=' flex justify-center items-start absolute top-[69%] left-[2.5%] px-[6vw] w-[42vw] '>  
+          <a  className='text-[1vw] text-center leading-[1.4vw]'>{heroes[selector].des}</a>
         </div> 
       </div>
       <div className='w-[100%] h-[25%] flex justify-center items-end pb-[0.5vw]'>
@@ -206,7 +206,7 @@ const Selector = ({
   })(hero);
   }
   return (
-    <div className=' w-[6vw] cursor-pointer mx-[0.5vw] relative  h-[7vw] flex items-end justify-center'>
+    <div className=' w-[6vw] cursor-pointer mx-[0.2vw] relative  h-[7vw] flex items-end justify-center'>
            <Transition
             show={selector==index}
             enter=" duration-500 absolute"
@@ -216,11 +216,11 @@ const Selector = ({
             leaveFrom="opacity-100"
             leaveTo="opacity-0 translate-y-[7vw]"
           >
-            {skin&&<div onClick={()=>setisskin(true)} className="flex w-[7vw] justify-center items-center " >
-            {!isskin&&image3&&<Image  src={image3} alt="icon" className='w-[120px] mb-[10px] '/>}
-            {isskin&&image4&&<Image  src={image4} alt="icon" className='w-[120px] mb-[10px]'/>}
+            {skin&&<div onClick={()=>setisskin(true)} className="flex w-[6vw] justify-center items-center " >
+            {!isskin&&image3&&<Image  src={image3} alt="icon" className='w-[4vw] mb-[10px] '/>}
+            {isskin&&image4&&<Image  src={image4} alt="icon" className='w-[4vw] mb-[10px]'/>}
             </div>}
-            <div onClick={()=>setisskin(false)} className="flex w-[7vw] justify-center" >
+            <div onClick={()=>setisskin(false)} className="flex w-[6vw] justify-center" >
             {image2 && ( 
               <Image  src={image2} alt="icon" className='w-[7vw] '/>)}
             </div>
@@ -237,7 +237,7 @@ const Selector = ({
           >
             <div onClick={()=>select(index)} className="z-10" >
             {image && ( 
-            <Image  src={image} alt="icon" className='w-[6vw]'/>)}
+            <Image  src={image} alt="icon" className='w-[5.3vw]'/>)}
             </div>
             </Transition>
         </div>

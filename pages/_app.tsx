@@ -2,17 +2,28 @@ import '../styles/globals.css'
 import { useState,useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { GlobalProvider } from '../state'
+import Image from '../components/image'
+import loading from '../public/0.gif'
+import loading2 from '../public/90.gif'
+import loading3 from '../public/100.gif'
 
 function MyApp({ Component, pageProps }: AppProps) {
  const [isloading,setisloading] = useState(true)
- const [visible,setvisible] = useState("invisible")
+ const [load1,setload1] = useState("visible")
+ const [load3,setload3] = useState(false)
+
 function show() {
-  setisloading(false);
-  setvisible("visible");
+  ;
+  setload3(true)
+  setload1("invisible")
+  setTimeout(function() {
+  setisloading(false)
+   }, 1200);
 }
+
+
  useEffect(()=>{
   if (document.readyState === "complete") {
-    
   } else {
     window.addEventListener("load", show);
     // Remove the event listener when component unmounts
@@ -23,10 +34,12 @@ function show() {
  );
   return(
   <GlobalProvider>
-    {isloading&&<div className='w-full h-[100vh] flex justify-center items-center absolute inset-0 z-30 bg-black font-Josefin overflow-hidden'>
-        <a className='text-6xl heroes-text-gold '>LOADING</a>
-        </div>}
-    <div className={``+visible}>
+    {isloading&&<div id='#load0' className='w-full h-[100vh] lgm:h-[99vh] flex justify-center items-center absolute inset-0 z-30 bg-white font-Josefin overflow-hidden'>
+      <Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-40 hidden`}/>
+      {<Image alt="" src={loading}  priority={true} className={`w-[50vw] mx-auto absolute lgm:w-[100vw] z-30 `+load1}/>}
+      {load3&&<Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto lgm:w-[100vw] absolute z-40 `}/>} 
+    </div>}
+    <div className={``+(!isloading ? '' : 'invisible')}>
     <Component {...pageProps} />
     </div>
   </GlobalProvider>   
