@@ -13,7 +13,7 @@ export const RoadmapM = () => {
     return (
       <section
         id="Roadmapm"
-        className="relative  w-full overflow-hidden bg-cover bg-bgs7m h-[440vw] flex flex-col justify-end items-center pb-[19vw]" 
+        className="relative  w-full overflow-hidden bg-cover bg-bgs7m h-[496vw] flex flex-col justify-end items-center pb-[19vw]" 
       >
         <div className='flex  w-fill items-center justify-center '>
           <LinkNewTab href="https://t.me/Evermoon_Community">
@@ -74,7 +74,7 @@ interface LinkProp {
         <a onMouseEnter={()=> setIsHover(true)} onMouseLeave={()=> setIsHover(false)} className="  flex  items-center justify-center cursor-pointer ">
           <div className="relative ">
             <div
-              className={` font-Glamode text-[3vw] leading-[6.5vw] text-center whitespace-nowrap transition-all duration-300
+              className={` font-Glamode text-[3vw] leading-[6.5vw] text-center whitespace-nowrap  duration-300
                ${isHover ? 'text-gold' : 'text-white'} ${
                 isHover && ''
               }`}
