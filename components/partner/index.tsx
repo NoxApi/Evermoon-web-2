@@ -27,7 +27,7 @@ export const Partner = () => {
         autoPlay
         muted
       >
-         <source src="/partner.webm#t=0.1" type="video/webm" />
+         <source src="/partner.webm" type="video/webm" />
         {/* <source src="/bonner.mp4" type="video/mp4" /> */}
       </video>
       </div>
