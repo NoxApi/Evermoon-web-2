@@ -28,6 +28,7 @@ import { Footer } from '../components/footer'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useGlobalContext } from '../state'
 import { workerData } from 'worker_threads'
+import Script from 'next/script'
 
 const Index: NextPage = () => {
   const {section,setsection} = useGlobalContext()!
@@ -87,6 +88,21 @@ const Index: NextPage = () => {
             <title>Evermoon</title>
             <meta name="description" content="Evermoon's NFT Marketplace" />
             <link rel="icon" href="/favicon.ico" />
+            <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'GA_MEASUREMENT_ID');
+              `}
+            </Script>
       </Head>
       {width>1023&&<div className='lgm:hidden'>
         <ReactScrollWheelHandler
