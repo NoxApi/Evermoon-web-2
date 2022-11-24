@@ -87,10 +87,9 @@ const Index: NextPage = () => {
       <Head>
             <title>Evermoon</title>
             <meta name="description" content="Evermoon's NFT Marketplace" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/Evermoonlogo.ico" />
             <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
-            
+            <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>       
       </Head>
       {width>1023&&<div className='lgm:hidden'>
         <ReactScrollWheelHandler
