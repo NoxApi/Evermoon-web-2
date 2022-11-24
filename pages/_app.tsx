@@ -6,6 +6,7 @@ import Image from '../components/image'
 import loading from '../public/0.gif'
 import loading2 from '../public/90.gif'
 import loading3 from '../public/100.gif'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }: AppProps) {
  const [isloading,setisloading] = useState(true)
@@ -40,7 +41,20 @@ function show() {
       {load3&&<Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto lgm:w-[100vw] absolute z-40 `}/>} 
     </div>}
     <div className={``+(!isloading ? '' : 'invisible')}>
-    <Component {...pageProps} />
+    <Script
+              src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'GA_MEASUREMENT_ID');
+              `}
+      </Script>
+      <Component {...pageProps} />
     </div>
   </GlobalProvider>   
   )
