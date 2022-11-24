@@ -42,7 +42,7 @@ function show() {
     </div>}
     <div className={``+(!isloading ? '' : 'invisible')}>
     <Script
-              src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+              src="https://www.googletagmanager.com/gtag/js?id=G-T59LHBSCPN"
               strategy="afterInteractive"
             />
             <Script id="google-analytics" strategy="afterInteractive">
@@ -51,7 +51,7 @@ function show() {
                 function gtag(){window.dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'GA_MEASUREMENT_ID');
+                gtag('config', 'G-T59LHBSCPN');
               `}
       </Script>
       <Component {...pageProps} />
