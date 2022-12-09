@@ -104,15 +104,19 @@ export default function Home() {
 
         <div className=' relative flex h-[10%] justify-center w-[100%] items-end pb-[18px] smm:pb-[1vw] '>
           <Image src={storebg} alt="AppStore" className="w-[250px] smm:w-[40vw]  absolute  z-20 " />
-          <div className='flex -translate-y-[48px] smm:-translate-y-[10vw] z-30  cursor-pointer'>
-            <div className='w-[250px] smm:w-[50vw] cursor-pointer  relative store2'>
+          <div className='flex -translate-y-[48px] smm:-translate-y-[10vw] z-30 '>
+          <LinkNewTab href="https://play.google.com/store/apps/details?id=com.ViewPassion.Evermoon">
+            <button className='w-[250px] smm:w-[50vw]  relative store2'>
               <Image src={store2} alt="AppStore" className="absolute inset-0 store2c1" />
               <Image src={store2h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
-            </div>
-            <div className='w-[250px] smm:w-[50vw] cursor-pointer   relative store2'>
+            </button>
+          </LinkNewTab>
+          <LinkNewTab href="https://testflight.apple.com/join/NnqmneOP">
+            <button className='w-[250px] smm:w-[50vw]   relative store2'>
               <Image src={store1} alt="AppStore" className="absolute inset-0 store2c1" />
               <Image src={store1h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
-            </div>
+            </button>
+          </LinkNewTab>
           </div>           
         </div>
         <div className=' absolute  bottom-0 left-0 z-20 translate-y-[-3vw] xlm:mb-[50px] w-[450px] h-[130px] lgm:hidden  '>

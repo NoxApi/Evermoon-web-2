@@ -9,9 +9,11 @@ import NextImage from 'next/image'
 import Line from '../../assets/header/line.png'
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+import LinkNewTab from '../LinkNewTab'
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false)
+  const [confirmhover,setconfirmhover] = useState(false)
   let width = "w-0"
   if (isHover)
     width = " w-full "
@@ -43,9 +45,8 @@ const Header = () => {
         </div>
         
         <HeaderMobile />
-      </div>
-      
-      
+        
+      </div>  
     </header>
   )
 }
@@ -55,7 +56,7 @@ interface Prop {
   setIsHover: any
 }
 function HeaderDesktop({isHover,setIsHover}:Prop) {
-
+  const [confirmhover,setconfirmhover] = useState(false)
   return (
     <div className="hidden lg:flex w-full ml-[10vw] ">
       <div className="ml-[1.5vw] flex items-end mr-auto  h-[3.5vw] z-30 w-[55vw] justify-between px-[1vw]">
@@ -86,12 +87,15 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
         <Link title="ROADMAP" section={9} current={false} />
       </div>
 
-      <div className="flex items-center">
-        {/* <Image src={team} alt="team" className="w-24 translate-x-1" /> */}
-        <div className="relative">
-          {/* <Image src={login} alt="marketplace" className="w-44" /> */}
+      <LinkNewTab href="https://auth.evermoon.games/registration">    
+      <div className="flex items-cente mt-[1vw] mr-[11vw]">
+        <div onMouseEnter={()=> setconfirmhover(true)} onMouseLeave={()=> setconfirmhover(false)} className={`z-20 cursor-pointer bgbutton  w-[10vw] h-[2.7vw]  flex justify-center items-center  gradient-border-mask }`}> 
+                <div className="flex justify-center items-center">
+                  <a  className={`glamode font-thin text-[1vw]  ${confirmhover?(" text-transparent bg-clip-text bg-gradient-to-b from-[#F9D390] to-[#E2B15B] "):("text-transparent bg-clip-text bg-white")}`}>{"REGISTER"}</a>
+                </div>
         </div>
       </div>
+      </LinkNewTab>  
       
     </div>
   )
@@ -99,12 +103,14 @@ function HeaderDesktop({isHover,setIsHover}:Prop) {
 
 function HeaderMobile() {
   let [isOpen, setIsOpen] = useState(false)
+  const [confirmhover,setconfirmhover] = useState(false)
   const openModal = () => {
     setIsOpen(true)
   }
   const closeModal = () => {
     setIsOpen(false)
   }
+
   return (
     <div className="lg:hidden w-full flex justify-end ">
       <button type="button" onClick={openModal} className="mr-2">
@@ -164,7 +170,15 @@ function HeaderMobile() {
                   <NextLink href="https://docs.evermoon.games/evermoon/">
                     <a className="block font-Glamode m-6 mt-0 text-white mdm:text-2xl">WHITE PAPER</a>
                   </NextLink>
-                            
+                  <LinkNewTab href="https://auth.evermoon.games/registration">    
+                    <div className="flex items-cente mt-[1vw] w-full justify-center">
+                      <div onMouseEnter={()=> setconfirmhover(true)} onMouseLeave={()=> setconfirmhover(false)} className={`z-20 cursor-pointer bgbutton  w-[20vw] h-[4vw]  flex justify-center items-center  gradient-border-mask }`}> 
+                              <div className="flex justify-center items-center">
+                                <a  className={`glamode font-thin text-[1.5vw]  ${confirmhover?(" text-transparent bg-clip-text bg-gradient-to-b from-[#F9D390] to-[#E2B15B] "):("text-transparent bg-clip-text bg-white")}`}>{"REGISTER"}</a>
+                              </div>
+                      </div>
+                    </div>
+                  </LinkNewTab>            
                 </div>
               </div>
             </Transition.Child>

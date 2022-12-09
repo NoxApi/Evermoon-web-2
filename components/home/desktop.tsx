@@ -74,17 +74,21 @@ export default function HomeD() {
               <Image src={card4} alt="AppStore" className=" absolute inset-0 left-[60%] translate-y-[4vw] w-[8vw]" />
           </div>
         </div>
-        <div className=' absolute flex  justify-center w-[100%] items-center h-[5vw] bottom-[0.5vw]   '>
+        <div className=' absolute flex  justify-center w-[100%] items-center h-[5vw] bottom-[0.9vw]   '>
           <Image src={storebg} alt="AppStore" className="w-[12vw] absolute  z-20 " />
-          <div className='flex  z-30  cursor-pointer'>
-            <div className='w-[11vw]  cursor-pointer  relative store2'>
-              <Image src={store2} alt="AppStore" className="absolute inset-0 store2c1" />
-              <Image src={store2h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
-            </div>
-            <div className='w-[11vw]  cursor-pointer   relative store2'>
-              <Image src={store1} alt="AppStore" className="absolute inset-0 store2c1" />
-              <Image src={store1h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
-            </div>
+          <div className='flex  z-30 '>
+            <LinkNewTab href="https://play.google.com/store/apps/details?id=com.ViewPassion.Evermoon">
+              <button className='w-[11vw]    relative store2'>
+                <Image src={store2} alt="AppStore" className="absolute inset-0 store2c1" />
+                <Image src={store2h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
+              </button>
+            </LinkNewTab>
+            <LinkNewTab href="https://testflight.apple.com/join/NnqmneOP">
+              <button className='w-[11vw]     relative store2'>
+                <Image src={store1} alt="AppStore" className="absolute inset-0 store2c1" />
+                <Image src={store1h} alt="AppStore" className="absolute inset-0  opacity-0 store2c2" />
+              </button>
+            </LinkNewTab>
           </div>           
         </div>
         <div className='flex absolute  bottom-0  right-0 translate-y-[-0.8vw] z-40 translate-x-[-5vw]'>

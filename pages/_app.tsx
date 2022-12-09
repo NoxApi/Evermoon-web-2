@@ -41,18 +41,18 @@ function show() {
       {load3&&<Image alt="" src={loading3} priority={true} className={`w-[50vw] mx-auto lgm:w-[100vw] absolute z-40 `}/>} 
     </div>}
     <div className={``+(!isloading ? '' : 'invisible')}>
-    <Script
-              src="https://www.googletagmanager.com/gtag/js?id=G-T59LHBSCPN"
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
+      <Script
+                src="https://www.googletagmanager.com/gtag/js?id=G-T59LHBSCPN"
+                strategy="afterInteractive"
+              />
+              <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){window.dataLayer.push(arguments);}
+                  gtag('js', new Date());
 
-                gtag('config', 'G-T59LHBSCPN');
-              `}
+                  gtag('config', 'G-T59LHBSCPN');
+                `}
       </Script>
       <Component {...pageProps} />
     </div>

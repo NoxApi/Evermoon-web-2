@@ -783,3 +783,34 @@ img {
     animation: play1 1.5s steps(48) forwards; 
   }
 }
+
+.bgbutton{
+  background: linear-gradient(180deg, #001D45 -1.5%, #000B25 81.93%);
+}
+.gradient-border-mask {
+  position: relative;
+  border-radius: 1vw;
+}
+
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1vw; 
+  border: 0.12vw solid transparent;
+  background: linear-gradient(180deg,#F9D390 30%,#E2B15B 50%) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.fontglamode{
+  font-family: "Glamode", sans-serif;
+}
+.glamode {
+  font-family:'"Glamode", sans-serif';
+}
