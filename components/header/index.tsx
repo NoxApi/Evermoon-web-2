@@ -26,7 +26,7 @@ const Header = () => {
         <div className='flex ml-[12vw] '>
         <SubLink title="ABOUT THE GAME" section={2} current={false} />
         <SubLink title="FEATURES" section={3} current={false} />
-        <SubLink title="MAP" section={4} current={false} />
+        {/* <SubLink title="MAP" section={4} current={false} /> */}
         <SubLink title="HEROES" section={5} current={false} /> 
         </div>
       </div>

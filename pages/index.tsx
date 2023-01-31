@@ -64,18 +64,18 @@ const Index: NextPage = () => {
     else if (section == 3)
       feature.current?.scrollIntoView({behavior: 'smooth'});
     else if (section == 4)
-      map.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 5)
+    //   map.current?.scrollIntoView({behavior: 'smooth'});
+    // else if (section == 5)
       hero.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 6)
+    else if (section == 5)
       token.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 7)
+    else if (section == 6)
       team.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 8)
+    else if (section == 7)
       partner.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 9)
+    else if (section == 8)
       roadmap.current?.scrollIntoView({behavior: 'smooth'});
-    else if (section == 10)
+    else if (section == 9)
       footerref.current?.scrollIntoView({behavior: 'smooth'});       
     }
     ,[section,width]
@@ -134,8 +134,8 @@ const Index: NextPage = () => {
                 <PAED/>
                 <div ref={feature}/>
                 <FeaturesD />
-                <div ref={map}/>
-                <MAP />
+                {/* <div ref={map}/>
+                <MAP /> */}
                 <div ref={hero}/>
                 <Heroes />
                 <div ref={token}/>
@@ -170,7 +170,7 @@ const Index: NextPage = () => {
               </div>
                 <PAE/>
                 <Features />
-                <MAPM />
+                {/* <MAPM /> */}
                 <HeroesM />
                 <TokenomicsM />
                 <Team />
