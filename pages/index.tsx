@@ -44,7 +44,7 @@ const Index: NextPage = () => {
   const footerref = useRef<null | HTMLDivElement>(null); 
   const [width,setwidth]=useState(0)
     function add(){
-      if (section < 10)
+      if (section < 9)
        setsection(section+1)
     }
     function sub(){
