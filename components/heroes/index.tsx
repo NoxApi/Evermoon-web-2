@@ -1,5 +1,6 @@
 
 import Image from '../image'
+import NImage from 'next/image'
 import { Transition } from '@headlessui/react'
 import topc from '../../assets/heroes/topc.png'
 import botc from '../../assets/heroes/botc.png'
@@ -23,7 +24,9 @@ export default function Heroes() {
     >
       <div className='relative h-[50vw] w-full overflow-hidden bg-center font-Josefin max-w-[1920px] lgm:hidden'> 
       <Image src={topc} alt="icon" className=' w-[100%] absolute top-0'/>
-      <BG index={heroes[selector].index} isskin={isskin} />
+      <div className='-z-20 w-[100%] absolute top-0 right-0 '> 
+        {isskin?(<NImage  src={`https://storage.googleapis.com/noxtestbucket/h${heroes[selector].index}s.png`} alt="icon"  layout='responsive' width={1920} height={1080}  />):(<NImage  src={`https://storage.googleapis.com/noxtestbucket/h${heroes[selector].index}.png`} alt="icon"  layout='responsive' width={1920} height={1080}  />)}
+      </div>
       <Image src={botc} alt="icon" className=' w-[100%] absolute bottom-0'/>
       <div className='w-[100%] h-[67%] flex justify-start items-start   relative '>
         <Image src={frame} alt="icon" className=' -z-10 w-[35%] absolute inset-0 top-[23%] left-[6%]'/>
