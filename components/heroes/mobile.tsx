@@ -6,6 +6,7 @@ import frame from '../../assets/heroes/frame.svg'
 import { useState } from 'react'
 import { HeroList } from './herolist'
 import { Transition } from '@headlessui/react'
+import NImage from "next/image"
 export default function HeroMobile(){
     const[selector,setselector]=useState(0)
   const[isskin,setisskin]=useState(false)
@@ -18,7 +19,9 @@ export default function HeroMobile(){
        <div className='lg:hidden h-[216vw] relative pt-[70vw] '>
             <Image src={topcm} alt="icon" className=' w-[100%] absolute top-0'/>
             <Image src={botcm} alt="icon" className=' w-[100%] absolute bottom-[-5px]'/>
-            <BG index={heroes[selector].index} isskin={isskin} />
+            <div className='-z-20 w-[100%] absolute top-0 right-0 '> 
+              {isskin?(<NImage  src={`https://storage.googleapis.com/noxtestbucket/h${heroes[selector].index}sm.png`} alt="icon"  layout='responsive' width={375} height={812}  />):(<NImage  src={`https://storage.googleapis.com/noxtestbucket/h${heroes[selector].index}m.png`} alt="icon"  layout='responsive' width={375} height={812}  />)}
+            </div>
             <div className='w-[100%] h-[80vw] relative px-[10vw]'>
                     <Image src={frame} alt="icon" className=' -z-10 w-[80%] mx-auto absolute inset-0 '/>
                     <div className=' h-[auto] flex justify-start items-center absolute top-[4%] px-[3%] '>  
@@ -60,36 +63,6 @@ export default function HeroMobile(){
     )
    } 
 
-   const BG = ({
-    index,
-    isskin,
-  }: {
-    index: number
-    isskin: boolean
-  }) => {
-    const [image, setImage] = useState<StaticImageData | null>(null);
-    (function (imageName) {
-      if(isskin){
-      import(`../../assets/heroes/h${index}sm.png`).then((image) =>
-        setImage(image.default)
-      )
-      }
-      else{
-        import(`../../assets/heroes/h${index}m.png`).then((image) =>
-          setImage(image.default)
-        )
-        }
-      
-    })(index)
-  
-    return (
-      <div>
-        {image && (      
-          <Image src={image} alt="icon" className='-z-20 w-[100%] absolute top-0 right-0 '/>
-        )}
-      </div>
-    )
-  }
   const Skintype = ({
     role,
   }: {
