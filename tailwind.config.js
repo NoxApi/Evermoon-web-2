@@ -23,7 +23,7 @@ module.exports = {
         'bgs8m' : "url('../public/bgs8m.png')",
         'bgs6m' : "url('https://storage.googleapis.com/noxtestbucket/bgs6m.png')",
         'bgs5m' : "url('https://storage.googleapis.com/noxtestbucket/bgs5m.png')",
-        'bgs1m' : "url('../public/bgs1m.png')",
+        'bgs1m' : "url('https://storage.googleapis.com/noxtestbucket/bgs1m.png')",
         'bgs2m' : "url('https://storage.googleapis.com/noxtestbucket/bgs2m.png')",
         'bgs4m' : "url('../public/bgs4m.png')",
       },
