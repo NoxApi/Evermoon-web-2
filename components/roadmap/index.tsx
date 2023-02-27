@@ -1,11 +1,13 @@
 import React from 'react'
-import roadmap from "../../assets/roadmap/rm.png"
+// import roadmap from require("https://storage.googleapis.com/noxtestbucket/roadmapcdn.png")
 import left from "../../assets/roadmap/left.png"
 import right from "../../assets/roadmap/right.png"
 import Image from '../image'
 import { useState } from 'react'
+import Image2 from 'next/image'
 export const Roadmap = () => {
   const [state,setstate] = useState(1)
+  // const roadmap = require("https://storage.googleapis.com/noxtestbucket/roadmapcdn.png")
   return (
     <section
       className="relative  h-[50vw] w-full overflow-hidden bg-bgs7 bg-cover flex flex-col items-center justify-start py-[2.7vw]" 
@@ -14,7 +16,9 @@ export const Roadmap = () => {
         <a className='text-[4.5vw] text-[#F1E3B5]'>ROADMAP</a>
       </div>
       <div className='w-[87vw] relative h-[23vw] mt-[8vw] overflow-hidden'>
-         <Image src={roadmap} alt="" className={`w-[101.7vw] mt-[0.5vw] absolute transition-all `+(state== 1 ? 'left-0' : 'left-[-14.5vw]')}/>
+        <div className={`w-[101.7vw] mt-[0.5vw] absolute transition-all `+(state== 1 ? 'left-0' : 'left-[-14.5vw]')}>
+          <Image2 src="https://storage.googleapis.com/noxtestbucket/roadmapcdn.png"  alt=""  width={2008} height={476} />
+        </div>
       </div>
       <div className=' h-[5vw] w-full flex justify-center items-center'>
         <div className={state== 2 ?' cursor-pointer':""} onClick={()=>setstate(1)}>
